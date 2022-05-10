@@ -1,0 +1,402 @@
+번호	이름	카드사	종류	링크																								
+16	신세계 씨티카드 콰트로	씨티카드	credit	https://www.banksalad.com/cards/16/issue	국내전용	2000	VISA	5000																				
+20	갤러리아 씨티카드 프레스티지	씨티카드	credit	https://www.banksalad.com/cards/20/issue	국내전용	4000	VISA	5000																				
+31	신세계 씨티 리워드 카드	씨티카드	credit	https://www.banksalad.com/cards/31/issue	국내전용	8000	VISA	10000																				
+236	IBK hi 카드	기업카드	credit	https://www.banksalad.com/cards/236/issue	BC	2000	Master	4000	VISA	4000																		
+287	Oil & Life카드(Oil)	기업카드	credit	https://www.banksalad.com/cards/287/issue	Union Pay	5000	Master	7000																				
+289	Oil & Life카드(Life)	기업카드	credit	https://www.banksalad.com/cards/289/issue	Union Pay	5000	Master	10000																				
+291	olleh Super DC IBK카드	기업카드	credit	https://www.banksalad.com/cards/291/issue	Union Pay	10000	Master	15000																				
+297	IBK-Syrup카드[신용]	기업카드	credit	https://www.banksalad.com/cards/297/issue	Master	7000	Union Pay	5000																				
+339	The CJ KB국민카드	국민카드	credit	https://www.banksalad.com/cards/339/issue	국내전용	5000	VISA	10000	Master	10000	JCB	10000	국내전용(모바일단독)	1000	VISA(모바일단독)	6000	Master(모바일단독)	6000	JCB(모바일단독)	6000								
+350	스카이패스 KB국민카드	국민카드	credit	https://www.banksalad.com/cards/350/issue	VISA(실버)	15000	VISA(골드)	20000	Master(실버)	15000	Master(골드)	20000	JCB(실버)	15000	JCB(골드)	20000												
+353	스타check	국민카드	check	https://www.banksalad.com/cards/353/issue	국내전용	0	Master	0	VISA	0																		
+354	포인트리check	국민카드	check	https://www.banksalad.com/cards/354/issue	국내전용	0	VISA	0																				
+355	민 check	국민카드	check	https://www.banksalad.com/cards/355/issue	국내전용	0	Master	0	VISA	0																		
+368	노리check	국민카드	check	https://www.banksalad.com/cards/368/issue	국내전용	0	Master	0	Union Pay	0	VISA	0																
+375	직장인보너스check	국민카드	check	https://www.banksalad.com/cards/375/issue	VISA	0	국내전용	0	Master	0																		
+379	정 check	국민카드	check	https://www.banksalad.com/cards/379/issue	국내전용	0	Master	0	VISA	0																		
+380	훈 check	국민카드	check	https://www.banksalad.com/cards/380/issue	국내전용	0	Master	0	VISA	0																		
+381	음 check	국민카드	check	https://www.banksalad.com/cards/381/issue	국내전용	0	Master	0	VISA	0																		
+416	KB국민 와이즈홈카드	국민카드	credit	https://www.banksalad.com/cards/416/issue	국내전용	5000	VISA	10000	Master	10000																		
+418	이마트 KB국민카드	국민카드	credit	https://www.banksalad.com/cards/418/issue	국내전용	5000	AMEX	10000	VISA	10000	Master	10000	JCB	10000	국내전용(모바일단독)	1000	AMEX(모바일단독)	6000	VISA(모바일단독)	6000	Master(모바일단독)	6000	JCB(모바일단독)	6000				
+419	해피포인트 KB국민카드	국민카드	credit	https://www.banksalad.com/cards/419/issue	VISA	5000	Master	5000	JCB	5000																		
+435	KB국민 반려애카드(강아지)	국민카드	credit	https://www.banksalad.com/cards/435/issue	K-World	8000	Master	13000																				
+436	KB국민 반려애카드(고양이)	국민카드	credit	https://www.banksalad.com/cards/436/issue	K-World	8000	Master	13000																				
+439	KB국민아이행복카드(T-type)	국민카드	credit	https://www.banksalad.com/cards/439/issue	국내전용	0	Master	0																				
+440	KB국민 GS행복가득카드	국민카드	credit	https://www.banksalad.com/cards/440/issue	국내전용	7000	Master	12000	AMEX	12000																		
+472	KB국민 굿데이카드	국민카드	credit	https://www.banksalad.com/cards/472/issue	국내전용	5000	VISA	10000	Master	10000	JCB	10000	Union Pay	10000	AMEX	10000	국내전용(모바일단독)	1000	VISA(모바일단독)	6000	Master(모바일단독)	6000	JCB(모바일단독)	6000	Union Pay(모바일단독)	6000	AMEX(모바일단독)	6000
+476	KB국민 굿데이올림카드	국민카드	credit	https://www.banksalad.com/cards/476/issue	K-World	15000	Master	20000	VISA	20000	AMEX	20000	K-World(모바일단독)	9000	VISA(모바일단독)	14000	Master(모바일단독)	14000	AMEX(모바일단독)	14000								
+491	KB국민 와이즈카드	국민카드	credit	https://www.banksalad.com/cards/491/issue	국내전용	5000	Union Pay	10000	JCB	10000	VISA	10000	Master	10000	AMEX	10000	국내전용(모바일단독)	1000	Union Pay(모바일단독)	6000	JCB(모바일단독)	6000	VISA(모바일단독)	6000	Master(모바일단독)	6000	AMEX(모바일단독)	6000
+505	KB국민 마일리지 가온카드(대한항공)	국민카드	credit	https://www.banksalad.com/cards/505/issue	국내전용	15000	Master	20000																				
+506	KB국민 마일리지 가온카드(아시아나항공)	국민카드	credit	https://www.banksalad.com/cards/506/issue	국내전용	15000	Master	20000																				
+507	가온check	국민카드	check	https://www.banksalad.com/cards/507/issue	국내전용	0	Master	0																				
+509	누리check	국민카드	check	https://www.banksalad.com/cards/509/issue	국내전용	0	Master	0																				
+1210	채움 스카이패스카드	NH카드	credit	https://www.banksalad.com/cards/1210/issue	Master	15000	VISA	15000	JCB	15000																		
+1239	삼성아멕스블루카드	삼성카드	credit	https://www.banksalad.com/cards/1239/issue	AMEX	12000																						
+1245	스카이패스삼성카드	삼성카드	credit	https://www.banksalad.com/cards/1245/issue	Master	22000	VISA	22000																				
+1279	American Express® Green	삼성카드	credit	https://www.banksalad.com/cards/1279/issue	AMEX	49000																						
+1344	CJ ONE 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/1344/issue	국내전용	8000	VISA	10000																				
+1360	삼성카드 4	삼성카드	credit	https://www.banksalad.com/cards/1360/issue	국내전용	5000	Union Pay	5000	AMEX	10000																		
+1375	이마트신세계 삼성카드 7	삼성카드	credit	https://www.banksalad.com/cards/1375/issue	국내전용	18000	Master	20000																				
+1376	신세계이마트 삼성카드 7	삼성카드	credit	https://www.banksalad.com/cards/1376/issue	국내전용	18000	Master	20000																				
+1392	트레이더스신세계 삼성카드 5	삼성카드	credit	https://www.banksalad.com/cards/1392/issue	국내전용	12000	VISA	15000																				
+1495	GS칼텍스 신한카드 Bigplus Smart	신한카드	credit	https://www.banksalad.com/cards/1495/issue	URS	5000	VISA(실버)	7000	VISA(골드)	12000																		
+1572	신한 Hi-Point 카드	신한카드	credit	https://www.banksalad.com/cards/1572/issue	URS	8000	UPI	8000	VISA	10000	Master	10000	JCB	10000	VISA(Platinum)	15000	Master(Platinum)	15000										
+1573	신한 Hi-Point 카드	신한카드	credit	https://www.banksalad.com/cards/1573/issue	URS	8000	UPI	8000	VISA	10000	Master	10000	JCB	10000	VISA(Platinum)	15000	Master(Platinum)	15000										
+1872	신한카드 Simple Platinum#	신한카드	credit	https://www.banksalad.com/cards/1872/issue	Union Pay	27000	URS	27000	VISA	30000																		
+1892	신한카드 S-Line 체크	신한카드	check	https://www.banksalad.com/cards/1892/issue	국내전용	0	VISA	0																				
+1897	신한카드 B.Big(삑)	신한카드	credit	https://www.banksalad.com/cards/1897/issue	S&	10000	VISA	13000	Union Pay	10000																		
+1970	프리머스 스카이패스카드	하나카드	credit	https://www.banksalad.com/cards/1970/issue	VISA	100000																						
+2027	Smart Any 카드	하나카드	credit	https://www.banksalad.com/cards/2027/issue	국내전용	5000	Union Pay	5000	VISA	10000	Master	10000																
+2243	KB국민 FINETECH카드(마일리지 대한항공)	국민카드	credit	https://www.banksalad.com/cards/2243/issue	국내전용	20000	Master	25000	국내전용(모바일단독)	14000	Master(모바일단독)	19000																
+2244	KB국민 FINETECH카드(마일리지 아시아나)	국민카드	credit	https://www.banksalad.com/cards/2244/issue	국내전용	20000	Master	25000	국내전용(모바일단독)	14000	Master(모바일단독)	19000																
+2251	아이행복 check(KB국민)	국민카드	check	https://www.banksalad.com/cards/2251/issue	국내전용	0	Master	0																				
+2264	참! 좋은 kt wiz 카드[신용]	기업카드	credit	https://www.banksalad.com/cards/2264/issue	VISA	5000	Union Pay	2000																				
+2307	신세계이마트 삼성카드4(포인트)	삼성카드	credit	https://www.banksalad.com/cards/2307/issue	국내전용	10000	Master	12000																				
+2320	국민행복카드[신용] for Baby Service(A-Type)	기업카드	credit	https://www.banksalad.com/cards/2320/issue	BC	0																						
+2321	국민행복카드[신용] for Children Service(B-Type)	기업카드	credit	https://www.banksalad.com/cards/2321/issue	BC	0																						
+2322	국민행복카드[신용] for Green Life Service(C-Type)	기업카드	credit	https://www.banksalad.com/cards/2322/issue	BC	0																						
+2324	ONE check	국민카드	check	https://www.banksalad.com/cards/2324/issue	Master	0	Union Pay	0																				
+2326	스피드메이트 check	국민카드	check	https://www.banksalad.com/cards/2326/issue	국내전용	0	Master	0																				
+2359	S-OIL 삼성카드 & POINT	삼성카드	credit	https://www.banksalad.com/cards/2359/issue	국내전용	10000	Master	12000																				
+2368	신한카드 The CLASSIC+ (아시아나항공)	신한카드	credit	https://www.banksalad.com/cards/2368/issue	URS	120000	AMEX	125000																				
+2372	자유로운 여행카드(SKYPASS)	우리카드	credit	https://www.banksalad.com/cards/2372/issue	Union Pay	50000																						
+2396	신한카드 Mr.Life	신한카드	credit	https://www.banksalad.com/cards/2396/issue	VISA	18000	S&	15000																				
+2478	우리 아이행복check	우리카드	check	https://www.banksalad.com/cards/2478/issue	Master	0	Union Pay	0																				
+2480	해피포인트 우리check	우리카드	check	https://www.banksalad.com/cards/2480/issue	BC(국내전용)	0																						
+2502	KB국민 다담카드(스마트 OTP)	국민카드	credit	https://www.banksalad.com/cards/2502/issue	K-World	15000	Master	20000	VISA	20000	K-World(모바일단독)	9000	Master(모바일단독)	14000	VISA(모바일단독)	14000												
+2564	자유로운 여행카드 (Asiana Club)	우리카드	credit	https://www.banksalad.com/cards/2564/issue	Union Pay	50000																						
+2565	신한카드 YOLO Tasty	신한카드	credit	https://www.banksalad.com/cards/2565/issue	VISA	13000	S&	10000																				
+2583	신한카드 주거래 신용	신한카드	credit	https://www.banksalad.com/cards/2583/issue	VISA	18000	Union Pay	15000																				
+2633	나라사랑카드(KB국민)	국민카드	check	https://www.banksalad.com/cards/2633/issue	국내전용	0																						
+2653	그랑블루 check	우리카드	check	https://www.banksalad.com/cards/2653/issue	BC Global	95000	Master	100000																				
+2804	삼성카드 & MILEAGE PLATINUM(스카이패스)	삼성카드	credit	https://www.banksalad.com/cards/2804/issue	국내전용	47000	AMEX	49000																				
+2914	신한카드 하이패스(전용) 체크	신한카드	check	https://www.banksalad.com/cards/2914/issue	국내전용	0																						
+2927	삼성카드 taptap S	삼성카드	credit	https://www.banksalad.com/cards/2927/issue	Master	10000	국내전용	10000																				
+2928	삼성카드 taptap O	삼성카드	credit	https://www.banksalad.com/cards/2928/issue	Master	10000	국내전용	10000																				
+2979	KB국민 마일리지 가온플래티늄카드(대한항공)	국민카드	credit	https://www.banksalad.com/cards/2979/issue	국내전용	100000	Master	110000																				
+2981	KB국민 마일리지 가온플래티늄카드(아시아나)	국민카드	credit	https://www.banksalad.com/cards/2981/issue	국내전용	100000	Master	110000																				
+2992	신한카드 RPM+ Platinum#	신한카드	credit	https://www.banksalad.com/cards/2992/issue	VISA	35000	Union Pay	32000																				
+3046	신한카드 YOLO ⓘ	신한카드	credit	https://www.banksalad.com/cards/3046/issue	국내전용	15000	VISA	18000																				
+3065	용인시민카드(신용)	기업카드	credit	https://www.banksalad.com/cards/3065/issue	BC	5000	VISA	7000																				
+3103	CU·배달의민족 삼성카드 taptap	삼성카드	credit	https://www.banksalad.com/cards/3103/issue	Master	10000	국내전용	10000																				
+3144	신한카드 후불하이패스+(하이패스 전용)	신한카드	credit	https://www.banksalad.com/cards/3144/issue	국내전용	2000																						
+3171	청춘대로 싱글 check	국민카드	check	https://www.banksalad.com/cards/3171/issue	Master	0	Union Pay	0																				
+3204	E1 LPG KB국민카드	국민카드	credit	https://www.banksalad.com/cards/3204/issue	K-World	15000	Master	20000																				
+3251	KB국민 청춘대로 매니아i카드	국민카드	credit	https://www.banksalad.com/cards/3251/issue	K-World	12000	Master	15000	K-World(모바일단독)	6000	Master(모바일단독)	9000																
+3286	Liiv Mate check	국민카드	check	https://www.banksalad.com/cards/3286/issue	국내전용	0																						
+3294	신한카드 The BEST-T	신한카드	credit	https://www.banksalad.com/cards/3294/issue	Union Pay	230000	AMEX	235000																				
+3295	신한카드 The BEST-T (대한항공)	신한카드	credit	https://www.banksalad.com/cards/3295/issue	Union Pay	230000	AMEX	235000																				
+3296	신한카드 The BEST-T (아시아나항공)	신한카드	credit	https://www.banksalad.com/cards/3296/issue	Union Pay	230000	AMEX	235000																				
+3329	아시아나 check	국민카드	check	https://www.banksalad.com/cards/3329/issue	Master	0																						
+3340	NH올원 파이카드	NH카드	credit	https://www.banksalad.com/cards/3340/issue	Master	12000	국내전용	10000																				
+3350	청춘대로 톡톡카드	국민카드	credit	https://www.banksalad.com/cards/3350/issue	K-World	10000	Master	12000	K-World(모바일단독)	4000	Master(모바일단독)	6000																
+3351	LG U+ check	국민카드	check	https://www.banksalad.com/cards/3351/issue	Master	0																						
+3374	신한카드 Edu	신한카드	credit	https://www.banksalad.com/cards/3374/issue	S&	20000	Master	23000																				
+3375	일상의 기쁨카드(신용)	기업카드	credit	https://www.banksalad.com/cards/3375/issue	Union Pay	10000	VISA	12000																				
+3377	일년의 설렘카드	기업카드	credit	https://www.banksalad.com/cards/3377/issue	Union Pay	10000	VISA	12000																				
+3378	청춘대로 1코노미 카드	국민카드	credit	https://www.banksalad.com/cards/3378/issue	K-World	15000	Master	17000	K-World(모바일단독)	9000	Master(모바일단독)	11000																
+3380	삼성 페이 삼성카드 taptap	삼성카드	credit	https://www.banksalad.com/cards/3380/issue	국내전용	10000	Master	10000																				
+3381	ALL 다모아카드	우리카드	credit	https://www.banksalad.com/cards/3381/issue	Master	12000	VISA	12000	BC(국내전용)	10000																		
+3382	We’ll Rich 100 GOLD카드	우리카드	credit	https://www.banksalad.com/cards/3382/issue	Master	12000																						
+3383	배달의민족 우리체크	우리카드	check	https://www.banksalad.com/cards/3383/issue	Master	0																						
+3414	WELCOME check	국민카드	check	https://www.banksalad.com/cards/3414/issue	Master	0	Union Pay	0																				
+3420	신세계 신한카드	신한카드	credit	https://www.banksalad.com/cards/3420/issue	Master	15000	Union Pay	12000																				
+3421	신세계 신한카드 (SKYPASS)	신한카드	credit	https://www.banksalad.com/cards/3421/issue	Union Pay	42000	Master	45000																				
+3422	아시아나 신한카드 Air 1.5	신한카드	credit	https://www.banksalad.com/cards/3422/issue	국내전용	43000	Master	45000																				
+3454	마이 홈플러스 신한카드	신한카드	credit	https://www.banksalad.com/cards/3454/issue	VISA	15000	국내전용	12000																				
+3459	참! 좋은 다이소카드(신용)	기업카드	credit	https://www.banksalad.com/cards/3459/issue	Union Pay	10000	VISA	12000																				
+3474	위비 Five 체크	우리카드	check	https://www.banksalad.com/cards/3474/issue	VISA	0	Master	0																				
+3482	모바일 Tmoney 신한카드	신한카드	credit	https://www.banksalad.com/cards/3482/issue	VISA	13000	Union Pay	10000																				
+3483	신한카드 All Pass	신한카드	credit	https://www.banksalad.com/cards/3483/issue	VISA	13000	Union Pay	10000																				
+3486	탄탄대로 온리유카드	국민카드	credit	https://www.banksalad.com/cards/3486/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+3500	신한 LOVE - 퍼스트가든	신한카드	credit	https://www.banksalad.com/cards/3500/issue	URS	8000	Union Pay	8000	VISA	10000	Master	10000	AMEX	10000														
+3511	가온 올포인트 check	국민카드	check	https://www.banksalad.com/cards/3511/issue	국내전용	0	Master	0																				
+3539	삼성카드 taptap I	삼성카드	credit	https://www.banksalad.com/cards/3539/issue	Master	49000	국내전용	49000																				
+3555	위메프 우리체크	우리카드	check	https://www.banksalad.com/cards/3555/issue	BC(국내전용)	3000	Union Pay(국내전용)	3000	Master	5000																		
+3558	가온 워킹업카드	국민카드	credit	https://www.banksalad.com/cards/3558/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+3560	H.Point check	국민카드	check	https://www.banksalad.com/cards/3560/issue	국내전용	0	Master	0																				
+3561	IBK-Hybrid(하이브리드)카드	기업카드	hybrid	https://www.banksalad.com/cards/3561/issue	Master	12000	Union Pay	10000																				
+3573	아모레퍼시픽 IBK카드	기업카드	credit	https://www.banksalad.com/cards/3573/issue	Union Pay	10000	VISA	12000																				
+3578	신한카드 Deep Dream	신한카드	credit	https://www.banksalad.com/cards/3578/issue	VISA	10000	Union Pay(국내전용)	8000																				
+3587	LG 페이 신한카드	신한카드	credit	https://www.banksalad.com/cards/3587/issue	S&	10000	Master	13000																				
+3616	우리 XGOLF 카드	우리카드	credit	https://www.banksalad.com/cards/3616/issue	BC	13000	Master	15000																				
+3628	더본 신한카드 신용	신한카드	credit	https://www.banksalad.com/cards/3628/issue	VISA	13000	S&	10000																				
+3629	다이소 신한카드	신한카드	credit	https://www.banksalad.com/cards/3629/issue	Master	13000	S&	10000																				
+3631	신한카드 Deep Oil	신한카드	credit	https://www.banksalad.com/cards/3631/issue	S&	10000	Master	13000																				
+3633	플래티늄서비스카드	씨티카드	check	https://www.banksalad.com/cards/3633/issue	Master	0																						
+3634	11Pay KB국민카드	국민카드	credit	https://www.banksalad.com/cards/3634/issue	K-World	15000	Master	15000																				
+3635	톡톡 Pay카드	국민카드	credit	https://www.banksalad.com/cards/3635/issue	K-World	20000	Master	20000	K-World(모바일단독)	14000	Master(모바일단독)	14000																
+3636	JCB 플랫티늄 서비스	국민카드	credit	https://www.banksalad.com/cards/3636/issue	국내전용	0																						
+3642	Mile 1.6 대한항공	하나카드	credit	https://www.banksalad.com/cards/3642/issue	AMEX	45000	AMEX(가족)	10000																				
+3643	Mile 1.6 아시아나	하나카드	credit	https://www.banksalad.com/cards/3643/issue	AMEX	45000	AMEX(가족)	10000																				
+3644	통커 카드	하나카드	credit	https://www.banksalad.com/cards/3644/issue	VISA	20000	JCB(One Way)	17000																				
+3648	I＇m CHEERFUL	롯데카드	credit	https://www.banksalad.com/cards/3648/issue	국내전용	15000	Master	15000	VISA	15000	AMEX	15000																
+3649	I＇m JOYFUL	롯데카드	credit	https://www.banksalad.com/cards/3649/issue	국내전용	15000	Master	15000	VISA	15000	AMEX	15000																
+3650	I＇m GREAT	롯데카드	credit	https://www.banksalad.com/cards/3650/issue	국내전용	15000	Master	15000	VISA	15000	AMEX	15000																
+3651	신한카드 경차사랑 Life	신한카드	credit	https://www.banksalad.com/cards/3651/issue	국내전용	0	VISA	0																				
+3654	카드의 정석 POINT CHECK	우리카드	check	https://www.banksalad.com/cards/3654/issue	BC(국내전용)	0	VISA	0	Master	0																		
+3656	신한카드 The ACE BLUE LABEL (스카이패스)	신한카드	credit	https://www.banksalad.com/cards/3656/issue	Union Pay	700000	VISA	705000																				
+3659	신한카드 Deep Dream Platinum+	신한카드	credit	https://www.banksalad.com/cards/3659/issue	Union Pay	30000	VISA	33000																				
+3661	1Q Daily+	하나카드	credit	https://www.banksalad.com/cards/3661/issue	JCB(One Way)	10000	VISA	12000	Master	12000	국내전용	10000																
+3665	신한카드 Deep Store	신한카드	credit	https://www.banksalad.com/cards/3665/issue	S&	13000	Master	16000																				
+3666	탄탄대로 Miz&Mr 티타늄카드	국민카드	credit	https://www.banksalad.com/cards/3666/issue	K-World(JCB)	30000	Master	30000																				
+3668	신한카드 The CLASSIC-Lite	신한카드	credit	https://www.banksalad.com/cards/3668/issue	Union Pay	97000	AMEX	100000																				
+3671	1Q Special+	하나카드	credit	https://www.banksalad.com/cards/3671/issue	JCB(One Way)	10000	VISA	12000	Master	12000																		
+3682	#tag 1 카드 Orange	하나카드	credit	https://www.banksalad.com/cards/3682/issue	Master	12000	Union Pay	12000																				
+3683	# tag 1 카드 Navy	하나카드	credit	https://www.banksalad.com/cards/3683/issue	Master	12000	Union Pay	12000																				
+3697	SOCAR 신한카드	신한카드	credit	https://www.banksalad.com/cards/3697/issue	S&	13000	VISA	16000																				
+3709	신한카드 Deep On Platinum+	신한카드	credit	https://www.banksalad.com/cards/3709/issue	Union Pay	30000	Master	33000																				
+3711	카드의 정석 L.POINT CHECK	우리카드	check	https://www.banksalad.com/cards/3711/issue	Master	0																						
+3717	카드의 정석 NEW우리V카드	우리카드	credit	https://www.banksalad.com/cards/3717/issue	Master	5000	VISA	5000	Union Pay	2000	BC Global	2000	BC	2000														
+3722	my pass 마패 카드	하나카드	credit	https://www.banksalad.com/cards/3722/issue	Union Pay	17000	Master	17000																				
+3724	탄탄대로 오토카드	국민카드	credit	https://www.banksalad.com/cards/3724/issue	K-World	50000	Master	50000																				
+3725	탄탄대로 올쇼핑카드	국민카드	credit	https://www.banksalad.com/cards/3725/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+3726	탄탄대로 올쇼핑 티타늄카드	국민카드	credit	https://www.banksalad.com/cards/3726/issue	Master	30000	K-World	30000																				
+3727	CLiP카드	국민카드	credit	https://www.banksalad.com/cards/3727/issue	Master	15000	K-World	15000																				
+3731	삼성페이 KB국민카드	국민카드	credit	https://www.banksalad.com/cards/3731/issue	K-World	15000	Master	15000																				
+3770	카카오페이 check	우리카드	check	https://www.banksalad.com/cards/3770/issue	VISA	0																						
+3772	카카오페이 KB국민 check	국민카드	check	https://www.banksalad.com/cards/3772/issue	국내전용	0	Master	0																				
+3777	1Q Global VIVA	하나카드	credit	https://www.banksalad.com/cards/3777/issue	국내전용	13000	Master	15000																				
+3785	Any PLUS 카드	하나카드	credit	https://www.banksalad.com/cards/3785/issue	JCB(One Way)	15000	Master	17000	Union Pay	17000																		
+3790	쇼핑앤조이카드	기업카드	credit	https://www.banksalad.com/cards/3790/issue	BC Global	10000																						
+3808	T-Premium KB국민카드	국민카드	credit	https://www.banksalad.com/cards/3808/issue	K-World(JCB)	25000	Master	25000																				
+3810	LG U+ 심플라이트카드	국민카드	credit	https://www.banksalad.com/cards/3810/issue	K-World(JCB)	15000	Master	15000																				
+3825	케이뱅크 X 네이버페이 check2	케이뱅크	check	https://www.banksalad.com/cards/3825/issue	국내전용	0	VISA	0																				
+3827	케이뱅크 X KT멤버십더블혜택 check	케이뱅크	check	https://www.banksalad.com/cards/3827/issue	VISA	0																						
+3828	투뿔카드	하나카드	credit	https://www.banksalad.com/cards/3828/issue	국내전용	18000	Master	20000																				
+3830	제주항공 Refresh Point 카드	기업카드	credit	https://www.banksalad.com/cards/3830/issue	BC Global	20000	Union Pay	22000	Master	22000																		
+3834	신한카드 The ACE BLUE LABEL (아시아나클럽)	신한카드	credit	https://www.banksalad.com/cards/3834/issue	Union Pay	700000	VISA	705000																				
+3840	코스트코 리워드 현대카드	현대카드	credit	https://www.banksalad.com/cards/3840/issue	국내전용	10000	VISA	10000																				
+3841	Young Youth check	국민카드	check	https://www.banksalad.com/cards/3841/issue	국내전용	0	Master	0																				
+3842	해피CU포인트 check	국민카드	check	https://www.banksalad.com/cards/3842/issue	국내전용	0	VISA	0	Master	0																		
+3843	LG/GS/LS/LIG패밀리 신한카드 RPM Platinum#	신한카드	credit	https://www.banksalad.com/cards/3843/issue	VISA	30000																						
+3844	예다함 카드	국민카드	credit	https://www.banksalad.com/cards/3844/issue	K-World(JCB)	15000	Master	15000																				
+3845	올바른GLOBALcheck	NH카드	check	https://www.banksalad.com/cards/3845/issue	Master	0																						
+3847	트레이더스신세계 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/3847/issue	국내전용	15000	Master	15000																				
+3848	THE 1 (Mercedes-Benz)	삼성카드	credit	https://www.banksalad.com/cards/3848/issue	국내전용	195000	AMEX	200000																				
+3849	CLUB Signature SKYPASS 카드	하나카드	credit	https://www.banksalad.com/cards/3849/issue	Union Pay	145000	VISA	150000																				
+3850	카드의 정석 하이마트	우리카드	credit	https://www.banksalad.com/cards/3850/issue	BC(국내전용)	13000	Master	18000																				
+3851	카드의 정석 PREMIUM POINT	우리카드	credit	https://www.banksalad.com/cards/3851/issue	BC(국내전용)	110000	Master	110000																				
+3852	카드의 정석 PREMIUM MILEAGE (SKYPASS)	우리카드	credit	https://www.banksalad.com/cards/3852/issue	BC(국내전용)	135000	Master	135000																				
+3853	카드의 정석 PREMIUM MILEAGE (AsianaClub)	우리카드	credit	https://www.banksalad.com/cards/3853/issue	BC(국내전용)	135000	Master	135000																				
+3854	신세계 신한카드 (Asiana Club)	신한카드	credit	https://www.banksalad.com/cards/3854/issue	Union Pay	42000	Master	45000																				
+3855	BS렌탈 하나카드	하나카드	credit	https://www.banksalad.com/cards/3855/issue	JCB(One Way)	13000	VISA	15000																				
+3856	SK매직 스페셜 롯데카드	롯데카드	credit	https://www.banksalad.com/cards/3856/issue	국내전용	12000	Master	15000																				
+3857	PAYCO taptap	삼성카드	credit	https://www.banksalad.com/cards/3857/issue	국내전용	9900	Master	9900																				
+3858	신한카드 YOLO ⓘ (미니언즈)	신한카드	credit	https://www.banksalad.com/cards/3858/issue	국내전용	15000	VISA	18000																				
+3859	신한카드 YOLO Tasty (미니언즈)	신한카드	credit	https://www.banksalad.com/cards/3859/issue	S&	10000	VISA	13000																				
+3860	GD카드(체크)	기업카드	check	https://www.banksalad.com/cards/3860/issue	Union Pay	0																						
+3861	K리그 축덕 하나멤버스 1Q Play1 카드	하나카드	credit	https://www.banksalad.com/cards/3861/issue	국내전용	10000	Master	12000																				
+3863	루비스톤 고객용 하나멤버스 Mega check	하나카드	check	https://www.banksalad.com/cards/3863/issue	VISA	0																						
+3864	카드의 정석 COOKIE CHECK	우리카드	check	https://www.banksalad.com/cards/3864/issue	Master	0																						
+3866	1Q My Lunch	하나카드	credit	https://www.banksalad.com/cards/3866/issue	국내전용	15000	Master	15000	VISA	17000																		
+3868	신한카드 Air One	신한카드	credit	https://www.banksalad.com/cards/3868/issue	S&	49000	AMEX	51000																				
+3869	신세계 씨티 클리어 카드	씨티카드	credit	https://www.banksalad.com/cards/3869/issue	국내전용	4000	VISA	5000																				
+3871	DGB세븐캐쉬백카드	대구은행	credit	https://www.banksalad.com/cards/3871/issue	BC(국내전용)	10000	Master	12000																				
+3872	KB국민 Easy pick카드	국민카드	credit	https://www.banksalad.com/cards/3872/issue	K-World(JCB)	20000	Master	20000	K-World(모바일단독)	14000	Master(모바일단독)	14000																
+3873	KB국민 Easy fly 티타늄카드	국민카드	credit	https://www.banksalad.com/cards/3873/issue	K-World(UPI)	35000	Master	35000																				
+3874	KB국민 Easy on카드	국민카드	credit	https://www.banksalad.com/cards/3874/issue	K-World(UPI)	20000	Master	20000	K-World(모바일단독)	14000	Master(모바일단독)	14000																
+3875	ROYAL BLUE POINT	우리카드	credit	https://www.banksalad.com/cards/3875/issue	BC(국내전용)	300000	VISA	300000	Master	300000																		
+3876	ROYAL BLUE MILEAGE (SKYPASS)	우리카드	credit	https://www.banksalad.com/cards/3876/issue	BC(국내전용)	330000	VISA	330000	Master	330000																		
+3877	ROYAL BLUE MILEAGE (AsianaClub)	우리카드	credit	https://www.banksalad.com/cards/3877/issue	BC(국내전용)	330000	VISA	330000	Master	330000																		
+3878	My flight SKYPASS 카드	하나카드	credit	https://www.banksalad.com/cards/3878/issue	Master	30000	VISA	35000	Master(가족)	10000	VISA(가족)	15000																
+3879	My flight SKYPASS Prime 카드	하나카드	credit	https://www.banksalad.com/cards/3879/issue	국내전용	100000	VISA	105000	국내전용(가족)	55000	VISA(가족)	60000																
+3880	My flight AsianaClub 카드	하나카드	credit	https://www.banksalad.com/cards/3880/issue	Master	30000	VISA	35000	Master(가족)	10000	VISA(가족)	15000																
+3881	KB국민 Easy auto 티타늄카드	국민카드	credit	https://www.banksalad.com/cards/3881/issue	K-World(JCB)	30000	Master	30000																				
+3882	LG U+ 스마트플랜 신한카드 BigPlus	신한카드	credit	https://www.banksalad.com/cards/3882/issue	BC	12000	Master	15000																				
+3885	신한카드 Deep Dream 체크 (미니언즈)	신한카드	check	https://www.banksalad.com/cards/3885/issue	VISA	0	Union Pay	0																				
+3886	PAYCO 하나 check	하나카드	check	https://www.banksalad.com/cards/3886/issue	국내전용	0	VISA	0																				
+3887	Real! Wide check	수협	check	https://www.banksalad.com/cards/3887/issue	국내전용	0	Master	0																				
+3888	현대카드 MY BUSINESS ZERO (포인트형)	현대카드	credit	https://www.banksalad.com/cards/3888/issue	국내전용	10000	Union Pay	10000	VISA	15000																		
+3889	홈플러스 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/3889/issue	국내전용	15000	VISA	15000																				
+3890	오버액션 노리 check(오버토끼)	국민카드	check	https://www.banksalad.com/cards/3890/issue	국내전용	0	Master	0																				
+3891	ONE AIR (UniMile)	기업카드	credit	https://www.banksalad.com/cards/3891/issue	국내전용	10000	Union Pay	10000																				
+3892	오버액션 노리 check(꼬마토끼)	국민카드	check	https://www.banksalad.com/cards/3892/issue	국내전용	0	Master	0																				
+3893	골든대로 check	국민카드	check	https://www.banksalad.com/cards/3893/issue	국내전용	0	Master	0																				
+3894	T라이트카드	NH카드	credit	https://www.banksalad.com/cards/3894/issue	JCB	15000	VISA	17000																				
+3895	펫블리(PETvely) 카드	NH카드	credit	https://www.banksalad.com/cards/3895/issue	Union Pay	23000	Master	25000																				
+3896	엘포인트카드(비씨)	NH카드	credit	https://www.banksalad.com/cards/3896/issue	Union Pay	15000																						
+3897	KT수퍼할부카드(비씨)	NH카드	credit	https://www.banksalad.com/cards/3897/issue	Union Pay	15000																						
+3898	경남 청년드림카드	NH카드	check	https://www.banksalad.com/cards/3898/issue	VISA	0																						
+3899	전자랜드 삼성카드 3 V2	삼성카드	credit	https://www.banksalad.com/cards/3899/issue	국내전용	13000	Master	13000	Union Pay	13000																		
+3900	카드의 정석 UniMile	우리카드	credit	https://www.banksalad.com/cards/3900/issue	BC(국내전용)	20000	Union Pay	20000																				
+3901	넥슨 던전앤파이터 check	하나카드	check	https://www.banksalad.com/cards/3901/issue	국내전용	0	VISA	0																				
+3902	넥슨 메이플스토리 check	하나카드	check	https://www.banksalad.com/cards/3902/issue	국내전용	0	VISA	0																				
+3903	뇌새김 하나카드	하나카드	credit	https://www.banksalad.com/cards/3903/issue	Union Pay	15000	VISA	17000	Master	15000																		
+3904	리틀프렌즈 check	하나카드	check	https://www.banksalad.com/cards/3904/issue	국내전용	0																						
+3905	신세계 하나 check	하나카드	check	https://www.banksalad.com/cards/3905/issue	국내전용	0	VISA	0																				
+3906	평생교육희망카드 (비씨)	NH카드	check	https://www.banksalad.com/cards/3906/issue	BC(국내전용)	0																						
+3907	아이스크림 홈런카드	하나카드	credit	https://www.banksalad.com/cards/3907/issue	국내전용	0																						
+3908	인슈 플러스 하나카드	하나카드	credit	https://www.banksalad.com/cards/3908/issue	JCB(One Way)	13000	VISA	15000																				
+3909	하나로마트 하나카드	하나카드	credit	https://www.banksalad.com/cards/3909/issue	VISA	18000	JCB(One Way)	15000																				
+3910	카드의 정석 CREAM TEENS CHECK	우리카드	check	https://www.banksalad.com/cards/3910/issue	BC	0																						
+3911	위니아대우 스마트 우리카드	우리카드	credit	https://www.banksalad.com/cards/3911/issue	Master	15000	국내전용	12000																				
+3912	삼성카드 SFC 6 V3	삼성카드	credit	https://www.banksalad.com/cards/3912/issue	Master	20000	Union Pay	20000																				
+3913	성남시 아동수당 신한카드 Deep Dream 체크	신한카드	check	https://www.banksalad.com/cards/3913/issue	Union Pay	0	VISA	0																				
+3914	청년농업희망check (비씨)	NH카드	check	https://www.banksalad.com/cards/3914/issue	BC(국내전용)	0																						
+3915	라이프파트너 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/3915/issue	국내전용	20000	Master	20000																				
+3916	전우사랑 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/3916/issue	국내전용	10000	Master	10000																				
+3917	광역알뜰교통 신한카드	신한카드	credit	https://www.banksalad.com/cards/3917/issue	Union Pay	12000	Master	15000																				
+3918	카카오 T 하나카드	하나카드	credit	https://www.banksalad.com/cards/3918/issue	국내전용	20000	Master	22000																				
+3919	서울대학교 CHECK	우리카드	check	https://www.banksalad.com/cards/3919/issue	Master	0	국내전용	0																				
+3920	LoL CHAMPIONS KOREA 우리check	우리카드	check	https://www.banksalad.com/cards/3920/issue	Master	0	국내전용	0																				
+3921	한베가족 썸(SUM)타는 우리 check	우리카드	check	https://www.banksalad.com/cards/3921/issue	BC(국내전용)	0	Master	0																				
+3924	현대모비스Family-현대카드M2 Platinum (사원증)	현대카드	credit	https://www.banksalad.com/cards/3924/issue	VISA	30000	Master	30000																				
+3925	카드의 정석 WOWRI	우리카드	credit	https://www.banksalad.com/cards/3925/issue	BC(국내전용)	10000	VISA	12000	Master	12000																		
+3926	카카오페이 신한 check (무지)	신한카드	check	https://www.banksalad.com/cards/3926/issue	Master	0																						
+3927	KB국민 선생님든든 카드	국민카드	credit	https://www.banksalad.com/cards/3927/issue	K-World(JCB)	15000	Master	15000																				
+3928	경기도청 패밀리 삼성카드 4 (포인트)	삼성카드	credit	https://www.banksalad.com/cards/3928/issue	국내전용	10000	Master	12000																				
+3929	THE BOON VIP 신한카드	신한카드	credit	https://www.banksalad.com/cards/3929/issue	국내전용	47000	VISA	50000																				
+3930	육군사관학교 학생증 KB국민 해피노리 check	국민카드	check	https://www.banksalad.com/cards/3930/issue	국내전용	0	VISA	0	Master	0	Union Pay	0																
+3931	신한카드 Deep On 체크	신한카드	check	https://www.banksalad.com/cards/3931/issue	국내전용	0	Master	0																				
+3933	광역알뜰교통 우리카드 (체크)	우리카드	check	https://www.banksalad.com/cards/3933/issue	국내전용	0	Master	0																				
+3934	K리그 축덕 Young Hana check with OKcashbag	하나카드	check	https://www.banksalad.com/cards/3934/issue	Master	0																						
+3935	카드의 정석 UniMile CHECK	우리카드	check	https://www.banksalad.com/cards/3935/issue	BC(국내전용)	0	Union Pay	0																				
+3936	이마트 KB국민카드(DISCOUNT STORE)	국민카드	credit	https://www.banksalad.com/cards/3936/issue	국내전용	5000	VISA	10000	Master	10000	JCB	10000	AMEX	10000														
+3937	LG전자 렌탈 플러스 하나카드	하나카드	credit	https://www.banksalad.com/cards/3937/issue	Union Pay	15000	Master	15000	VISA	20000																		
+3938	부자되세요 더 오일카드	대구은행	credit	https://www.banksalad.com/cards/3938/issue	Union Pay	10000	VISA	13000																				
+3939	신한카드 Deep ECO	신한카드	credit	https://www.banksalad.com/cards/3939/issue	국내전용	13000	S&	13000	VISA	16000																		
+3941	KB국민 FINETECH카드(대한항공)	국민카드	credit	https://www.banksalad.com/cards/3941/issue	국내전용	20000	Master	25000	국내전용(모바일단독)	14000	Master(모바일단독)	19000																
+3942	KB국민 Easy fly 티타늄카드	국민카드	credit	https://www.banksalad.com/cards/3942/issue	K-World(UPI)	35000	Master	35000																				
+3943	KB국민 청춘대로 매니아i카드	국민카드	credit	https://www.banksalad.com/cards/3943/issue	K-World(UPI)	12000	Master	15000																				
+3945	신한카드 Deep Dream Platinum+ (미니언즈)	신한카드	credit	https://www.banksalad.com/cards/3945/issue	VISA	33000																						
+3946	신한카드 S-Line 체크 (미니언즈)	신한카드	check	https://www.banksalad.com/cards/3946/issue	VISA	0																						
+3947	신세계사이먼 프리미엄 아울렛 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/3947/issue	국내전용	20000	Master	20000																				
+3948	쇼핑앤조이 카드	기업카드	credit	https://www.banksalad.com/cards/3948/issue	BC Global	10000																						
+3951	I’m GREAT	롯데카드	credit	https://www.banksalad.com/cards/3951/issue	국내전용	15000	Master	15000	VISA	15000	AMEX	15000																
+3953	SSG.COM카드	현대카드	credit	https://www.banksalad.com/cards/3953/issue	국내전용	20000	VISA	20000																				
+3957	MG새마을금고 카드의 정석 POINT	우리카드	credit	https://www.banksalad.com/cards/3957/issue	BC	10000	VISA	12000	Master	12000																		
+3958	한국전력공사 복지 신한카드 Love	신한카드	credit	https://www.banksalad.com/cards/3958/issue	Master	10000																						
+3959	신한카드 The BEST+ (대한항공)	신한카드	credit	https://www.banksalad.com/cards/3959/issue	URS	295000	VISA	300000	Master	300000																		
+3960	신한카드 The BEST+ (아시아나항공)	신한카드	credit	https://www.banksalad.com/cards/3960/issue	URS	295000	VISA	300000	Master	300000																		
+3961	SOL Deep Dream 신한카드 체크	신한카드	check	https://www.banksalad.com/cards/3961/issue	VISA	0	Union Pay	0																				
+3962	신한카드 B.Big(삑)	신한카드	credit	https://www.banksalad.com/cards/3962/issue	S&	10000	Union Pay	10000	VISA	13000																		
+3964	I＇m Powerful	롯데카드	credit	https://www.banksalad.com/cards/3964/issue	국내전용	15000	Master	15000	AMEX	15000																		
+3965	올바른 POINT UP +	NH카드	credit	https://www.banksalad.com/cards/3965/issue	JCB	23000	Master	25000																				
+3968	I＇m ACTIVE	롯데카드	credit	https://www.banksalad.com/cards/3968/issue	국내전용	15000	Master	15000	AMEX	15000																		
+3969	I＇m YOLO 플래티넘	롯데카드	credit	https://www.banksalad.com/cards/3969/issue	국내전용	48000	Master	50000																				
+3970	I＇m Wonderful Plus	롯데카드	credit	https://www.banksalad.com/cards/3970/issue	국내전용	15000	Master	15000	AMEX	15000																		
+3972	D4@카드의정석	우리카드	credit	https://www.banksalad.com/cards/3972/issue	BC(국내전용)	9000	Master	10000																				
+3973	삼성카드 2 V4	삼성카드	credit	https://www.banksalad.com/cards/3973/issue	국내전용	20000	Master	20000																				
+3976	삼성카드 5 V4	삼성카드	credit	https://www.banksalad.com/cards/3976/issue	국내전용	39000	Master	39000																				
+3978	카카오뱅크 KB국민카드	국민카드	credit	https://www.banksalad.com/cards/3978/issue	국내전용	15000	Master	15000																				
+3979	카카오뱅크 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/3979/issue	국내전용	7000	Master	7000	VISA	7000																		
+3980	펭수 노리 check(펭카)	국민카드	check	https://www.banksalad.com/cards/3980/issue	국내전용	0	VISA	0																				
+3981	LOCA Classic	롯데카드	credit	https://www.banksalad.com/cards/3981/issue	국내전용	20000	Master	20000																				
+3987	LOCA PLATINUM 할인형	롯데카드	credit	https://www.banksalad.com/cards/3987/issue	국내전용	100000	Master	100000																				
+3991	카드의정석 UNTACT	우리카드	credit	https://www.banksalad.com/cards/3991/issue	BC(국내전용)	12000	Master(해외전용)	12000																				
+3992	카드의정석 UNTACT PLATINUM	우리카드	credit	https://www.banksalad.com/cards/3992/issue	BC	25000	Master	25000																				
+3996	DailyWith 데일리위드 카드	기업카드	credit	https://www.banksalad.com/cards/3996/issue	BC	10000	Master	12000	Union Pay	12000																		
+3999	신한카드 Deep Dream	신한카드	credit	https://www.banksalad.com/cards/3999/issue	VISA	10000	Union Pay(국내전용)	8000																				
+4000	롤라 카드	롯데카드	credit	https://www.banksalad.com/cards/4000/issue	국내전용	15000	Master	15000																				
+4001	뱅크샐러드 빨대카드	롯데카드	credit	https://www.banksalad.com/cards/4001/issue	국내전용	20000	Master	20000	VISA	20000	AMEX	20000																
+4002	LOCA MONEY	롯데카드	credit	https://www.banksalad.com/cards/4002/issue	국내전용	20000	Master	20000	VISA	20000	AMEX	20000																
+4003	LOCA 100	롯데카드	credit	https://www.banksalad.com/cards/4003/issue	국내전용	20000	Master	20000	VISA	20000	AMEX	20000																
+4004	MULTI Young 모바일카드	하나카드	credit	https://www.banksalad.com/cards/4004/issue	국내전용	12000	VISA(국내외겸용)	12000																				
+4006	토스 credit	하나카드	credit	https://www.banksalad.com/cards/4006/issue	국내전용	10000	VISA	10000																				
+4009	신한카드 Unboxing	신한카드	credit	https://www.banksalad.com/cards/4009/issue	국내전용	32000	AMEX	35000																				
+4010	신한카드 Unboxing	신한카드	hybrid	https://www.banksalad.com/cards/4010/issue	국내전용	0																						
+4012	성남사랑 신한카드 Deep Dream 체크	신한카드	check	https://www.banksalad.com/cards/4012/issue	VISA	0	Union Pay	0																				
+4013	신한플러스 멤버십 체크	신한카드	check	https://www.banksalad.com/cards/4013/issue	국내전용	0	Master	0																				
+4016	LOCA LIKIT	롯데카드	credit	https://www.banksalad.com/cards/4016/issue	국내전용	10000	Master	10000																				
+4053	The Easy카드(적립형)	국민카드	credit	https://www.banksalad.com/cards/4053/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+4054	The Easy카드(할인형)	국민카드	credit	https://www.banksalad.com/cards/4054/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+4056	현대카드ZERO Edition2(할인형)	현대카드	credit	https://www.banksalad.com/cards/4056/issue	국내전용	10000	Master(Platinum)	10000	VISA(Platinum)	10000	AMEX	10000																
+4057	대한항공카드 150	현대카드	credit	https://www.banksalad.com/cards/4057/issue	Master	150000	국내전용	150000																				
+4058	My Trip 1Q Global VIVA	하나카드	credit	https://www.banksalad.com/cards/4058/issue	국내전용	13000	Master	15000																				
+4059	T 라이트 삼성카드	삼성카드	credit	https://www.banksalad.com/cards/4059/issue	국내전용	25000	VISA	25000																				
+4060	국민행복 삼성카드 V2	삼성카드	credit	https://www.banksalad.com/cards/4060/issue	국내전용	0	Master	0																				
+4061	신한 국민행복카드[체크]	신한카드	check	https://www.banksalad.com/cards/4061/issue	국내전용	0	VISA	0																				
+4062	신한 국민행복카드[신용]	신한카드	credit	https://www.banksalad.com/cards/4062/issue	국내전용	0	VISA	0																				
+4063	NEW 씨티 클리어 카드	씨티카드	credit	https://www.banksalad.com/cards/4063/issue	국내전용	4000	VISA(국내외겸용)	5000	Master(국내외겸용)	5000																		
+4064	현대카드 DIGITAL LOVER	현대카드	credit	https://www.banksalad.com/cards/4064/issue	국내전용	20000	VISA	20000																				
+4065	현대카드ZERO Edition2(포인트형)	현대카드	credit	https://www.banksalad.com/cards/4065/issue	국내전용	10000	Master(Platinum)	10000	VISA(Platinum)	10000	AMEX	10000																
+4066	현대카드ZERO MOBILE Edition2(할인형)	현대카드	credit	https://www.banksalad.com/cards/4066/issue	국내전용	10000	Master(Platinum)	10000	VISA(Platinum)	10000	AMEX	10000																
+4068	현대카드ZERO MOBILE Edition2(포인트형)	현대카드	credit	https://www.banksalad.com/cards/4068/issue	국내전용	10000	Master(Platinum)	10000	VISA(Platinum)	10000	AMEX	10000																
+4069	현대카드Z family	현대카드	credit	https://www.banksalad.com/cards/4069/issue	국내전용	10000	VISA	10000	Master	10000																		
+4070	현대카드Z ontact	현대카드	credit	https://www.banksalad.com/cards/4070/issue	국내전용	10000	VISA	10000	Master	10000																		
+4071	현대카드Z work	현대카드	credit	https://www.banksalad.com/cards/4071/issue	국내전용	10000	VISA	10000	Master	10000																		
+4072	현대카드X BOOST	현대카드	credit	https://www.banksalad.com/cards/4072/issue	VISA	30000	Master	30000	국내전용	30000																		
+4073	현대카드 M BOOST	현대카드	credit	https://www.banksalad.com/cards/4073/issue	국내전용	30000	VISA	30000	Master	30000																		
+4074	현대카드 M2 BOOST	현대카드	credit	https://www.banksalad.com/cards/4074/issue	국내전용	60000	VISA	60000	Master	60000																		
+4075	the Pink	현대카드	credit	https://www.banksalad.com/cards/4075/issue	국내전용	150000	VISA	150000	Master	150000																		
+4076	현대카드 M3 BOOST	현대카드	credit	https://www.banksalad.com/cards/4076/issue	국내전용	90000	VISA	90000	Master	90000																		
+4077	현대카드X2 BOOST	현대카드	credit	https://www.banksalad.com/cards/4077/issue	국내전용	60000	VISA	60000	Master	60000																		
+4078	현대카드X3 BOOST	현대카드	credit	https://www.banksalad.com/cards/4078/issue	국내전용	90000	VISA	90000	Master	90000																		
+4079	현대카드 the Green Edition2	현대카드	credit	https://www.banksalad.com/cards/4079/issue	국내전용	150000	VISA	150000	Master	150000																		
+4080	the Red Edition5 (포인트형)	현대카드	credit	https://www.banksalad.com/cards/4080/issue	국내전용	300000	VISA	300000	Master	300000																		
+4081	the Red Edition5 (항공 마일리지형)	현대카드	credit	https://www.banksalad.com/cards/4081/issue	국내전용	300000	VISA	300000	Master	300000																		
+4082	KB국민 해외에선 check	국민카드	check	https://www.banksalad.com/cards/4082/issue	국내전용	0	Master	0																				
+4083	삼성 iD ON 카드	삼성카드	credit	https://www.banksalad.com/cards/4083/issue	국내전용	20000	Master	20000																				
+4084	카드의정석 NEW우리V카드	우리카드	credit	https://www.banksalad.com/cards/4084/issue	BC	2000	Master	5000	VISA	5000	Union Pay	2000																
+4085	네이버 현대카드	현대카드	credit	https://www.banksalad.com/cards/4085/issue	국내전용	10000	VISA	10000																				
+4087	스타벅스 현대카드	현대카드	credit	https://www.banksalad.com/cards/4087/issue	국내전용	0																						
+4088	카드의정석 우리Vcheck	우리카드	check	https://www.banksalad.com/cards/4088/issue	BC	0	Master	0	VISA	0																		
+4089	올바른 FLEX 카드	NH카드	credit	https://www.banksalad.com/cards/4089/issue	국내전용	10000	VISA	12000																				
+4091	LGU+ 카드의정석 Ⅱ	우리카드	credit	https://www.banksalad.com/cards/4091/issue	BC	20000	Master	20000																				
+4092	MULTI On 모바일카드	하나카드	credit	https://www.banksalad.com/cards/4092/issue	국내전용	12000	VISA	12000																				
+4093	toss KB국민카드	국민카드	credit	https://www.banksalad.com/cards/4093/issue	국내전용	20000	Master	20000																				
+4095	K리그 축덕 하나멤버스 1Q Play1 카드	하나카드	credit	https://www.banksalad.com/cards/4095/issue	국내전용	10000	Master	12000																				
+4096	369청춘불패 오포인트카드	부산은행	check	https://www.banksalad.com/cards/4096/issue	BC Global	0																						
+4097	펭수 노리 check(펭요미)	국민카드	check	https://www.banksalad.com/cards/4097/issue	국내전용	0	VISA	0																				
+4098	11번가 신한카드	신한카드	credit	https://www.banksalad.com/cards/4098/issue	Master	8000	S&	5000																				
+4099	신한카드 The CLASSIC-S	신한카드	credit	https://www.banksalad.com/cards/4099/issue	국내전용	97000	VISA	100000	Master	100000																		
+4100	첵첵check	국민카드	check	https://www.banksalad.com/cards/4100/issue	국내전용	0	VISA	0	Master	0																		
+4101	위글위글 첵첵 check	국민카드	check	https://www.banksalad.com/cards/4101/issue	국내전용	0	VISA	0																				
+4102	CLUB Signature Asiana Club 카드	하나카드	credit	https://www.banksalad.com/cards/4102/issue	Union Pay	145000	VISA	150000																				
+4103	하나 스카이패스 아멕스 플래티늄 카드	하나카드	credit	https://www.banksalad.com/cards/4103/issue	AMEX	45000																						
+4104	CLUB Premier Hotel 카드	하나카드	credit	https://www.banksalad.com/cards/4104/issue	VISA	210000	JCB	200000																				
+4105	CLUB Premier Travel 카드	하나카드	credit	https://www.banksalad.com/cards/4105/issue	VISA	210000	JCB	200000																				
+4106	모두의 신세계 하나카드	하나카드	credit	https://www.banksalad.com/cards/4106/issue	국내전용	12000	VISA(국내외겸용)	12000																				
+4107	모두의 건강	하나카드	credit	https://www.banksalad.com/cards/4107/issue	국내전용(모바일단독)	15000	VISA(모바일단독)	15000	국내전용	20000	VISA	20000																
+4108	MULTI Oil 모바일카드	하나카드	credit	https://www.banksalad.com/cards/4108/issue	국내전용	15000	VISA(국내외겸용)	15000																				
+4109	국민 행복 카드	하나카드	credit	https://www.banksalad.com/cards/4109/issue	국내전용	0	VISA(국내외겸용)	0	Master(국내외겸용)	0																		
+4110	MULTI Living 모바일카드	하나카드	credit	https://www.banksalad.com/cards/4110/issue	국내전용	12000	VISA(국내외겸용)	12000																				
+4111	MULTI Any 모바일카드	하나카드	credit	https://www.banksalad.com/cards/4111/issue	국내전용	12000	VISA(국내외겸용)	12000																				
+4112	하나원큐카드	하나카드	credit	https://www.banksalad.com/cards/4112/issue	국내전용	15000	VISA	15000																				
+4113	1Q Special+	하나카드	credit	https://www.banksalad.com/cards/4113/issue	국내전용	10000	One Way	10000	VISA	12000	Master	12000																
+4114	하나멤버스 1Q 카드 내맘대로	하나카드	credit	https://www.banksalad.com/cards/4114/issue	One Way	10000	VISA	12000																				
+4115	모두의 쇼핑	하나카드	credit	https://www.banksalad.com/cards/4115/issue	국내전용	15000	VISA	15000																				
+4116	My Trip AsianaClub 카드 My flight	하나카드	credit	https://www.banksalad.com/cards/4116/issue	Master(국내외겸용)	30000	VISA(국내외겸용)	35000																				
+4117	My Trip SKYPASS 카드 My flight	하나카드	credit	https://www.banksalad.com/cards/4117/issue	Master(국내외겸용)	30000	VISA(국내외겸용)	35000																				
+4118	톡톡 with 토스 카드	국민카드	credit	https://www.banksalad.com/cards/4118/issue	국내전용	12000	VISA(모바일단독)	6000	국내전용	12000	VISA(모바일단독)	6000																
+4119	CLUB Primus Skypass 카드	하나카드	credit	https://www.banksalad.com/cards/4119/issue	VISA(국내외겸용)	100000	Master(국내외겸용)	100000																				
+4121	LOCA LIKIT 1.2	롯데카드	credit	https://www.banksalad.com/cards/4121/issue	국내전용	10000	Master	10000	AMEX	10000																		
+4137	IBK 무직타이거 카드(신용)	기업카드	credit	https://www.banksalad.com/cards/4137/issue	BC	10000	Master	12000																				
+4141	I＇m WONDERFUL 플래티넘	롯데카드	credit	https://www.banksalad.com/cards/4141/issue	국내전용	35000	Master	35000																				
+4142	I＇m DRIVING	롯데카드	credit	https://www.banksalad.com/cards/4142/issue	국내전용	18000	Master	18000	VISA	18000	AMEX	18000																
+4144	현대백화점카드	현대백화점	credit	https://www.banksalad.com/cards/4144/issue	국내전용	0																						
+4145	현대백화점 Fit카드	현대백화점	credit	https://www.banksalad.com/cards/4145/issue	국내전용	0																						
+4146	KB국민 톡톡 F카드	국민카드	credit	https://www.banksalad.com/cards/4146/issue	국내전용	12000	Master	12000	국내전용(모바일단독)	6000	Master(모바일단독)	6000																
+4147	KB국민 톡톡 M카드	국민카드	credit	https://www.banksalad.com/cards/4147/issue	국내전용	12000	Master	12000	국내전용(모바일단독)	6000	Master(모바일단독)	6000																
+4148	KB국민 톡톡 O카드	국민카드	credit	https://www.banksalad.com/cards/4148/issue	국내전용	12000	Master	12000	국내전용(모바일단독)	6000	Master(모바일단독)	6000																
+4149	KB국민 톡톡 D카드	국민카드	credit	https://www.banksalad.com/cards/4149/issue	국내전용	12000	Master	12000	국내전용(모바일단독)	6000	Master(모바일단독)	6000																
+4158	후불하이패스 카드	하나카드	credit	https://www.banksalad.com/cards/4158/issue	국내전용	3000																						
+4174	현대카드 후불하이패스카드	현대카드	credit	https://www.banksalad.com/cards/4174/issue	국내전용	2000																						
+4176	내맘대로 쁨 카드	하나카드	credit	https://www.banksalad.com/cards/4176/issue	국내전용	12000	Master	12000																				
+4185	올바른BAZIC카드	NH카드	credit	https://www.banksalad.com/cards/4185/issue	JCB	12000	Master	14000																				
+4186	올바른 OIL&PASS카드	NH카드	credit	https://www.banksalad.com/cards/4186/issue	국내전용	13000	Master	15000																				
+4187	올바른 MYPICK 카드	NH카드	credit	https://www.banksalad.com/cards/4187/issue	국내전용	13000	Union Pay	13000	VISA	15000																		
+4188	올바른 하나로카드	NH카드	credit	https://www.banksalad.com/cards/4188/issue	국내전용	13000	JCB	13000	Master	15000																		
+4189	별다줄카드	NH카드	credit	https://www.banksalad.com/cards/4189/issue	국내전용	12000	VISA	14000																				
+4190	올바른 NEW HAVE카드	NH카드	credit	https://www.banksalad.com/cards/4190/issue	국내전용	12000	Master	12000																				
+4191	탐나는전 check	국민카드	check	https://www.banksalad.com/cards/4191/issue	국내전용	0																						
+4192	해피리워드 check	국민카드	check	https://www.banksalad.com/cards/4192/issue	국내전용	0	VISA	0																				
+4193	첵첵 check	국민카드	check	https://www.banksalad.com/cards/4193/issue	국내전용	0	Master	0	VISA	0																		
+4195	그린재킷 check	국민카드	check	https://www.banksalad.com/cards/4195/issue	국내전용	0	VISA	0																				
+4196	kt-현대카드M Edition3 (청구할인형)	현대카드	credit	https://www.banksalad.com/cards/4196/issue	국내전용	30000	VISA	30000	Master	30000																		
+4197	카카오페이 신한 콘 체크	신한카드	check	https://www.banksalad.com/cards/4197/issue	국내전용	0	Master	0																				
+6001	탄탄대로 Miz&Mr카드(블루팩)	국민카드	credit	https://www.banksalad.com/cards/3637/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+6002	탄탄대로 Miz&Mr카드(퍼플팩)	국민카드	credit	https://www.banksalad.com/cards/3637/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+6003	탄탄대로 Miz&Mr카드(웨딩팩)	국민카드	credit	https://www.banksalad.com/cards/3637/issue	K-World	15000	Master	15000	K-World(모바일단독)	9000	Master(모바일단독)	9000																
+6011	"Easy ring 티타늄카드(온라인쇼핑, 대형마트)"	국민카드	credit	https://www.banksalad.com/cards/3998/issue	국내전용	30000	Master	30000	국내전용(모바일단독)	24000	Master(모바일단독)	24000																
+6012	"Easy ring 티타늄카드(온라인쇼핑, 커피, 편의점, 베이커리)"	국민카드	credit	https://www.banksalad.com/cards/3998/issue	국내전용	30000	Master	30000	국내전용(모바일단독)	24000	Master(모바일단독)	24000																
+6013	"Easy ring 티타늄카드(온라인쇼핑, 주유)"	국민카드	credit	https://www.banksalad.com/cards/3998/issue	국내전용	30000	Master	30000	국내전용(모바일단독)	24000	Master(모바일단독)	24000																
+6014	"Easy ring 티타늄카드(대형마트, 커피, 편의점, 베이커리)"	국민카드	credit	https://www.banksalad.com/cards/3998/issue	국내전용	30000	Master	30000	국내전용(모바일단독)	24000	Master(모바일단독)	24000																
+6015	"Easy ring 티타늄카드(대형마트, 주유)"	국민카드	credit	https://www.banksalad.com/cards/3998/issue	국내전용	30000	Master	30000	국내전용(모바일단독)	24000	Master(모바일단독)	24000																
+6016	"Easy ring 티타늄카드(커피, 편의점, 베이커리, 주유)"	국민카드	credit	https://www.banksalad.com/cards/3998/issue	국내전용	30000	Master	30000	국내전용(모바일단독)	24000	Master(모바일단독)	24000																
+6021	Easy link 티타늄카드(패밀리팩)	국민카드	credit	https://www.banksalad.com/cards/4094/issue	국내전용	30000	Union Pay	31000	Master	32000																		
+6022	Easy link 티타늄카드(사업자팩)	국민카드	credit	https://www.banksalad.com/cards/4094/issue	국내전용	30000	Union Pay	31000	Master	32000																		
+6023	Easy link 티타늄카드(직장인팩)	국민카드	credit	https://www.banksalad.com/cards/4094/issue	국내전용	30000	Union Pay	31000	Master	32000																		
+																												

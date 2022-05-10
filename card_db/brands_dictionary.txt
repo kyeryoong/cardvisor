@@ -1,0 +1,160 @@
+transport_bus,버스
+transport_subway,지하철
+transport_taxi,택시
+transport_korail,KORAIL
+transport_srt,SRT
+transport_arex,코레일공항철도
+communication_skt,SK텔레콤
+communication_kt,KT
+communication_lgu,LG유플러스
+communication_ktinternet,KT olleh 인터넷
+communication_sktinternet,SKT 인터넷
+communication_lguinternet,LG U+ 인터넷
+communication_sktiptv,SKT IPTV
+communication_ktiptv,KT IP-TV
+communication_lguiptv,LG U+ IPTV
+communication_sktintphone,SKT 인터넷전화
+communication_ktintphone,KT 인터넷전화
+communication_lguintphone,LG U+ 인터넷전화
+mart_emart,이마트
+mart_homeplus,홈플러스
+mart_lottemart,롯데마트
+mart_nhhanaro,농협하나로마트
+mart_emarttraders,이마트 트레이더스
+mart_vicmarket,VIC 마켓
+mart_hanaroclub,하나로클럽
+mart_costco,코스트코
+mart_homeplusexpress,홈플러스익스프레스
+mart_emarteveryday,이마트 에브리데이
+mart_gsmart,GS마트
+mart_lottesuper,롯데슈퍼
+mart_gsthefresh,GS THE FRESH
+convstore_gs25,GS25
+convstore_cu,CU
+convstore_seveneleven,세븐일레븐
+convstore_ministop,미니스톱
+convstore_emart24,이마트24
+convstore_buytheway,바이더웨이
+movies_cgv,CGV
+movies_lottecinema,롯데시네마
+movies_megabox,메가박스
+movies_cgvonline,CGV 온라인
+movies_megaboxonline,메가박스 온라인
+movies_lottecinemaonline,롯데시네마 온라인
+movies_ticketlinkmovie,티켓링크 영화
+movies_interparkmovie,인터파크 영화
+movies_yes24movie,YES24 영화
+movies_navermovie,네이버영화
+movies_maxmovie,맥스무비
+entertainment_netflix,넷플릭스
+entertainment_youtubepremium,유튜브 프리미엄
+entertainment_watcha,왓챠
+entertainment_wavve,웨이브
+entertainment_melon,멜론
+entertainment_genie,genie
+deptstore_shinsegaedept,신세계백화점
+deptstore_lottedept,롯데백화점
+deptstore_hyundaidept,현대백화점
+deptstore_galleriadept,갤러리아 백화점
+deptstore_akplazadept,AK플라자 백화점
+deptstore_lotteyoungplaza,롯데영플라자
+deptstore_hyundaiuplex,현대백화점 U-PLEX
+deptstore_dcubedept,디큐브백화점
+deptstore_newcoredept,뉴코아백화점
+onlineshopping_11st,11번가
+onlineshopping_gmarket,G마켓
+onlineshopping_auction,옥션
+onlineshopping_navershopping,네이버쇼핑
+onlineshopping_interpark,인터파크
+onlineshopping_gsshop,GS SHOP
+onlineshopping_lottecom,롯데닷컴
+onlineshopping_lotteimall,롯데아이몰
+onlineshopping_ssgcom,SSG닷컴
+onlineshopping_shinsegaemall,신세계몰
+onlineshopping_akmall,AK몰
+onlineshopping_emartmall,이마트몰
+onlineshopping_hyundaihmall,현대Hmall
+onlineshopping_coupang,쿠팡
+onlineshopping_wemakeprice,위메프
+onlineshopping_tmon,티몬
+easypay_naverpay,네이버페이
+easypay_kakaopay,카카오페이
+easypay_samsungpay,삼성페이
+cafebakery_starbucks,스타벅스
+cafebakery_starbuckssirenorder,스타벅스 APP 사이렌오더
+cafebakery_twosomeplace,투썸플레이스
+cafebakery_ediyacoffee,이디야커피
+cafebakery_hollyscoffee,할리스커피
+cafebakery_cafebene,카페베네
+cafebakery_tomntoms,탐앤탐스
+cafebakery_angelinus,엔제리너스
+cafebakery_gongcha,공차
+cafebakery_passcucci,파스쿠찌
+cafebakery_coffeebean,커피빈
+cafebakery_paulbassett,폴 바셋
+cafebakery_baskinrobbins,배스킨라빈스 31
+cafebakery_natuur,나뚜루
+cafebakery_dunkindonuts,던킨도너츠
+cafebakery_krispykreme,크리스피크림
+cafebakery_misterdonut,미스터도넛
+cafebakery_smoothieking,스무디킹
+cafebakery_parisbaguette,파리바게뜨
+cafebakery_touslesjours,뚜레쥬르
+cafebakery_pariscroissant,파리크라상
+beauty_oliveyoung,올리브영
+beauty_lalavla,랄라블라
+beauty_lohbs,롭스
+dining_outback,아웃백스테이크하우스
+dining_tgif,T.G.I.F
+dining_sevensprings,세븐스프링스
+dining_vips,VIPS
+dining_ashely,애슐리
+dining_madforgarlic,매드포갈릭
+dining_bennigans,베니건스
+dining_mcdonalds,맥도날드
+dining_burgerking,버거킹
+dining_lotteria,롯데리아
+dining_kfc,KFC
+dining_subway,써브웨이
+dining_innoutburger,인앤아웃버거
+dining_nobrandburger,노브랜드버거
+dining_momstouch,맘스터치
+dining_goobne,굽네치킨
+dining_dominos,도미노 피자
+dining_misterpizza,미스터피자
+dining_pizzahut,피자헛
+dining_papajohns,파파존스피자
+books_kyobobooks,교보문고
+books_bandinlunis,반디앤루니스
+books_ypbooks,영풍문고
+books_kyobobooksint,인터넷 교보문고
+books_bandinlunisonline,반디앤루니스 온라인
+books_ypbooksint,인터넷 영풍문고
+books_yes24books,YES24 도서
+books_interparkbooks,인터파크 도서
+books_aladin,알라딘
+themepark_lotteworld,롯데월드
+themepark_everland,에버랜드
+themepark_seoulland,서울랜드
+themepark_kjworld,경주월드
+themepark_carribeanbay,캐리비안 베이
+fuel_gsgas,GS칼텍스 휘발유
+fuel_skgas,SK엔크린 휘발유
+fuel_hobgas,현대오일뱅크 휘발유
+fuel_soilgas,S-Oil 휘발유
+fuel_gsdis,GS칼텍스 경유
+fuel_skdis,SK엔크린 경유
+fuel_hobdis,현대오일뱅크 경유
+fuel_soildis,S-Oil 경유
+fuel_gslpg,GS칼텍스 LPG
+fuel_sklpg,SK엔크린 LPG
+fuel_hoblpg,현대오일뱅크 LPG
+fuel_soillpg,S-Oil LPG
+fuel_gspet,GS칼텍스 등유
+fuel_skpet,SK엔크린 등유
+fuel_hobpet,현대오일뱅크 등유
+fuel_soilpet,S-Oil 등유
+fuel_fuelgas,주유 휘발유
+fuel_fueldis,주유 경유
+fuel_fuellpg,주유 LPG
+fuel_fuelpet,주유 등유

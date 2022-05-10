@@ -1,0 +1,39 @@
+* {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+
+label .iconbox {
+    position: relative;
+    display: flex;
+    width: 160px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    color: rgb(100, 100, 100);
+    border-radius: 3px;
+    font-size: 21px;
+    user-select: none;
+    margin: 10px;
+}
+
+label .brandlogo {
+    width: 120px;
+    height: 60px;
+    margin-top: 5px;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label input[type="checkbox"]:checked~.iconbox {
+    background: rgb(0, 200, 200);
+    color: rgb(255, 255, 255);
+}
+
+label .iconbox span {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 1000;
+}
