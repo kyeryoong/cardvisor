@@ -85,3 +85,16 @@ body {
     border: transparent;
     border-radius: 5px;
 }
+
+.container .toMainButton {
+    margin: auto;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    align-items: center;
+    background-color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}

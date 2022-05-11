@@ -5,6 +5,7 @@ import Header from '../../Header';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +14,8 @@ function Card() {
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
     const [show4, setShow4] = useState(false);
+
+    const navigate = useNavigate();
 
     return (
         <div className={styles.container}>
@@ -113,6 +116,15 @@ function Card() {
                         혜택 선택 완료
                     </button>
                 </Link>
+            </div>
+            <br />
+
+            <div>
+                <button className={styles.toMainButton} onClick={() => {
+                    navigate('/main');
+                }}>
+                    홈 화면으로
+                </button>
             </div>
         </div >
     );

@@ -1,20 +1,24 @@
 import React from 'react';
+
+import { useNavigate } from 'react-router';
 import styles from './Header.module.css';
 
 
 
 function Header() {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.header}>
             <div className={styles.title} onClick={() => {
-                alert("홈")
+                navigate('/main');
             }}>
                 cardvisor
             </div>
 
             <div className={styles.zone1}>
                 <button onClick={() => {
-                    alert("내 정보")
+                    navigate('/mypage');
                 }}>
                     내 정보
                 </button>

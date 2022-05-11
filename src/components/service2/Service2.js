@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router';
 
 
 
-function Service1Results() {
+function Service2() {
     const navigate = useNavigate();
-    
+
     return (
         <div>
             <Header />
@@ -23,4 +23,4 @@ function Service1Results() {
     );
 }
 
-export default Service1Results;
+export default Service2;

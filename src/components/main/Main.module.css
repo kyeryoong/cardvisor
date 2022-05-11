@@ -1,0 +1,39 @@
+* {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+
+.service1Button {
+    width: 400px;
+    height: 600px;
+    margin: 20px;
+    font-size: 1.5rem;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}
+
+.service2Button {
+    width: 400px;
+    height: 600px;
+    margin: 20px;
+    font-size: 1.5rem;
+    
+    text-align: left;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}
+
+.listButton {
+    width: 400px;
+    height: 600px;
+    margin: 20px;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}
