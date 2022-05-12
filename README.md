@@ -1,8 +1,8 @@
 # Cardvisor Frontend
 
-## Created By 김영우
-## Team Cardvisor
-## Hongik University Computer Engineering Major
+### Created By 김영우
+### Team Cardvisor
+### Hongik University Computer Engineering Major
 
 ### Ver 1.0.0 (2022/05/11)
 1. First Commit of the Frontend Project
