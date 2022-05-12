@@ -5,13 +5,13 @@ import styles from './Header.module.css';
 
 
 
-function Header() {
+function Header(props) {
     const navigate = useNavigate();
 
     return (
         <div className={styles.header}>
             <div className={styles.title} onClick={() => {
-                navigate('/main');
+                navigate('/');
             }}>
                 cardvisor
             </div>

@@ -5,12 +5,12 @@ import styles from './Main.module.css';
 
 
 
-function Main() {
+function Main(props) {
     const navigate = useNavigate();
 
     return (
         <div>
-            <Header />
+            <Header headertype={props.headertype} />
 
             <div className={styles.text}>
                 원하시는 서비스를 선택하세요.

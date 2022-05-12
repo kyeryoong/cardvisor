@@ -4,23 +4,23 @@ import { useNavigate } from 'react-router';
 
 
 
-function Service1Results(props) {
+function Home(props) {
     const navigate = useNavigate();
-    
+
     return (
         <div>
             <Header headertype={props.headertype} />
 
-            THIS PAGE IS NOT IMPLEMENTED YET!
+            HOMEPAGE
             <br />
 
             <button onClick={() => {
-                navigate(-1);
+                navigate('/main');
             }}>
-                뒤로가기
+                시작하기
             </button>
         </div>
     );
 }
 
-export default Service1Results;
+export default Home;

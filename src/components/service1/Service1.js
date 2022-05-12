@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Card() {
+function Card(props) {
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
@@ -19,7 +19,7 @@ function Card() {
 
     return (
         <div className={styles.container}>
-            <Header />
+            <Header headertype={props.headertype} />
 
             <h1>카드 추천 받기</h1>
             <h2>선호하는 혜택을 체크해주세요!</h2>

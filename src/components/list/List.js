@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router';
 
 
 
-function List() {
+function List(props) {
     const navigate = useNavigate();
 
     return (
         <div>
-            <Header />
+            <Header headertype={props.headertype} />
 
             THIS PAGE IS NOT IMPLEMENTED YET!
             <br />
