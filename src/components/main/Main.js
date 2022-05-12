@@ -12,23 +12,30 @@ function Main() {
         <div>
             <Header />
 
-            <button className={styles.service1Button} onClick={() => {
+            <div className={styles.text}>
+                원하시는 서비스를 선택하세요.
+            </div>
+            <br /><br />
+
+            <div className={styles.service1Button} onClick={() => {
                 navigate('/service1');
             }}>
-                서비스1
-            </button>
+                <div className={styles.mainText}>카드<br />추천받기</div>
+                <div className={styles.subText}><br />혜택 직접 선택</div>
+            </div>
 
-            <button className={styles.service2Button} onClick={() => {
+            <div className={styles.service2Button} onClick={() => {
                 navigate('/service2');
             }}>
-                서비스2
-            </button>
+                <div className={styles.mainText}>카드<br />추천받기</div>
+                <div className={styles.subText}><br />소비 내역 입력</div>
+            </div>
 
-            <button className={styles.listButton} onClick={() => {
+            <div className={styles.listButton} onClick={() => {
                 navigate('/list');
             }}>
-                카드 목록
-            </button>
+                <div className={styles.mainText}>전체<br />카드 목록<br /></div>
+            </div>
         </div>
     );
 }
