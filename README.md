@@ -4,9 +4,9 @@
 
 
 ## About Me
-### Created By 김영우
-### Team Cardvisor
-### Hongik University Computer Engineering Major
+#### Young-Woo Kim
+#### Team Cardvisor
+#### Hongik University Computer Engineering Major
 <br><br>
 
 
