@@ -12,7 +12,6 @@
 
 
 ## Version Logs
-<br>
 
 ### Ver 1.0.0 (2022/05/11)
 - First Commit of the Frontend Project
