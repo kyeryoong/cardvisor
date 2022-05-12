@@ -2,62 +2,60 @@
     font-family: "NanumBarunGothic", sans-serif;
 }
 
-.text {
-    text-align: center;
+.introText {
     font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
+    text-align: center;
+}
+
+.buttonsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .service1Button {
     width: 400px;
     height: 600px;
     margin: 20px;
-    text-align: left;
-    display: inline-flex;
-    flex-direction: column;
+    padding-top: 40px;
     padding-left: 40px;
-    padding-top: 60px;
     color: rgb(255, 255, 255);
+    background-color: rgb(243, 156, 18);
     border: transparent;
     border-radius: 5px;
-    background-color: rgb(243, 156, 18);
 }
 
 .service2Button {
     width: 400px;
     height: 600px;
     margin: 20px;
-    text-align: left;
-    display: inline-flex;
-    flex-direction: column;
+    padding-top: 40px;
     padding-left: 40px;
-    padding-top: 60px;
     color: rgb(255, 255, 255);
+    background-color: rgb(52, 152, 219);
     border: transparent;
     border-radius: 5px;
-    background-color: rgb(52, 152, 219);
 }
 
 .listButton {
     width: 400px;
     height: 600px;
     margin: 20px;
-    text-align: left;
-    display: inline-flex;
-    flex-direction: column;
+    padding-top: 40px;
     padding-left: 40px;
-    padding-top: 60px;
     color: rgb(255, 255, 255);
+    background-color: rgb(0, 200, 200);
     border: transparent;
     border-radius: 5px;
-    background-color: rgb(0, 200, 200);
 }
 
 .mainText {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    text-align: left;
 }
 
 .subText{
     font-size: 1.5rem;
+    text-align: left;
 }

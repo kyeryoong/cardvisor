@@ -13,7 +13,7 @@ body {
     margin-bottom: 200px;
 }
 
-.container h1 {
+h1 {
     width: 900px;
     font-size: 3rem;
     color: rgb(50, 50, 50);
@@ -23,7 +23,7 @@ body {
     margin-bottom: 10px;
 }
 
-.container h2 {
+h2 {
     width: 900px;
     font-size: 1.5rem;
     color: rgb(50, 50, 50);
@@ -33,24 +33,24 @@ body {
     margin-bottom: 10px;
 }
 
-.container hr {
+hr {
     width: 100%;
     position: relative;
     margin-bottom: 20px;;
 }
 
-.container .zone1 {
+.zone1 {
     width: 860px;
     float: left;
 }
 
-.container .zone2 {
+.zone2 {
     width: 20px;
     margin-right: 5px;
     float: right;
 }
 
-.container .categoryName {
+.categoryName {
     width: 100%;
     height: 50px;
     text-align: left;
@@ -61,7 +61,7 @@ body {
     border: transparent;
 }
 
-.container .hideShow {
+.hideShow {
     height: 50px;
     text-align: left;
     font-size: 1.5rem;
@@ -70,15 +70,15 @@ body {
     border: transparent;
 }
 
-.container .row {
+.row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.container .sendButton {
+.sendButton {
     width: 100%;
-    height: 60px;
-    font-size: 1.5rem;
+    height: 70px;
+    font-size: 1.8rem;
     align-items: center;
     background-color: rgb(243, 156, 18);
     color: rgb(255, 255, 255);
@@ -86,12 +86,12 @@ body {
     border-radius: 5px;
 }
 
-.container .toMainButton {
+.toMainButton {
     margin: auto;
     display: block;
     width: 200px;
     height: 50px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     align-items: center;
     background-color: rgb(160, 160, 160);
     color: rgb(255, 255, 255);

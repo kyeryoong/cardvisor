@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "NanumBarunGothic", sans-serif;
+    text-align: center;
+}
+
+.introText {
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: left;
+}
+
+.cardImages {
+    height: 60px;
+}
+
+.cardCompanyImages{
+    padding-left: 30px;
+    height: 80px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding-top: 6px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.cardName {
+    width: 700px;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.toMainButton {
+    margin: auto;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}
+
+.cardInfoButton {
+    margin: auto;
+    display: block;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    align-items: center;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.homepageButton {
+    margin: auto;
+    display: block;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;
+    align-items: center;
+    background-color: rgb(52, 152, 219);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}

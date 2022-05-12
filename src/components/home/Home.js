@@ -1,16 +1,12 @@
-import Header from '../../Header';
-
 import { useNavigate } from 'react-router';
 
 
 
-function Home(props) {
+function Home() {
     const navigate = useNavigate();
 
     return (
         <div>
-            <Header headertype={props.headertype} />
-
             HOMEPAGE
             <br />
 

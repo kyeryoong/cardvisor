@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 
 
 
-function Header(props) {
+function Header() {
     const navigate = useNavigate();
 
     return (

@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "NanumBarunGothic", sans-serif;
+    text-align: center;
+}
+
+.cardName {
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.cardInfo {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.moreInfoButton {
+    width: 250px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.likeButton {
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.subText {
+    font-size: 2rem;
+    font-weight: 1000;
+    text-align: center;
+    color: rgb(0, 200, 200);
+}
+
+.brandsZone {
+    text-align: center;
+}
+
+.brandsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.brandImage {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 90px;
+    background-color: rgb(204,244,244);
+}
+
+.brandName {
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+
+.brandInfo {
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 1000;
+    color:rgb(0, 200, 200);
+}
+
+.moreCardsZone {
+    text-align: center;
+}
+
+.moreCardsRow {
+    display: grid;
+    grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr;
+    place-items: center;
+}
+
+.moreCardImage {
+    width: 180px;
+    height: 120px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(204,244,244);
+}
+
+.moreCardCompanyImage {
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+
+.moreCardName {
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+
+.toMoreCardsButton {
+    width: 250px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}
+
+.goBackButton {
+    width: 250px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+}

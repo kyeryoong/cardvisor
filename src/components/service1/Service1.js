@@ -1,7 +1,6 @@
 import styles from './Service1.module.css';
 
 import Brands from './Brands';
-import Header from '../../Header';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -9,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Card(props) {
+function Card() {
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
@@ -18,9 +17,7 @@ function Card(props) {
     const navigate = useNavigate();
 
     return (
-        <div className={styles.container}>
-            <Header headertype={props.headertype} />
-
+        <div>
             <h1>카드 추천 받기</h1>
             <h2>선호하는 혜택을 체크해주세요!</h2>
             <br /><br />

@@ -1,16 +1,12 @@
-import Header from '../../Header';
-
 import { useNavigate } from 'react-router';
 
 
 
-function MyPage(props) {
+function MyPage() {
     const navigate = useNavigate();
 
     return (
         <div>
-            <Header headertype={props.headertype} />
-
             THIS PAGE IS NOT IMPLEMENTED YET!
             <br />
 
