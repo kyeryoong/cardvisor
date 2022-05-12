@@ -4,9 +4,9 @@
 
 
 ## About Me
-#### Young-Woo Kim
-#### Team Cardvisor
-#### Hongik University Computer Engineering Major
+#### Name  │ Young-Woo Kim
+#### Team  │ Cardvisor
+#### Major │ Hongik University Computer Engineering
 <br><br>
 
 
