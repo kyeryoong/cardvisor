@@ -21,7 +21,7 @@ function Main() {
                 navigate('/service1');
             }}>
                 <div className={styles.mainText}>카드<br />추천받기</div>
-                <div className={styles.subText}><b(r />혜택 직접 선택</div>
+                <div className={styles.subText}><br/>혜택 직접 선택</div>
             </div>
 
             <div className={styles.service2Button} onClick={() => {
