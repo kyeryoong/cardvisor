@@ -19,6 +19,7 @@
     font-weight: 500;
     padding-left: 40px;
     align-items: center;
+    cursor: pointer;
 }
 
 .zone1 {
@@ -41,22 +42,22 @@
     width: 100px;
     height: 40px;
     font-size: 1.2rem;
-    font-weight: 1000;
     align-items: center;
     border: transparent;
     border-radius: 5px;
     background-color: rgb(160, 160, 160);
-    color: rgb(255,255, 255)
+    color: rgb(255,255, 255);
+    cursor: pointer;
 }
 
 .zone2 button {
     width: 100px;
     height: 40px;
     font-size: 1.2rem;
-    font-weight: 1000;
     align-items: center;
     border: transparent;
     border-radius: 5px;
     background-color: rgb(243, 156, 18);
-    color: rgb(255,255, 255)
+    color: rgb(255,255, 255);
+    cursor: pointer;
 }

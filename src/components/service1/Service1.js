@@ -68,7 +68,7 @@ function Card() {
 
             <div>
                 <div className={styles.zone1}><button className={styles.categoryName} onClick={() => { setShow3(!show3); }}> 마트 </button></div>
-                <div className={styles.zone2}><button className={styles.hideShow} onClick={() => { setShow3(!show3); }}> {show2 ? '▲' : '▼'}</button></div>
+                <div className={styles.zone2}><button className={styles.hideShow} onClick={() => { setShow3(!show3); }}> {show3 ? '▲' : '▼'}</button></div>
             </div>
 
             <hr />
@@ -93,7 +93,7 @@ function Card() {
 
             <div>
                 <div className={styles.zone1}><button className={styles.categoryName} onClick={() => { setShow4(!show4); }}> 편의점 </button></div>
-                <div className={styles.zone2}><button className={styles.hideShow} onClick={() => { setShow4(!show4); }}> {show3 ? '▲' : '▼'}</button></div>
+                <div className={styles.zone2}><button className={styles.hideShow} onClick={() => { setShow4(!show4); }}> {show4 ? '▲' : '▼'}</button></div>
             </div>
 
             <hr />

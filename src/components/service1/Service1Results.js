@@ -1,11 +1,12 @@
 import styles from './Service1Results.module.css';
 
 import { useNavigate } from 'react-router';
-
+import { useState } from 'react';
 
 
 function Service1Results() {
     const navigate = useNavigate();
+    const [like, setLike] = useState(false);
 
     return (
         <div>
@@ -24,13 +25,13 @@ function Service1Results() {
                     상세 정보 보기
                 </button>
 
-                <button className={styles.likeButton}>
+                <button className={styles.likeButton} onClick={() => {
+                    setLike(!like);
+                }}> {like ? '♡ ' : '♥ '}
                     찜하기
                 </button>
             </div>
             <br /><br /><br /><br /><br />
-
-
 
             <div className={styles.subText}>
                 주요 맟춤 혜택

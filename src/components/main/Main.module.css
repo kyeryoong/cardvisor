@@ -24,6 +24,7 @@
     background-color: rgb(243, 156, 18);
     border: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .service2Button {
@@ -36,6 +37,7 @@
     background-color: rgb(52, 152, 219);
     border: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .listButton {
@@ -48,6 +50,7 @@
     background-color: rgb(0, 200, 200);
     border: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .mainText {

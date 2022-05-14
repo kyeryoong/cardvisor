@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "NanumBarunGothic", sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper {
+    position: absolute;
+    left: 10%;
+}
+
+.intro1 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+.intro2 {
+    text-align: left;
+    font-size: 8rem;
+    font-weight: 1000;
+    font-family: 'Poppins', serif;
+    color: rgb(0, 200, 200);
+}
+
+.startButton {
+    display: block;
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.zone1 {
+    float: left;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.zone2 {
+    margin-left: 20px;
+    float: left;
+    font-size: 1.5rem;
+    color: rgb(243, 156, 18);
+    font-weight: 1000;
+    cursor: pointer;
+}
+
+.homepageImage {
+    position: fixed;
+    width: 70%;
+    bottom: 0;
+    right: 0;
+}

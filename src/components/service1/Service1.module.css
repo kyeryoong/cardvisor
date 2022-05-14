@@ -59,6 +59,7 @@ hr {
     font-weight: 1000;
     background-color: transparent;
     border: transparent;
+    cursor: pointer;
 }
 
 .hideShow {
@@ -68,6 +69,7 @@ hr {
     color: rgb(50, 50, 50);
     background-color: transparent;
     border: transparent;
+    cursor: pointer;
 }
 
 .row {
@@ -84,6 +86,7 @@ hr {
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .toMainButton {
@@ -97,4 +100,5 @@ hr {
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }

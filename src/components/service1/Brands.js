@@ -5,9 +5,11 @@ function Brands(props) {
         <label>
             <input type="checkbox" name="" />
             <div className={styles.iconbox}>
-                <img className={styles.brandlogo} alt={props.brandlogo} src={process.env.PUBLIC_URL + '/images/brands_logo/'+ props.brandlogo + '.png'} />
+                <img className={styles.brandlogo}
+                    alt={props.brandlogo}
+                    src={process.env.PUBLIC_URL + '/images/brands_logo/' + props.brandlogo + '.png'} />
                 <span>{props.name}</span>
-            </div>          
+            </div>
         </label>
     );
 }

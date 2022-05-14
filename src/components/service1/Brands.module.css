@@ -6,13 +6,13 @@ label .iconbox {
     position: relative;
     display: flex;
     width: 160px;
-    height: 100px;
+    height: 110px;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(240, 240, 240);
+    background: linear-gradient(rgb(240, 240, 240) 70%, rgb(224, 224, 224) 30%);
     color: rgb(100, 100, 100);
     border-radius: 3px;
-    font-size: 21px;
+    font-size: 1.5rem;
     user-select: none;
     margin: 10px;
     transition: 0.2s;
@@ -21,7 +21,7 @@ label .iconbox {
 label .brandlogo {
     width: 120px;
     height: 60px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 label input[type="checkbox"] {
@@ -29,12 +29,12 @@ label input[type="checkbox"] {
 }
 
 label input[type="checkbox"]:checked~.iconbox {
-    background: rgb(0, 200, 200);
+    background: linear-gradient(rgb(200, 255, 255) 70%, rgb(0, 200, 200) 30%);
     color: rgb(255, 255, 255);
 }
 
 label .iconbox span {
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 1rem;
     font-weight: 1000;
 }
