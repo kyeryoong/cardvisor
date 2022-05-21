@@ -1,0 +1,129 @@
+{
+    "cards": [
+        {
+            "card_code" : 16,
+            "card_name" : "신세계 씨티카드 콰트로",
+            "card_company" : "씨티카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 20,
+            "card_name" : "갤러리아 씨티카드 프레스티지",
+            "card_company" : "씨티카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 31,
+            "card_name" : "신세계 씨티 리워드 카드",
+            "card_company" : "씨티카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 236,
+            "card_name" : "IBK hi 카드",
+            "card_company" : "기업카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 287,
+            "card_name" : "Oil & Life카드(Oil)",
+            "card_company" : "기업카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 289,
+            "card_name" : "Oil & Life카드(Life)",
+            "card_company" : "기업카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 291,
+            "card_name" : "olleh Super DC IBK카드",
+            "card_company" : "기업카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 297,
+            "card_name" : "IBK-Syrup카드[신용]",
+            "card_company" : "기업카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 339,
+            "card_name" : "The CJ KB국민카드",
+            "card_company" : "국민카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 350,
+            "card_name" : "스카이패스 KB국민카드",
+            "card_company" : "국민카드",
+            "card_type" : "credit"
+        },
+
+        {
+            "card_code" : 353,
+            "card_name" : "스타check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 354,
+            "card_name" : "포인트리check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 355,
+            "card_name" : "민 check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 368,
+            "card_name" : "노리check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 375,
+            "card_name" : "직장인보너스check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 379,
+            "card_name" : "정 check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 380,
+            "card_name" : "훈 check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        },
+
+        {
+            "card_code" : 381,
+            "card_name" : "음 check",
+            "card_company" : "국민카드",
+            "card_type" : "check"
+        }
+    ]
+}

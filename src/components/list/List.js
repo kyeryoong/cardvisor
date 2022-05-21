@@ -15,24 +15,24 @@ function List() {
 
             <table>
                 <tbody>
-                    {dummy.cards.map(cur => (
-                        <tr key={cur.card_code}>
+                    {dummy.cardAll.map(cur => (
+                        <tr key={cur.id}>
                             <td>
                                 <img
                                     className={styles.cardImages}
-                                    alt={cur.card_code}
-                                    src={process.env.PUBLIC_URL + '/images/card_images/' + cur.card_code + '.png'} />
+                                    alt={cur.id}
+                                    src={process.env.PUBLIC_URL + '/images/card_images/' + cur.id + '.png'} />
                             </td>
 
                             <td>
                                 <img
                                     className={styles.cardCompanyImages}
-                                    alt={cur.card_company}
-                                    src={process.env.PUBLIC_URL + '/images/card_logo/left aligned/' + cur.card_company + '.png'} />
+                                    alt={cur.company}
+                                    src={process.env.PUBLIC_URL + '/images/card_logo/left aligned/' + cur.company + '.png'} />
                             </td>
 
                             <td className={styles.cardName}>
-                                {cur.card_name}
+                                {cur.name}
                             </td>
 
                             <td>
@@ -43,7 +43,7 @@ function List() {
 
                             <td>
                                 <button className={styles.homepageButton} onClick={() => {
-                                    window.open('https://www.banksalad.com/cards/' + cur.card_code + '/issue');
+                                    window.open(cur.link);
                                 }}>홈페이지</button>
                             </td>
                         </tr>

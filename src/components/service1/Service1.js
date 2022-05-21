@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
+import SelectedBrands from './SelectedBrands';
+
 
 
 function Card() {
@@ -21,8 +23,6 @@ function Card() {
             <h1>카드 추천 받기</h1>
             <h2>선호하는 혜택을 체크해주세요!</h2>
             <br /><br />
-
-
 
             <div>
                 <div className={styles.zone1}><button className={styles.categoryName} onClick={() => { setShow1(!show1); }}> 교통 </button></div>
@@ -106,6 +106,11 @@ function Card() {
                 {show4 && <Brands name="바이더웨이" brandlogo="convstore_buytheway" />}
             </div>
             <br /><br /><br />
+
+            <button onClick={() => {
+                alert(SelectedBrands);
+            }}>전송 확인</button>
+
 
             <div>
                 <Link to='/service1/results'>

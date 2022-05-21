@@ -9,7 +9,7 @@ import Service2 from './components/service2/Service2';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 
-import Demo from './components/Demo'
+
 
 function App() {
     return (
@@ -24,8 +24,6 @@ function App() {
                 <Route exact path='/service2' element={<Service2 />} />
                 <Route exact path='/list' element={<List />} />
                 <Route exact path='/mypage' element={<MyPage />} />
-
-                <Route exact path='/demo' element={<Demo />} />
             </Routes>
         </BrowserRouter>
     );
