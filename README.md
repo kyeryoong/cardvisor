@@ -36,3 +36,9 @@
 - database was updated with more information.
 - names of files in *card_logo* were changed.
 - names of variables in *List.js* were changed.
+
+### Ver. 1.0.5 (2022/05/22)
+- backend connection was implemented using JSON.
+
+### Ver. 1.1.0 (2022/05/22)
+- WILL BE RELEASED LATER
