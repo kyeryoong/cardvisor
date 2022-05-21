@@ -10,6 +10,28 @@ import SelectedBrands from './SelectedBrands';
 
 
 
+let jsonArr = [];
+
+function getJson() {
+    let url = "http://localhost:8080/select";
+    //let jsonArr = new Object();
+    //jsonArr = [{"memberId":1 , "brandId": 10 }, {"memberId":1 , "brandId":20 }, {"memberId":1 , "brandId":30}];
+
+    fetch(url, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(jsonArr)
+    }).then(res => {
+        console.log(res);
+    }).catch(err => {
+        console.log(err);
+    });
+}
+
+
+
 function Card() {
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
