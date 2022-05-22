@@ -1,0 +1,401 @@
+﻿card_code,card_company,card_company_eng,card_link,card_name,card_type
+16,씨티카드,citi,"https://www.banksalad.com/cards/16/issue",신세계 씨티카드 콰트로,credit
+20,씨티카드,citi,"https://www.banksalad.com/cards/20/issue",갤러리아 씨티카드 프레스티지,credit
+31,씨티카드,citi,"https://www.banksalad.com/cards/31/issue",신세계 씨티 리워드 카드,credit
+236,기업카드,ibk,"https://www.banksalad.com/cards/236/issue",IBK hi 카드,credit
+287,기업카드,ibk,"https://www.banksalad.com/cards/287/issue",Oil & Life카드(Oil),credit
+289,기업카드,ibk,"https://www.banksalad.com/cards/289/issue",Oil & Life카드(Life),credit
+291,기업카드,ibk,"https://www.banksalad.com/cards/291/issue",olleh Super DC IBK카드,credit
+297,기업카드,ibk,"https://www.banksalad.com/cards/297/issue",IBK-Syrup카드[신용],credit
+339,국민카드,kb,"https://www.banksalad.com/cards/339/issue",The CJ KB국민카드,credit
+350,국민카드,kb,"https://www.banksalad.com/cards/350/issue",스카이패스 KB국민카드,credit
+353,국민카드,kb,"https://www.banksalad.com/cards/353/issue",스타check,check
+354,국민카드,kb,"https://www.banksalad.com/cards/354/issue",포인트리check,check
+355,국민카드,kb,"https://www.banksalad.com/cards/355/issue",민 check,check
+368,국민카드,kb,"https://www.banksalad.com/cards/368/issue",노리check,check
+375,국민카드,kb,"https://www.banksalad.com/cards/375/issue",직장인보너스check,check
+379,국민카드,kb,"https://www.banksalad.com/cards/379/issue",정 check,check
+380,국민카드,kb,"https://www.banksalad.com/cards/380/issue",훈 check,check
+381,국민카드,kb,"https://www.banksalad.com/cards/381/issue",음 check,check
+416,국민카드,kb,"https://www.banksalad.com/cards/416/issue",KB국민 와이즈홈카드,credit
+418,국민카드,kb,"https://www.banksalad.com/cards/418/issue",이마트 KB국민카드,credit
+419,국민카드,kb,"https://www.banksalad.com/cards/419/issue",해피포인트 KB국민카드,credit
+435,국민카드,kb,"https://www.banksalad.com/cards/435/issue",KB국민 반려애카드(강아지),credit
+436,국민카드,kb,"https://www.banksalad.com/cards/436/issue",KB국민 반려애카드(고양이),credit
+439,국민카드,kb,"https://www.banksalad.com/cards/439/issue",KB국민아이행복카드(T-type),credit
+440,국민카드,kb,"https://www.banksalad.com/cards/440/issue",KB국민 GS행복가득카드,credit
+472,국민카드,kb,"https://www.banksalad.com/cards/472/issue",KB국민 굿데이카드,credit
+476,국민카드,kb,"https://www.banksalad.com/cards/476/issue",KB국민 굿데이올림카드,credit
+491,국민카드,kb,"https://www.banksalad.com/cards/491/issue",KB국민 와이즈카드,credit
+505,국민카드,kb,"https://www.banksalad.com/cards/505/issue",KB국민 마일리지 가온카드(대한항공),credit
+506,국민카드,kb,"https://www.banksalad.com/cards/506/issue",KB국민 마일리지 가온카드(아시아나항공),credit
+507,국민카드,kb,"https://www.banksalad.com/cards/507/issue",가온check,check
+509,국민카드,kb,"https://www.banksalad.com/cards/509/issue",누리check,check
+1210,NH카드,nh,"https://www.banksalad.com/cards/1210/issue",채움 스카이패스카드,credit
+1239,삼성카드,samsung,"https://www.banksalad.com/cards/1239/issue",삼성아멕스블루카드,credit
+1245,삼성카드,samsung,"https://www.banksalad.com/cards/1245/issue",스카이패스삼성카드,credit
+1279,삼성카드,samsung,"https://www.banksalad.com/cards/1279/issue",American Express® Green,credit
+1344,삼성카드,samsung,"https://www.banksalad.com/cards/1344/issue",CJ ONE 삼성카드,credit
+1360,삼성카드,samsung,"https://www.banksalad.com/cards/1360/issue",삼성카드 4,credit
+1375,삼성카드,samsung,"https://www.banksalad.com/cards/1375/issue",이마트신세계 삼성카드 7,credit
+1376,삼성카드,samsung,"https://www.banksalad.com/cards/1376/issue",신세계이마트 삼성카드 7,credit
+1392,삼성카드,samsung,"https://www.banksalad.com/cards/1392/issue",트레이더스신세계 삼성카드 5,credit
+1495,신한카드,shinhan,"https://www.banksalad.com/cards/1495/issue",GS칼텍스 신한카드 Bigplus Smart,credit
+1572,신한카드,shinhan,"https://www.banksalad.com/cards/1572/issue",신한 Hi-Point 카드,credit
+1573,신한카드,shinhan,"https://www.banksalad.com/cards/1573/issue",신한 Hi-Point 카드,credit
+1872,신한카드,shinhan,"https://www.banksalad.com/cards/1872/issue",신한카드 Simple Platinum#,credit
+1892,신한카드,shinhan,"https://www.banksalad.com/cards/1892/issue",신한카드 S-Line 체크,check
+1897,신한카드,shinhan,"https://www.banksalad.com/cards/1897/issue",신한카드 B.Big(삑),credit
+1970,하나카드,hana,"https://www.banksalad.com/cards/1970/issue",프리머스 스카이패스카드,credit
+2027,하나카드,hana,"https://www.banksalad.com/cards/2027/issue",Smart Any 카드,credit
+2243,국민카드,kb,"https://www.banksalad.com/cards/2243/issue",KB국민 FINETECH카드(마일리지 대한항공),credit
+2244,국민카드,kb,"https://www.banksalad.com/cards/2244/issue",KB국민 FINETECH카드(마일리지 아시아나),credit
+2251,국민카드,kb,"https://www.banksalad.com/cards/2251/issue",아이행복 check(KB국민),check
+2264,기업카드,ibk,"https://www.banksalad.com/cards/2264/issue",참! 좋은 kt wiz 카드[신용],credit
+2307,삼성카드,samsung,"https://www.banksalad.com/cards/2307/issue",신세계이마트 삼성카드4(포인트),credit
+2320,기업카드,ibk,"https://www.banksalad.com/cards/2320/issue",국민행복카드[신용] for Baby Service(A-Type),credit
+2321,기업카드,ibk,"https://www.banksalad.com/cards/2321/issue",국민행복카드[신용] for Children Service(B-Type),credit
+2322,기업카드,ibk,"https://www.banksalad.com/cards/2322/issue",국민행복카드[신용] for Green Life Service(C-Type),credit
+2324,국민카드,kb,"https://www.banksalad.com/cards/2324/issue",ONE check,check
+2326,국민카드,kb,"https://www.banksalad.com/cards/2326/issue",스피드메이트 check,check
+2359,삼성카드,samsung,"https://www.banksalad.com/cards/2359/issue",S-OIL 삼성카드 & POINT,credit
+2368,신한카드,shinhan,"https://www.banksalad.com/cards/2368/issue",신한카드 The CLASSIC+ (아시아나항공),credit
+2372,우리카드,woori,"https://www.banksalad.com/cards/2372/issue",자유로운 여행카드(SKYPASS),credit
+2396,신한카드,shinhan,"https://www.banksalad.com/cards/2396/issue",신한카드 Mr.Life,credit
+2478,우리카드,woori,"https://www.banksalad.com/cards/2478/issue",우리 아이행복check,check
+2480,우리카드,woori,"https://www.banksalad.com/cards/2480/issue",해피포인트 우리check,check
+2502,국민카드,kb,"https://www.banksalad.com/cards/2502/issue",KB국민 다담카드(스마트 OTP),credit
+2564,우리카드,woori,"https://www.banksalad.com/cards/2564/issue",자유로운 여행카드 (Asiana Club),credit
+2565,신한카드,shinhan,"https://www.banksalad.com/cards/2565/issue",신한카드 YOLO Tasty,credit
+2583,신한카드,shinhan,"https://www.banksalad.com/cards/2583/issue",신한카드 주거래 신용,credit
+2633,국민카드,kb,"https://www.banksalad.com/cards/2633/issue",나라사랑카드(KB국민),check
+2653,우리카드,woori,"https://www.banksalad.com/cards/2653/issue",그랑블루 check,check
+2804,삼성카드,samsung,"https://www.banksalad.com/cards/2804/issue",삼성카드 & MILEAGE PLATINUM(스카이패스),credit
+2914,신한카드,shinhan,"https://www.banksalad.com/cards/2914/issue",신한카드 하이패스(전용) 체크,check
+2927,삼성카드,samsung,"https://www.banksalad.com/cards/2927/issue",삼성카드 taptap S,credit
+2928,삼성카드,samsung,"https://www.banksalad.com/cards/2928/issue",삼성카드 taptap O,credit
+2979,국민카드,kb,"https://www.banksalad.com/cards/2979/issue",KB국민 마일리지 가온플래티늄카드(대한항공),credit
+2981,국민카드,kb,"https://www.banksalad.com/cards/2981/issue",KB국민 마일리지 가온플래티늄카드(아시아나),credit
+2992,신한카드,shinhan,"https://www.banksalad.com/cards/2992/issue",신한카드 RPM+ Platinum#,credit
+3046,신한카드,shinhan,"https://www.banksalad.com/cards/3046/issue",신한카드 YOLO ⓘ,credit
+3065,기업카드,ibk,"https://www.banksalad.com/cards/3065/issue",용인시민카드(신용),credit
+3103,삼성카드,samsung,"https://www.banksalad.com/cards/3103/issue",CU·배달의민족 삼성카드 taptap,credit
+3144,신한카드,shinhan,"https://www.banksalad.com/cards/3144/issue",신한카드 후불하이패스+(하이패스 전용),credit
+3171,국민카드,kb,"https://www.banksalad.com/cards/3171/issue",청춘대로 싱글 check,check
+3204,국민카드,kb,"https://www.banksalad.com/cards/3204/issue",E1 LPG KB국민카드,credit
+3251,국민카드,kb,"https://www.banksalad.com/cards/3251/issue",KB국민 청춘대로 매니아i카드,credit
+3286,국민카드,kb,"https://www.banksalad.com/cards/3286/issue",Liiv Mate check,check
+3294,신한카드,shinhan,"https://www.banksalad.com/cards/3294/issue",신한카드 The BEST-T,credit
+3295,신한카드,shinhan,"https://www.banksalad.com/cards/3295/issue",신한카드 The BEST-T (대한항공),credit
+3296,신한카드,shinhan,"https://www.banksalad.com/cards/3296/issue",신한카드 The BEST-T (아시아나항공),credit
+3329,국민카드,kb,"https://www.banksalad.com/cards/3329/issue",아시아나 check,check
+3340,NH카드,nh,"https://www.banksalad.com/cards/3340/issue",NH올원 파이카드,credit
+3350,국민카드,kb,"https://www.banksalad.com/cards/3350/issue",청춘대로 톡톡카드,credit
+3351,국민카드,kb,"https://www.banksalad.com/cards/3351/issue",LG U+ check,check
+3374,신한카드,shinhan,"https://www.banksalad.com/cards/3374/issue",신한카드 Edu,credit
+3375,기업카드,ibk,"https://www.banksalad.com/cards/3375/issue",일상의 기쁨카드(신용),credit
+3377,기업카드,ibk,"https://www.banksalad.com/cards/3377/issue",일년의 설렘카드,credit
+3378,국민카드,kb,"https://www.banksalad.com/cards/3378/issue",청춘대로 1코노미 카드,credit
+3380,삼성카드,samsung,"https://www.banksalad.com/cards/3380/issue",삼성 페이 삼성카드 taptap,credit
+3381,우리카드,woori,"https://www.banksalad.com/cards/3381/issue",ALL 다모아카드,credit
+3382,우리카드,woori,"https://www.banksalad.com/cards/3382/issue",We’ll Rich 100 GOLD카드,credit
+3383,우리카드,woori,"https://www.banksalad.com/cards/3383/issue",배달의민족 우리체크,check
+3414,국민카드,kb,"https://www.banksalad.com/cards/3414/issue",WELCOME check,check
+3420,신한카드,shinhan,"https://www.banksalad.com/cards/3420/issue",신세계 신한카드,credit
+3421,신한카드,shinhan,"https://www.banksalad.com/cards/3421/issue",신세계 신한카드 (SKYPASS),credit
+3422,신한카드,shinhan,"https://www.banksalad.com/cards/3422/issue",아시아나 신한카드 Air 1.5,credit
+3454,신한카드,shinhan,"https://www.banksalad.com/cards/3454/issue",마이 홈플러스 신한카드,credit
+3459,기업카드,ibk,"https://www.banksalad.com/cards/3459/issue",참! 좋은 다이소카드(신용),credit
+3474,우리카드,woori,"https://www.banksalad.com/cards/3474/issue",위비 Five 체크,check
+3482,신한카드,shinhan,"https://www.banksalad.com/cards/3482/issue",모바일 Tmoney 신한카드,credit
+3483,신한카드,shinhan,"https://www.banksalad.com/cards/3483/issue",신한카드 All Pass,credit
+3486,국민카드,kb,"https://www.banksalad.com/cards/3486/issue",탄탄대로 온리유카드,credit
+3500,신한카드,shinhan,"https://www.banksalad.com/cards/3500/issue",신한 LOVE - 퍼스트가든,credit
+3511,국민카드,kb,"https://www.banksalad.com/cards/3511/issue",가온 올포인트 check,check
+3539,삼성카드,samsung,"https://www.banksalad.com/cards/3539/issue",삼성카드 taptap I,credit
+3555,우리카드,woori,"https://www.banksalad.com/cards/3555/issue",위메프 우리체크,check
+3558,국민카드,kb,"https://www.banksalad.com/cards/3558/issue",가온 워킹업카드,credit
+3560,국민카드,kb,"https://www.banksalad.com/cards/3560/issue",H.Point check,check
+3561,기업카드,ibk,"https://www.banksalad.com/cards/3561/issue",IBK-Hybrid(하이브리드)카드,hybrid
+3573,기업카드,ibk,"https://www.banksalad.com/cards/3573/issue",아모레퍼시픽 IBK카드,credit
+3578,신한카드,shinhan,"https://www.banksalad.com/cards/3578/issue",신한카드 Deep Dream,credit
+3587,신한카드,shinhan,"https://www.banksalad.com/cards/3587/issue",LG 페이 신한카드,credit
+3616,우리카드,woori,"https://www.banksalad.com/cards/3616/issue",우리 XGOLF 카드,credit
+3628,신한카드,shinhan,"https://www.banksalad.com/cards/3628/issue",더본 신한카드 신용,credit
+3629,신한카드,shinhan,"https://www.banksalad.com/cards/3629/issue",다이소 신한카드,credit
+3631,신한카드,shinhan,"https://www.banksalad.com/cards/3631/issue",신한카드 Deep Oil,credit
+3633,씨티카드,citi,"https://www.banksalad.com/cards/3633/issue",플래티늄서비스카드,check
+3634,국민카드,kb,"https://www.banksalad.com/cards/3634/issue",11Pay KB국민카드,credit
+3635,국민카드,kb,"https://www.banksalad.com/cards/3635/issue",톡톡 Pay카드,credit
+3636,국민카드,kb,"https://www.banksalad.com/cards/3636/issue",JCB 플랫티늄 서비스,credit
+3642,하나카드,hana,"https://www.banksalad.com/cards/3642/issue",Mile 1.6 대한항공,credit
+3643,하나카드,hana,"https://www.banksalad.com/cards/3643/issue",Mile 1.6 아시아나,credit
+3644,하나카드,hana,"https://www.banksalad.com/cards/3644/issue",통커 카드,credit
+3648,롯데카드,lotte,"https://www.banksalad.com/cards/3648/issue",I＇m CHEERFUL,credit
+3649,롯데카드,lotte,"https://www.banksalad.com/cards/3649/issue",I＇m JOYFUL,credit
+3650,롯데카드,lotte,"https://www.banksalad.com/cards/3650/issue",I＇m GREAT,credit
+3651,신한카드,shinhan,"https://www.banksalad.com/cards/3651/issue",신한카드 경차사랑 Life,credit
+3654,우리카드,woori,"https://www.banksalad.com/cards/3654/issue",카드의 정석 POINT CHECK,check
+3656,신한카드,shinhan,"https://www.banksalad.com/cards/3656/issue",신한카드 The ACE BLUE LABEL (스카이패스),credit
+3659,신한카드,shinhan,"https://www.banksalad.com/cards/3659/issue",신한카드 Deep Dream Platinum+,credit
+3661,하나카드,hana,"https://www.banksalad.com/cards/3661/issue",1Q Daily+,credit
+3665,신한카드,shinhan,"https://www.banksalad.com/cards/3665/issue",신한카드 Deep Store,credit
+3666,국민카드,kb,"https://www.banksalad.com/cards/3666/issue",탄탄대로 Miz&Mr 티타늄카드,credit
+3668,신한카드,shinhan,"https://www.banksalad.com/cards/3668/issue",신한카드 The CLASSIC-Lite,credit
+3671,하나카드,hana,"https://www.banksalad.com/cards/3671/issue",1Q Special+,credit
+3682,하나카드,hana,"https://www.banksalad.com/cards/3682/issue",#tag 1 카드 Orange,credit
+3683,하나카드,hana,"https://www.banksalad.com/cards/3683/issue",# tag 1 카드 Navy,credit
+3697,신한카드,shinhan,"https://www.banksalad.com/cards/3697/issue",SOCAR 신한카드,credit
+3709,신한카드,shinhan,"https://www.banksalad.com/cards/3709/issue",신한카드 Deep On Platinum+,credit
+3711,우리카드,woori,"https://www.banksalad.com/cards/3711/issue",카드의 정석 L.POINT CHECK,check
+3717,우리카드,woori,"https://www.banksalad.com/cards/3717/issue",카드의 정석 NEW우리V카드,credit
+3722,하나카드,hana,"https://www.banksalad.com/cards/3722/issue",my pass 마패 카드,credit
+3724,국민카드,kb,"https://www.banksalad.com/cards/3724/issue",탄탄대로 오토카드,credit
+3725,국민카드,kb,"https://www.banksalad.com/cards/3725/issue",탄탄대로 올쇼핑카드,credit
+3726,국민카드,kb,"https://www.banksalad.com/cards/3726/issue",탄탄대로 올쇼핑 티타늄카드,credit
+3727,국민카드,kb,"https://www.banksalad.com/cards/3727/issue",CLiP카드,credit
+3731,국민카드,kb,"https://www.banksalad.com/cards/3731/issue",삼성페이 KB국민카드,credit
+3770,우리카드,woori,"https://www.banksalad.com/cards/3770/issue",카카오페이 check,check
+3772,국민카드,kb,"https://www.banksalad.com/cards/3772/issue",카카오페이 KB국민 check,check
+3777,하나카드,hana,"https://www.banksalad.com/cards/3777/issue",1Q Global VIVA,credit
+3785,하나카드,hana,"https://www.banksalad.com/cards/3785/issue",Any PLUS 카드,credit
+3790,기업카드,ibk,"https://www.banksalad.com/cards/3790/issue",쇼핑앤조이카드,credit
+3808,국민카드,kb,"https://www.banksalad.com/cards/3808/issue",T-Premium KB국민카드,credit
+3810,국민카드,kb,"https://www.banksalad.com/cards/3810/issue",LG U+ 심플라이트카드,credit
+3825,케이뱅크,kbank,"https://www.banksalad.com/cards/3825/issue",케이뱅크 X 네이버페이 check2,check
+3827,케이뱅크,kbank,"https://www.banksalad.com/cards/3827/issue",케이뱅크 X KT멤버십더블혜택 check,check
+3828,하나카드,hana,"https://www.banksalad.com/cards/3828/issue",투뿔카드,credit
+3830,기업카드,ibk,"https://www.banksalad.com/cards/3830/issue",제주항공 Refresh Point 카드,credit
+3834,신한카드,shinhan,"https://www.banksalad.com/cards/3834/issue",신한카드 The ACE BLUE LABEL (아시아나클럽),credit
+3840,현대카드,hyundai,"https://www.banksalad.com/cards/3840/issue",코스트코 리워드 현대카드,credit
+3841,국민카드,kb,"https://www.banksalad.com/cards/3841/issue",Young Youth check,check
+3842,국민카드,kb,"https://www.banksalad.com/cards/3842/issue",해피CU포인트 check,check
+3843,신한카드,shinhan,"https://www.banksalad.com/cards/3843/issue",LG/GS/LS/LIG패밀리 신한카드 RPM Platinum#,credit
+3844,국민카드,kb,"https://www.banksalad.com/cards/3844/issue",예다함 카드,credit
+3845,NH카드,nh,"https://www.banksalad.com/cards/3845/issue",올바른GLOBALcheck,check
+3847,삼성카드,samsung,"https://www.banksalad.com/cards/3847/issue",트레이더스신세계 삼성카드,credit
+3848,삼성카드,samsung,"https://www.banksalad.com/cards/3848/issue",THE 1 (Mercedes-Benz),credit
+3849,하나카드,hana,"https://www.banksalad.com/cards/3849/issue",CLUB Signature SKYPASS 카드,credit
+3850,우리카드,woori,"https://www.banksalad.com/cards/3850/issue",카드의 정석 하이마트,credit
+3851,우리카드,woori,"https://www.banksalad.com/cards/3851/issue",카드의 정석 PREMIUM POINT,credit
+3852,우리카드,woori,"https://www.banksalad.com/cards/3852/issue",카드의 정석 PREMIUM MILEAGE (SKYPASS),credit
+3853,우리카드,woori,"https://www.banksalad.com/cards/3853/issue",카드의 정석 PREMIUM MILEAGE (AsianaClub),credit
+3854,신한카드,shinhan,"https://www.banksalad.com/cards/3854/issue",신세계 신한카드 (Asiana Club),credit
+3855,하나카드,hana,"https://www.banksalad.com/cards/3855/issue",BS렌탈 하나카드,credit
+3856,롯데카드,lotte,"https://www.banksalad.com/cards/3856/issue",SK매직 스페셜 롯데카드,credit
+3857,삼성카드,samsung,"https://www.banksalad.com/cards/3857/issue",PAYCO taptap,credit
+3858,신한카드,shinhan,"https://www.banksalad.com/cards/3858/issue",신한카드 YOLO ⓘ (미니언즈),credit
+3859,신한카드,shinhan,"https://www.banksalad.com/cards/3859/issue",신한카드 YOLO Tasty (미니언즈),credit
+3860,기업카드,ibk,"https://www.banksalad.com/cards/3860/issue",GD카드(체크),check
+3861,하나카드,hana,"https://www.banksalad.com/cards/3861/issue",K리그 축덕 하나멤버스 1Q Play1 카드,credit
+3863,하나카드,hana,"https://www.banksalad.com/cards/3863/issue",루비스톤 고객용 하나멤버스 Mega check,check
+3864,우리카드,woori,"https://www.banksalad.com/cards/3864/issue",카드의 정석 COOKIE CHECK,check
+3866,하나카드,hana,"https://www.banksalad.com/cards/3866/issue",1Q My Lunch,credit
+3868,신한카드,shinhan,"https://www.banksalad.com/cards/3868/issue",신한카드 Air One,credit
+3869,씨티카드,citi,"https://www.banksalad.com/cards/3869/issue",신세계 씨티 클리어 카드,credit
+3871,대구은행,dgb,"https://www.banksalad.com/cards/3871/issue",DGB세븐캐쉬백카드,credit
+3872,국민카드,kb,"https://www.banksalad.com/cards/3872/issue",KB국민 Easy pick카드,credit
+3873,국민카드,kb,"https://www.banksalad.com/cards/3873/issue",KB국민 Easy fly 티타늄카드,credit
+3874,국민카드,kb,"https://www.banksalad.com/cards/3874/issue",KB국민 Easy on카드,credit
+3875,우리카드,woori,"https://www.banksalad.com/cards/3875/issue",ROYAL BLUE POINT,credit
+3876,우리카드,woori,"https://www.banksalad.com/cards/3876/issue",ROYAL BLUE MILEAGE (SKYPASS),credit
+3877,우리카드,woori,"https://www.banksalad.com/cards/3877/issue",ROYAL BLUE MILEAGE (AsianaClub),credit
+3878,하나카드,hana,"https://www.banksalad.com/cards/3878/issue",My flight SKYPASS 카드,credit
+3879,하나카드,hana,"https://www.banksalad.com/cards/3879/issue",My flight SKYPASS Prime 카드,credit
+3880,하나카드,hana,"https://www.banksalad.com/cards/3880/issue",My flight AsianaClub 카드,credit
+3881,국민카드,kb,"https://www.banksalad.com/cards/3881/issue",KB국민 Easy auto 티타늄카드,credit
+3882,신한카드,shinhan,"https://www.banksalad.com/cards/3882/issue",LG U+ 스마트플랜 신한카드 BigPlus,credit
+3885,신한카드,shinhan,"https://www.banksalad.com/cards/3885/issue",신한카드 Deep Dream 체크 (미니언즈),check
+3886,하나카드,hana,"https://www.banksalad.com/cards/3886/issue",PAYCO 하나 check,check
+3887,수협,sh,"https://www.banksalad.com/cards/3887/issue",Real! Wide check,check
+3888,현대카드,hyundai,"https://www.banksalad.com/cards/3888/issue",현대카드 MY BUSINESS ZERO (포인트형),credit
+3889,삼성카드,samsung,"https://www.banksalad.com/cards/3889/issue",홈플러스 삼성카드,credit
+3890,국민카드,kb,"https://www.banksalad.com/cards/3890/issue",오버액션 노리 check(오버토끼),check
+3891,기업카드,ibk,"https://www.banksalad.com/cards/3891/issue",ONE AIR (UniMile),credit
+3892,국민카드,kb,"https://www.banksalad.com/cards/3892/issue",오버액션 노리 check(꼬마토끼),check
+3893,국민카드,kb,"https://www.banksalad.com/cards/3893/issue",골든대로 check,check
+3894,NH카드,nh,"https://www.banksalad.com/cards/3894/issue",T라이트카드,credit
+3895,NH카드,nh,"https://www.banksalad.com/cards/3895/issue",펫블리(PETvely) 카드,credit
+3896,NH카드,nh,"https://www.banksalad.com/cards/3896/issue",엘포인트카드(비씨),credit
+3897,NH카드,nh,"https://www.banksalad.com/cards/3897/issue",KT수퍼할부카드(비씨),credit
+3898,NH카드,nh,"https://www.banksalad.com/cards/3898/issue",경남 청년드림카드,check
+3899,삼성카드,samsung,"https://www.banksalad.com/cards/3899/issue",전자랜드 삼성카드 3 V2,credit
+3900,우리카드,woori,"https://www.banksalad.com/cards/3900/issue",카드의 정석 UniMile,credit
+3901,하나카드,hana,"https://www.banksalad.com/cards/3901/issue",넥슨 던전앤파이터 check,check
+3902,하나카드,hana,"https://www.banksalad.com/cards/3902/issue",넥슨 메이플스토리 check,check
+3903,하나카드,hana,"https://www.banksalad.com/cards/3903/issue",뇌새김 하나카드,credit
+3904,하나카드,hana,"https://www.banksalad.com/cards/3904/issue",리틀프렌즈 check,check
+3905,하나카드,hana,"https://www.banksalad.com/cards/3905/issue",신세계 하나 check,check
+3906,NH카드,nh,"https://www.banksalad.com/cards/3906/issue",평생교육희망카드 (비씨),check
+3907,하나카드,hana,"https://www.banksalad.com/cards/3907/issue",아이스크림 홈런카드,credit
+3908,하나카드,hana,"https://www.banksalad.com/cards/3908/issue",인슈 플러스 하나카드,credit
+3909,하나카드,hana,"https://www.banksalad.com/cards/3909/issue",하나로마트 하나카드,credit
+3910,우리카드,woori,"https://www.banksalad.com/cards/3910/issue",카드의 정석 CREAM TEENS CHECK,check
+3911,우리카드,woori,"https://www.banksalad.com/cards/3911/issue",위니아대우 스마트 우리카드,credit
+3912,삼성카드,samsung,"https://www.banksalad.com/cards/3912/issue",삼성카드 SFC 6 V3,credit
+3913,신한카드,shinhan,"https://www.banksalad.com/cards/3913/issue",성남시 아동수당 신한카드 Deep Dream 체크,check
+3914,NH카드,nh,"https://www.banksalad.com/cards/3914/issue",청년농업희망check (비씨),check
+3915,삼성카드,samsung,"https://www.banksalad.com/cards/3915/issue",라이프파트너 삼성카드,credit
+3916,삼성카드,samsung,"https://www.banksalad.com/cards/3916/issue",전우사랑 삼성카드,credit
+3917,신한카드,shinhan,"https://www.banksalad.com/cards/3917/issue",광역알뜰교통 신한카드,credit
+3918,하나카드,hana,"https://www.banksalad.com/cards/3918/issue",카카오 T 하나카드,credit
+3919,우리카드,woori,"https://www.banksalad.com/cards/3919/issue",서울대학교 CHECK,check
+3920,우리카드,woori,"https://www.banksalad.com/cards/3920/issue",LoL CHAMPIONS KOREA 우리check,check
+3921,우리카드,woori,"https://www.banksalad.com/cards/3921/issue",한베가족 썸(SUM)타는 우리 check,check
+3924,현대카드,hyundai,"https://www.banksalad.com/cards/3924/issue",현대모비스Family-현대카드M2 Platinum (사원증),credit
+3925,우리카드,woori,"https://www.banksalad.com/cards/3925/issue",카드의 정석 WOWRI,credit
+3926,신한카드,shinhan,"https://www.banksalad.com/cards/3926/issue",카카오페이 신한 check (무지),check
+3927,국민카드,kb,"https://www.banksalad.com/cards/3927/issue",KB국민 선생님든든 카드,credit
+3928,삼성카드,samsung,"https://www.banksalad.com/cards/3928/issue",경기도청 패밀리 삼성카드 4 (포인트),credit
+3929,신한카드,shinhan,"https://www.banksalad.com/cards/3929/issue",THE BOON VIP 신한카드,credit
+3930,국민카드,kb,"https://www.banksalad.com/cards/3930/issue",육군사관학교 학생증 KB국민 해피노리 check,check
+3931,신한카드,shinhan,"https://www.banksalad.com/cards/3931/issue",신한카드 Deep On 체크,check
+3933,우리카드,woori,"https://www.banksalad.com/cards/3933/issue",광역알뜰교통 우리카드 (체크),check
+3934,하나카드,hana,"https://www.banksalad.com/cards/3934/issue",K리그 축덕 Young Hana check with OKcashbag,check
+3935,우리카드,woori,"https://www.banksalad.com/cards/3935/issue",카드의 정석 UniMile CHECK,check
+3936,국민카드,kb,"https://www.banksalad.com/cards/3936/issue",이마트 KB국민카드(DISCOUNT STORE),credit
+3937,하나카드,hana,"https://www.banksalad.com/cards/3937/issue",LG전자 렌탈 플러스 하나카드,credit
+3938,대구은행,dgb,"https://www.banksalad.com/cards/3938/issue",부자되세요 더 오일카드,credit
+3939,신한카드,shinhan,"https://www.banksalad.com/cards/3939/issue",신한카드 Deep ECO,credit
+3941,국민카드,kb,"https://www.banksalad.com/cards/3941/issue",KB국민 FINETECH카드(대한항공),credit
+3942,국민카드,kb,"https://www.banksalad.com/cards/3942/issue",KB국민 Easy fly 티타늄카드,credit
+3943,국민카드,kb,"https://www.banksalad.com/cards/3943/issue",KB국민 청춘대로 매니아i카드,credit
+3945,신한카드,shinhan,"https://www.banksalad.com/cards/3945/issue",신한카드 Deep Dream Platinum+ (미니언즈),credit
+3946,신한카드,shinhan,"https://www.banksalad.com/cards/3946/issue",신한카드 S-Line 체크 (미니언즈),check
+3947,삼성카드,samsung,"https://www.banksalad.com/cards/3947/issue",신세계사이먼 프리미엄 아울렛 삼성카드,credit
+3948,기업카드,ibk,"https://www.banksalad.com/cards/3948/issue",쇼핑앤조이 카드,credit
+3951,롯데카드,lotte,"https://www.banksalad.com/cards/3951/issue",I’m GREAT,credit
+3953,현대카드,hyundai,"https://www.banksalad.com/cards/3953/issue",SSG.COM카드,credit
+3957,우리카드,woori,"https://www.banksalad.com/cards/3957/issue",MG새마을금고 카드의 정석 POINT,credit
+3958,신한카드,shinhan,"https://www.banksalad.com/cards/3958/issue",한국전력공사 복지 신한카드 Love,credit
+3959,신한카드,shinhan,"https://www.banksalad.com/cards/3959/issue",신한카드 The BEST+ (대한항공),credit
+3960,신한카드,shinhan,"https://www.banksalad.com/cards/3960/issue",신한카드 The BEST+ (아시아나항공),credit
+3961,신한카드,shinhan,"https://www.banksalad.com/cards/3961/issue",SOL Deep Dream 신한카드 체크,check
+3962,신한카드,shinhan,"https://www.banksalad.com/cards/3962/issue",신한카드 B.Big(삑),credit
+3964,롯데카드,lotte,"https://www.banksalad.com/cards/3964/issue",I＇m Powerful,credit
+3965,NH카드,nh,"https://www.banksalad.com/cards/3965/issue",올바른 POINT UP +,credit
+3968,롯데카드,lotte,"https://www.banksalad.com/cards/3968/issue",I＇m ACTIVE,credit
+3969,롯데카드,lotte,"https://www.banksalad.com/cards/3969/issue",I＇m YOLO 플래티넘,credit
+3970,롯데카드,lotte,"https://www.banksalad.com/cards/3970/issue",I＇m Wonderful Plus,credit
+3972,우리카드,woori,"https://www.banksalad.com/cards/3972/issue",D4@카드의정석,credit
+3973,삼성카드,samsung,"https://www.banksalad.com/cards/3973/issue",삼성카드 2 V4,credit
+3976,삼성카드,samsung,"https://www.banksalad.com/cards/3976/issue",삼성카드 5 V4,credit
+3978,국민카드,kb,"https://www.banksalad.com/cards/3978/issue",카카오뱅크 KB국민카드,credit
+3979,삼성카드,samsung,"https://www.banksalad.com/cards/3979/issue",카카오뱅크 삼성카드,credit
+3980,국민카드,kb,"https://www.banksalad.com/cards/3980/issue",펭수 노리 check(펭카),check
+3981,롯데카드,lotte,"https://www.banksalad.com/cards/3981/issue",LOCA Classic,credit
+3987,롯데카드,lotte,"https://www.banksalad.com/cards/3987/issue",LOCA PLATINUM 할인형,credit
+3991,우리카드,woori,"https://www.banksalad.com/cards/3991/issue",카드의정석 UNTACT,credit
+3992,우리카드,woori,"https://www.banksalad.com/cards/3992/issue",카드의정석 UNTACT PLATINUM,credit
+3996,기업카드,ibk,"https://www.banksalad.com/cards/3996/issue",DailyWith 데일리위드 카드,credit
+3999,신한카드,shinhan,"https://www.banksalad.com/cards/3999/issue",신한카드 Deep Dream,credit
+4000,롯데카드,lotte,"https://www.banksalad.com/cards/4000/issue",롤라 카드,credit
+4001,롯데카드,lotte,"https://www.banksalad.com/cards/4001/issue",뱅크샐러드 빨대카드,credit
+4002,롯데카드,lotte,"https://www.banksalad.com/cards/4002/issue",LOCA MONEY,credit
+4003,롯데카드,lotte,"https://www.banksalad.com/cards/4003/issue",LOCA 100,credit
+4004,하나카드,hana,"https://www.banksalad.com/cards/4004/issue",MULTI Young 모바일카드,credit
+4006,하나카드,hana,"https://www.banksalad.com/cards/4006/issue",토스 credit,credit
+4009,신한카드,shinhan,"https://www.banksalad.com/cards/4009/issue",신한카드 Unboxing,credit
+4010,신한카드,shinhan,"https://www.banksalad.com/cards/4010/issue",신한카드 Unboxing,hybrid
+4012,신한카드,shinhan,"https://www.banksalad.com/cards/4012/issue",성남사랑 신한카드 Deep Dream 체크,check
+4013,신한카드,shinhan,"https://www.banksalad.com/cards/4013/issue",신한플러스 멤버십 체크,check
+4016,롯데카드,lotte,"https://www.banksalad.com/cards/4016/issue",LOCA LIKIT,credit
+4053,국민카드,kb,"https://www.banksalad.com/cards/4053/issue",The Easy카드(적립형),credit
+4054,국민카드,kb,"https://www.banksalad.com/cards/4054/issue",The Easy카드(할인형),credit
+4056,현대카드,hyundai,"https://www.banksalad.com/cards/4056/issue",현대카드ZERO Edition2(할인형),credit
+4057,현대카드,hyundai,"https://www.banksalad.com/cards/4057/issue",대한항공카드 150,credit
+4058,하나카드,hana,"https://www.banksalad.com/cards/4058/issue",My Trip 1Q Global VIVA,credit
+4059,삼성카드,samsung,"https://www.banksalad.com/cards/4059/issue",T 라이트 삼성카드,credit
+4060,삼성카드,samsung,"https://www.banksalad.com/cards/4060/issue",국민행복 삼성카드 V2,credit
+4061,신한카드,shinhan,"https://www.banksalad.com/cards/4061/issue",신한 국민행복카드[체크],check
+4062,신한카드,shinhan,"https://www.banksalad.com/cards/4062/issue",신한 국민행복카드[신용],credit
+4063,씨티카드,citi,"https://www.banksalad.com/cards/4063/issue",NEW 씨티 클리어 카드,credit
+4064,현대카드,hyundai,"https://www.banksalad.com/cards/4064/issue",현대카드 DIGITAL LOVER,credit
+4065,현대카드,hyundai,"https://www.banksalad.com/cards/4065/issue",현대카드ZERO Edition2(포인트형),credit
+4066,현대카드,hyundai,"https://www.banksalad.com/cards/4066/issue",현대카드ZERO MOBILE Edition2(할인형),credit
+4068,현대카드,hyundai,"https://www.banksalad.com/cards/4068/issue",현대카드ZERO MOBILE Edition2(포인트형),credit
+4069,현대카드,hyundai,"https://www.banksalad.com/cards/4069/issue",현대카드Z family,credit
+4070,현대카드,hyundai,"https://www.banksalad.com/cards/4070/issue",현대카드Z ontact,credit
+4071,현대카드,hyundai,"https://www.banksalad.com/cards/4071/issue",현대카드Z work,credit
+4072,현대카드,hyundai,"https://www.banksalad.com/cards/4072/issue",현대카드X BOOST,credit
+4073,현대카드,hyundai,"https://www.banksalad.com/cards/4073/issue",현대카드 M BOOST,credit
+4074,현대카드,hyundai,"https://www.banksalad.com/cards/4074/issue",현대카드 M2 BOOST,credit
+4075,현대카드,hyundai,"https://www.banksalad.com/cards/4075/issue",the Pink,credit
+4076,현대카드,hyundai,"https://www.banksalad.com/cards/4076/issue",현대카드 M3 BOOST,credit
+4077,현대카드,hyundai,"https://www.banksalad.com/cards/4077/issue",현대카드X2 BOOST,credit
+4078,현대카드,hyundai,"https://www.banksalad.com/cards/4078/issue",현대카드X3 BOOST,credit
+4079,현대카드,hyundai,"https://www.banksalad.com/cards/4079/issue",현대카드 the Green Edition2,credit
+4080,현대카드,hyundai,"https://www.banksalad.com/cards/4080/issue",the Red Edition5 (포인트형),credit
+4081,현대카드,hyundai,"https://www.banksalad.com/cards/4081/issue",the Red Edition5 (항공 마일리지형),credit
+4082,국민카드,kb,"https://www.banksalad.com/cards/4082/issue",KB국민 해외에선 check,check
+4083,삼성카드,samsung,"https://www.banksalad.com/cards/4083/issue",삼성 iD ON 카드,credit
+4084,우리카드,woori,"https://www.banksalad.com/cards/4084/issue",카드의정석 NEW우리V카드,credit
+4085,현대카드,hyundai,"https://www.banksalad.com/cards/4085/issue",네이버 현대카드,credit
+4087,현대카드,hyundai,"https://www.banksalad.com/cards/4087/issue",스타벅스 현대카드,credit
+4088,우리카드,woori,"https://www.banksalad.com/cards/4088/issue",카드의정석 우리Vcheck,check
+4089,NH카드,nh,"https://www.banksalad.com/cards/4089/issue",올바른 FLEX 카드,credit
+4091,우리카드,woori,"https://www.banksalad.com/cards/4091/issue",LGU+ 카드의정석 Ⅱ,credit
+4092,하나카드,hana,"https://www.banksalad.com/cards/4092/issue",MULTI On 모바일카드,credit
+4093,국민카드,kb,"https://www.banksalad.com/cards/4093/issue",toss KB국민카드,credit
+4095,하나카드,hana,"https://www.banksalad.com/cards/4095/issue",K리그 축덕 하나멤버스 1Q Play1 카드,credit
+4096,부산은행,bnk,"https://www.banksalad.com/cards/4096/issue",369청춘불패 오포인트카드,check
+4097,국민카드,kb,"https://www.banksalad.com/cards/4097/issue",펭수 노리 check(펭요미),check
+4098,신한카드,shinhan,"https://www.banksalad.com/cards/4098/issue",11번가 신한카드,credit
+4099,신한카드,shinhan,"https://www.banksalad.com/cards/4099/issue",신한카드 The CLASSIC-S,credit
+4100,국민카드,kb,"https://www.banksalad.com/cards/4100/issue",첵첵check,check
+4101,국민카드,kb,"https://www.banksalad.com/cards/4101/issue",위글위글 첵첵 check,check
+4102,하나카드,hana,"https://www.banksalad.com/cards/4102/issue",CLUB Signature Asiana Club 카드,credit
+4103,하나카드,hana,"https://www.banksalad.com/cards/4103/issue",하나 스카이패스 아멕스 플래티늄 카드,credit
+4104,하나카드,hana,"https://www.banksalad.com/cards/4104/issue",CLUB Premier Hotel 카드,credit
+4105,하나카드,hana,"https://www.banksalad.com/cards/4105/issue",CLUB Premier Travel 카드,credit
+4106,하나카드,hana,"https://www.banksalad.com/cards/4106/issue",모두의 신세계 하나카드,credit
+4107,하나카드,hana,"https://www.banksalad.com/cards/4107/issue",모두의 건강,credit
+4108,하나카드,hana,"https://www.banksalad.com/cards/4108/issue",MULTI Oil 모바일카드,credit
+4109,하나카드,hana,"https://www.banksalad.com/cards/4109/issue",국민 행복 카드,credit
+4110,하나카드,hana,"https://www.banksalad.com/cards/4110/issue",MULTI Living 모바일카드,credit
+4111,하나카드,hana,"https://www.banksalad.com/cards/4111/issue",MULTI Any 모바일카드,credit
+4112,하나카드,hana,"https://www.banksalad.com/cards/4112/issue",하나원큐카드,credit
+4113,하나카드,hana,"https://www.banksalad.com/cards/4113/issue",1Q Special+,credit
+4114,하나카드,hana,"https://www.banksalad.com/cards/4114/issue",하나멤버스 1Q 카드 내맘대로,credit
+4115,하나카드,hana,"https://www.banksalad.com/cards/4115/issue",모두의 쇼핑,credit
+4116,하나카드,hana,"https://www.banksalad.com/cards/4116/issue",My Trip AsianaClub 카드 My flight,credit
+4117,하나카드,hana,"https://www.banksalad.com/cards/4117/issue",My Trip SKYPASS 카드 My flight,credit
+4118,국민카드,kb,"https://www.banksalad.com/cards/4118/issue",톡톡 with 토스 카드,credit
+4119,하나카드,hana,"https://www.banksalad.com/cards/4119/issue",CLUB Primus Skypass 카드,credit
+4121,롯데카드,lotte,"https://www.banksalad.com/cards/4121/issue",LOCA LIKIT 1.2,credit
+4137,기업카드,ibk,"https://www.banksalad.com/cards/4137/issue",IBK 무직타이거 카드(신용),credit
+4141,롯데카드,lotte,"https://www.banksalad.com/cards/4141/issue",I＇m WONDERFUL 플래티넘,credit
+4142,롯데카드,lotte,"https://www.banksalad.com/cards/4142/issue",I＇m DRIVING,credit
+4144,현대백화점,thehyundai,"https://www.banksalad.com/cards/4144/issue",현대백화점카드,credit
+4145,현대백화점,thehyundai,"https://www.banksalad.com/cards/4145/issue",현대백화점 Fit카드,credit
+4146,국민카드,kb,"https://www.banksalad.com/cards/4146/issue",KB국민 톡톡 F카드,credit
+4147,국민카드,kb,"https://www.banksalad.com/cards/4147/issue",KB국민 톡톡 M카드,credit
+4148,국민카드,kb,"https://www.banksalad.com/cards/4148/issue",KB국민 톡톡 O카드,credit
+4149,국민카드,kb,"https://www.banksalad.com/cards/4149/issue",KB국민 톡톡 D카드,credit
+4158,하나카드,hana,"https://www.banksalad.com/cards/4158/issue",후불하이패스 카드,credit
+4174,현대카드,hyundai,"https://www.banksalad.com/cards/4174/issue",현대카드 후불하이패스카드,credit
+4176,하나카드,hana,"https://www.banksalad.com/cards/4176/issue",내맘대로 쁨 카드,credit
+4185,NH카드,nh,"https://www.banksalad.com/cards/4185/issue",올바른BAZIC카드,credit
+4186,NH카드,nh,"https://www.banksalad.com/cards/4186/issue",올바른 OIL&PASS카드,credit
+4187,NH카드,nh,"https://www.banksalad.com/cards/4187/issue",올바른 MYPICK 카드,credit
+4188,NH카드,nh,"https://www.banksalad.com/cards/4188/issue",올바른 하나로카드,credit
+4189,NH카드,nh,"https://www.banksalad.com/cards/4189/issue",별다줄카드,credit
+4190,NH카드,nh,"https://www.banksalad.com/cards/4190/issue",올바른 NEW HAVE카드,credit
+4191,국민카드,kb,"https://www.banksalad.com/cards/4191/issue",탐나는전 check,check
+4192,국민카드,kb,"https://www.banksalad.com/cards/4192/issue",해피리워드 check,check
+4193,국민카드,kb,"https://www.banksalad.com/cards/4193/issue",첵첵 check,check
+4195,국민카드,kb,"https://www.banksalad.com/cards/4195/issue",그린재킷 check,check
+4196,현대카드,hyundai,"https://www.banksalad.com/cards/4196/issue",kt-현대카드M Edition3 (청구할인형),credit
+4197,신한카드,shinhan,"https://www.banksalad.com/cards/4197/issue",카카오페이 신한 콘 체크,check
+6001,국민카드,kb,"https://www.banksalad.com/cards/3637/issue",탄탄대로 Miz&Mr카드(블루팩),credit
+6002,국민카드,kb,"https://www.banksalad.com/cards/3637/issue",탄탄대로 Miz&Mr카드(퍼플팩),credit
+6003,국민카드,kb,"https://www.banksalad.com/cards/3637/issue",탄탄대로 Miz&Mr카드(웨딩팩),credit
+6011,국민카드,kb,"https://www.banksalad.com/cards/3998/issue","""Easy ring 티타늄카드(온라인쇼핑, 대형마트)""",credit
+6012,국민카드,kb,"https://www.banksalad.com/cards/3998/issue","""Easy ring 티타늄카드(온라인쇼핑, 커피, 편의점, 베이커리)""",credit
+6013,국민카드,kb,"https://www.banksalad.com/cards/3998/issue","""Easy ring 티타늄카드(온라인쇼핑, 주유)""",credit
+6014,국민카드,kb,"https://www.banksalad.com/cards/3998/issue","""Easy ring 티타늄카드(대형마트, 커피, 편의점, 베이커리)""",credit
+6015,국민카드,kb,"https://www.banksalad.com/cards/3998/issue","""Easy ring 티타늄카드(대형마트, 주유)""",credit
+6016,국민카드,kb,"https://www.banksalad.com/cards/3998/issue","""Easy ring 티타늄카드(커피, 편의점, 베이커리, 주유)""",credit
+6021,국민카드,kb,"https://www.banksalad.com/cards/4094/issue",Easy link 티타늄카드(패밀리팩),credit
+6022,국민카드,kb,"https://www.banksalad.com/cards/4094/issue",Easy link 티타늄카드(사업자팩),credit
+6023,국민카드,kb,"https://www.banksalad.com/cards/4094/issue",Easy link 티타늄카드(직장인팩),credit

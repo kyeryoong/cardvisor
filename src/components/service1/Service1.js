@@ -8,24 +8,21 @@ import { useNavigate } from 'react-router-dom';
 
 import SelectedBrands from './SelectedBrands';
 
-
-
 let jsonArr = [];
 
-function getJson() {
+
+function getJson(){
     let url = "http://localhost:8080/select";
-    //let jsonArr = new Object();
-    //jsonArr = [{"memberId":1 , "brandId": 10 }, {"memberId":1 , "brandId":20 }, {"memberId":1 , "brandId":30}];
 
     fetch(url, {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json"
+        method:"post",
+        headers:{
+            "Content-Type":"application/json"
         },
-        body: JSON.stringify(jsonArr)
+        body:JSON.stringify(jsonArr)
     }).then(res => {
         console.log(res);
-    }).catch(err => {
+    }).catch(err =>{
         console.log(err);
     });
 }
@@ -46,6 +43,8 @@ function Card() {
             <h2>선호하는 혜택을 체크해주세요!</h2>
             <br /><br />
 
+
+
             <div>
                 <div className={styles.zone1}><button className={styles.categoryName} onClick={() => { setShow1(!show1); }}> 교통 </button></div>
                 <div className={styles.zone2}><button className={styles.hideShow} onClick={() => { setShow1(!show1); }}> {show1 ? '▲' : '▼'}</button></div>
@@ -53,7 +52,7 @@ function Card() {
 
             <hr />
             <div className={styles.row}>
-                {show1 && <Brands name="버스" brandlogo="transport_bus" />}
+                {show1 && <Brands name="버스" brandlogo="transport_bus"/>}
                 {show1 && <Brands name="지하철" brandlogo="transport_subway" />}
                 {show1 && <Brands name="택시" brandlogo="transport_taxi" />}
                 {show1 && <Brands name="코레일" brandlogo="transport_korail" />}
@@ -129,14 +128,15 @@ function Card() {
             </div>
             <br /><br /><br />
 
-            <button onClick={() => {
-                alert(SelectedBrands);
-            }}>전송 확인</button>
-
-
             <div>
                 <Link to='/service1/results'>
-                    <button className={styles.sendButton}>
+                    <button className={styles.sendButton} onClick={() => {
+                    
+                        for(var i = 0; i < SelectedBrands.length; i++){
+                            jsonArr[i] = {"memberId" : 1, "brandName": SelectedBrands[i]}
+                        }
+                        getJson();
+                    }}>
                         혜택 선택 완료
                     </button>
                 </Link>

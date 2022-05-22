@@ -1,0 +1,200 @@
+﻿brand_id,name_eng,name_kor,category_id
+1,beauty_innisfree,이니스프리,1
+2,beauty_thefaceshop,더페이스샵,1
+3,beauty_aritaum,아리따움,1
+4,beauty_tonymoly,토니모리,1
+5,beauty_etudehouse,에뛰드하우스,1
+6,beauty_naturerepublic,네이처리퍼블릭,1
+7,beauty_oliveyoung,올리브영,1
+8,beauty_lalavla,랄라블라,1
+9,beauty_lohbs,롭스,1
+10,books_kyobobooks,교보문고,2
+11,books_bandinlunis,반디앤루니스,2
+12,books_ypbooks,영풍문고,2
+13,books_kyobobooksint,인터넷 교보문고,2
+14,books_bandinlunisonline,반디앤루니스 온라인,2
+15,books_ypbooksint,인터넷 영풍문고,2
+16,books_yes24books,YES24 도서,2
+17,books_interparkbooks,인터파크 도서,2
+18,books_aladin,알라딘,2
+19,books_11stbooks,도서11번가,2
+20,cafebakery_starbucks,스타벅스,3
+21,cafebakery_twosomeplace,투썸플레이스,3
+22,cafebakery_ediyacoffe,이디야커피,3
+23,cafebakery_hollyscoffe,할리스커피,3
+24,cafebakery_cafebene,카페베네,3
+25,cafebakery_tomntoms,탐앤탐스,3
+26,cafebakery_angelinus,엔제리너스,3
+27,cafebakery_gongcha,공차,3
+28,cafebakery_passcucci,파스쿠찌,3
+29,cafebakery_coffeebean,커피빈,3
+30,cafebakery_paulbassett,폴 바셋,3
+31,cafebakery_baskinrobbins,배스킨라빈스 31,3
+32,cafebakery_natuur,나뚜루,3
+33,cafebakery_haagendazs,하겐다즈,3
+34,cafebakery_dunkindonuts,던킨도너츠,3
+35,cafebakery_krispykreme,크리스피크림,3
+36,cafebakery_misterdonut,미스터도넛,3
+37,cafebakery_smoothieking,스무디킹,3
+38,cafebakery_parisbaguette,파리바게뜨,3
+39,cafebakery_touslesjours,뚜레쥬르,3
+40,cafebakery_pariscroissant,파리크라상,3
+41,communication_skt,SK텔레콤,4
+42,communication_kt,KT,4
+43,communication_lgu,LG유플러스,4
+44,communication_ktinternet,KT olleh 인터넷,4
+45,communication_sktinternet,SKT 인터넷,4
+46,communication_lguinternet,LG U+ 인터넷,4
+47,communication_sktiptv,SKT IPTV,4
+48,communication_ktiptv,KT IP-TV,4
+49,communication_lguiptv,LG U+ IPTV,4
+50,communication_sktintphone,SKT 인터넷전화,4
+51,communication_ktintphone,KT 인터넷전화,4
+52,communication_lguintphone,LG U+ 인터넷전화,4
+53,convstore_gs25,GS25,5
+54,convstore_cu,CU,5
+55,convstore_seveneleven,세븐일레븐,5
+56,convstore_ministop,미니스톱,5
+57,convstore_emart24,이마트24,5
+58,convstore_buytheway,바이더웨이,5
+59,deptstore_shinsegaedept,신세계백화점,6
+60,deptstore_lottedept,롯데백화점,6
+61,deptstore_hyundaidept,현대백화점,6
+62,deptstore_galleriadept,갤러리아 백화점,6
+63,deptstore_akplazadept,AK플라자 백화점,6
+64,deptstore_lotteyoungplaza,롯데영플라자,6
+65,deptstore_hyundaiuplex,현대백화점 U-PLEX,6
+66,deptstore_dcubedept,디큐브백화점,6
+67,deptstore_newcoredept,뉴코아백화점,6
+68,dining_outback,아웃백스테이크하우스,7
+69,dining_tgif,T.G.I.F,7
+70,dining_sevensprings,세븐스프링스,7
+71,dining_vips,VIPS,7
+72,dining_ashely,애슐리,7
+73,dining_madforgarlic,매드포갈릭,7
+74,dining_bennigans,베니건스,7
+75,dining_mcdonalds,맥도날드,7
+76,dining_burgerking,버거킹,7
+77,dining_lotteria,롯데리아,7
+78,dining_kfc,KFC,7
+79,dining_subway,써브웨이,7
+80,dining_innoutburger,인앤아웃버거,7
+81,dining_nobrandburger,노브랜드버거,7
+82,dining_momstouch,맘스터치,7
+83,dining_bbq,BBQ,7
+84,dining_kyochon,교촌치킨,7
+85,dining_goobne,굽네치킨,7
+86,dining_nene,네네치킨,7
+87,dining_pericana,페리카나,7
+88,dining_toreore,또래오래,7
+89,dining_mexicana,멕시카나치킨,7
+90,dining_cjeogajip,처갓집양념치킨,7
+91,dining_bhc,BHC치킨,7
+92,dining_hosigi,호식이 두마리치킨,7
+93,dining_dominos,도미노 피자,7
+94,dining_misterpizza,미스터피자,7
+95,dining_pizzahut,피자헛,7
+96,dining_papajohns,파파존스피자,7
+97,easypay_naverpay,네이버페이,8
+98,easypay_kakaopay,카카오페이,8
+99,easypay_samsungpay,삼성페이,8
+100,entertainment_netflix,넷플릭스,9
+101,entertainment_youtubepremium,유튜브 프리미엄,9
+102,entertainment_watcha,왓챠,9
+103,entertainment_wavve,웨이브,9
+104,entertainment_disneyplus,디즈니 플러스,9
+105,entertainment_melon,멜론,9
+106,entertainment_bugs,벅스,9
+107,entertainment_genie,genie,9
+108,entertainment_soribada,소리바다,9
+109,entertainment_flo,FLO,9
+110,entertainment_youtubemusic,유튜브 뮤직,9
+111,fuel_gsgas,GS칼텍스 휘발유,10
+112,fuel_skgas,SK엔크린 휘발유,10
+113,fuel_hobgas,현대오일뱅크 휘발유,10
+114,fuel_soilgas,S-Oil 휘발유,10
+115,fuel_altgas,알뜰주유소 휘발유,10
+116,fuel_nhgas,NH-OIL 휘발유,10
+117,fuel_gsdis,GS칼텍스 경유,10
+118,fuel_skdis,SK엔크린 경유,10
+119,fuel_hobdis,현대오일뱅크 경유,10
+120,fuel_soildis,S-Oil 경유,10
+121,fuel_altdis,알뜰주유소 경유,10
+122,fuel_nhdis,NH-OIL 경유,10
+123,fuel_gslpg,GS칼텍스 LPG,10
+124,fuel_sklpg,SK엔크린 LPG,10
+125,fuel_hoblpg,현대오일뱅크 LPG,10
+126,fuel_soillpg,S-Oil LPG,10
+127,fuel_altlpg,알뜰주유소 LPG,10
+128,fuel_nhlpg,NH-OIL LPG,10
+129,fuel_e1lpg,E1 LPG,10
+130,fuel_gspet,GS칼텍스 등유,10
+131,fuel_skpet,SK엔크린 등유,10
+132,fuel_hobpet,현대오일뱅크 등유,10
+133,fuel_soilpet,S-Oil 등유,10
+134,fuel_altpet,알뜰주유소 등유,10
+135,fuel_nhpet,NH-OIL 등유,10
+136,fuel_fuelgas,주유 휘발유,10
+137,fuel_fueldis,주유 경유,10
+138,fuel_fuellpg,주유 LPG,10
+139,fuel_fuelpet,주유 등유,10
+140,mart_emart,이마트,11
+141,mart_homeplus,홈플러스,11
+142,mart_lottemart,롯데마트,11
+143,mart_nhhanaro,농협하나로마트,11
+144,mart_emarttraders,이마트 트레이더스,11
+145,mart_vicmarket,VIC 마켓,11
+146,mart_hanaroclub,하나로클럽,11
+147,mart_costco,코스트코,11
+148,mart_homeplusexpress,홈플러스익스프레스,11
+149,mart_emarteveryday,이마트 에브리데이,11
+150,mart_gsmart,GS마트,11
+151,mart_lottesuper,롯데슈퍼,11
+152,mart_gsthefresh,GS THE FRESH,11
+153,movies_cgv,CGV,12
+154,movies_lottecinema,롯데시네마,12
+155,movies_megabox,메가박스,12
+156,movies_cgvonline,CGV 온라인,12
+157,movies_megaboxonline,메가박스 온라인,12
+158,movies_lottecinemaonline,롯데시네마 온라인,12
+159,movies_ticketlinkmovie,티켓링크 영화,12
+160,movies_interparkmovie,인터파크 영화,12
+161,movies_yes24movie,YES24 영화,12
+162,movies_navermovie,네이버영화,12
+163,movies_maxmovie,맥스무비,12
+164,onlineshopping_11st,11번가,13
+165,onlineshopping_gmarket,G마켓,13
+166,onlineshopping_auction,옥션,13
+167,onlineshopping_navershopping,네이버쇼핑,13
+168,onlineshopping_interpark,인터파크,13
+169,onlineshopping_gsshop,GS SHOP,13
+170,onlineshopping_lottecom,롯데닷컴,13
+171,onlineshopping_lotteimall,롯데아이몰,13
+172,onlineshopping_ssgcom,SSG닷컴,13
+173,onlineshopping_shinsegaemall,신세계몰,13
+174,onlineshopping_akmall,AK몰,13
+175,onlineshopping_emartmall,이마트몰,13
+176,onlineshopping_hyundaihmall,현대Hmall,13
+177,onlineshopping_coupang,쿠팡,13
+178,onlineshopping_wemakeprice,위메프,13
+179,onlineshopping_tmon,티몬,13
+180,themepark_lotteworld,롯데월드,14
+181,themepark_everland,에버랜드,14
+182,themepark_seoulland,서울랜드,14
+183,themepark_kjworld,경주월드,14
+184,themepark_carribeanbay,캐리비안 베이,14
+185,themepark_oceanworld,오션월드,14
+186,transport_kakaottaxi,카카오T 택시,15
+187,transport_bus,버스,15
+188,transport_subway,지하철,15
+189,transport_taxi,택시,15
+190,transport_tmoney,T-money 충전,15
+191,transport_kakaotblack,카카오 T 블랙,15
+192,transport_expressbus,고속버스모바일앱,15
+193,transport_premiumtaxi,모범택시,15
+194,transport_cashbee,캐시비,15
+195,transport_korail,KORAIL,15
+196,transport_srt,SRT,15
+197,transport_arex,코레일공항철도,15
+198,transport_ktx,KTX,15
+199,starbuckssirenorder,스타벅스 APP 사이렌오더,3

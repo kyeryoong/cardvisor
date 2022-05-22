@@ -1,10 +1,26 @@
 import { useNavigate } from 'react-router';
-import dummy from "../database/data.json";
+import { useState } from 'react';
+import { useEffect } from 'react';
 import styles from './List.module.css';
+
 
 
 function List() {
     const navigate = useNavigate();
+
+    const [cards, setCards] = useState({
+        cardAll: [{}],
+    });
+
+    useEffect(() => {
+        fetch("/cards")
+            .then((response) => {
+                return response.json();
+            })
+            .then(data => {
+                setCards(data);
+            });
+    }, []);
 
     return (
         <div>
@@ -15,7 +31,7 @@ function List() {
 
             <table>
                 <tbody>
-                    {dummy.cardAll.map(cur => (
+                    {cards.cardAll.map(cur => (
                         <tr key={cur.id}>
                             <td>
                                 <img
@@ -28,7 +44,7 @@ function List() {
                                 <img
                                     className={styles.cardCompanyImages}
                                     alt={cur.company}
-                                    src={process.env.PUBLIC_URL + '/images/card_logo/left aligned/' + cur.company + '.png'} />
+                                    src={process.env.PUBLIC_URL + '/images/card_logo/left_aligned/' + cur.company_eng + '.png'} />
                             </td>
 
                             <td className={styles.cardName}>
