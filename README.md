@@ -45,3 +45,4 @@
 
 ### Ver. 1.1.1 (2022/05/25)
 - brands logo was updated.
+- *service1* page was modified.
