@@ -42,3 +42,6 @@
 
 ### Ver. 1.1.0 (2022/05/22)
 - backend server was connected with SpringBoot and Java.
+
+### Ver. 1.1.1 (2022/05/25)
+- brands logo was updated.
