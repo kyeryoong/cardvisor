@@ -1,0 +1,45 @@
+* {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+
+label .iconbox {
+    position: relative;
+    display: flex;
+    width: 430px;
+    height: 110px;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, rgb(240, 240, 240) 40%, rgb(224, 224, 224) 30%);
+    color: rgb(100, 100, 100);
+    border-radius: 3px;
+    font-size: 1.5rem;
+    user-select: none;
+    margin: 10px;
+}
+
+label .brandNameEng {
+    width: 120px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: -260px;
+}
+
+span {
+    margin-left: 0px;
+    text-align: left;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label input[type="checkbox"]:checked~.iconbox {
+    background: linear-gradient(to right, rgb(200, 255, 255) 40%, rgb(0, 200, 200) 30%);
+    color: rgb(255, 255, 255);
+}
+
+label .iconbox span {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 1000;
+}

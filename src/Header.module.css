@@ -10,6 +10,7 @@
     top: 0px;
     left: 0px;
     background: rgb(0, 200, 200);
+    z-index: 1;
 }
 
 .title {

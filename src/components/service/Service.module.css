@@ -33,47 +33,15 @@ h2 {
     margin-bottom: 10px;
 }
 
-hr {
-    width: 100%;
-    position: relative;
-    margin-bottom: 10px;;
-}
-
-.zone1 {
-    width: 860px;
-    float: left;
-}
-
-.zone2 {
-    width: 20px;
-    margin-right: 5px;
-    float: right;
-}
-
-.categoryName {
-    width: 100%;
-    text-align: left;
-    font-size: 1.5rem;
-    color: rgb(50, 50, 50);
-    font-weight: 1000;
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
-}
-
-.hideShow {
-    height: 50px;
-    text-align: left;
-    font-size: 1.5rem;
-    color: rgb(50, 50, 50);
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
-}
-
-.row {
+.service1Row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 50px;
+}
+
+.service2Row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 50px;
 }
 
@@ -103,12 +71,7 @@ hr {
     cursor: pointer;
 }
 
-details {
+.detailsZone {
     margin-bottom: 30px;
-}
-
-.summaryZone {
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 0px;
 }

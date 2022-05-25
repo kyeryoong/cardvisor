@@ -21,7 +21,7 @@ function Home() {
 
             <div>
                 <button className={styles.startButton} onClick={() => {
-                    navigate('/main');
+                    navigate('/login');
                 }}>
                     시작하기
                 </button>

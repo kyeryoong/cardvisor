@@ -16,7 +16,7 @@ function Header() {
                 cardvisor
             </div>
 
-            <div className={styles.zone1}>
+            {/* <div className={styles.zone1}>
                 <button onClick={() => {
                     navigate('/mypage');
                 }}>
@@ -30,7 +30,7 @@ function Header() {
                 }}>
                     로그아웃
                 </button>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -1,0 +1,50 @@
+hr {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;;
+}
+
+.zone1 {
+    width: 860px;
+    float: left;
+}
+
+.zone2 {
+    width: 20px;
+    margin-right: 5px;
+    float: right;
+}
+
+.categoryName {
+    width: 105%;
+    height: 40px;
+    text-align: left;
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+    font-weight: 1000;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hideShow {
+    height: 40px;
+    text-align: left;
+    font-size: 1.5rem;
+    color: rgb(50, 50, 50);
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.summaryZone ::marker {
+    font-size: 0px;
+}
+
+.summaryZone {
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}

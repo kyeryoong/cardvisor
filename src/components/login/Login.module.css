@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.temp1 {
+    background-color: red;
+    border: 3px solid red;
+    color: white;
+    font-size: 2rem;
+    font-weight: 1000;
+    height: 50px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp2 {
+    border: 3px solid red;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    height: 80px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Poppins', serif;
+    color: rgb(0, 200, 200);
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.subTitle {
+    font-size: 1.3rem;
+    font-family: 'NanumBarunGothic', serif;
+    color: rgb(160, 160, 160);
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.line {
+    background-color: rgb(200, 200, 200);
+    height: 1.5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.inputZone {
+    width: 400px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+    text-align: left;
+    background-color: transparent;
+    border: 3px solid rgb(0, 200, 200);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.inputZone::placeholder {
+    font-size: 1.3rem;
+    font-weight: 1000;
+    font-family: 'NanumBarunGothic', serif;
+    color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    font-family: 'NanumBarunGothic';
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    display: block;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color:rgb(243, 156, 18);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
