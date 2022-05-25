@@ -24,7 +24,7 @@
 
 ### Ver. 1.0.2 (2022/05/13)
 - *list* page was implemented using JSON.
-- database folder was created for temporal use.
+- Database folder was created for temporal use.
 
 ### Ver. 1.0.3 (2022/05/14)
 - *header* was modified.
@@ -33,16 +33,22 @@
 
 ### Ver. 1.0.4 (2022/05/19)
 - Data transfer was implemented in *service1*.
-- database was updated with more information.
-- names of files in *card_logo* were changed.
-- names of variables in *List.js* were changed.
+- Database was updated with more information.
+- Names of files in *card_logo* were changed.
+- Names of variables in *List.js* were changed.
 
 ### Ver. 1.0.5 (2022/05/22)
-- backend server was connected using JSON.
+- Backend server was connected using JSON.
 
 ### Ver. 1.1.0 (2022/05/22)
-- backend server was connected with SpringBoot and Java.
+- Backend server was connected with SpringBoot and Java.
 
 ### Ver. 1.1.1 (2022/05/25)
-- brands logo was updated.
+- All of brands logo was updated.
 - *service1* page was modified.
+
+### Ver. 1.1.2 (2022/05/25)
+- *service1* page was completed.
+- *service2* page was implemented.
+- *login* page was implemented. (NO LOGIN SECURITY FUNCTION!)
+- Major structural changes in *service* pages. (*service1* and *service2* pages were moved to parent directory *service*)
