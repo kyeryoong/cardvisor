@@ -52,3 +52,6 @@
 - *service2* page was implemented.
 - *login* page was implemented. (NO LOGIN SECURITY FUNCTION!)
 - Major structural changes in *service* pages. (*service1* and *service2* pages were moved to parent directory *service*)
+
+### Ver. 1.1.3 (2022/05/27)
+- *service1* and *service2* was modified.
