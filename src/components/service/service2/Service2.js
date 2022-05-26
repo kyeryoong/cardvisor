@@ -4,13 +4,21 @@ import Brands from './Brands';
 import Categories from '../Categories';
 
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 
-function Service1() {
+let jsonArr = [];
+
+function Service2() {
     const navigate = useNavigate();
 
-    // const [sel, setSel] = useState(0);
+    const [sel1, setSel1] = useState(0);
+    const [sel2, setSel2] = useState(0);
+    const [sel3, setSel3] = useState(0);
+    const [sel4, setSel4] = useState(0);
+    const [sel5, setSel5] = useState(0);
+    const [sel6, setSel6] = useState(0);
 
     return (
         <div>
@@ -24,17 +32,21 @@ function Service1() {
                 <Categories categoryName="교통" />
 
                 <div className={styles.service2Row}>
-                    <Brands brandNameKor="버스" brandNameEng="transport_bus" />
-                    <Brands brandNameKor="지하철" brandNameEng="transport_subway" />
-                    <Brands brandNameKor="택시" brandNameEng="transport_taxi" />
-                    <Brands brandNameKor="코레일" brandNameEng="transport_korail" />
-                    <Brands brandNameKor="SRT" brandNameEng="transport_srt" />
-                    <Brands brandNameKor="인천국제공항철도" brandNameEng="transport_arex" />
+                    <Brands brandNameKor="버스" brandNameEng="transport_bus" setSel={setSel1} />
+                    <Brands brandNameKor="지하철" brandNameEng="transport_subway" setSel={setSel2} />
+                    <Brands brandNameKor="택시" brandNameEng="transport_taxi" setSel={setSel3} />
+                    <Brands brandNameKor="코레일" brandNameEng="transport_korail" setSel={setSel4} />
+                    <Brands brandNameKor="SRT" brandNameEng="transport_srt" setSel={setSel5} />
+                    <Brands brandNameKor="인천국제공항철도" brandNameEng="transport_arex" setSel={setSel6} />
                 </div>
             </details>
 
-
-
+            {sel1}<br />
+            {sel2}<br />
+            {sel3}<br />
+            {sel4}<br />
+            {sel5}<br />
+            {sel6}<br />
 
             <div>
                 {/* <Link to='/service1/results'>
@@ -48,6 +60,21 @@ function Service1() {
                         n개 혜택 선택 완료
                     </button>
                 </Link> */}
+
+                <button className={styles.sendButton} onClick={() => {
+                    jsonArr = []
+
+                    if (sel1 > 0) {jsonArr.push(["transport_bus", sel1]);}
+                    if (sel2 > 0) {jsonArr.push(["transport_subway", sel2]);}
+                    if (sel3 > 0) {jsonArr.push(["transport_taxi", sel3]);}
+                    if (sel4 > 0) {jsonArr.push(["transport_korail", sel4]);}
+                    if (sel5 > 0) {jsonArr.push(["transport_srt", sel5]);}
+                    if (sel6 > 0) {jsonArr.push(["transport_arex", sel6]);}
+
+                    alert(jsonArr.join("\n"));
+                }}>
+                    혜택 선택 완료
+                </button>
             </div>
             <br />
 
@@ -62,4 +89,4 @@ function Service1() {
     );
 }
 
-export default Service1;
+export default Service2;

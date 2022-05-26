@@ -25,10 +25,10 @@ function Brands(props) {
                 props.setSel(SelectedBrands.length);
             }
             }>
-                <img className={styles.brandNameEng}
+                <img className={styles.brandLogo}
                     alt={props.brandNameEng}
                     src={process.env.PUBLIC_URL + '/images/brands_logo/' + props.brandNameEng + '.png'} />
-                <span>{props.brandNameKor}</span>
+                <div className={styles.brandNameKor}>{props.brandNameKor}</div>
             </div>
         </label>
     );

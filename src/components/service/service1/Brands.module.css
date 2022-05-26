@@ -2,11 +2,9 @@
     font-family: "NanumBarunGothic", sans-serif;
 }
 
-label .iconbox {
-    position: relative;
-    display: flex;
+.iconbox {
     width: 160px;
-    height: 110px;
+    height: 120px;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(rgb(240, 240, 240) 70%, rgb(224, 224, 224) 30%);
@@ -17,23 +15,23 @@ label .iconbox {
     margin: 10px;
 }
 
-label .brandNameEng {
+.brandLogo {
     width: 120px;
     height: 60px;
-    margin-top: 10px;
+    margin-top: 13px;
 }
 
-label input[type="checkbox"] {
+.brandNameKor {
+    margin-top: 13px;
+    font-size: 1.1rem;
+    font-weight: 1000;
+}
+
+input[type="checkbox"] {
     display: none;
 }
 
-label input[type="checkbox"]:checked~.iconbox {
+input[type="checkbox"]:checked~.iconbox {
     background: linear-gradient(rgb(200, 255, 255) 70%, rgb(0, 200, 200) 30%);
     color: rgb(255, 255, 255);
-}
-
-label .iconbox span {
-    margin-top: 15px;
-    font-size: 1rem;
-    font-weight: 1000;
 }

@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom';
 
 let jsonArr = [];
 
-
 function getJson() {
     let url = "http://localhost:8080/select";
 
