@@ -6,16 +6,27 @@
     text-align: center;
 }
 
-.cardName {
+.bestCardImage {
+    border-radius: 14px;
+    box-shadow: 0px 4px 5px rgb(100, 100, 100);
+}
+
+.bestCardName {
     font-size: 3rem;
     font-weight: 1000;
     text-align: center;
 }
 
-.cardInfo {
+.bestCardType {
     font-size: 1.5rem;
     font-weight: 1000;
     text-align: center;
+}
+
+.bestCardCompanyImage {
+    height: 60px;
+    margin-bottom: -25px;
+    margin-left: -12px;
 }
 
 .moreInfoButton {
@@ -105,17 +116,18 @@
     height: 120px;
     margin: 10px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 9px;
     background-color: rgb(204,244,244);
+    box-shadow: 0px 2px 3px rgb(100, 100, 100);
 }
 
 .moreCardCompanyImage {
     width: 180px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: -25px;
+    margin-bottom: -25px;
     text-align: center;
-    font-size: 1.3rem;
     font-weight: 1000;
 }
 
@@ -125,7 +137,7 @@
     margin-right: 10px;
     margin-top: 10px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 1000;
 }
 
