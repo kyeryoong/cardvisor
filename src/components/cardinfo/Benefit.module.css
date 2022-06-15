@@ -1,0 +1,23 @@
+.benefitDetail {
+    height: 50px;
+}
+
+.brandLogo {
+    height: 50px;
+    float: left;
+}
+
+.benefitDetail1 {
+    text-align: left;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.benefitDetail2 {
+    color: rgb(0,200,200);
+    text-align: left;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}

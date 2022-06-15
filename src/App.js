@@ -9,7 +9,7 @@ import Service1Results from './components/service/service1/Service1Results';
 import Service2 from './components/service/service2/Service2';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
-
+import CardInfo from './components/cardinfo/CardInfo';
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
                 <Route exact path='/service2' element={<Service2 />} />
                 <Route exact path='/list' element={<List />} />
                 <Route exact path='/mypage' element={<MyPage />} />
+                <Route exact path='/cardinfo' element={<CardInfo />} />
             </Routes>
         </BrowserRouter>
     );

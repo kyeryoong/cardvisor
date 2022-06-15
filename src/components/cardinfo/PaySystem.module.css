@@ -1,0 +1,30 @@
+.paySystemZone {
+    width: 430px;
+}
+
+.brandLogo {
+    width: 100px;
+    float: left;
+}
+
+.nameZone {
+    width: 160px;
+    text-align: left;
+    float: left;
+    margin-top: 13px;
+    color: rgb(50, 50, 50);
+    font-size: 1.5rem;
+    font-weight: 1000;
+}
+
+.amountZone{
+    width: 100px;
+    text-align: right;
+    float: right;
+    margin-top: 13px;
+    margin-right: 20px;
+    color: rgb(50, 50, 50);
+    font-size: 1.5rem;
+    font-weight: 1000;
+}
+
