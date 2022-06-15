@@ -1,17 +1,36 @@
 import styles from './Service1Results.module.css';
 
 import { useNavigate } from 'react-router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function Service1Results() {
     const navigate = useNavigate();
     const [like, setLike] = useState(false);
 
+        // 5월 31일에 추천된 카드 리스트를 받기 위해 추가한 코드들 //////
+    // 33번째 줄에 {cards.cards} 를 통해 잘 받은 것을 알 수 있음
+    const [cards, setCards] = useState({
+        topTenCards: [{}],
+        bestCardBenefits: [{}],
+        likeCount: "",
+    });
+
+    useEffect(() => {
+        fetch("/results")
+            .then((response) => {
+                return response.json();
+            })
+            .then(data => {
+                setCards(data);
+            });
+    }, []);
+    /////////////////////////////////////////////////////////
+
     return (
         <div>
             <div className={styles.cardName}>
-                카드 이름
+                카드 이름{cards.topTenCards[0].name}
             </div>
             <br /><br />
 
@@ -27,14 +46,14 @@ function Service1Results() {
 
                 <button className={styles.likeButton} onClick={() => {
                     setLike(!like);
-                }}> {like ? '♡ ' : '♥ '}
+                }}> {like ? '♡ ' : '♥ '}{cards.likeCount}
                     찜하기
                 </button>
             </div>
             <br /><br /><br /><br /><br />
 
             <div className={styles.subText}>
-                주요 맟춤 혜택
+                주요 맟춤 혜택{cards.bestCardBenefits[0].brandName}
             </div>
             <br />
 
