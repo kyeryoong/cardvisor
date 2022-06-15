@@ -59,3 +59,6 @@
 ### Ver. 1.2.1 (2022/06/15)
 - All of card images was updated.
 - *cardinfo* page containing *Benefit*, *CardInfo*, *PaySystem* components was created.
+
+### Ver. 1.2.2 (2022/06/16)
+- *service1 result* page was modified with lots of updates.
