@@ -71,13 +71,18 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.brandImage {
+.brandImageZone {
     width: 180px;
     height: 180px;
     margin: 10px;
     text-align: center;
     border-radius: 90px;
     background-color: rgb(204,244,244);
+}
+
+.brandImage {
+    width: 180px;
+    margin-top: 45px;
 }
 
 .brandName {

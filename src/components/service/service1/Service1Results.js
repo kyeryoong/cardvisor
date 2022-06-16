@@ -13,7 +13,6 @@ function Service1Results() {
     const [cards, setCards] = useState({
         topTenCards: [{}],
         bestCardBenefits: [{}],
-        // likeCount: "",
     });
 
     useEffect(() => {
@@ -55,11 +54,13 @@ function Service1Results() {
         else if (type === "hybrid\r") { return "하이브리드 카드" }
     }
 
+
+
     return (
         <div>
             <img
                 className={styles.bestCardImage}
-                alt={cards.topTenCards[0].id}
+                alt="cards"
                 src={process.env.PUBLIC_URL + '/images/card_images/' + cards.topTenCards[0].id + '.png'} />
             <br /><br />
 
@@ -72,19 +73,21 @@ function Service1Results() {
                 {typeParser(cards.topTenCards[0].type)} │
                 <img
                     className={styles.bestCardCompanyImage}
-                    alt={cards.topTenCards[1].id}
-                    src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[1].company_eng + '.png'} />
+                    alt="cards"
+                    src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[0].company_eng + '.png'} />
                 <br /><br />
             </div>
 
             <div>
-                <button className={styles.moreInfoButton} >
-                    상세 정보 보기
+                <button className={styles.moreInfoButton} onClick={() => {
+                    window.open("https://www.banksalad.com/cards/" + cards.topTenCards[0].id + "/issue");
+                }}>
+                    카드사 홈페이지
                 </button>
 
                 <button className={styles.likeButton} onClick={() => {
                     setLike(!like);
-                }}> {like ? '♡ ' : '♥ '}{cards.likeCount}
+                }}> {like ? '♡ ' : '♥ '}
                     찜하기
                 </button>
             </div>
@@ -96,27 +99,56 @@ function Service1Results() {
             <br />
 
             <div className={styles.brandsRow}>
-                <div className={styles.brandImage}>혜택 1</div>
-                <div className={styles.brandImage}>혜택 2</div>
-                <div className={styles.brandImage}>혜택 3</div>
-                <div className={styles.brandImage}>혜택 4</div>
-                <div className={styles.brandImage}>혜택 5</div>
+                <div className={styles.brandImageZone}>
+                    <img
+                        className={styles.brandImage}
+                        alt="brands"
+                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[0]?.brandName + '.png'} />
+                </div>
+
+                <div className={styles.brandImageZone}>
+                    <img
+                        className={styles.brandImage}
+                        alt="brands"
+                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[1]?.brandName + '.png'} />
+                </div>
+
+                <div className={styles.brandImageZone}>
+                    <img
+                        className={styles.brandImage}
+                        alt="brands"
+                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[2]?.brandName + '.png'} />
+                </div>
+
+                <div className={styles.brandImageZone}>
+                    <img
+                        className={styles.brandImage}
+                        alt="brands"
+                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[3]?.brandName + '.png'} />
+                </div>
+
+                <div className={styles.brandImageZone}>
+                    <img
+                        className={styles.brandImage}
+                        alt="brands"
+                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[4]?.brandName + '.png'} />
+                </div>
             </div>
 
             <div className={styles.brandsRow}>
-                <div className={styles.brandName}>{cards.bestCardBenefits[0].brandName}</div>
-                <div className={styles.brandName}>{cards.bestCardBenefits[1].brandName}</div>
-                <div className={styles.brandName}>{cards.bestCardBenefits[2].brandName}</div>
-                <div className={styles.brandName}>{cards.bestCardBenefits[3].brandName}</div>
-                <div className={styles.brandName}>{cards.bestCardBenefits[4].brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[0]?.brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[1]?.brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[2]?.brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[3]?.brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[4]?.brandName}</div>
             </div>
-
+            
             <div className={styles.brandsRow}>
-                <div className={styles.brandInfo}>{benefitParser(cards.bestCardBenefits[0].feeType, cards.bestCardBenefits[0].numberOne, cards.bestCardBenefits[0].numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards.bestCardBenefits[1].feeType, cards.bestCardBenefits[1].numberOne, cards.bestCardBenefits[1].numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards.bestCardBenefits[2].feeType, cards.bestCardBenefits[2].numberOne, cards.bestCardBenefits[2].numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards.bestCardBenefits[3].feeType, cards.bestCardBenefits[3].numberOne, cards.bestCardBenefits[3].numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards.bestCardBenefits[4].feeType, cards.bestCardBenefits[4].numberOne, cards.bestCardBenefits[4].numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[0]?.feeType, cards?.bestCardBenefits[0]?.numberOne, cards.bestCardBenefits[0]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[1]?.feeType, cards?.bestCardBenefits[1]?.numberOne, cards.bestCardBenefits[1]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[2]?.feeType, cards?.bestCardBenefits[2]?.numberOne, cards.bestCardBenefits[2]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[3]?.feeType, cards?.bestCardBenefits[3]?.numberOne, cards.bestCardBenefits[3]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[4]?.feeType, cards?.bestCardBenefits[4]?.numberOne, cards.bestCardBenefits[4]?.numberTwo)}</div>
             </div>
             <br /><br /><br /><br /><br />
 
@@ -131,29 +163,29 @@ function Service1Results() {
                 <div>
                     <img
                         className={styles.moreCardImage}
-                        alt={cards.topTenCards[1].id}
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards.topTenCards[1].id + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[1]?.id + '.png'} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardImage}
-                        alt={cards.topTenCards[2].id}
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards.topTenCards[2].id + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[2]?.id + '.png'} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardImage}
-                        alt={cards.topTenCards[3].id}
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards.topTenCards[3].id + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[3]?.id + '.png'} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardImage}
-                        alt={cards.topTenCards[4].id}
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards.topTenCards[4].id + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[4]?.id + '.png'} />
                 </div>
             </div>
 
@@ -161,37 +193,37 @@ function Service1Results() {
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
-                        alt={cards.topTenCards[1].id}
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[1].company_eng + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[1]?.company_eng + '.png'} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
-                        alt={cards.topTenCards[2].id}
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[2].company_eng + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[2]?.company_eng + '.png'} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
-                        alt={cards.topTenCards[3].id}
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[3].company_eng + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[3]?.company_eng + '.png'} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
-                        alt={cards.topTenCards[4].id}
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[4].company_eng + '.png'} />
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[4]?.company_eng + '.png'} />
                 </div>
             </div>
 
             <div className={styles.moreCardsRow}>
-                <div className={styles.moreCardName}>{cards.topTenCards[1].name}</div>
-                <div className={styles.moreCardName}>{cards.topTenCards[2].name}</div>
-                <div className={styles.moreCardName}>{cards.topTenCards[3].name}</div>
-                <div className={styles.moreCardName}>{cards.topTenCards[4].name}</div>
+                <div className={styles.moreCardName}>{cards?.topTenCards[1]?.name}</div>
+                <div className={styles.moreCardName}>{cards?.topTenCards[2]?.name}</div>
+                <div className={styles.moreCardName}>{cards?.topTenCards[3]?.name}</div>
+                <div className={styles.moreCardName}>{cards?.topTenCards[4]?.name}</div>
             </div>
             <br /><br /><br /><br /><br />
 
