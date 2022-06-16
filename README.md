@@ -62,3 +62,6 @@
 
 ### Ver. 1.2.2 (2022/06/16)
 - *service1 result* page was modified with lots of updates.
+
+### Ver. 1.2.3 (2022/06/16)
+- *service1 result* page was almost completed.
