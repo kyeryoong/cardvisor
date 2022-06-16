@@ -66,7 +66,7 @@ function Login() {
 
 
 
-            <br /><br /><br /><br /><br /><br />
+            {/* <br /><br /><br /><br /><br /><br />
             <div className={style.temp1}>
                 현재 로그인 보안 기능 X
             </div>
@@ -75,7 +75,7 @@ function Login() {
                         <li>이곳을 CLICK 하거나</li>
                         <li>ID : admin │ PW : 1234 입력</li>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
