@@ -61,26 +61,26 @@ function Service1Results() {
             <img
                 className={styles.bestCardImage}
                 alt="cards"
-                src={process.env.PUBLIC_URL + '/images/card_images/' + cards.topTenCards[0].id + '.png'} />
+                src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[0]?.id + '.png'} />
             <br /><br />
 
             <div className={styles.bestCardName}>
-                {cards.topTenCards[0].name}
+                {cards?.topTenCards[0]?.name}
             </div>
             <br /><br />
 
             <div className={styles.bestCardType}>
-                {typeParser(cards.topTenCards[0].type)} │
+                {typeParser(cards?.topTenCards[0]?.type)} │
                 <img
                     className={styles.bestCardCompanyImage}
                     alt="cards"
-                    src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards.topTenCards[0].company_eng + '.png'} />
+                    src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[0]?.company_eng + '.png'} />
                 <br /><br />
             </div>
 
             <div>
                 <button className={styles.moreInfoButton} onClick={() => {
-                    window.open("https://www.banksalad.com/cards/" + cards.topTenCards[0].id + "/issue");
+                    window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[0]?.id + "/issue");
                 }}>
                     카드사 홈페이지
                 </button>
@@ -136,19 +136,19 @@ function Service1Results() {
             </div>
 
             <div className={styles.brandsRow}>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[0]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[1]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[2]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[3]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[4]?.brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[0]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[1]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[2]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[3]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[4]?.brandNameKor}</div>
             </div>
             
             <div className={styles.brandsRow}>
-                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[0]?.feeType, cards?.bestCardBenefits[0]?.numberOne, cards.bestCardBenefits[0]?.numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[1]?.feeType, cards?.bestCardBenefits[1]?.numberOne, cards.bestCardBenefits[1]?.numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[2]?.feeType, cards?.bestCardBenefits[2]?.numberOne, cards.bestCardBenefits[2]?.numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[3]?.feeType, cards?.bestCardBenefits[3]?.numberOne, cards.bestCardBenefits[3]?.numberTwo)}</div>
-                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[4]?.feeType, cards?.bestCardBenefits[4]?.numberOne, cards.bestCardBenefits[4]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[0]?.feeType, cards?.bestCardBenefits[0]?.numberOne, cards?.bestCardBenefits[0]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[1]?.feeType, cards?.bestCardBenefits[1]?.numberOne, cards?.bestCardBenefits[1]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[2]?.feeType, cards?.bestCardBenefits[2]?.numberOne, cards?.bestCardBenefits[2]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[3]?.feeType, cards?.bestCardBenefits[3]?.numberOne, cards?.bestCardBenefits[3]?.numberTwo)}</div>
+                <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[4]?.feeType, cards?.bestCardBenefits[4]?.numberOne, cards?.bestCardBenefits[4]?.numberTwo)}</div>
             </div>
             <br /><br /><br /><br /><br />
 
