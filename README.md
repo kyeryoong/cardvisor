@@ -65,3 +65,7 @@
 
 ### Ver. 1.2.3 (2022/06/16)
 - *service1 result* page was almost completed.
+
+### Ver 1.2.4 (2022/06/16)
+- *service1 result* page was modified.
+- *service1 result more* page was created to show more recommended cards.
