@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "NanumBarunGothic", sans-serif;
+    text-align: center;
+}
+
+.introText {
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: left;
+}

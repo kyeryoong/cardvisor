@@ -6,6 +6,7 @@ import Login from './components/login/Login';
 import Main from './components/main/Main';
 import Service1 from './components/service/service1/Service1';
 import Service1Results from './components/service/service1/Service1Results';
+import Service1ResultsMore from './components/service/service1/Service1ResultsMore';
 import Service2 from './components/service/service2/Service2';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
@@ -23,6 +24,7 @@ function App() {
                 <Route exact path='/main' element={<Main />} />
                 <Route exact path='/service1' element={<Service1 />} />
                 <Route exact path='/service1/results' element={<Service1Results />} />
+                <Route exact path='/service1/results/more' element={<Service1ResultsMore />} />
                 <Route exact path='/service2' element={<Service2 />} />
                 <Route exact path='/list' element={<List />} />
                 <Route exact path='/mypage' element={<MyPage />} />

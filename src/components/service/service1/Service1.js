@@ -12,6 +12,10 @@ import { useNavigate } from 'react-router-dom';
 
 let jsonArr = [];
 
+function initArray() {
+    let SelectedBrands = [];
+}
+
 function getJson() {
     let url = "http://localhost:8080/select";
 
@@ -28,7 +32,24 @@ function getJson() {
     });
 }
 
+function isSelected() {
+    if (SelectedBrands.length == 0) {
+        alert("혜택을 선택해주세요");
 
+        return '/service1';
+    }
+
+    else {
+        for (var i = 0; i < SelectedBrands.length; i++) {
+            jsonArr[i] = { "memberId": 1, "brandName": SelectedBrands[i] }
+        }
+        getJson();
+
+        return '/service1/results';
+    }
+}
+
+{initArray()}
 
 function Service1() {
     const navigate = useNavigate();
@@ -37,6 +58,8 @@ function Service1() {
 
     return (
         <div>
+            
+
             <h1>카드 추천 받기</h1>
             <h2>선호하는 혜택을 체크해주세요!</h2>
             <br /><br />
@@ -338,17 +361,11 @@ function Service1() {
 
 
             <div>
-                <Link to='/service1/results'>
-                    <button className={styles.sendButton} onClick={() => {
-
-                        for (var i = 0; i < SelectedBrands.length; i++) {
-                            jsonArr[i] = { "memberId": 1, "brandName": SelectedBrands[i] }
-                        }
-                        getJson();
-                    }}>
-                        {sel}개 혜택 선택 완료
-                    </button>
-                </Link>
+                <button className={styles.sendButton} onClick={() => {
+                    navigate(isSelected());
+                }}>
+                    {sel}개 혜택 선택 완료
+                </button>
             </div>
             <br />
 
