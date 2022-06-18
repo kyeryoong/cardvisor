@@ -136,11 +136,11 @@ function Service1Results() {
             </div>
 
             <div className={styles.brandsRow}>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[0]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[1]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[2]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[3]?.brandName}</div>
-                <div className={styles.brandName}>{cards?.bestCardBenefits[4]?.brandName}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[0]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[1]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[2]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[3]?.brandNameKor}</div>
+                <div className={styles.brandName}>{cards?.bestCardBenefits[4]?.brandNameKor}</div>
             </div>
             
             <div className={styles.brandsRow}>
