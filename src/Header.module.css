@@ -23,6 +23,11 @@
     cursor: pointer;
 }
 
+.titleLogo {
+    height: 100px;
+    margin-top: 20px;
+}
+
 .zone1 {
     display: flex;
     position: fixed;

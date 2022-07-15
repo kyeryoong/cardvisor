@@ -7,6 +7,7 @@
 }
 
 .bestCardImage {
+    height: 180px;
     border-radius: 14px;
     box-shadow: 0px 4px 5px rgb(100, 100, 100);
 }
@@ -18,23 +19,37 @@
 }
 
 .bestCardType {
+    margin-left: 30px;
     font-size: 1.5rem;
     font-weight: 1000;
     text-align: center;
 }
 
 .bestCardCompanyImage {
-    height: 60px;
-    margin-bottom: -25px;
-    margin-left: -12px;
+    height: 82px;
+    margin-bottom: -32px;
+    margin-left: -30px;
 }
 
 .moreInfoButton {
-    width: 250px;
+    width: 420px;
     height: 50px;
     font-size: 1.5rem;
     align-items: center;
     background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.toCardCompanyPageButton {
+    width: 250px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(0, 200, 200);
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 5px;
@@ -56,7 +71,7 @@
 }
 
 .subText {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 1000;
     text-align: center;
     color: rgb(0, 200, 200);
@@ -119,7 +134,10 @@
 .moreCardImage {
     width: 180px;
     height: 120px;
-    margin: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     border-radius: 9px;
     background-color: rgb(204,244,244);
@@ -128,8 +146,8 @@
 
 .moreCardCompanyImage {
     width: 180px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: -25px;
     margin-bottom: -25px;
     text-align: center;
@@ -137,13 +155,63 @@
 }
 
 .moreCardName {
-    width: 180px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 220px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 10px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 1000;
+}
+
+.moreCardInfoButtonsRow {
+    display: grid;
+    grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr;
+    place-items: center;
+}
+
+.moreCardInfoButtons {
+    width: 220px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.moreCardInfoButton1 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.moreCardInfoImage1 {
+    filter: invert();
+    width: 26px;
+    margin: 12px;
+}
+
+.moreCardInfoButton2 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgb(0, 200, 200);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.moreCardInfoImage2 {
+    filter: invert();
+    width: 26px;
+    margin: 12px;
 }
 
 .toMoreCardsButton {

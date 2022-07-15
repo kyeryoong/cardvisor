@@ -16,18 +16,18 @@
     left: 10%;
 }
 
-.intro1 {
+.intro {
     text-align: left;
     font-size: 2rem;
     font-weight: 1000;
+    color: rgb(100, 100, 100);
 }
 
-.intro2 {
-    text-align: left;
-    font-size: 8rem;
-    font-weight: 1000;
-    font-family: 'Poppins', serif;
-    color: rgb(0, 200, 200);
+.mainLogo {
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -120px;
+    margin-bottom: -60px;
 }
 
 .startButton {

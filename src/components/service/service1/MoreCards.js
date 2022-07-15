@@ -1,9 +1,9 @@
 import styles from './MoreCards.module.css';
 
 function rankParser(rank) {
-    if (rank == "1") { return <div className={styles.moreCardRankGold}>{rank}</div> }
-    else if (rank == "2") { return <div className={styles.moreCardRankSilver}>{rank}</div> }
-    else if (rank == "3") { return <div className={styles.moreCardRankBronze}>{rank}</div> }
+    if (rank === "1") { return <div className={styles.moreCardRankGold}>{rank}</div> }
+    else if (rank === "2") { return <div className={styles.moreCardRankSilver}>{rank}</div> }
+    else if (rank === "3") { return <div className={styles.moreCardRankBronze}>{rank}</div> }
     else  { return <div className={styles.moreCardRankNormal}>{rank}</div> }
 }
 
@@ -31,7 +31,7 @@ function MoreCards(props) {
                 </div>
 
                 <button className={styles.cardInfoButton} onClick={() => {
-                    alert('준비중');
+                    window.open('/cardinfo/' + props.id);
                 }}>상세정보</button>
             </div>
             <hr />

@@ -62,12 +62,11 @@ function Service1Results() {
                 className={styles.bestCardImage}
                 alt="cards"
                 src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[0]?.id + '.png'} />
-            <br /><br />
+            <br/><br/>
 
             <div className={styles.bestCardName}>
                 {cards?.topTenCards[0]?.name}
             </div>
-            <br /><br />
 
             <div className={styles.bestCardType}>
                 {typeParser(cards?.topTenCards[0]?.type)} │
@@ -75,11 +74,20 @@ function Service1Results() {
                     className={styles.bestCardCompanyImage}
                     alt="cards"
                     src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[0]?.company_eng + '.png'} />
-                <br /><br />
+                <br/><br/>
             </div>
 
             <div>
                 <button className={styles.moreInfoButton} onClick={() => {
+                    window.open('/cardinfo/' + cards?.topTenCards[0]?.id);
+                }}>
+                    카드 상세정보 보기
+                </button>
+
+            </div>
+
+            <div>
+                <button className={styles.toCardCompanyPageButton} onClick={() => {
                     window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[0]?.id + "/issue");
                 }}>
                     카드사 홈페이지
@@ -91,12 +99,12 @@ function Service1Results() {
                     찜하기
                 </button>
             </div>
-            <br /><br /><br /><br /><br />
+            <br/><br/><br/><br/><br/>
 
             <div className={styles.subText}>
                 주요 맟춤 혜택
             </div>
-            <br />
+            <br/>
 
             <div className={styles.brandsRow}>
                 <div className={styles.brandImageZone}>
@@ -150,7 +158,7 @@ function Service1Results() {
                 <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[3]?.feeType, cards?.bestCardBenefits[3]?.numberOne, cards?.bestCardBenefits[3]?.numberTwo)}</div>
                 <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[4]?.feeType, cards?.bestCardBenefits[4]?.numberOne, cards?.bestCardBenefits[4]?.numberTwo)}</div>
             </div>
-            <br /><br /><br /><br /><br />
+            <br/><br/><br/><br/><br/>
 
 
 
@@ -225,6 +233,94 @@ function Service1Results() {
                 <div className={styles.moreCardName}>{cards?.topTenCards[3]?.name}</div>
                 <div className={styles.moreCardName}>{cards?.topTenCards[4]?.name}</div>
             </div>
+
+            <div className={styles.moreCardInfoButtonsRow}>
+                <div className={styles.moreCardInfoButtons}>
+                    <button className={styles.moreCardInfoButton1} onClick={() => {
+                        window.open('/cardinfo/' + cards?.topTenCards[1]?.id)
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage1}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/moreinfo.png'} />
+                    </button>
+
+                    <button className={styles.moreCardInfoButton2} onClick={() => {
+                        window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[1]?.id + "/issue")
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage2}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/gopage.png'} />
+                    </button>
+                </div>
+
+                <div className={styles.moreCardInfoButtons}>
+                    <button className={styles.moreCardInfoButton1} onClick={() => {
+                        window.open('/cardinfo/' + cards?.topTenCards[2]?.id)
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage1}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/moreinfo.png'} />
+                    </button>
+
+                    <button className={styles.moreCardInfoButton2} onClick={() => {
+                        window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[2]?.id + "/issue")
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage2}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/gopage.png'} />
+                    </button>
+                </div>
+
+                <div className={styles.moreCardInfoButtons}>
+                    <button className={styles.moreCardInfoButton1} onClick={() => {
+                        window.open('/cardinfo/' + cards?.topTenCards[3]?.id)
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage1}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/moreinfo.png'} />
+                    </button>
+
+                    <button className={styles.moreCardInfoButton2} onClick={() => {
+                        window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[3]?.id + "/issue")
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage2}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/gopage.png'} />
+                    </button>
+                </div>
+
+                <div className={styles.moreCardInfoButtons}>
+                    <button className={styles.moreCardInfoButton1} onClick={() => {
+                        window.open('/cardinfo/' + cards?.topTenCards[4]?.id)
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage1}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/moreinfo.png'} />
+                    </button>
+
+                    <button className={styles.moreCardInfoButton2} onClick={() => {
+                        window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[4]?.id + "/issue")
+                    }}>
+                        <img
+                            className={styles.moreCardInfoImage2}
+                            alt="cards"
+                            src={process.env.PUBLIC_URL + '/images/menu_icon/gopage.png'} />
+                    </button>
+                </div>
+            </div>
+            
+
+            
+            
+            
+
             <br /><br /><br /><br /><br />
 
             <div>

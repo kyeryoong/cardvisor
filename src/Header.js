@@ -13,7 +13,7 @@ function Header() {
             <div className={styles.title} onClick={() => {
                 navigate('/');
             }}>
-                cardvisor
+                <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_white.png'}/>
             </div>
 
             {/* <div className={styles.zone1}>

@@ -8,14 +8,14 @@ function Home() {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.intro1}>
+            <div className={styles.intro}>
                 나에게 딱 맞는 카드를<br />
                 몇 번의 클릭으로 간편하게!
             </div>
             <br />
 
-            <div className={styles.intro2}>
-                cardvisor
+            <div>
+                <img alt="home" className={styles.mainLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_blue.png'}/>
             </div>
             <br />
 

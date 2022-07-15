@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import Header from './Header';
 import Home from './components/home/Home';
@@ -28,7 +29,7 @@ function App() {
                 <Route exact path='/service2' element={<Service2 />} />
                 <Route exact path='/list' element={<List />} />
                 <Route exact path='/mypage' element={<MyPage />} />
-                <Route exact path='/cardinfo' element={<CardInfo />} />
+                <Route exact path='/cardinfo/:card_code' element={<CardInfo />} />
             </Routes>
         </BrowserRouter>
     );

@@ -53,7 +53,7 @@ function List() {
 
                             <td>
                                 <button className={styles.cardInfoButton} onClick={() => {
-                                    alert('준비중');
+                                    window.open('/cardinfo/' + cur.id);
                                 }}>상세정보</button>
                             </td>
 

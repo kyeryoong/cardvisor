@@ -84,10 +84,11 @@ hr {
 }
 
 .cardName {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 1000;
     text-align: left;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .cardCompanyZone {
@@ -120,9 +121,19 @@ hr {
 }
 
 .cardImage {
-    background-color: rgb(0, 200, 200);
-    width: 280px;
-    height: 160px;
+    width: 215px;
     float: left;
     border-radius: 10px;
+    box-shadow: 0px 2px 3px rgb(100, 100, 100);
+}
+
+.caution {
+    text-align: left;
+    color: rgb(120, 120, 120);
+}
+
+.cautionHighlight {
+    text-align: left;
+    font-weight: 1000;
+    color: rgb(243, 156, 18);
 }
