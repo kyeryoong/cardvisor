@@ -33,7 +33,7 @@ function getJson() {
 }
 
 function isSelected() {
-    if (SelectedBrands.length == 0) {
+    if (SelectedBrands.length === 0) {
         alert("혜택을 선택해주세요");
 
         return '/service1';
