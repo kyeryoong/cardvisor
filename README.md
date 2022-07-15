@@ -69,3 +69,6 @@
 ### Ver 1.2.4 (2022/06/18)
 - *service1 result* page was modified.
 - *service1 result more* page was created to show more recommended cards.
+
+### Ver 1.2.5 (2022/07/15)
+- Database server was connected using Amazon RDS.
