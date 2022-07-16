@@ -73,9 +73,14 @@
 ### Ver 1.2.5 (2022/07/15)
 - Database server was connected using Amazon RDS.
 
-### Ver 1.2.6 (2022/07/15)
+### Ver 1.2.6 (2022/07/16)
 - Cardvisor main logo was changed.
 - Some of the unnecessary files were deleted.
 - Buttons in *Main* page was modified.
 - *Service1Result* page was modified with lots of updates.
 - *CardInfo* page was implemented using UseParams to show information of each cards.
+
+### Ver 1.2.7 (2022/07/16)
+- Font has been changed into *SDGothic* series
+- transition and hover effects has been added.
+- *Service1Result* page was modified.
