@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
 .header {
     display: flex;
     position: fixed;
@@ -15,10 +13,9 @@
 
 .title {
     color: white;
-    font-family: 'Poppins', serif;
-    font-size: 2.5rem;
     font-weight: 500;
     padding-left: 40px;
+    margin-bottom: 15px;
     align-items: center;
     cursor: pointer;
 }

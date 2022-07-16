@@ -37,7 +37,6 @@
 
 .subTitle {
     font-size: 1.3rem;
-    font-family: 'NanumBarunGothic', serif;
     color: rgb(160, 160, 160);
     text-align: left;
     margin-bottom: 5px;
@@ -68,7 +67,6 @@
 .inputZone::placeholder {
     font-size: 1.3rem;
     font-weight: 1000;
-    font-family: 'NanumBarunGothic', serif;
     color: rgb(200, 200, 200);
     display: flex;
     align-items: center;
@@ -76,7 +74,6 @@
 }
 
 .button {
-    font-family: 'NanumBarunGothic';
     width: 400px;
     height: 60px;
     margin: auto;

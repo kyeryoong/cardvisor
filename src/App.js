@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useParams } from 'react-router';
+import styles from './App.css'
 
 import Header from './Header';
 import Home from './components/home/Home';

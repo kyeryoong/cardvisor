@@ -58,30 +58,39 @@ function Service1Results() {
 
     return (
         <div>
-            <img
-                className={styles.bestCardImage}
-                alt="cards"
-                src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[0]?.id + '.png'} />
-            <br/><br/>
+            <div className={styles.bestCardImageZone}>
+                <div className={styles.bestCardBadge}>
+                    BEST
+                </div>
+                <img
+                    className={styles.bestCardImage}
+                    alt="cards"
+                    src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[0]?.id + '.png'} />
+            </div>
 
             <div className={styles.bestCardName}>
                 {cards?.topTenCards[0]?.name}
             </div>
 
             <div className={styles.bestCardType}>
-                {typeParser(cards?.topTenCards[0]?.type)} │
+                {typeParser(cards?.topTenCards[0]?.type)} &nbsp; │
                 <img
                     className={styles.bestCardCompanyImage}
                     alt="cards"
-                    src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[0]?.company_eng + '.png'} />
-                <br/><br/>
+                    src={process.env.PUBLIC_URL + '/images/card_logo/left_aligned/' + cards?.topTenCards[0]?.company_eng + '.png'} />
+                <br /><br />
             </div>
 
             <div>
-                <button className={styles.moreInfoButton} onClick={() => {
+                <button className={styles.bestCardMoreInfoButton} onClick={() => {
                     window.open('/cardinfo/' + cards?.topTenCards[0]?.id);
                 }}>
-                    카드 상세정보 보기
+                    <img className={styles.bestCardMoreInfoButtonImage}
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/menu_icon/moreinfo.png'} />
+                    <a className={styles.bestCardMoreInfoButtonText}>
+                        카드 상세정보 보기
+                    </a>
                 </button>
 
             </div>
@@ -90,7 +99,12 @@ function Service1Results() {
                 <button className={styles.toCardCompanyPageButton} onClick={() => {
                     window.open("https://www.banksalad.com/cards/" + cards?.topTenCards[0]?.id + "/issue");
                 }}>
-                    카드사 홈페이지
+                    <img className={styles.toCardCompanyPageButtonImage}
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + '/images/menu_icon/gopage.png'} />
+                    <a className={styles.toCardCompanyPageButtonText}>
+                        카드사 홈페이지
+                    </a>
                 </button>
 
                 <button className={styles.likeButton} onClick={() => {
@@ -99,12 +113,12 @@ function Service1Results() {
                     찜하기
                 </button>
             </div>
-            <br/><br/><br/><br/><br/>
+            <br /><br /><br /><br /><br />
 
             <div className={styles.subText}>
                 주요 맟춤 혜택
             </div>
-            <br/>
+            <br />
 
             <div className={styles.brandsRow}>
                 <div className={styles.brandImageZone}>
@@ -150,7 +164,7 @@ function Service1Results() {
                 <div className={styles.brandName}>{cards?.bestCardBenefits[3]?.brandNameKor}</div>
                 <div className={styles.brandName}>{cards?.bestCardBenefits[4]?.brandNameKor}</div>
             </div>
-            
+
             <div className={styles.brandsRow}>
                 <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[0]?.feeType, cards?.bestCardBenefits[0]?.numberOne, cards?.bestCardBenefits[0]?.numberTwo)}</div>
                 <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[1]?.feeType, cards?.bestCardBenefits[1]?.numberOne, cards?.bestCardBenefits[1]?.numberTwo)}</div>
@@ -158,7 +172,7 @@ function Service1Results() {
                 <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[3]?.feeType, cards?.bestCardBenefits[3]?.numberOne, cards?.bestCardBenefits[3]?.numberTwo)}</div>
                 <div className={styles.brandInfo}>{benefitParser(cards?.bestCardBenefits[4]?.feeType, cards?.bestCardBenefits[4]?.numberOne, cards?.bestCardBenefits[4]?.numberTwo)}</div>
             </div>
-            <br/><br/><br/><br/><br/>
+            <br /><br /><br /><br /><br />
 
 
 
@@ -315,11 +329,11 @@ function Service1Results() {
                     </button>
                 </div>
             </div>
-            
 
-            
-            
-            
+
+
+
+
 
             <br /><br /><br /><br /><br />
 

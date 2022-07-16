@@ -1,3 +1,37 @@
+@font-face {
+    font-family: "SDGothicNeoB";
+    src: url("../public/fonts/AppleSDGothicNeoB.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SDGothicNeoEB";
+    src: url("../public/fonts/AppleSDGothicNeoEB.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SDGothicNeoH";
+    src: url("../public/fonts/AppleSDGothicNeoH.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SDGothicNeoL";
+    src: url("../public/fonts/AppleSDGothicNeoL.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SDGothicNeoM";
+    src: url("../public/fonts/AppleSDGothicNeoM.ttf") format("truetype");
+    font-weight: normal;
+}
+
+* {
+    font-family: "SDGothicNeoM", sans-serif;
+}
+
 .App {
     text-align: center;
 }
