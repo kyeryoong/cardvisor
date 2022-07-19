@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "./Login.module.css";
+import styles from "./Login.module.css";
 
 
 
@@ -28,35 +28,34 @@ function Login() {
 
     return (
         <div>
-            <div className={style.title}>
+            <div className={styles.title}>
                 Login
             </div>
 
-            <div className={style.subTitle}>
+            <div className={styles.subTitle}>
                 cardvisor에 오신것을 환영합니다!
             </div>
             
-            <div className={style.line} />
+            <div className={styles.line} />
 
             <div>
                 <form>
                     <div>
-                        <input type="text" className={style.inputZone} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post"/>
+                        <input type="text" className={styles.inputZone} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post"/>
                     </div>
 
                     <div>
-                        <input type="password" className={style.inputZone} name="pw" placeholder="비밀번호" onChange={handleChange} autoComplete="off" method="post" />
+                        <input type="password" className={styles.inputZone} name="pw" placeholder="비밀번호" onChange={handleChange} autoComplete="off" method="post" />
                     </div>
 
                     <div>
-                        <button type="submit" className={style.button} onClick={() => {
+                        <button type="submit" className={styles.button} onClick={() => {
                             if (info.id === correctid && info.pw === correctpw) {
                                 navigate("/main");
                             }
 
                             else {
                                 alert("아이디와 비밀번호를 확인해주세요.")
-                                navigate(-1);
                             }
                         }}>로그인</button>
                     </div>

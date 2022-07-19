@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useParams } from 'react-router';
 import styles from './App.css'
 
 import Header from './Header';
@@ -13,6 +12,8 @@ import Service2 from './components/service/service2/Service2';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
+import NotFound from './components/notfound/NotFound'
+
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Route exact path='/list' element={<List />} />
                 <Route exact path='/mypage' element={<MyPage />} />
                 <Route exact path='/cardinfo/:card_code' element={<CardInfo />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
     );

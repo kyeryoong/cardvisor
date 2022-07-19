@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.four {
+    color: rgb(0, 200, 200);
+    font-size: 17rem;
+    font-weight: 1000;
+}
+
+.deadFace {
+    height: 210px;
+    border: 20px solid rgb(0, 200, 200);
+    border-radius: 105px;
+}
+
+.pageNotFound {
+    color: rgb(0, 200, 200);
+    margin-top: -80px;
+    font-family: 'Poppins', serif;
+    font-size: 3rem;
+    font-weight: 1000;
+}
+
+.text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgb(160, 160, 160);
+}
+
+.toMainButton {
+    margin: auto;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}

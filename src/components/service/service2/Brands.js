@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import style from './Brands.module.css';
+import styles from './Brands.module.css';
 
 
 
@@ -8,42 +8,42 @@ function Brands(props) {
 
     return (
         <label>
-            <div className={style.iconbox}>
-                <div className={style.zone1}>
+            <div className={styles.iconbox}>
+                <div className={styles.zone1}>
                     <img
                         alt={props.brandNameEng}
                         src={process.env.PUBLIC_URL + '/images/brands_logo/' + props.brandNameEng + '.png'} />
                 </div>
 
-                <div className={style.zone2}>
-                    <div className={style.zone21}>
+                <div className={styles.zone2}>
+                    <div className={styles.zone21}>
                         {props.brandNameKor}
                     </div>
 
-                    <div className={style.zone22}>
-                        <input type="number" step="10000" className={style.inputZone} value={cost} required="required" placeholder='0' onChange={event => {
+                    <div className={styles.zone22}>
+                        <input type="number" step="10000" className={styles.inputZone} value={cost} required="required" placeholder='0' onChange={event => {
                             setCost(event.target.value);
                             props.setSel(event.target.value);
                         }} />
                     </div>
 
-                    <div className={style.zone23}>
-                        <button className={style.costButton} onClick={() => {
+                    <div className={styles.zone23}>
+                        <button className={styles.costButton} onClick={() => {
                             setCost(Number(cost) + 10000);
                             props.setSel(Number(cost) + 10000);
                         }}>1만원</button>
 
-                        <button className={style.costButton} onClick={() => {
+                        <button className={styles.costButton} onClick={() => {
                             setCost(Number(cost) + 20000);
                             props.setSel(Number(cost) + 20000);
                         }}>2만원</button>
 
-                        <button className={style.costButton} onClick={() => {
+                        <button className={styles.costButton} onClick={() => {
                             setCost(Number(cost) + 50000);
                             props.setSel(Number(cost) + 50000);
                         }}>5만원</button>
 
-                        <button className={style.resetButton} onClick={() => {
+                        <button className={styles.resetButton} onClick={() => {
                             setCost("");
                             props.setSel(Number(0));
                         }}>×</button>

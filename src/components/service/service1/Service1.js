@@ -58,8 +58,6 @@ function Service1() {
 
     return (
         <div>
-            
-
             <h1>카드 추천 받기</h1>
             <h2>선호하는 혜택을 체크해주세요!</h2>
             <br /><br />
