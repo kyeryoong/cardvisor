@@ -87,6 +87,7 @@
 - *Service1Result* page was modified.
 
 ### Ver 1.2.8 (2022/07/20)
+- *NotFound* page was implemented.
 - Minor chnages in designs.
 - Some icons and images were added.
 - README.md was modified.
