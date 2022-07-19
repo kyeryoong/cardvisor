@@ -1,12 +1,13 @@
-# Cardvisor Frontend
-<br><br>
+![cardvisor_md](https://user-images.githubusercontent.com/98510309/179799642-f61c32d2-7e98-467e-b923-1f5a6534995d.png)
 
+ 
 
 
 ## About Me
-#### Name : Young-Woo Kim
-#### Team : Cardvisor
-#### Major : Hongik University Computer Engineering
+#### Name  |  Young-Woo Kim
+#### Major  |  Hongik University Computer Engineering
+#### Team  |  Cardvisor
+#### Position  |  Frontend Engineering
 <br><br>
 
 
@@ -84,3 +85,8 @@
 - Font has been changed into *SDGothic* series
 - transition and hover effects has been added.
 - *Service1Result* page was modified.
+
+### Ver 1.2.8 (2022/07/20)
+- Minor chnages in designs.
+- Some icons and images were added.
+- README.md was modified.
