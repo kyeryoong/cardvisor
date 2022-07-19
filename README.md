@@ -7,7 +7,7 @@
 #### Name  |  Young-Woo Kim
 #### Major  |  Hongik University Computer Engineering
 #### Team  |  Cardvisor
-#### Position  |  Frontend Engineering
+#### Position  |  Frontend Engineer
 <br><br>
 
 
