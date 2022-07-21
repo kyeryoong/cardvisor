@@ -83,7 +83,7 @@
 
 ### Ver 1.2.7 (2022/07/16)
 - Font has been changed into *SDGothic* series
-- transition and hover effects has been added.
+- Transition and hover effects has been added.
 - *Service1Result* page was modified.
 
 ### Ver 1.2.8 (2022/07/20)
