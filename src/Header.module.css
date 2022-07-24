@@ -25,23 +25,15 @@
     margin-top: 20px;
 }
 
-.zone1 {
+.headerButton {
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: right;
-    right: 150px;
+    right: 100px;
 }
 
-.zone2 {
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: right;
-    right: 40px;
-}
-
-.zone1 button {
+.headerButton button {
     width: 100px;
     height: 40px;
     font-size: 1.2rem;
@@ -49,18 +41,6 @@
     border: transparent;
     border-radius: 5px;
     background-color: rgb(160, 160, 160);
-    color: rgb(255,255, 255);
-    cursor: pointer;
-}
-
-.zone2 button {
-    width: 100px;
-    height: 40px;
-    font-size: 1.2rem;
-    align-items: center;
-    border: transparent;
-    border-radius: 5px;
-    background-color: rgb(243, 156, 18);
     color: rgb(255,255, 255);
     cursor: pointer;
 }

@@ -16,21 +16,14 @@ function Header() {
                 <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_white.png'}/>
             </div>
 
-            {/* <div className={styles.zone1}>
+            <div className={styles.headerButton}>
                 <button onClick={() => {
-                    navigate('/mypage');
+                    alert("Hello");
                 }}>
                     내 정보
                 </button>
             </div>
 
-            <div className={styles.zone2}>
-                <button onClick={() => {
-                    alert("로그아웃")
-                }}>
-                    로그아웃
-                </button>
-            </div> */}
         </div>
     );
 }

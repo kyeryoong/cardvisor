@@ -21,31 +21,32 @@ function Brands(props) {
                     </div>
 
                     <div className={styles.zone22}>
-                        <input type="number" step="10000" className={styles.inputZone} value={cost} required="required" placeholder='0' onChange={event => {
-                            setCost(event.target.value);
-                            props.setSel(event.target.value);
-                        }} />
+                        <input type="number" step="10000" className={styles.inputZone} value={cost} required="required" placeholder="0" min="0"
+                            onChange={event => {
+                                setCost(event.target.value);
+                                props.setSel(event.target.value);
+                            }} />
                     </div>
 
                     <div className={styles.zone23}>
                         <button className={styles.costButton} onClick={() => {
-                            setCost(Number(cost) + 10000);
-                            props.setSel(Number(cost) + 10000);
+                            setCost((current) => Number(current) + 10000);
+                            props.setSel((current) => Number(current) + 10000);
                         }}>1만원</button>
 
                         <button className={styles.costButton} onClick={() => {
-                            setCost(Number(cost) + 20000);
-                            props.setSel(Number(cost) + 20000);
+                            setCost((current) => Number(current) + 20000);
+                            props.setSel((current) => Number(current) + 20000);
                         }}>2만원</button>
 
                         <button className={styles.costButton} onClick={() => {
-                            setCost(Number(cost) + 50000);
-                            props.setSel(Number(cost) + 50000);
+                            setCost((current) => Number(current) + 50000);
+                            props.setSel((current) => Number(current) + 50000);
                         }}>5만원</button>
 
                         <button className={styles.resetButton} onClick={() => {
                             setCost("");
-                            props.setSel(Number(0));
+                            props.setSel((current) => Number(0));
                         }}>×</button>
                     </div>
                 </div>
