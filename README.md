@@ -1,7 +1,9 @@
 ![cardvisor_md](https://user-images.githubusercontent.com/98510309/179799642-f61c32d2-7e98-467e-b923-1f5a6534995d.png)
 
  
-
+## Deployment in Progress!
+### Visit [cardvisor.netlify.app](https://cardvisor.netlify.app) to check this project!
+<br><br>
 
 ## About Me
 #### Name  |  Young-Woo Kim
