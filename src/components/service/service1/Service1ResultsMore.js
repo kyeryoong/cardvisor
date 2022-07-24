@@ -1,13 +1,8 @@
-import styles from './Service1ResultsMore.module.css';
-
-import { useNavigate } from 'react-router';
 import { useState, useEffect } from 'react';
 import MoreCards from './MoreCards';
 
 
 function Service1ResultsMore() {
-    const navigate = useNavigate();
-
     const [cards, setCards] = useState({
         topTenCards: [{}],
         bestCardBenefits: [{}],

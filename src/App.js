@@ -16,23 +16,87 @@ import NotFound from './components/notfound/NotFound'
 
 
 
+
 function App() {
     return (
         <BrowserRouter>
-            <Header />
-
             <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route exact path='/login' element={<Login />} />
-                <Route exact path='/main' element={<Main />} />
-                <Route exact path='/service1' element={<Service1 />} />
-                <Route exact path='/service1/results' element={<Service1Results />} />
-                <Route exact path='/service1/results/more' element={<Service1ResultsMore />} />
-                <Route exact path='/service2' element={<Service2 />} />
-                <Route exact path='/list' element={<List />} />
-                <Route exact path='/mypage' element={<MyPage />} />
-                <Route exact path='/cardinfo/:card_code' element={<CardInfo />} />
-                <Route path="*" element={<NotFound />} />
+                <Route exact path='/' element={
+                    <div>
+                        <Header logined={false} />
+                        <Home />
+                    </div>}
+                />
+
+                <Route exact path='/login' element={
+                    <div>
+                        <Header logined={false} />
+                        <Login />
+                    </div>}
+                />
+
+                <Route exact path='/main' element={
+                    <div>
+                        <Header logined={true} />
+                        <Main />
+                    </div>}
+                />
+
+                <Route exact path='/service1' element={
+                    <div>
+                        <Header logined={true} />
+                        <Service1 />
+                    </div>}
+                />
+
+                <Route exact path='/service1/results' element={
+                    <div>
+                        <Header logined={true} />
+                        <Service1Results />
+                    </div>}
+                />
+
+                <Route exact path='/service1/results/more' element={
+                    <div>
+                        <Header logined={true} />
+                        <Service1ResultsMore />
+                    </div>}
+                />
+
+                <Route exact path='/service2' element={
+                    <div>
+                        <Header logined={true} />
+                        <Service2 />
+                    </div>}
+                />
+
+                <Route exact path='/list' element={
+                    <div>
+                        <Header logined={true} />
+                        <List />
+                    </div>}
+                />
+
+                <Route exact path='/mypage' element={
+                    <div>
+                        <Header logined={true} />
+                        <MyPage />
+                    </div>}
+                />
+
+                <Route exact path='/cardinfo/:card_code' element={
+                    <div>
+                        <Header logined={true} />
+                        <CardInfo />
+                    </div>}
+                />
+
+                <Route path="*" element={
+                    <div>
+                        <Header logined={false} />
+                        <NotFound />
+                    </div>}
+                />
             </Routes>
         </BrowserRouter>
     );

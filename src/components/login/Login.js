@@ -33,7 +33,7 @@ function Login() {
             </div>
 
             <div className={styles.subTitle}>
-                cardvisor에 오신것을 환영합니다!
+                Cardvisor에 오신것을 환영합니다!
             </div>
             
             <div className={styles.line} />
