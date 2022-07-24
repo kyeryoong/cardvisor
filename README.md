@@ -1,12 +1,13 @@
-# Cardvisor Frontend
-<br><br>
+![cardvisor_md](https://user-images.githubusercontent.com/98510309/179799642-f61c32d2-7e98-467e-b923-1f5a6534995d.png)
 
+ 
 
 
 ## About Me
-#### Name : Young-Woo Kim
-#### Team : Cardvisor
-#### Major : Hongik University Computer Engineering
+#### Name  |  Young-Woo Kim
+#### Major  |  Hongik University Computer Engineering
+#### Team  |  Cardvisor
+#### Position  |  Frontend Engineer
 <br><br>
 
 
@@ -18,7 +19,7 @@
 - *Service1* page was implemented.
 
 ### Ver. 1.0.1 (2022/05/12)
-- Several Pages were connected with using react-router-dom.
+- Several Pages were connected with using React-router-dom.
 - *Service1*, *List*, *Main*, *MyPage* pages were implemented.
 - *header* was implemented.
 
@@ -81,6 +82,12 @@
 - *CardInfo* page was implemented using UseParams to show information of each cards.
 
 ### Ver 1.2.7 (2022/07/16)
-- Font has been changed into *SDGothic* series
-- transition and hover effects has been added.
+- Font has been changed into *SDGothic* series.
+- Transition and hover effects has been added.
 - *Service1Result* page was modified.
+
+### Ver 1.2.8 (2022/07/20)
+- *NotFound* page was implemented.
+- Minor chnages in designs.
+- Some icons and images were added.
+- README.md was modified.
