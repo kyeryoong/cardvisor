@@ -12,7 +12,7 @@ function MyPage() {
                 <a className={styles.four}>4</a>
                 <img className={styles.deadFace}
                     alt="deadface"
-                    src={process.env.PUBLIC_URL + '/images/menu_icon/dead_blue.png'} />
+                    src={process.env.PUBLIC_URL + '/images/icons/dead_blue.png'} />
                 <a className={styles.four}>4</a>
             </div>
 

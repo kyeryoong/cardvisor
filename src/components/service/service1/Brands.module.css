@@ -12,6 +12,10 @@
 }
 
 .brandLogo {
+    text-align: center;
+}
+
+.brandLogo img {
     width: 120px;
     height: 60px;
     margin-top: 13px;
@@ -21,6 +25,7 @@
     margin-top: 10px;
     font-size: 1.1rem;
     font-weight: 1000;
+    text-align: center;
 }
 
 input[type="checkbox"] {

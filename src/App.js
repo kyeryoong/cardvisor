@@ -91,7 +91,7 @@ function App() {
                     </div>}
                 />
 
-                <Route path="*" element={
+                <Route path='*' element={
                     <div>
                         <Header logined={false} />
                         <NotFound />

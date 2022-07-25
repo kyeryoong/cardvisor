@@ -5,11 +5,13 @@
     justify-content: left;
     height: 80px;
     top: 0px;
-    left: 20px;
-    right: 20px;
-    z-index: 1;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
     border-bottom: 1.5px solid rgb(200, 200, 200);
+    background-color: white;
 }
+
 
 .title {
     color: white;
@@ -28,7 +30,7 @@
 .headerButton {
     display: flex;
     position: fixed;
-    right: 80px;
+    right: 70px;
     height: 40px;
     font-size: 1.2rem;
     align-items: center;
@@ -42,7 +44,7 @@
     display: grid;
     position: fixed;
     top: 90px;
-    right: 80px;
+    right: 60px;
     height: 180px;
     width: 300px;
     background-color: rgb(200, 250, 250);

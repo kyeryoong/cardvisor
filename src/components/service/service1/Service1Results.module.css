@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+.bestCardButtonsZone {
+    text-align: center;
+}
+
 .bestCardImageZone {
     margin-top: -100px;
+    text-align: center;
 }
 
 .bestCardBadge {
@@ -61,6 +66,7 @@
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
+    text-align: center;
 }
 
 .bestCardMoreInfoButtonImage {
@@ -68,6 +74,7 @@
     width: 26px;
     margin: 12px;
     margin-left: 0;
+    text-align: center;
 }
 
 .bestCardMoreInfoButtonText {
@@ -88,6 +95,7 @@
     margin-right: 10px;
     position: relative;
     cursor: pointer;
+    text-align: center;
 }
 
 .toCardCompanyPageButtonImage {
@@ -95,6 +103,7 @@
     width: 26px;
     margin: 12px;
     margin-left: 0;
+    text-align: center;
 }
 
 .toCardCompanyPageButtonText {
@@ -116,6 +125,7 @@
     position: relative;
     top: -18px;
     cursor: pointer;
+    text-align: center;
 }
 
 .subText {
@@ -215,6 +225,7 @@
     display: grid;
     grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr;
     place-items: center;
+    text-align: center;
 }
 
 .moreCardInfoButtons {
@@ -259,6 +270,11 @@
     filter: invert();
     width: 26px;
     margin: 12px;
+
+}
+
+.extraButtonsZone {
+    text-align: center;
 }
 
 .toMoreCardsButton {
@@ -271,13 +287,13 @@
     border: transparent;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
 .goBackButton {
     width: 250px;
     height: 50px;
     font-size: 1.5rem;
-    align-items: center;
     background-color: rgb(160, 160, 160);
     color: rgb(255, 255, 255);
     border: transparent;

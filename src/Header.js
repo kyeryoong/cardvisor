@@ -13,16 +13,27 @@ function Header(props) {
 
     return (
         <div className={styles.header}>
-            <div className={styles.title} onClick={() => {
-                navigate('/');
-            }}>
-                <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_blue.png'} />
-            </div>
+            {!props.logined && 
+                <div className={styles.title} onClick={() => {
+                    navigate('/');
+                }}>
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_blue.png'} />
+                </div>
+            }
+            
+            {props.logined && 
+                <div className={styles.title} onClick={() => {
+                    navigate('/main');
+                }}>
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_blue.png'} />
+                </div>
+            }
 
-            {clicked ? <img alt="button" className={styles.headerButton} src={process.env.PUBLIC_URL + '/images/menu_icon/user_orange.png'}
+
+            {clicked ? <img alt="button" className={styles.headerButton} src={process.env.PUBLIC_URL + '/images/icons/user_orange.png'}
                 onClick={() => {
                     clicked ? setClicked(false) : setClicked(true);
-                }} /> : <img alt="button" className={styles.headerButton} src={process.env.PUBLIC_URL + '/images/menu_icon/user_blue.png'}
+                }} /> : <img alt="button" className={styles.headerButton} src={process.env.PUBLIC_URL + '/images/icons/user_blue.png'}
                 onClick={() => {
                     clicked ? setClicked(false) : setClicked(true);
                 }} />}
