@@ -91,3 +91,11 @@
 - Minor chnages in designs.
 - Some icons and images were added.
 - README.md was modified.
+
+### Ver. 1.2.9 (2022/07/25)
+- Header was changed with some of updates in design and function.
+- Frontend project was deployed using Netlify.
+
+### Ver. 1.3.0 (2022/07/26)
+- *Service2" page was implemented.
+- Icons were added in category.
