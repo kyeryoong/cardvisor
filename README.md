@@ -1,6 +1,5 @@
-![cardvisor_md](https://user-images.githubusercontent.com/98510309/179799642-f61c32d2-7e98-467e-b923-1f5a6534995d.png)
+![cardvisor_md](https://user-images.githubusercontent.com/98510309/180853547-c7678261-1ba1-4613-8b8a-7fc34f1dff9d.png)
 
- 
 
 
 ## About Me
