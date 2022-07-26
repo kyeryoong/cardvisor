@@ -70,26 +70,26 @@
 ### Ver. 1.2.3 (2022/06/16)
 - *Service1Result* page was almost completed.
 
-### Ver 1.2.4 (2022/06/18)
+### Ver. 1.2.4 (2022/06/18)
 - *Service1Result* page was modified.
 - *Service1ResultMore* page was created to show more recommended cards.
 
-### Ver 1.2.5 (2022/07/15)
+### Ver. 1.2.5 (2022/07/15)
 - Database server was connected using Amazon RDS.
 
-### Ver 1.2.6 (2022/07/16)
+### Ver. 1.2.6 (2022/07/16)
 - Cardvisor main logo was changed.
 - Some of the unnecessary files were deleted.
 - Buttons in *Main* page was modified.
 - *Service1Result* page was modified with lots of updates.
 - *CardInfo* page was implemented using UseParams to show information of each cards.
 
-### Ver 1.2.7 (2022/07/16)
+### Ver. 1.2.7 (2022/07/16)
 - Font has been changed into *SDGothic* series.
 - Transition and hover effects has been added.
 - *Service1Result* page was modified.
 
-### Ver 1.2.8 (2022/07/20)
+### Ver. 1.2.8 (2022/07/20)
 - *NotFound* page was implemented.
 - Minor changes in designs.
 - Some icons and images were added.
