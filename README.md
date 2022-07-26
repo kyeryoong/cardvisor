@@ -96,5 +96,5 @@
 - Frontend project was deployed using Netlify.
 
 ### Ver. 1.3.0 (2022/07/26)
-- *Service2" page was implemented.
+- *Service2* page was implemented.
 - Icons were added in category.
