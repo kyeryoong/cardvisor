@@ -95,11 +95,11 @@
 - Header was changed with some of updates in design and function.
 - Frontend project was deployed using Netlify.
 
-### Ver. 1.2.10 (2022/07/26)
+### Ver. 1.3.10 (2022/07/26)
 - *Service2* page was implemented.
 - Icons were added in category.
 
-### Ver. 1.2.11 (2022/07/26)
+### Ver. 1.3.11 (2022/07/26)
 - *Header* was modified.
 - *Service2Analysis* page was created to show analysis of spending.
 - *ScrollToTop* module was created.
