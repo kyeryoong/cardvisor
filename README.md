@@ -2,6 +2,10 @@
 
 
 
+## Deployment in Progress!
+### Visit [cardvisor.netlify.app](https://cardvisor.netlify.app) to check this project!
+<br><br>
+
 ## About Me
 #### Name  |  Young-Woo Kim
 #### Major  |  Hongik University Computer Engineering
