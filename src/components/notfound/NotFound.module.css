@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+.mainZone {
+    text-align: center;
+}
+
 .four {
     color: rgb(0, 200, 200);
     font-size: 17rem;

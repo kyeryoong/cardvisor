@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import styles from './List.module.css';
 
+import Intro from '../../Intro';
 
 
 function List() {
@@ -24,10 +25,8 @@ function List() {
 
     return (
         <div>
-            <div className={styles.introText}>
-                전체 카드 목록
-            </div>
-            <br /><br />
+            <Intro mainText="전체 카드 목록" subText="모든 카드의 정보를 확인할 수 있습니다." />
+            <br /><br /><br />
 
             <table>
                 <tbody>
@@ -37,14 +36,14 @@ function List() {
                                 <img
                                     className={styles.cardImages}
                                     alt={cur.id}
-                                    src={process.env.PUBLIC_URL + '/images/card_images/' + cur.id + '.png'} />
+                                    src={process.env.PUBLIC_URL + "/images/card_images/" + cur.id + ".png"} />
                             </td>
 
                             <td>
                                 <img
                                     className={styles.cardCompanyImages}
                                     alt={cur.company}
-                                    src={process.env.PUBLIC_URL + '/images/card_logo/left_aligned/' + cur.company_eng + '.png'} />
+                                    src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cur.company_eng + ".png"} />
                             </td>
 
                             <td className={styles.cardName}>
@@ -53,7 +52,7 @@ function List() {
 
                             <td>
                                 <button className={styles.cardInfoButton} onClick={() => {
-                                    window.open('/cardinfo/' + cur.id);
+                                    window.open("/cardinfo/" + cur.id);
                                 }}>상세정보</button>
                             </td>
 
@@ -70,7 +69,7 @@ function List() {
 
             <div>
                 <button className={styles.toMainButton} onClick={() => {
-                    navigate('/main');
+                    navigate("/main");
                 }}>
                     홈 화면으로
                 </button>

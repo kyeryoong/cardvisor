@@ -4,7 +4,7 @@ function rankParser(rank) {
     if (rank === "1") { return <div className={styles.moreCardRankGold}>{rank}</div> }
     else if (rank === "2") { return <div className={styles.moreCardRankSilver}>{rank}</div> }
     else if (rank === "3") { return <div className={styles.moreCardRankBronze}>{rank}</div> }
-    else  { return <div className={styles.moreCardRankNormal}>{rank}</div> }
+    else { return <div className={styles.moreCardRankNormal}>{rank}</div> }
 }
 
 function MoreCards(props) {
@@ -16,14 +16,14 @@ function MoreCards(props) {
                 <div>
                     <img className={styles.moreCardImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + props.id + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_images/" + props.id + ".png"} />
                 </div>
 
                 <div>
-                <img
-                    className={styles.moreCardCompanyImage}
-                    alt="cards"
-                    src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + props.company + '.png'} />
+                    <img
+                        className={styles.moreCardCompanyImage}
+                        alt="cards"
+                        src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/" + props.company + ".png"} />
                 </div>
 
                 <div className={styles.moreCardName}>
@@ -31,7 +31,7 @@ function MoreCards(props) {
                 </div>
 
                 <button className={styles.cardInfoButton} onClick={() => {
-                    window.open('/cardinfo/' + props.id);
+                    window.open("/cardinfo/" + props.id);
                 }}>상세정보</button>
             </div>
             <hr />

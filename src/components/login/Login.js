@@ -35,13 +35,13 @@ function Login() {
             <div className={styles.subTitle}>
                 Cardvisor에 오신것을 환영합니다!
             </div>
-            
+
             <div className={styles.line} />
 
             <div>
                 <form>
                     <div>
-                        <input type="text" className={styles.inputZone} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post"/>
+                        <input type="text" className={styles.inputZone} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post" />
                     </div>
 
                     <div>
@@ -61,7 +61,7 @@ function Login() {
                     </div>
                 </form>
             </div>
-            <br />          
+            <br />
 
 
 

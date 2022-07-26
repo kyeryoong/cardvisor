@@ -3,9 +3,9 @@ import styles from '../Service.module.css';
 import Brands from './Brands';
 import SelectedBrands from './SelectedBrands';
 import Categories from '../Categories';
+import Intro from '../../../Intro';
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -36,7 +36,7 @@ function isSelected() {
     if (SelectedBrands.length === 0) {
         alert("혜택을 선택해주세요");
 
-        return '/service1';
+        return "/service1";
     }
 
     else {
@@ -45,7 +45,7 @@ function isSelected() {
         }
         getJson();
 
-        return '/service1/results';
+        return "/service1/results";
     }
 }
 
@@ -58,8 +58,7 @@ function Service1() {
 
     return (
         <div>
-            <h1>카드 추천 받기</h1>
-            <h2>선호하는 혜택을 체크해주세요!</h2>
+            <Intro mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요!" />
             <br /><br /><br />
 
 
@@ -429,7 +428,7 @@ function Service1() {
 
             <div>
                 <button className={styles.toMainButton} onClick={() => {
-                    navigate('/main');
+                    navigate("/main");
                 }}>
                     홈 화면으로
                 </button>

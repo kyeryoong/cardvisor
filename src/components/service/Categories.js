@@ -36,7 +36,7 @@ function Categories(props) {
                     }
                 </div>
             </div>
-            
+
             <div className={styles.hrline} />
         </summary>
     )

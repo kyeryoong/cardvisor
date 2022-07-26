@@ -5,7 +5,7 @@ function Benefit(props) {
         <div className={styles.benefitDetail}>
             <img className={styles.brandLogo}
                 alt={props.benefitNameEng}
-                src={process.env.PUBLIC_URL + '/images/brands_logo/' + props.benefitNameEng + '.png'} />
+                src={process.env.PUBLIC_URL + "/images/brands_logo/" + props.benefitNameEng + ".png"} />
             <div>
                 <a className={styles.benefitDetail1}>
                     {props.benefitNameKor}

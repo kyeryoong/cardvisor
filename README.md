@@ -87,7 +87,7 @@
 
 ### Ver 1.2.8 (2022/07/20)
 - *NotFound* page was implemented.
-- Minor chnages in designs.
+- Minor changes in designs.
 - Some icons and images were added.
 - README.md was modified.
 
@@ -95,6 +95,12 @@
 - Header was changed with some of updates in design and function.
 - Frontend project was deployed using Netlify.
 
-### Ver. 1.3.0 (2022/07/26)
-- *Service2" page was implemented.
+### Ver. 1.2.10 (2022/07/26)
+- *Service2* page was implemented.
 - Icons were added in category.
+
+### Ver. 1.2.11 (2022/07/26)
+- *Header* was modified.
+- *Service2Analysis* page was created to show analysis of spending.
+- *ScrollToTop* module was created.
+- Minor programmical grammar changes in several components.

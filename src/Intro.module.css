@@ -1,0 +1,21 @@
+.mainText {
+    width: 900px;
+    font-size: 3rem;
+    font-weight: 1000;
+    color: rgb(50, 50, 50);
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subText {
+    width: 900px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(150, 150, 150);
+    text-align: left;
+    position: relative;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}

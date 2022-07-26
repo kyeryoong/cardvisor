@@ -28,7 +28,7 @@ function Brands(props) {
                 <div className={styles.brandLogo}>
                     <img
                         alt={props.brandNameEng}
-                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + props.brandNameEng + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + props.brandNameEng + ".png"} />
                 </div>
 
                 <div className={styles.brandNameKor}>{props.brandNameKor}</div>

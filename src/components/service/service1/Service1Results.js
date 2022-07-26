@@ -8,8 +8,6 @@ function Service1Results() {
     const navigate = useNavigate();
     const [like, setLike] = useState(false);
 
-    // 5월 31일에 추천된 카드 리스트를 받기 위해 추가한 코드들 //////
-    // 33번째 줄에 {cards.cards} 를 통해 잘 받은 것을 알 수 있음
     const [cards, setCards] = useState({
         topTenCards: [{}],
         bestCardBenefits: [{}],
@@ -49,9 +47,9 @@ function Service1Results() {
     }
 
     function typeParser(type) {
-        if (type === "credit\r") { return "신용카드" }
-        else if (type === "check\r") { return "체크카드" }
-        else if (type === "hybrid\r") { return "하이브리드 카드" }
+        if (type === "credit\r" || type === "credit") { return "신용카드" }
+        else if (type === "check\r" || type === "check") { return "체크카드" }
+        else if (type === "hybrid\r" || type === "hybrid") { return "하이브리드 카드" }
     }
 
 
@@ -65,7 +63,7 @@ function Service1Results() {
                 <img
                     className={styles.bestCardImage}
                     alt="cards"
-                    src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[0]?.id + '.png'} />
+                    src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[0]?.id + ".png"} />
             </div>
 
             <div className={styles.bestCardName}>
@@ -77,18 +75,18 @@ function Service1Results() {
                 <img
                     className={styles.bestCardCompanyImage}
                     alt="cards"
-                    src={process.env.PUBLIC_URL + '/images/card_logo/left_aligned/' + cards?.topTenCards[0]?.company_eng + '.png'} />
+                    src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cards?.topTenCards[0]?.company_eng + ".png"} />
                 <br /><br />
             </div>
 
             <div className={styles.bestCardButtonsZone}>
                 <div>
                     <button className={styles.bestCardMoreInfoButton} onClick={() => {
-                        window.open('/cardinfo/' + cards?.topTenCards[0]?.id);
+                        window.open("/cardinfo/" + cards?.topTenCards[0]?.id);
                     }}>
                         <img className={styles.bestCardMoreInfoButtonImage}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/moreinfo.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/moreinfo.png"} />
                         <a className={styles.bestCardMoreInfoButtonText}>
                             카드 상세정보 보기
                         </a>
@@ -101,7 +99,7 @@ function Service1Results() {
                     }}>
                         <img className={styles.toCardCompanyPageButtonImage}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/gopage.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/gopage.png"} />
                         <a className={styles.toCardCompanyPageButtonText}>
                             카드사 홈페이지
                         </a>
@@ -109,7 +107,7 @@ function Service1Results() {
 
                     <button className={styles.likeButton} onClick={() => {
                         setLike(!like);
-                    }}> {like ? '♡ ' : '♥ '}
+                    }}> {like ? "♡" : "♥"}
                         찜하기
                     </button>
                 </div>
@@ -126,35 +124,35 @@ function Service1Results() {
                     <img
                         className={styles.brandImage}
                         alt="brands"
-                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[0]?.brandName + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + cards?.bestCardBenefits[0]?.brandName + ".png"} />
                 </div>
 
                 <div className={styles.brandImageZone}>
                     <img
                         className={styles.brandImage}
                         alt="brands"
-                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[1]?.brandName + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + cards?.bestCardBenefits[1]?.brandName + ".png"} />
                 </div>
 
                 <div className={styles.brandImageZone}>
                     <img
                         className={styles.brandImage}
                         alt="brands"
-                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[2]?.brandName + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + cards?.bestCardBenefits[2]?.brandName + ".png"} />
                 </div>
 
                 <div className={styles.brandImageZone}>
                     <img
                         className={styles.brandImage}
                         alt="brands"
-                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[3]?.brandName + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + cards?.bestCardBenefits[3]?.brandName + ".png"} />
                 </div>
 
                 <div className={styles.brandImageZone}>
                     <img
                         className={styles.brandImage}
                         alt="brands"
-                        src={process.env.PUBLIC_URL + '/images/brands_logo/' + cards?.bestCardBenefits[4]?.brandName + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + cards?.bestCardBenefits[4]?.brandName + ".png"} />
                 </div>
             </div>
 
@@ -187,28 +185,28 @@ function Service1Results() {
                     <img
                         className={styles.moreCardImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[1]?.id + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[1]?.id + ".png"} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[2]?.id + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[2]?.id + ".png"} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[3]?.id + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[3]?.id + ".png"} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_images/' + cards?.topTenCards[4]?.id + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[4]?.id + ".png"} />
                 </div>
             </div>
 
@@ -217,28 +215,28 @@ function Service1Results() {
                     <img
                         className={styles.moreCardCompanyImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[1]?.company_eng + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/" + cards?.topTenCards[1]?.company_eng + ".png"} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[2]?.company_eng + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/" + cards?.topTenCards[2]?.company_eng + ".png"} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[3]?.company_eng + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/" + cards?.topTenCards[3]?.company_eng + ".png"} />
                 </div>
 
                 <div>
                     <img
                         className={styles.moreCardCompanyImage}
                         alt="cards"
-                        src={process.env.PUBLIC_URL + '/images/card_logo/center_aligned/' + cards?.topTenCards[4]?.company_eng + '.png'} />
+                        src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/" + cards?.topTenCards[4]?.company_eng + ".png"} />
                 </div>
             </div>
 
@@ -252,12 +250,12 @@ function Service1Results() {
             <div className={styles.moreCardInfoButtonsRow}>
                 <div className={styles.moreCardInfoButtons}>
                     <button className={styles.moreCardInfoButton1} onClick={() => {
-                        window.open('/cardinfo/' + cards?.topTenCards[1]?.id)
+                        window.open("/cardinfo/" + cards?.topTenCards[1]?.id)
                     }}>
                         <img
                             className={styles.moreCardInfoImage1}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/moreinfo.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/moreinfo.png"} />
                     </button>
 
                     <button className={styles.moreCardInfoButton2} onClick={() => {
@@ -266,7 +264,7 @@ function Service1Results() {
                         <img
                             className={styles.moreCardInfoImage2}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/gopage.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/gopage.png"} />
                     </button>
                 </div>
 
@@ -277,7 +275,7 @@ function Service1Results() {
                         <img
                             className={styles.moreCardInfoImage1}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/moreinfo.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/moreinfo.png"} />
                     </button>
 
                     <button className={styles.moreCardInfoButton2} onClick={() => {
@@ -286,18 +284,18 @@ function Service1Results() {
                         <img
                             className={styles.moreCardInfoImage2}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/gopage.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/gopage.png"} />
                     </button>
                 </div>
 
                 <div className={styles.moreCardInfoButtons}>
                     <button className={styles.moreCardInfoButton1} onClick={() => {
-                        window.open('/cardinfo/' + cards?.topTenCards[3]?.id)
+                        window.open("/cardinfo/" + cards?.topTenCards[3]?.id)
                     }}>
                         <img
                             className={styles.moreCardInfoImage1}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/moreinfo.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/moreinfo.png"} />
                     </button>
 
                     <button className={styles.moreCardInfoButton2} onClick={() => {
@@ -306,18 +304,18 @@ function Service1Results() {
                         <img
                             className={styles.moreCardInfoImage2}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/gopage.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/gopage.png"} />
                     </button>
                 </div>
 
                 <div className={styles.moreCardInfoButtons}>
                     <button className={styles.moreCardInfoButton1} onClick={() => {
-                        window.open('/cardinfo/' + cards?.topTenCards[4]?.id)
+                        window.open("/cardinfo/" + cards?.topTenCards[4]?.id)
                     }}>
                         <img
                             className={styles.moreCardInfoImage1}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/moreinfo.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/moreinfo.png"} />
                     </button>
 
                     <button className={styles.moreCardInfoButton2} onClick={() => {
@@ -326,7 +324,7 @@ function Service1Results() {
                         <img
                             className={styles.moreCardInfoImage2}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + '/images/icons/gopage.png'} />
+                            src={process.env.PUBLIC_URL + "/images/icons/gopage.png"} />
                     </button>
                 </div>
             </div>
@@ -335,7 +333,7 @@ function Service1Results() {
             <div className={styles.extraButtonsZone}>
                 <div>
                     <button className={styles.toMoreCardsButton} onClick={() => {
-                        navigate('/service1/results/more');
+                        navigate("/service1/results/more");
                     }}>
                         더 많은 카드 보기
                     </button>

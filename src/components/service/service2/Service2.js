@@ -2,6 +2,7 @@ import styles from '../Service.module.css';
 
 import Brands from './Brands';
 import Categories from '../Categories';
+import Intro from '../../../Intro';
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -81,7 +82,7 @@ function Service2() {
     const [sel707, setSel707] = useState(0);
     const [sel708, setSel708] = useState(0);
     const [sel709, setSel709] = useState(0);
-    
+
     const [sel801, setSel801] = useState(0);
     const [sel802, setSel802] = useState(0);
     const [sel803, setSel803] = useState(0);
@@ -191,8 +192,7 @@ function Service2() {
 
     return (
         <div>
-            <h1>카드 추천 받기</h1>
-            <h2>선호하는 혜택의 금액을 입력해주세요!</h2>
+            <Intro mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요!" />
             <br /><br /><br />
 
             <div></div>
@@ -553,29 +553,8 @@ function Service2() {
 
 
             <div>
-                {/* <Link to='/service1/results'>
-                    <button className={styles.sendButton} onClick={() => {
-
-                        for (var i = 0; i < SelectedBrands.length; i++) {
-                            jsonArr[i] = { "memberId": 1, "brandName": SelectedBrands[i] }
-                        }
-                        getJson();
-                    }}>
-                        n개 혜택 선택 완료
-                    </button>
-                </Link> */}
-
                 <button className={styles.sendButton} onClick={() => {
-                    jsonArr = []
-
-                    if (sel101 > 0) { jsonArr.push(["transport_bus", sel101]); }
-                    if (sel102 > 0) { jsonArr.push(["transport_subway", sel102]); }
-                    if (sel103 > 0) { jsonArr.push(["transport_taxi", sel103]); }
-                    if (sel104 > 0) { jsonArr.push(["transport_korail", sel104]); }
-                    if (sel105 > 0) { jsonArr.push(["transport_srt", sel105]); }
-                    if (sel106 > 0) { jsonArr.push(["transport_arex", sel106]); }
-
-                    alert(jsonArr.join("\n"));
+                    navigate("analysis")
                 }}>
                     혜택 선택 완료
                 </button>
@@ -584,7 +563,7 @@ function Service2() {
 
             <div>
                 <button className={styles.toMainButton} onClick={() => {
-                    navigate('/main');
+                    navigate("/main");
                 }}>
                     홈 화면으로
                 </button>

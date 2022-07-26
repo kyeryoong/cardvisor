@@ -27,16 +27,6 @@ function CardInfo() {
             });
     }, []);
 
-    const myArray = [{
-        "id": 16,
-        "name": "신세계 씨티카드 콰트로",
-        "company": "씨티카드",
-        "type": "credit\r",
-        "link": "https://www.banksalad.com/cards/16/issue\r",
-        "company_eng": "citi"
-    }]
-
-
 
     return (
         <div>
@@ -46,8 +36,8 @@ function CardInfo() {
                         <img
                             alt="cards"
                             className={styles.cardImage}
-                            src={process.env.PUBLIC_URL + '/images/card_images/' + card_code + '.png'} />
-                    </div>                   
+                            src={process.env.PUBLIC_URL + "/images/card_images/" + card_code + ".png"} />
+                    </div>
                 </div>
 
                 <div className={styles.cardInfoZone2}>
@@ -80,7 +70,7 @@ function CardInfo() {
 
                         <button className={styles.likeButton} onClick={() => {
                             setLike(!like);
-                        }}> {like ? '♡ ' : '♥ '}
+                        }}> {like ? "♡" : "♥"}
                             찜하기
                         </button>
                     </div>
@@ -128,7 +118,7 @@ function CardInfo() {
             <hr />
 
             <div className={styles.caution}>
-            <br />
+                <br />
                 해당 페이지에서 안내하는 혜택은 실제 카드사에서 제공하는 혜택과 다를수 있습니다.<br />
                 혜택은 전원실적과 특정 조건 및 상황에 따라 다르게 제공되거나 제공되지 않을 수 있습니다.<br />
                 연회비는 결제사의 상황에 따라 지원이 중단되거나 변동될 수 있습니다.<br /><br />

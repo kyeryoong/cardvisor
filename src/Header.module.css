@@ -7,11 +7,24 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    z-index: 10;
-    border-bottom: 1.5px solid rgb(200, 200, 200);
+    z-index: 10;;
     background-color: white;
 }
 
+.header2 {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: left;
+    width: 96%;
+    height: 81px;
+    top: 0px;
+    left: 2%;
+    right: 2%;
+    z-index: 9;;
+    border-bottom: 1.5px solid rgb(200, 200, 200);
+    background-color: transparent;
+}
 
 .title {
     color: white;
@@ -52,7 +65,7 @@
     border-radius: 5px;
 }
 
-.headerClickedZoneCloseButton{
+.headerClickedZoneCloseButton {
     font-size: 1.5rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
