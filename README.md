@@ -108,3 +108,7 @@
 - *Service2Analysis* page was created to show analysis of spending.
 - *ScrollToTop* module was created.
 - Minor programmical grammar changes in several components.
+
+### Ver. 1.2.12 (2022/07/31)
+- *List* page was modified.
+- Pagination was implemented in *List* page.

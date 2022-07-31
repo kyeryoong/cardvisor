@@ -4,15 +4,22 @@
     box-sizing: border-box;
 }
 
+.introText {
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: left;
+}
+
 .cardImages {
-    height: 60px;
+    height: 55px;
     border: 1px rgb(170, 170, 170) solid;
     border-radius: 4px;
     box-shadow: 0px 2px 3px rgb(100, 100, 100);
+    margin-top: 2px;
 }
 
-.cardCompanyImages {
-    padding-left: 30px;
+.cardCompanyImages{
+    padding-left: 20px;
     height: 80px;
 }
 
@@ -21,7 +28,6 @@ table {
 }
 
 td {
-    padding-top: 6px;
     border-bottom: 1px solid rgb(190, 190, 190);
 }
 
@@ -74,4 +80,76 @@ td {
     border: transparent;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.moreCardInfoButton1 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgb(243, 156, 18);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.moreCardInfoImage1 {
+    filter: invert();
+    width: 26px;
+    margin: 12px;
+}
+
+.moreCardInfoButton2 {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgb(52, 152, 219);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.moreCardInfoImage2 {
+    filter: invert();
+    width: 26px;
+    margin: 12px;
+
+}
+
+.pageButtonCurrentPage {
+    margin-left: 1px;
+    margin-right: 1px;
+    height: 35px;
+    width: 35px;
+    font-size: 1.1rem;
+    font-weight: 1000;
+    background-color: rgb(0, 200, 200);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pageButtonNotCurrentPage {
+    margin-left: 1px;
+    margin-right: 1px;
+    height: 35px;
+    width: 35px;
+    font-size: 1.1rem;
+    background-color: rgb(200, 200, 200);
+    color: rgb(120, 120, 120);
+    border: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pageButtonGroup {
+    text-align: center;
 }
