@@ -49,7 +49,7 @@ function Register() {
 
 
 
-    function checkID () {
+    function checkID() {
         if (info.id.length > 4) {
             return true;
         }
@@ -79,7 +79,7 @@ function Register() {
                 setCheckedPW("비밀번호가 일치하지 않습니다.");
                 return false;
             }
-            
+
             else {
                 setCheckedPW("비밀번호가 너무 짧습니다.");
                 return false;
@@ -90,64 +90,66 @@ function Register() {
 
 
     return (
-        <div className={styles.registerZone}>
-            <div className={styles.registerZoneLeft}>
-                <div className={styles.registerText1}>
-                    사용자 소비 패턴 기반<br />
-                    <span className={styles.registerText2}>카드 상품</span><br />
-                    <span className={styles.registerText2}>추천 서비스</span>
-                </div>
-
-                <img alt="graphic" className={styles.cardvisorImage} src={process.env.PUBLIC_URL + '/images/cardvisor_white.png'} />
-            </div>
-
-
-
-            <div className={styles.registerZoneRight}>
-                <div className={styles.registerZoneRightInside}>
-                    <div className={styles.mainTitle}>
-                        Register
+        <div className={styles.container}>
+            <div className={styles.registerZone}>
+                <div className={styles.registerZoneLeft}>
+                    <div className={styles.registerText1}>
+                        사용자 소비 패턴 기반<br />
+                        <span className={styles.registerText2}>카드 상품</span><br />
+                        <span className={styles.registerText2}>추천 서비스</span>
                     </div>
 
-                    <div className={styles.subTitle}>
-                        Cardvisor의 혜택을 체험해보세요!
+                    <img alt="graphic" className={styles.cardvisorImage} src={process.env.PUBLIC_URL + '/images/cardvisor_white.png'} />
+                </div>
+
+
+
+                <div className={styles.registerZoneRight}>
+                    <div className={styles.registerZoneRightInside}>
+                        <div className={styles.mainTitle}>
+                            Register
+                        </div>
+
+                        <div className={styles.subTitle}>
+                            Cardvisor의 혜택을 체험해보세요!
+                        </div>
+                        <br />
+
+
+
+                        <div className={styles.inputZone}>
+                            <input type="text" className={styles.inputBox} name="id" placeholder="아이디" onChange={handleChangeID} autoComplete="off" method="post" />
+                        </div>
+
+                        <div className={styles.checkedIDZone}>
+                            {checkedID}
+                        </div>
+                        <br /><br />
+
+
+
+                        <div className={styles.inputZone}>
+                            <input type="password" className={styles.inputBox} name="pw" placeholder="비밀번호" onChange={handleChangePW} autoComplete="off" method="post" />
+                        </div>
+
+                        <div className={styles.inputZone}>
+                            <input type="password" className={styles.inputBox} name="pwcheck" placeholder="비밀번호 확인" onChange={handleChangePW} autoComplete="off" method="post" />
+                        </div>
+
+                        <div className={styles.checkedPWZone}>
+                            {checkedPW}
+                        </div>
+
+
+                        <button type="submit" className={styles.registerButton} onClick={() => {
+                            if (checkID() && checkPW()) {
+                                navigate("/main");
+                            }
+                        }}>회원가입</button>
+                        <br /><br /><br />
                     </div>
                     <br />
-
-
-
-                    <div className={styles.inputZone}>
-                        <input type="text" className={styles.inputBox} name="id" placeholder="아이디" onChange={handleChangeID} autoComplete="off" method="post" />
-                    </div>
-
-                    <div className={styles.checkedIDZone}>
-                        {checkedID}
-                    </div>
-                    <br /><br />
-
-
-
-                    <div className={styles.inputZone}>
-                        <input type="password" className={styles.inputBox} name="pw" placeholder="비밀번호" onChange={handleChangePW} autoComplete="off" method="post" />
-                    </div>
-
-                    <div className={styles.inputZone}>
-                        <input type="password" className={styles.inputBox} name="pwcheck" placeholder="비밀번호 확인" onChange={handleChangePW} autoComplete="off" method="post" />
-                    </div>
-
-                    <div className={styles.checkedPWZone}>
-                        {checkedPW}
-                    </div>
-
-
-                    <button type="submit" className={styles.registerButton} onClick={() => {
-                        if (checkID() && checkPW()) {
-                            navigate("/main");
-                        }
-                    }}>회원가입</button>
-                    <br /><br /><br />
                 </div>
-                <br />
             </div>
         </div>
     )

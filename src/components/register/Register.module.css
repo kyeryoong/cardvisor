@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, transparent 40%, rgb(0,200,200) 100%);
+}
+
 .registerZone {
-    display: grid;
     background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20vh;
     grid-template-columns: 1fr 1fr;
     height: 700px;
     width: 1200px;
@@ -19,7 +32,7 @@
 
 .registerZoneRight {
     float: right;
-    background-color: rgb(200, 255, 255);
+    background-color: rgb(255, 255, 255);
     height: 700px;
     width: 700px;
     border-radius: 0px 10px 10px 0px;
@@ -69,28 +82,31 @@
     text-align: center;
 }
 
-.inputBox {
+input {
     width: 100%;
     height: 60px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: left;
     background-color: rgb(255, 255, 255);
     border: transparent;
-    border-radius: 5px;
-    padding: 10px;
+    border-bottom: 2px solid rgb(0, 200, 200);
+    padding: -10px;
     margin-top: 7px;
     margin-bottom: 7px;
 }
 
-.inputZone::placeholder {
-    font-size: 1.3rem;
-    font-weight: 1000;
+input::placeholder {
+    font-size: 1.5rem;
     color: rgb(200, 200, 200);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+input:focus {
+    outline: none;
 }
 
 .registerButton {

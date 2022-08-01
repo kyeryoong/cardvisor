@@ -10,6 +10,7 @@
     color: white;
     text-align: left;
     padding-left: 30px;
+    z-index: 1;
 }
 
 .text2 {
@@ -19,23 +20,19 @@
     text-align: left;
     padding-left: 30px;
     line-height: 1.2;
+    z-index: 1;
 }
 
 .text3 {
     font-size: 1.2rem;
     color: white;
     padding-left: 30px;
+    z-index: 1;
 }
 
 .image1 {
-    height: 600px;
-    margin-top: -50px;
-    margin-left: 15px;
+    height: 700px;
+    margin-top: -70px;
+    margin-left: -25px;
     z-index: 0;
-}
-
-.image2 {
-    height: 330px;
-    margin-top: -500px;
-    z-index: 10;
 }
