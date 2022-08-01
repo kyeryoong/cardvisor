@@ -6,6 +6,7 @@ import ScrollToTop from './ScrollToTop';
 
 import Home from './components/home/Home';
 import Login from './components/login/Login';
+import Register from './components/register/Register';
 import Main from './components/main/Main';
 import Service1 from './components/service/service1/Service1';
 import Service1Results from './components/service/service1/Service1Results';
@@ -19,13 +20,9 @@ import NotFound from './components/notfound/NotFound'
 
 
 
-
-
 function App() {
     return (
         <div>
-
-
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/" element={
@@ -39,6 +36,13 @@ function App() {
                         <div>
                             <Header logined={false} />
                             <Login />
+                        </div>}
+                    />
+
+                    <Route exact path="/register" element={
+                        <div>
+                            <Header logined={false} />
+                            <Register />
                         </div>}
                     />
 

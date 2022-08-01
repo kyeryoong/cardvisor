@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import Carousel from './Carousel'
+
 import styles from "./Login.module.css";
 
 
@@ -15,66 +18,84 @@ function Login() {
         pw: ""
     });
 
-    const handleChange = (event) => {
+    function handleChange (event) {
         event.preventDefault();
         setInfo(info => {
             const updated = {
                 ...info,
                 [event.target.name]: event.target.value
             };
+            
             return updated;
         });
     };
 
+
+
     return (
-        <div>
-            <div className={styles.title}>
-                Login
-            </div>
-
-            <div className={styles.subTitle}>
-                Cardvisor에 오신것을 환영합니다!
-            </div>
-
-            <div className={styles.line} />
-
-            <div>
-                <form>
-                    <div>
-                        <input type="text" className={styles.inputZone} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post" />
+        <div className={styles.loginZone}>
+            <div className={styles.loginZoneLeft}>
+                <form className={styles.loginZoneLeftInside}>
+                    <div className={styles.mainTitle}>
+                        Login
                     </div>
 
-                    <div>
-                        <input type="password" className={styles.inputZone} name="pw" placeholder="비밀번호" onChange={handleChange} autoComplete="off" method="post" />
+                    <div className={styles.subTitle}>
+                        Cardvisor에 오신것을 환영합니다!
+                    </div>
+                    <br />
+
+
+
+                    <div className={styles.inputZone}>
+                        <input type="text" className={styles.inputBox} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post" />
                     </div>
 
-                    <div>
-                        <button type="submit" className={styles.button} onClick={() => {
-                            if (info.id === correctid && info.pw === correctpw) {
-                                navigate("/main");
-                            }
-
-                            else {
-                                alert("아이디와 비밀번호를 확인해주세요.")
-                            }
-                        }}>로그인</button>
+                    <div className={styles.inputZone}>
+                        <input type="password" className={styles.inputBox} name="pw" placeholder="비밀번호" onChange={handleChange} autoComplete="off" method="post" />
                     </div>
+
+                    <button type="submit" className={styles.loginButton} onClick={() => {
+                        if (info.id === correctid && info.pw === correctpw) {
+                            navigate("/main");
+                        }
+
+                        else {
+                            alert("아이디와 비밀번호를 확인해주세요.");
+                        }
+                    }}>로그인</button>
+                    <br /><br /><br />
+
+                    <div className={styles.registerZone}>
+                        아직 회원이 아니신가요?
+                        &nbsp;&nbsp;&nbsp;
+
+                        <span className={styles.registerButton} onClick={() => {
+                            navigate("/register");
+                        }}>
+                            회원가입 하기
+                        </span>
+                    </div>
+
+                    <div className={styles.findPasswordZone}>
+                        비밀번호를 잊으셨나요?
+                        &nbsp;&nbsp;&nbsp;
+
+                        <span className={styles.findPasswordButton} onClick={() => {
+                            alert("준비중");
+                        }}>
+                            비밀번호 찾기
+                        </span>
+                    </div>
+
                 </form>
             </div>
-            <br />
 
 
 
-            {/* <br /><br /><br /><br /><br /><br />
-            <div className={style.temp1}>
-                현재 로그인 보안 기능 X
+            <div className={styles.loginZoneRight}>
+                <Carousel />
             </div>
-            <div className={style.temp2}>
-                <div onClick={() => { navigate("/main"); }}>
-                        <li>이곳을 CLICK 하거나</li>
-                        <li>ID : admin │ PW : 1234 입력</li>
-                </div>
-            </div> */}
         </div>
     );
 }

@@ -19,28 +19,33 @@ function Home() {
             </div>
             <br />
 
-            <div>
-                <button className={styles.startButton} onClick={() => {
-                    navigate("/login");
-                }}>
-                    시작하기
-                </button>
+
+            <button className={styles.startButton} onClick={() => {
+                navigate("/login");
+            }}>
+                시작하기
+            </button>
+            <br /><br /><br /><br /><br />
+
+
+            <div className={styles.zone1}>
+                아직 회원이 아니신가요?
+            </div>
+            <div className={styles.zone2} onClick={() => {
+                navigate("/register");
+            }}>
+                회원가입
             </div>
             <br /><br /><br />
 
-            <div>
-                <div className={styles.zone1}>아직 회원이 아니신가요?</div>
-                <div className={styles.zone2} onClick={() => {
-                    alert("준비중");
-                }}>회원가입</div>
-            </div>
-            <br /><br />
 
-            <div>
-                <div className={styles.zone1}>Cardvisor에 대해서 자세히 알고 싶으면?</div>
-                <div className={styles.zone2} onClick={() => {
-                    alert("준비중");
-                }}>서비스 소개</div>
+            <div className={styles.zone1}>
+                Cardvisor에 대해서 자세히 알고 싶으면?
+            </div>
+            <div className={styles.zone2} onClick={() => {
+                alert("준비중");
+            }}>
+                서비스 소개
             </div>
             <br />
 

@@ -42,7 +42,7 @@ function ScrollToTop() {
             <button
                 className={buttonStatus ? "topButton active" : "topButton"} onClick={handleTop}>
                 <div>
-                    <img alt="arrow_up" className="arrow" src={process.env.PUBLIC_URL + "/images/icons/arrow_up.png"} />
+                    <img alt="arrow_up" className="arrow" src={process.env.PUBLIC_URL + "/images/icons/arrow_up_black.png"} />
                 </div>
                 TOP
             </button>

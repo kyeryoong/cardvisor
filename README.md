@@ -2,20 +2,34 @@
 
 
 
-## Deployment in Progress!
-### Visit [cardvisor.netlify.app](https://cardvisor.netlify.app) to check this project!
-<br><br>
+# Deployment in Progress!
 
-## About Me
-#### Name  |  Young-Woo Kim
-#### Major  |  Hongik University Computer Engineering
-#### Team  |  Cardvisor
-#### Position  |  Frontend Engineer
+### Visit [cardvisor.site](https://cardvisor.site) to check this project!
 <br><br>
 
 
 
-## Version Logs
+# About Me
+
+### Name &nbsp; | &nbsp; Young-Woo Kim
+### Major &nbsp; | &nbsp; Hongik University Computer Engineering
+### Team &nbsp; | &nbsp; Cardvisor
+### Position &nbsp; | &nbsp; Frontend Engineer
+<br><br>
+
+
+
+# Technologies and Software Used
+
+### Style Sheet Language &nbsp; | &nbsp; CSS
+### Programming Languages &nbsp; | &nbsp; JavaScript, JSX
+### Frontend Server &nbsp; | &nbsp; React.js
+### Deployment &nbsp; | &nbsp; Netlify
+### Version Control &nbsp; | &nbsp; GitHub
+<br><br>
+
+
+# Version Logs
 
 ### Ver. 1.0.0 (2022/05/11)
 - First Commit of the Frontend Project
@@ -112,3 +126,10 @@
 ### Ver. 1.2.12 (2022/07/31)
 - *List* page was modified.
 - Pagination was implemented in *List* page.
+
+### Ver. 1.3.1 (2022/08/01)
+- *Login* page was modified with lots of updates and design changes.
+- *Carousel* component and *BannerZone* components were created for *Login* page.
+- *Register* page was created.
+- Some of the missing card images were uploaded.
+- Some of the category images were changed.

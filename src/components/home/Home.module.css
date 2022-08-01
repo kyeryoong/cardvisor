@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -31,27 +29,27 @@
 
 .startButton {
     display: block;
-    width: 150px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 200px;
+    height: 60px;
+    font-size: 1.8rem;
     align-items: center;
     background-color: rgb(243, 156, 18);
     color: rgb(255, 255, 255);
     border: transparent;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 .zone1 {
     float: left;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
 .zone2 {
     margin-left: 20px;
     float: left;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: rgb(243, 156, 18);
     font-weight: 1000;
     cursor: pointer;

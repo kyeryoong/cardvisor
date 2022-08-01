@@ -1,0 +1,41 @@
+.mainZone {
+    height: 700px;
+    width: 700px;
+    background: linear-gradient(0deg, rgb(12, 31, 66) 10%, rgb(51, 85, 252) 50%, rgb(12, 31, 66) 90%);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.text1 {
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.text2 {
+    font-size: 4rem;
+    color: white;
+    font-weight: 1000;
+    text-align: left;
+    padding-left: 30px;
+    line-height: 1.2;
+}
+
+.text3 {
+    font-size: 1.2rem;
+    color: white;
+    padding-left: 30px;
+}
+
+.image1 {
+    height: 600px;
+    margin-top: -50px;
+    margin-left: 15px;
+    z-index: 0;
+}
+
+.image2 {
+    height: 330px;
+    margin-top: -500px;
+    z-index: 10;
+}

@@ -30,9 +30,7 @@ function Categories(props) {
                     setShow(!show);
                 }}>
                     {
-                        show ?
-                            <img alt="arrow_up" className={styles.arrow} src={process.env.PUBLIC_URL + "/images/icons/arrow_up.png"} /> :
-                            <img alt="arrow_down" className={styles.arrow} src={process.env.PUBLIC_URL + "/images/icons/arrow_down.png"} />
+                        show ? <img alt="arrow_up" className={styles.arrow} src={process.env.PUBLIC_URL + "/images/icons/arrow_up_black.png"} /> : <img alt="arrow_down" className={styles.arrow} src={process.env.PUBLIC_URL + "/images/icons/arrow_down_black.png"} />
                     }
                 </div>
             </div>
