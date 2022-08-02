@@ -1,58 +1,56 @@
 import { useNavigate } from 'react-router';
 import styles from './Home.module.css';
 
+import HomeCarousel from './HomeCarousel';
+import DatabaseInfo from './DatabaseInfo';
+
 
 
 function Home() {
     const navigate = useNavigate();
 
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.intro}>
-                나에게 딱 맞는 카드를<br />
-                몇 번의 클릭으로 간편하게!
-            </div>
-            <br />
+        <div>
+            <HomeCarousel />
+            <br /><br />
 
-            <div>
-                <img alt="home" className={styles.mainLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_blue.png"} />
+            <div className={styles.startText}>
+                지금 바로
             </div>
-            <br />
-
 
             <button className={styles.startButton} onClick={() => {
                 navigate("/login");
             }}>
                 시작하기
             </button>
-            <br /><br /><br /><br /><br />
+            <br /><br />
 
+            <div className={styles.registerZone}>
+                <span className={styles.registerText}>
+                    아직 회원이 아니신가요? &nbsp; &nbsp;&nbsp;
+                </span>
 
-            <div className={styles.zone1}>
-                아직 회원이 아니신가요?
+                <span className={styles.registerButton} onClick={() => {
+                                navigate("/register");
+                            }}>
+                    회원 가입 하기
+                </span>
             </div>
-            <div className={styles.zone2} onClick={() => {
-                navigate("/register");
-            }}>
-                회원가입
-            </div>
-            <br /><br /><br />
 
+            <DatabaseInfo />
+            <br /><br />
 
-            <div className={styles.zone1}>
-                Cardvisor에 대해서 자세히 알고 싶으면?
-            </div>
-            <div className={styles.zone2} onClick={() => {
-                alert("준비중");
-            }}>
-                서비스 소개
-            </div>
-            <br />
+            <div className={styles.databaseZone}>
+                <span className={styles.databaseText}>
+                    카드 데이터 및 브랜드 자세히 보기 &nbsp; &nbsp;&nbsp;
+                </span>
 
-            <img
-                className={styles.homepageImage}
-                alt="home"
-                src={process.env.PUBLIC_URL + "/images/homepage.png"} />
+                <span className={styles.databaseButton} onClick={() => {
+                                alert("준비중");
+                            }}>
+                    데이터 상세 보기
+                </span>
+            </div>
         </div >
     );
 }

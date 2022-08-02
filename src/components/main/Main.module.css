@@ -3,6 +3,18 @@
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: center;
+    margin-top: -60px;
+}
+
+.backgroundZone {
+    width: 100vw;
+    background-color: rgb(200, 255, 255);
+}
+
+.buttonsZone {
+    width: 1200px;
+    display: block;
+    margin: 0px auto;
 }
 
 .buttonsRow {
@@ -22,39 +34,33 @@
 .service1Button {
     width: 400px;
     height: 600px;
-    margin: 20px;
     padding-top: 40px;
     padding-left: 40px;
     color: rgb(255, 255, 255);
     background-color: rgb(243, 156, 18);
     border: transparent;
-    border-radius: 15px;
     cursor: pointer;
 }
 
 .service2Button {
     width: 400px;
     height: 600px;
-    margin: 20px;
     padding-top: 40px;
     padding-left: 40px;
     color: rgb(255, 255, 255);
     background-color: rgb(52, 152, 219);
     border: transparent;
-    border-radius: 15px;
     cursor: pointer;
 }
 
 .listButton {
     width: 400px;
     height: 600px;
-    margin: 20px;
     padding-top: 40px;
     padding-left: 40px;
     color: rgb(255, 255, 255);
     background-color: rgb(124, 102, 250);
     border: transparent;
-    border-radius: 15px;
     cursor: pointer;
 }
 

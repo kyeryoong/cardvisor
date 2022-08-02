@@ -99,7 +99,7 @@ function Register() {
                         <span className={styles.registerText2}>추천 서비스</span>
                     </div>
 
-                    <img alt="graphic" className={styles.cardvisorImage} src={process.env.PUBLIC_URL + '/images/cardvisor_white.png'} />
+                    <img alt="graphic" className={styles.cardvisorLogo} src={process.env.PUBLIC_URL + '/images/cardvisor_white.png'} />
                 </div>
 
 

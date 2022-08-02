@@ -15,19 +15,15 @@ function Header(props) {
         <div>
             <div className={styles.header}>
                 {!props.logined &&
-                    <div className={styles.title} onClick={() => {
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_header.png"} onClick={() => {
                         navigate("/");
-                    }}>
-                        <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_blue.png"} />
-                    </div>
+                    }} />
                 }
 
                 {props.logined &&
-                    <div className={styles.title} onClick={() => {
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_header.png"} onClick={() => {
                         navigate("/main");
-                    }}>
-                        <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_blue.png"} />
-                    </div>
+                    }} />
                 }
 
 

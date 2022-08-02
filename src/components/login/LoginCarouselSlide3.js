@@ -1,6 +1,6 @@
-import styles from "./BannerZone3.module.css"
+import styles from "./LoginCarouselSlide3.module.css"
 
-function BannerZone3() {
+function LoginCarouselSlide3() {
     return (
         <div className={styles.mainZone}>
             <div className={styles.text1}>
@@ -17,4 +17,4 @@ function BannerZone3() {
     )
 }
 
-export default BannerZone3;
+export default LoginCarouselSlide3;

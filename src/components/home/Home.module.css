@@ -13,51 +13,58 @@
     left: 10%;
 }
 
-.intro {
-    text-align: left;
+.startText {
+    color: rgb(243, 156, 18);
+    width: 300px;
     font-size: 2rem;
-    font-weight: 1000;
-    color: rgb(100, 100, 100);
-}
-
-.mainLogo {
-    height: 400px;
-    margin-left: -200px;
-    margin-top: -120px;
-    margin-bottom: -60px;
+    text-align: center;
+    display: block;
+    margin: 0px auto;
+    margin-top: 50px;
 }
 
 .startButton {
-    display: block;
-    width: 200px;
+    width: 300px;
     height: 60px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     align-items: center;
     background-color: rgb(243, 156, 18);
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 6px;
     cursor: pointer;
+    display: block;
+    margin: 0px auto;
+    margin-top: 10px;
+    padding-top: 5px;
 }
 
-.zone1 {
-    float: left;
-    font-size: 1.8rem;
-    cursor: pointer;
+.registerZone {
+    width: 400px;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(160, 160, 160);
 }
 
-.zone2 {
-    margin-left: 20px;
-    float: left;
-    font-size: 1.8rem;
-    color: rgb(243, 156, 18);
+.registerButton {
     font-weight: 1000;
+    color:rgb(243, 156, 18);
     cursor: pointer;
 }
 
-.homepageImage {
-    position: fixed;
-    width: 70%;
-    bottom: 0;
-    right: 0;
+.databaseZone {
+    width: 600px;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(160, 160, 160);
+}
+
+.databaseButton {
+    font-weight: 1000;
+    color:rgb(0, 120, 250);
+    cursor: pointer;
 }

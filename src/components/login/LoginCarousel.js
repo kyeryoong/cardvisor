@@ -4,14 +4,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import BannerZone1 from "./BannerZone1";
-import BannerZone2 from "./BannerZone2";
-import BannerZone3 from "./BannerZone3";
+import LoginCarouselSlide1 from "./LoginCarouselSlide1";
+import LoginCarouselSlide2 from "./LoginCarouselSlide2";
+import LoginCarouselSlide3 from "./LoginCarouselSlide3";
 
 
 
-function Carousel() {
-
+function BannerCarousel() {
     const settings = {
         infinite: true,
         slidesToShow: 1,
@@ -28,20 +27,20 @@ function Carousel() {
         <div style={{ height: "700px", width: "700px" }}>
             <Slider {...settings}>
                 <div>
-                    <BannerZone1 />
+                    <LoginCarouselSlide1 />
                 </div>
 
                 <div>
-                    <BannerZone2 />
+                    <LoginCarouselSlide2 />
                 </div>
 
                 <div>
-                    <BannerZone3 />
+                    <LoginCarouselSlide3 />
                 </div>
             </Slider>
-        </div >
+        </div>
     );
 
 }
 
-export default Carousel;
+export default BannerCarousel;

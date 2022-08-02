@@ -16,34 +16,28 @@
     position: fixed;
     align-items: center;
     justify-content: left;
-    width: 96%;
+    width: 98vw;
     height: 81px;
     top: 0px;
-    left: 2%;
-    right: 2%;
+    left: 1vw;
+    right: 1vw;
     z-index: 9;;
     border-bottom: 1.5px solid rgb(200, 200, 200);
     background-color: transparent;
 }
 
-.title {
-    color: white;
-    font-weight: 500;
-    padding-left: 10px;
-    margin-bottom: 15px;
-    align-items: center;
-    cursor: pointer;
-}
-
 .titleLogo {
+    display: block;
+    margin-left: 20vw;
+    margin-top: 5px;
     height: 100px;
-    margin-top: 25px;
+    cursor: pointer;
 }
 
 .headerButton {
     display: flex;
     position: fixed;
-    right: 70px;
+    right: 20vw;
     height: 40px;
     font-size: 1.2rem;
     align-items: center;
@@ -57,7 +51,7 @@
     display: grid;
     position: fixed;
     top: 90px;
-    right: 60px;
+    right: 20vw;
     height: 180px;
     width: 300px;
     background-color: rgb(220, 255, 255);

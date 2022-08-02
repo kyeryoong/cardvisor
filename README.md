@@ -129,7 +129,13 @@
 
 ### Ver. 1.3.1 (2022/08/01)
 - *Login* page was modified with lots of updates and design changes.
-- *Carousel* component and *BannerZone* components were created for *Login* page.
+- *Carousel* and *BannerZone* components were created for *Login* page.
 - *Register* page was created.
 - Some of the missing card images were uploaded.
 - Some of the category images were changed.
+
+### Ver. 1.3.2 (2022/08/02)
+- *Home* page was modified with lots of updates and design changes.
+- *Main* page was modified.
+- Former *Carousel* and *BannerZone* components were renamed to *LoginCarousel* and *LoginCarouselSlide* components.
+- *HomeCarousel* and *HomeCarouselSlide* components were created *Home* page.

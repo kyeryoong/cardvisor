@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 20vh;
+    margin-top: 15vh;
     grid-template-columns: 1fr 1fr;
     height: 700px;
     width: 1200px;
@@ -55,7 +55,7 @@
     color: rgb(255, 255, 255);
 }
 
-.cardvisorImage {
+.cardvisorLogo {
     width: 400px;
     margin-top: 270px;
     margin-right: -20px;
