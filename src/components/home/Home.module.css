@@ -54,7 +54,32 @@
     cursor: pointer;
 }
 
-.databaseZone {
+.cardDataIcon {
+    height: 80px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.cardDataIntro {
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background-color: rgb(0, 120, 250);
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+.cardDataZone {
     width: 600px;
     display: block;
     margin: 0px auto;
@@ -63,7 +88,7 @@
     color: rgb(160, 160, 160);
 }
 
-.databaseButton {
+.cardDataButton {
     font-weight: 1000;
     color:rgb(0, 120, 250);
     cursor: pointer;

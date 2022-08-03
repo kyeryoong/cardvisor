@@ -1,0 +1,37 @@
+.mainZone {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon {
+    width: 45px;
+    padding-top: 15px;
+    margin-right: 20px;
+}
+
+.type {
+    width: 130px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 25px;
+    color: rgb(100, 100, 100);
+}
+
+.valueZone {
+    width: 200px;
+    display: flex;
+    justify-content: right;
+}
+
+.value {
+    font-size: 4rem;
+    font-weight: 1000;
+    color: rgb(0, 120, 250);
+}
+
+.gae {
+    font-size: 2rem;
+    color: rgb(0, 120, 250);
+    padding-top: 25px;
+    padding-left: 5px;
+}

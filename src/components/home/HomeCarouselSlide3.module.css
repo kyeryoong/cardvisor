@@ -26,26 +26,26 @@
 }
 
 .text1 {
+    width: fit-content;
     background-color: rgb(50, 100, 200);
     color: rgb(255, 255, 255);
-    width: 320px;
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
     padding-bottom: 0px;
     border-radius: 5px;
     display: block;
     margin: 0px auto;
-    margin-top: 60px;
+    margin-top: 70px;
 }
 
 .text2 {
     color: rgb(50, 100, 200);
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 1000;
     display: block;
     margin: 0px auto;

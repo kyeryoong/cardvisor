@@ -1,57 +1,44 @@
 .backgroundZone {
     height: 500px;
     width: 100vw;
+    display: block;
+    margin: 0px auto;
     background-color: rgb(220, 255, 255);
 }
 
-.mainZone {
-    width: 1000px;
+.graphic {
+    height: 250px;
     display: block;
     margin: 0px auto;
-    position: relative;
-    top: 50px;
-}
-
-.graphicZone {
-    width: 600px;
-}
-
-.graphic {
-    height: 300px;
-    margin-left: 50px;
+    padding-top: 40px;
 }
 
 .text1 {
+    width: fit-content;
     background-color: rgb(243, 156, 18);
     color: rgb(255, 255, 255);
+    text-align: center;
     font-size: 2rem;
     font-weight: 500;
-    text-align: right;
-    margin-top: -180px;
-    margin-right: 55px;
-    float: right;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
     padding-bottom: 0px;
     border-radius: 5px;
+    display: block;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.text1Content {
+    display: inline-block;
 }
 
 .text2 {
     color: rgb(243, 156, 18);
-    font-size: 4.5rem;
+    text-align: center;
+    font-size: 4rem;
     font-weight: 1000;
-    text-align: right;
-    margin-top: -140px;
-    margin-right: 50px;
-    float: right;
-}
-
-.text3 {
-    color: rgb(243, 156, 18);
-    font-size: 1.5rem;
-    text-align: right;
-    margin-top: -60px;
-    margin-right: 50px;
-    float: right;
+    display: block;
+    margin: 0px auto;
 }

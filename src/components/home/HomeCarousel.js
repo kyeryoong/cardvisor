@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -22,24 +21,21 @@ function HomeCarousel() {
         arrows: false
     };
 
+    const carouselStyles = {
+        marginTop: "-120px",
+        height: "500px",
+        width: "100vw"
+    };
+
     return (
-        <div style={{ marginTop: "-120px", height: "500px", width: "100vw" }}>
+        <div style={carouselStyles}>
             <Slider {...settings}>
-                <div>
-                    <HomeCarouselSlide1 />
-                </div>
-
-                <div>
-                    <HomeCarouselSlide2 />
-                </div>
-
-                <div>
-                    <HomeCarouselSlide3 />
-                </div>
+                <HomeCarouselSlide1 />
+                <HomeCarouselSlide2 />
+                <HomeCarouselSlide3 />
             </Slider>
         </div>
     );
-
 }
 
 export default HomeCarousel;

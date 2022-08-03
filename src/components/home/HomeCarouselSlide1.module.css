@@ -16,7 +16,7 @@
 
 .text1 {
     color: rgb(0, 200, 200);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 1000;
     text-align: center;
     margin-top: 70px;
@@ -24,7 +24,8 @@
 
 .text2 {
     color: rgb(0, 200, 200);
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 1000;
     text-align: center;
+    margin-top: -5px;
 }

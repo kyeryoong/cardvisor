@@ -20,7 +20,7 @@ function HomeCarouselSlide3() {
             <br />
         
             <div className={styles.text2}>
-                알고리즘 기반 서비스
+                알고리즘 기반 추천 서비스
             </div>
             <br />
         </div>
