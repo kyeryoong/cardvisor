@@ -145,3 +145,7 @@
 ### Ver. 1.3.3 (2022/08/03)
 - *Home* page was modified.
 - Some icons and images were added.
+
+### Ver. 1.3.4 (2022/08/03)
+- Lots of changes to support mobile experience.
+- *Home*, *Login* pages were modified.
