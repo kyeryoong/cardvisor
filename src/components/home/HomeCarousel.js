@@ -14,7 +14,7 @@ function HomeCarousel() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 1500,
+        speed: 1000,
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnHover: false,
@@ -22,9 +22,11 @@ function HomeCarousel() {
     };
 
     const carouselStyles = {
+        height: "350px",
+        width: "100vw",
+        display: "block",
+        margin: "0px auto",
         marginTop: "-120px",
-        height: "500px",
-        width: "100vw"
     };
 
     return (

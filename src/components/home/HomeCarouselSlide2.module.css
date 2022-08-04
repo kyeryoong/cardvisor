@@ -1,44 +1,59 @@
 .backgroundZone {
     height: 500px;
     width: 100vw;
-    display: block;
-    margin: 0px auto;
     background-color: rgb(220, 255, 255);
 }
 
 .graphic {
-    height: 250px;
+    width: 300px;
     display: block;
     margin: 0px auto;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .text1 {
-    width: fit-content;
-    background-color: rgb(243, 156, 18);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 7px;
-    padding-bottom: 0px;
-    border-radius: 5px;
     display: block;
     margin: 0px auto;
-    margin-top: 20px;
-}
-
-.text1Content {
-    display: inline-block;
+    width: fit-content;
+    color: rgb(250, 150, 0);
+    font-size: 1.6rem;
+    font-weight: 1000;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .text2 {
-    color: rgb(243, 156, 18);
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 1000;
     display: block;
     margin: 0px auto;
+    width: fit-content;
+    color: rgb(250, 150, 0);
+    font-size: 3.2rem;
+    font-weight: 1000;
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .backgroundZone {
+        height: 350px;
+    }
+
+    .graphic {
+        width: 200px;
+        padding-top: 20px;
+    }
+
+    .text1 {
+        font-size: 1.2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text2 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
 }

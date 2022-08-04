@@ -9,14 +9,12 @@ function CardDataCarouselSlide(props) {
                 {props.type}
             </span>
 
-            <span className={styles.valueZone}>
-                <span className={styles.value}>
-                    {props.value}
-                </span>
+            <span className={styles.value}>
+                {props.value}
+            </span>
 
-                <span className={styles.gae}>
-                    개
-                </span>
+            <span className={styles.gae}>
+                개
             </span>
         </div>
     )

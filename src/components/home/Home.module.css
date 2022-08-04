@@ -8,56 +8,67 @@
     user-select: none;
 }
 
-.wrapper {
-    position: absolute;
-    left: 10%;
-}
-
 .startText {
-    color: rgb(243, 156, 18);
-    width: 300px;
-    font-size: 2rem;
-    text-align: center;
     display: block;
     margin: 0px auto;
-    margin-top: 50px;
+    color: rgb(250, 150, 0);
+    width: fit-content;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 200px;
 }
 
 .startButton {
-    width: 300px;
+    display: block;
+    margin: 0px auto;
+    width: 200px;
     height: 60px;
     font-size: 2rem;
     align-items: center;
-    background-color: rgb(243, 156, 18);
+    background-color: rgb(250, 150, 0);
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 6px;
     cursor: pointer;
-    display: block;
-    margin: 0px auto;
     margin-top: 10px;
-    padding-top: 5px;
 }
 
+.startButton:hover {
+    background-color: rgb(0, 200, 200);
+    transition: 500ms;
+}
+
+
+
 .registerZone {
-    width: 400px;
-    display: block;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px auto;
-    text-align: center;
+}
+
+.registerText {
     font-size: 1.3rem;
+    font-weight: 1000;
     color: rgb(160, 160, 160);
+    margin-right: 5px;
 }
 
 .registerButton {
+    font-size: 1.3rem;
     font-weight: 1000;
-    color:rgb(243, 156, 18);
+    color: rgb(250, 150, 0);
     cursor: pointer;
+    margin-left: 5px;
 }
+
+
 
 .cardDataIcon {
     height: 80px;
     display: block;
     margin: 0px auto;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -68,7 +79,7 @@
     margin: 0px auto;
     margin-bottom: 20px;
     padding-top: 8px;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
@@ -80,16 +91,59 @@
 }
 
 .cardDataZone {
-    width: 600px;
-    display: block;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px auto;
-    text-align: center;
+}
+
+.cardDataText {
     font-size: 1.3rem;
+    font-weight: 1000;
     color: rgb(160, 160, 160);
+    margin-right: 5px;
 }
 
 .cardDataButton {
+    font-size: 1.3rem;
     font-weight: 1000;
-    color:rgb(0, 120, 250);
+    color: rgb(0, 120, 250);
     cursor: pointer;
+    margin-left: 5px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .startText {
+        margin-top: 20px;
+    }
+
+    .registerText {
+        width: 100vw;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .registerButton {
+        width: 100vw;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .cardDataIcon {
+        margin-top: 60px;
+    }
+
+    .cardDataText {
+        width: 100vw;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .cardDataButton {
+        width: 100vw;
+        text-align: center;
+        margin-left: 0px;
+    }
 }

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import LoginCarousel from './LoginCarousel'
-
 import styles from "./Login.module.css";
 
 
@@ -95,7 +93,7 @@ function Login() {
 
 
                 <div className={styles.loginZoneRight}>
-                    <LoginCarousel />
+                    {/* <LoginCarousel /> */}
                 </div>
             </div>
         </div>

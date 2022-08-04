@@ -1,31 +1,56 @@
 .backgroundZone {
     height: 500px;
     width: 100vw;
-    display: block;
-    margin: 0px auto;
     background-color: rgb(220, 255, 255);
 }
 
 .graphic {
-    height: 250px;
+    width: 300px;
     display: block;
     margin: 0px auto;
-    position: relative;
-    top: 50px;
+    padding-top: 30px;
 }
 
-.text1 {
-    color: rgb(0, 200, 200);
-    font-size: 2.5rem;
-    font-weight: 1000;
+.textZone {
     text-align: center;
-    margin-top: 70px;
+    margin-bottom: -10px;
 }
 
-.text2 {
-    color: rgb(0, 200, 200);
-    font-size: 4rem;
+.textGray {
+    width: fit-content;
+    color: rgb(150, 150, 150);
+    font-size: 2.4rem;
     font-weight: 1000;
-    text-align: center;
-    margin-top: -5px;
+}
+
+.textBlue {
+    width: fit-content;
+    color: rgb(0, 200, 200);
+    font-size: 3.6rem;
+    font-weight: 1000;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .backgroundZone {
+        height: 350px;
+    }
+
+    .graphic {
+        width: 200px;
+        padding-top: 20px;
+    }
+
+    .textZone {
+        white-space: nowrap;
+    }
+
+    .textGray {
+        font-size: 1.6rem;
+    }
+
+    .textBlue {
+        font-size: 2.4rem;
+    }
 }

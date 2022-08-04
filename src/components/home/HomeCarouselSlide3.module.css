@@ -1,52 +1,71 @@
 .backgroundZone {
     height: 500px;
     width: 100vw;
-    display: block;
-    margin: 0px auto;
     background-color: rgb(220, 255, 255);
 }
 
-.graphicZone {
-    width: 720px;
-    display: block;
-    margin: 0px auto;
-    position: relative;
-    top: 60px;
-}
-
-.graphicRow {
+.graphicRows {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 600px;
+    margin: 0px auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 .graphic {
-    height: 200px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 200px;
 }
 
 .text1 {
-    width: fit-content;
-    background-color: rgb(50, 100, 200);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 7px;
-    padding-bottom: 0px;
-    border-radius: 5px;
     display: block;
     margin: 0px auto;
-    margin-top: 70px;
+    width: fit-content;
+    color: rgb(0, 120, 250);
+    font-size: 1.6rem;
+    font-weight: 1000;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .text2 {
-    color: rgb(50, 100, 200);
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 1000;
     display: block;
     margin: 0px auto;
+    width: fit-content;
+    color: rgb(0, 120, 250);
+    font-size: 3.2rem;
+    font-weight: 1000;
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .backgroundZone {
+        height: 350px;
+    }
+
+    .graphicRows {
+        width: 360px;
+        margin: 0px auto;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+    .graphic {
+        width: 120px;
+        padding-top: 20px;
+    }
+
+    .text1 {
+        font-size: 1.2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text2 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
 }

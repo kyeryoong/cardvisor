@@ -6,20 +6,18 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(225deg, transparent 40%, rgb(0,200,200) 100%);
+    background: linear-gradient(225deg, transparent 40%, rgb(0, 200, 200) 100%);
 }
 
 .loginZone {
-    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    margin-top: 15vh;
-    grid-template-columns: 1fr 1fr;
+    margin-left: calc(50vw - 600px);
+    margin-right: calc(50vw - 600px);
+    min-height: 100vh;
     height: 700px;
     width: 1200px;
-    z-index: 10;
 }
 
 .loginZoneLeft {
@@ -32,13 +30,10 @@
 
 .loginZoneRight {
     float: right;
-    background-color: transparent;
+    background: linear-gradient(45deg, rgb(0, 120, 120) 0%, rgb(0, 240, 240) 80%);
     height: 700px;
     width: 700px;
-}
-
-.loginZoneLeftInside {
-    margin: 48px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .mainTitle {
@@ -46,6 +41,8 @@
     font-family: 'Poppins', serif;
     color: rgb(0, 200, 200);
     text-align: left;
+    margin-left: 10%;
+    margin-top: 30px;
     letter-spacing: -3px;
 }
 
@@ -53,15 +50,12 @@
     font-size: 1.3rem;
     color: rgb(160, 160, 160);
     text-align: left;
-    margin-bottom: 5px;
+    margin-left: 10%;
 }
 
 .inputZone {
     text-align: center;
-}
-
-input {
-    width: 100%;
+    width: 80%;
     height: 60px;
     font-size: 2rem;
     font-weight: 1000;
@@ -70,56 +64,117 @@ input {
     background-color: rgb(255, 255, 255);
     border: transparent;
     border-bottom: 2px solid rgb(0, 200, 200);
-    padding: -10px;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-left: 10%;
 }
 
-input::placeholder {
-    font-size: 1.5rem;
-    color: rgb(200, 200, 200);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-input:focus {
+.inputZone:focus {
     outline: none;
 }
 
 .loginButton {
-    width: 100%;
+    width: 80%;
     height: 70px;
     font-size: 2rem;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: rgb(243, 156, 18);
+    background-color: rgb(250, 150, 0);
     border: none;
     border-radius: 5px;
     padding: 10px;
     margin-top: 40px;
+    margin-left: 10%;
     cursor: pointer;
 }
 
 .registerZone {
     font-size: 1.3rem;
     color: rgb(160, 160, 160);
+    margin-left: 10%;
 }
 
 .registerButton {
     font-weight: 1000;
-    color: rgb(243, 156, 18);
+    color: rgb(250, 150, 0);
     cursor: pointer;
 }
 
 .findPasswordZone {
     margin-top: 10px;
     font-size: 1.3rem;
+    margin-left: 10%;
     color: rgb(160, 160, 160);
 }
 
 .findPasswordButton {
     font-weight: 1000;
-    color: rgb(243, 156, 18);
+    color: rgb(250, 150, 0);
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .loginZone {
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 0vh;
+        margin-bottom: 0vh;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .loginZoneRight {
+        background: transparent;
+        height: 0px;
+        width: 0px;
+        border-radius: 0px;
+    }
+
+    .loginZoneLeft {
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 120px;
+        margin-bottom: 0vh;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .mainTitle {
+        text-align: center;
+        font-size: 4rem;
+        margin-left: 0vw;
+        margin-top: 50px;
+    }
+
+    .subTitle {
+        text-align: center;
+        font-size: 1rem;
+        margin-left: 0vw;
+    }
+
+    .inputZone {
+        width: 80vw;
+        height: 60px;
+        font-size: 2rem;
+        margin-left: 10vw;
+    }
+
+    .loginButton {
+        width: 80vw;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-left: 10vw;
+    }
+
+    .registerZone {
+        margin-left: 0vw;
+        text-align: center;
+    }
+
+    .findPasswordZone {
+        margin-left: 0vw;
+        text-align: center;
+    }    
 }

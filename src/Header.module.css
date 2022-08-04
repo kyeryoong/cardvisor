@@ -2,32 +2,16 @@
     display: flex;
     position: fixed;
     align-items: center;
-    justify-content: left;
     height: 80px;
     top: 0px;
     left: 0px;
     right: 0px;
-    z-index: 10;;
-    background-color: white;
-}
-
-.header2 {
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: left;
-    width: 98vw;
-    height: 81px;
-    top: 0px;
-    left: 1vw;
-    right: 1vw;
-    z-index: 9;;
     border-bottom: 1.5px solid rgb(200, 200, 200);
-    background-color: transparent;
+    background-color: white;
+    z-index: 10;
 }
 
 .titleLogo {
-    display: block;
     margin-left: 20vw;
     margin-top: 5px;
     height: 100px;
@@ -39,11 +23,6 @@
     position: fixed;
     right: 20vw;
     height: 40px;
-    font-size: 1.2rem;
-    align-items: center;
-    border: transparent;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -52,22 +31,23 @@
     position: fixed;
     top: 90px;
     right: 20vw;
-    height: 180px;
+    height: 200px;
     width: 300px;
     background-color: rgb(220, 255, 255);
-    padding: 20px;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
+    z-index: 9;
 }
 
 .headerClickedZoneCloseButton {
     font-size: 1.5rem;
     font-weight: 1000;
+    display: flex;
+    margin-left: auto;
+    margin-top: 10px;
     color: rgb(0, 200, 200);
-    margin-top: -5px;
-    margin-left: 240px;
-    height: 20px;
+    height: 30px;
     width: 30px;
-    float: right;
     background-color: transparent;
     border: 0px;
     cursor: pointer;
@@ -77,39 +57,84 @@
 .headerClickedText1 {
     font-size: 1.3rem;
     text-align: left;
-    margin-top: -20px;
+    margin-left: 30px;
+    margin-top: -40px;
 }
 
 .headerClickedText2 {
     font-size: 1.3rem;
-    font-weight: 1000;
     text-align: left;
+    margin-left: 30px;
     margin-top: -20px;
     color: rgb(0, 200, 200);
 }
 
 .headerClickedZoneButton1 {
-    width: 260px;
+    width: 240px;
     height: 40px;
     border: 0px;
+    display: block;
+    margin: 0px auto;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: -10px;
     color: white;
-    background-color: rgb(243, 156, 18);
+    background-color: rgb(250, 150, 0);
     border-radius: 5px;
     cursor: pointer;
+    margin-top: -10px;
 }
 
 .headerClickedZoneButton2 {
-    width: 260px;
+    width: 240px;
     height: 40px;
     border: 0px;
+    display: block;
+    margin: 0px auto;
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: -10px;
     color: white;
     background-color: rgb(52, 152, 219);
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .titleLogo {
+        margin-left: 20px;
+        height: 80px;
+    }
+
+    .headerButton {
+        right: 20px;
+        height: 30px;
+    }
+
+    .headerClickedZone {
+        top: 80px;
+        left: 0vw;
+        right: 0vw;
+        height: 200px;
+        width: 100vw;
+        border: 0px;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .headerClickedZoneCloseButton {
+        margin-top: 0px;
+    }
+
+    .headerClickedText1 {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .headerClickedText2 {
+        text-align: center;
+        margin-left: 0px;
+        color: rgb(0, 200, 200);
+    }
 }

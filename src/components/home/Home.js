@@ -10,33 +10,38 @@ function Home() {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className={styles.mainZone}>
             <HomeCarousel />
             <br /><br />
 
-            <div className={styles.startText}>
-                지금 바로
-            </div>
 
-            <button className={styles.startButton} onClick={() => {
-                navigate("/login");
-            }}>
-                시작하기
-            </button>
+
+            <div className={styles.startZone}>
+                <div className={styles.startText}>
+                    지금 바로
+                </div>
+
+                <button className={styles.startButton} onClick={() => {
+                    navigate("/login");
+                }}>
+                    시작하기
+                </button>
+            </div>
             <br /><br />
+
+
 
             <div className={styles.registerZone}>
                 <span className={styles.registerText}>
-                    아직 회원이 아니신가요? &nbsp; &nbsp;&nbsp;
+                    아직 회원이 아니신가요?
                 </span>
 
                 <span className={styles.registerButton} onClick={() => {
                     navigate("/register");
                 }}>
-                    회원 가입 하기
+                    회원가입 하기
                 </span>
             </div>
-            <br /><br /><br /><br />
 
 
 
@@ -52,7 +57,7 @@ function Home() {
 
             <div className={styles.cardDataZone}>
                 <span className={styles.cardDataText}>
-                    지원 카드 및 브랜드 자세히 보기 &nbsp; &nbsp;&nbsp;
+                    지원 카드 및 브랜드 자세히 보기
                 </span>
 
                 <span className={styles.cardDataButton} onClick={() => {

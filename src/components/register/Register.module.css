@@ -24,7 +24,7 @@
 
 .registerZoneLeft {
     float: left;
-    background: linear-gradient(45deg, rgb(0, 120, 120) 0%, rgb(0, 240, 240) 80%);;
+    background: linear-gradient(45deg, rgb(0, 120, 120) 0%, rgb(0, 240, 240) 80%);
     height: 700px;
     width: 500px;
     border-radius: 10px 0px 0px 10px;
@@ -115,7 +115,7 @@ input:focus {
     font-size: 2rem;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: rgb(243, 156, 18);
+    background-color: rgb(250, 150, 0);
     border: none;
     border-radius: 5px;
     padding: 10px;

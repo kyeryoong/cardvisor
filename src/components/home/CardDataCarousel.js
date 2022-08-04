@@ -22,7 +22,7 @@ function CardDataCarousel() {
 
     const carouselStyles = {
         height: "fit-content",
-        width: "400px",
+        width: "100vw",
         display: "block",
         margin: "0px auto"
     };
