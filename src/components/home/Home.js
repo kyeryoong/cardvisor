@@ -6,6 +6,7 @@ import CardDataCarousel from './CardDataCarousel';
 import Loading from './Loading';
 
 
+
 function Home() {
     const navigate = useNavigate();
 
@@ -66,6 +67,7 @@ function Home() {
                     데이터 상세 보기
                 </span>
             </div>
+            <br /><br /><br /><br /><br />
         </div >
     );
 }

@@ -34,18 +34,17 @@ function Login() {
         <div className={styles.container}>
             <div className={styles.loginZone}>
                 <div className={styles.loginZoneLeft}>
-                    <form className={styles.loginZoneLeftInside}>
-                        <div className={styles.mainTitle}>
-                            Login
-                        </div>
+                    <div className={styles.mainTitle}>
+                        Login
+                    </div>
 
-                        <div className={styles.subTitle}>
-                            Cardvisor에 오신것을 환영합니다!
-                        </div>
-                        <br />
+                    <div className={styles.subTitle}>
+                        Cardvisor에 오신것을 환영합니다!
+                    </div>
 
 
 
+                    <form>
                         <div className={styles.inputZone}>
                             <input type="text" className={styles.inputBox} name="id" placeholder="아이디" onChange={handleChange} autoComplete="off" method="post" />
                         </div>
@@ -62,32 +61,34 @@ function Login() {
                             else {
                                 alert("아이디와 비밀번호를 확인해주세요.");
                             }
-                        }}>로그인</button>
-                        <br /><br /><br />
-
-                        <div className={styles.registerZone}>
-                            아직 회원이 아니신가요?
-                            &nbsp;&nbsp;&nbsp;
-
-                            <span className={styles.registerButton} onClick={() => {
-                                navigate("/register");
-                            }}>
-                                회원가입 하기
-                            </span>
-                        </div>
-
-                        <div className={styles.findPasswordZone}>
-                            비밀번호를 잊으셨나요?
-                            &nbsp;&nbsp;&nbsp;
-
-                            <span className={styles.findPasswordButton} onClick={() => {
-                                alert("준비중");
-                            }}>
-                                비밀번호 찾기
-                            </span>
-                        </div>
-
+                        }}>
+                            로그인
+                        </button>
                     </form>
+
+
+
+                    <div className={styles.registerZone}>
+                        아직 회원이 아니신가요?
+                        &nbsp;&nbsp;
+
+                        <span className={styles.registerButton} onClick={() => {
+                            navigate("/register");
+                        }}>
+                            회원가입 하기
+                        </span>
+                    </div>
+
+                    <div className={styles.findPasswordZone}>
+                        비밀번호를 잊으셨나요?
+                        &nbsp;&nbsp;&nbsp;
+
+                        <span className={styles.findPasswordButton} onClick={() => {
+                            alert("준비중");
+                        }}>
+                            비밀번호 찾기
+                        </span>
+                    </div>
                 </div>
 
 

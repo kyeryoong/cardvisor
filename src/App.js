@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styles from './App.css'
 
-import Header from './Header';
-import ScrollToTop from './ScrollToTop';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 import Home from './components/home/Home';
 import Login from './components/login/Login';
@@ -119,6 +120,8 @@ function App() {
             </BrowserRouter>
 
             <ScrollToTop />
+
+            <Footer />
         </div>
     );
 }

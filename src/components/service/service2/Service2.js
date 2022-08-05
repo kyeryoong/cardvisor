@@ -2,7 +2,7 @@ import styles from '../Service.module.css';
 
 import Brands from './Brands';
 import Categories from '../Categories';
-import Intro from '../../../Intro';
+import Intro from '../../Intro';
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-import Intro from '../../Intro';
+import Intro from '../Intro';
 import ListElement from './ListElement';
 
 import styles from './List.module.css';

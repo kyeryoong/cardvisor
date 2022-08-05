@@ -38,8 +38,6 @@
     transition: 500ms;
 }
 
-
-
 .registerZone {
     width: fit-content;
     display: flex;
@@ -61,8 +59,6 @@
     cursor: pointer;
     margin-left: 5px;
 }
-
-
 
 .cardDataIcon {
     height: 80px;

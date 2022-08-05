@@ -1,0 +1,61 @@
+.footerZone {
+    padding: 20px;
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+    color: rgb(150, 150, 150);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cardvisorLogo1 {
+    height: 40px;
+    opacity: 0.3;
+}
+
+.cardvisorLogo2 {
+    height: 40px;
+    opacity: 0.3;
+}
+
+.copyright {
+    width: fit-content;
+    font-family: 'Poppins', serif;
+    letter-spacing: -1px;
+    color: rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0px auto;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .footerZone {
+        padding: 20px;
+        width: 100vw;
+        height: 100px;
+        text-align: center;
+        background-color: rgb(220, 220, 220);
+        color: rgb(150, 150, 150);
+    }
+
+    .cardvisorLogo1 {
+        height: 40px;
+        opacity: 0.3;
+    }
+
+    .cardvisorLogo2 {
+        height: 40px;
+        opacity: 0.3;
+    }
+
+    .copyright {
+        width: fit-content;
+        font-family: 'Poppins', serif;
+        letter-spacing: -1px;
+        color: rgba(0, 0, 0, 0.3);
+        display: block;
+        margin: 0px auto;
+    }
+}

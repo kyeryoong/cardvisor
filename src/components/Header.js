@@ -15,13 +15,13 @@ function Header(props) {
         <div>
             <div className={styles.header}>
                 {!props.logined &&
-                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_header.png"} onClick={() => {
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} onClick={() => {
                         navigate("/");
                     }} />
                 }
 
                 {props.logined &&
-                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_header.png"} onClick={() => {
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} onClick={() => {
                         navigate("/main");
                     }} />
                 }

@@ -149,3 +149,8 @@
 ### Ver. 1.3.4 (2022/08/04)
 - Lots of changes to support mobile experience.
 - *Home*, *Login* pages were modified.
+
+### Ver. 1.3.5 (2022/08/05)
+- *Main*, *Register* pages were modified.
+- *Header* was modified.
+- *Footer* was implemented.

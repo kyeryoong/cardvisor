@@ -1,91 +1,205 @@
-.introText {
+.randomCardZone {
+    width: 100vw;
+    height: 500px;
+    margin-top: 80px;
+    background-color: rgb(220, 255, 255);
+}
+
+.randomCardIntro {
+    margin-left: 20vw;
+    padding-top: 50px;
     font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
-    text-align: center;
-    margin-top: -60px;
-}
-
-.backgroundZone {
-    width: 100vw;
-    background-color: rgb(200, 255, 255);
+    width: fit-content;
+    border-bottom: 3px solid rgb(0, 200, 200);
 }
 
 .buttonsZone {
-    width: 1200px;
+    width: 60vw;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.button1 {
+    width: 20vw;
+    height: 300px;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 200, 200);
+    border: transparent;
+    cursor: pointer;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 1px solid white;
+}
+
+.button2 {
+    width: 20vw;
+    height: 300px;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 200, 200);
+    border: transparent;
+    cursor: pointer;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.button3 {
+    width: 20vw;
+    height: 300px;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 200, 200);
+    border: transparent;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 1px solid white;
+}
+
+.button1:hover {
+    background: linear-gradient(180deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%)
+}
+
+.button2:hover {
+    background: linear-gradient(180deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%)
+}
+
+.button3:hover {
+    background: linear-gradient(180deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%)
+}
+
+.buttonGraphic {
+    filter: invert();
+    width: 120px;
     display: block;
     margin: 0px auto;
-}
-
-.buttonsRow {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.buttonImage {
-    filter: invert();
-    width: 300px;
-    height: 300px;
-    position: relative;
-    bottom: -100px;
-    right: -60px;
-}
-
-.service1Button {
-    width: 400px;
-    height: 600px;
-    padding-top: 40px;
-    padding-left: 40px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(250, 150, 0);
-    border: transparent;
-    cursor: pointer;
-}
-
-.service2Button {
-    width: 400px;
-    height: 600px;
-    padding-top: 40px;
-    padding-left: 40px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(52, 152, 219);
-    border: transparent;
-    cursor: pointer;
-}
-
-.listButton {
-    width: 400px;
-    height: 600px;
-    padding-top: 40px;
-    padding-left: 40px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(124, 102, 250);
-    border: transparent;
-    cursor: pointer;
-}
-
-.service1Button:hover {
-    background-color: rgb(0, 200, 200);
-    transition: 0.3s;
-}
-
-.service2Button:hover {
-    background-color: rgb(0, 200, 200);
-    transition: 0.3s;
-}
-
-.listButton:hover {
-    background-color: rgb(0, 200, 200);
-    transition: 0.3s;
+    margin-bottom: 30px;
 }
 
 .mainText {
-    font-size: 3.5rem;
-    text-align: left;
-    line-height: 60px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    font-weight: 1000;
+    text-align: center;
 }
 
 .subText {
-    font-size: 1.5rem;
-    text-align: left;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: -5px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .buttonsZone {
+        width: 750px;
+    }
+
+    .button1 {
+        width: 250px;
+    }
+    
+    .button2 {
+        width: 250px;
+    }
+
+    .button3 {
+        width: 250px;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .randomCardZone {
+        height: 22vh;
+    }
+
+    .randomCardIntro {
+        padding-top: 3vh;
+        margin-left: 5vw;
+        font-size: 4vw;
+    }
+
+    .buttonsZone {
+        width: 90vw;
+        height: calc(78vh - 180px - 12vw);
+        margin-top: 6vw;
+        margin-left: 5vw;
+        margin-bottom: 6vw;
+    }
+
+    .button1 {
+        width: 90vw;
+        height: calc(26vh - 60px - 4vw);
+        padding-top: 0;
+        border-radius: 10px 10px 0px 0px;
+        border: 0px;
+        border-bottom: 1px solid white;
+        display: grid;
+        grid-template-columns: calc(13vh - 30px + 18vw) calc(72vw - 13vh + 30px);
+    }
+
+    .button2 {
+        width: 90vw;
+        height: calc(26vh - 60px - 4vw);
+        padding-top: 0;
+        border: 0px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        display: grid;
+        grid-template-columns: calc(13vh - 30px + 18vw) calc(72vw - 13vh + 30px);
+    }
+
+    .button3 {
+        width: 90vw;
+        min-width: none;
+        height: calc(26vh - 60px - 4vw);
+        padding-top: 0;
+        border-radius: 0px 0px 10px 10px;
+        border: 0px;
+        border-top: 1px solid white;
+        display: grid;
+        grid-template-columns: calc(13vh - 30px + 18vw) calc(72vw - 13vh + 30px);
+    }
+    
+    .buttonGraphic {
+        margin: 0px;
+        margin-top: calc(6.5vh - 15px - 1vw);
+        margin-left: 10vw;
+        width: calc(13vh - 30px - 2vw);
+        height: calc(13vh - 30px - 2vw);
+    }
+
+    .textZone {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: fit-content;
+    }
+
+    .mainText {
+        font-size: 1.8rem;
+        text-align: left;
+        margin: 0px;
+        word-break: keep-all;
+    }
+
+    .subText {
+        font-size: 1.2rem;
+        text-align: left;
+        margin: 0px;
+        word-break: keep-all;
+    }
 }

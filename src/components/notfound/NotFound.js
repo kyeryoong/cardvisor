@@ -9,11 +9,11 @@ function MyPage() {
     return (
         <div className={styles.mainZone}>
             <div>
-                <a className={styles.four}>4</a>
+                <span className={styles.four}>4</span>
                 <img className={styles.deadFace}
                     alt="deadface"
                     src={process.env.PUBLIC_URL + "/images/icons/dead_blue.png"} />
-                <a className={styles.four}>4</a>
+                <span className={styles.four}>4</span>
             </div>
 
             <div className={styles.pageNotFound}>

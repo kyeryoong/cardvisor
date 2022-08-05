@@ -3,7 +3,7 @@ import styles from '../Service.module.css';
 import Brands from './Brands';
 import SelectedBrands from './SelectedBrands';
 import Categories from '../Categories';
-import Intro from '../../../Intro';
+import Intro from '../../Intro';
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

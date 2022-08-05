@@ -26,7 +26,7 @@ function HomeCarousel() {
         width: "100vw",
         display: "block",
         margin: "0px auto",
-        marginTop: "-120px",
+        marginTop: "80px",
     };
 
     return (

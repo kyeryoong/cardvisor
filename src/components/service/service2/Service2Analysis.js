@@ -1,7 +1,7 @@
 import ReactApexChart from 'react-apexcharts';
 import styles from './Service2Analysis.module.css'
 
-import Intro from '../../../Intro';
+import Intro from '../../Intro';
 
 var total_transport = 10000
 var total_communication = 2500
