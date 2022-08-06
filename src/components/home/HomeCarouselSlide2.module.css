@@ -1,7 +1,6 @@
 .backgroundZone {
     height: 500px;
     width: 100vw;
-    background-color: rgb(220, 255, 255);
 }
 
 .graphic {
@@ -16,19 +15,20 @@
     display: block;
     margin: 0px auto;
     width: fit-content;
-    color: rgb(250, 150, 0);
-    font-size: 1.6rem;
+    color: rgb(0, 200, 200);
+    font-size: 2rem;
     font-weight: 1000;
     border-bottom: 2px solid rgb(200, 200, 200);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
 }
 
 .text2 {
     display: block;
     margin: 0px auto;
     width: fit-content;
-    color: rgb(250, 150, 0);
+    color: rgb(255, 255, 255);
     font-size: 3.2rem;
     font-weight: 1000;
     margin-top: 20px;
@@ -43,7 +43,8 @@
 
     .graphic {
         width: 200px;
-        padding-top: 20px;
+        padding-top: 30px;
+        margin-bottom: 10px;
     }
 
     .text1 {

@@ -1,32 +1,16 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.service1Row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin-bottom: 50px;
-}
-
-.service2Row {
+.serviceRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    width: 60vw;
+    margin-left: 20vw;
 }
 
 .sendButton {
-    width: 100%;
+    width: 60vw;
     height: 70px;
     font-size: 1.8rem;
-    align-items: center;
+    margin-left: 20vw;
     background-color: rgb(243, 156, 18);
     color: rgb(255, 255, 255);
     border: transparent;
@@ -37,10 +21,10 @@ body {
 .toMainButton {
     display: block;
     margin: 0px auto;
+    margin-bottom: 100px;
     width: 200px;
     height: 50px;
     font-size: 1.5rem;
-    align-items: center;
     background-color: rgb(160, 160, 160);
     color: rgb(255, 255, 255);
     border: transparent;
@@ -48,7 +32,19 @@ body {
     cursor: pointer;
 }
 
-.detailsZone {
-    margin-bottom: 30px;
-    font-size: 0px;
+
+
+@media screen and (max-width: 900px) {
+    .serviceRow {
+        grid-template-columns: 1fr;
+        width: 90vw;
+        margin-left: 5vw;
+        transition: 0.5s;
+    }
+
+    .sendButton {
+        width: 90vw;
+        margin-left: 5vw;
+        transition: 0.5s;
+    }
 }

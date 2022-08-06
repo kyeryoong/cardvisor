@@ -12,6 +12,8 @@ function Home() {
 
     return (
         <div className={styles.mainZone}>
+            <div className={styles.backgroundZone} />
+
             <HomeCarousel />
             <br /><br />
 

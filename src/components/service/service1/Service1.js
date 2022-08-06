@@ -1,4 +1,4 @@
-import styles from '../Service.module.css';
+import styles from './Service1.module.css';
 
 import Brands from './Brands';
 import SelectedBrands from './SelectedBrands';
@@ -70,7 +70,7 @@ function Service1() {
                     iconName="category_transportation"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="버스" brandNameEng="transport_bus" setSel={setSel} />
                     <Brands brandNameKor="지하철" brandNameEng="transport_subway" setSel={setSel} />
                     <Brands brandNameKor="택시" brandNameEng="transport_taxi" setSel={setSel} />
@@ -89,7 +89,7 @@ function Service1() {
                     iconName="category_communication"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="SK텔레콤" brandNameEng="communication_skt" setSel={setSel} />
                     <Brands brandNameKor="KT" brandNameEng="communication_kt" setSel={setSel} />
                     <Brands brandNameKor="LG유플러스" brandNameEng="communication_lgu" setSel={setSel} />
@@ -114,7 +114,7 @@ function Service1() {
                     iconName="category_mart"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="이마트" brandNameEng="mart_emart" setSel={setSel} />
                     <Brands brandNameKor="홈플러스" brandNameEng="mart_homeplus" setSel={setSel} />
                     <Brands brandNameKor="롯데마트" brandNameEng="mart_lottemart" setSel={setSel} />
@@ -140,7 +140,7 @@ function Service1() {
                     iconName="category_convstore"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="GS25" brandNameEng="convstore_gs25" setSel={setSel} />
                     <Brands brandNameKor="CU" brandNameEng="convstore_cu" setSel={setSel} />
                     <Brands brandNameKor="세븐일레븐" brandNameEng="convstore_seveneleven" setSel={setSel} />
@@ -158,7 +158,7 @@ function Service1() {
                     iconName="category_movies"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="CGV" brandNameEng="movies_cgv" setSel={setSel} />
                     <Brands brandNameKor="롯데시네마" brandNameEng="movies_lottecinema" setSel={setSel} />
                     <Brands brandNameKor="메가박스" brandNameEng="movies_megabox" setSel={setSel} />
@@ -182,7 +182,7 @@ function Service1() {
                     iconName="category_entertainment"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="넷플릭스" brandNameEng="entertainment_netflix" setSel={setSel} />
                     <Brands brandNameKor="유튜브 프리미엄" brandNameEng="entertainment_youtubepremium" setSel={setSel} />
                     <Brands brandNameKor="왓챠" brandNameEng="entertainment_watcha" setSel={setSel} />
@@ -201,7 +201,7 @@ function Service1() {
                     iconName="category_deptstore"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="신세계백화점" brandNameEng="deptstore_shinsegaedept" setSel={setSel} />
                     <Brands brandNameKor="롯데백화점" brandNameEng="deptstore_lottedept" setSel={setSel} />
                     <Brands brandNameKor="현대백화점" brandNameEng="deptstore_hyundaidept" setSel={setSel} />
@@ -224,7 +224,7 @@ function Service1() {
                     iconName="category_onlineshopping"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="11번가" brandNameEng="onlineshopping_11st" setSel={setSel} />
                     <Brands brandNameKor="G마켓" brandNameEng="onlineshopping_gmarket" setSel={setSel} />
                     <Brands brandNameKor="옥션" brandNameEng="onlineshopping_auction" setSel={setSel} />
@@ -253,7 +253,7 @@ function Service1() {
                     iconName="category_easypay"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="네이버페이" brandNameEng="easypay_naverpay" setSel={setSel} />
                     <Brands brandNameKor="카카오페이" brandNameEng="easypay_kakaopay" setSel={setSel} />
                     <Brands brandNameKor="삼성페이" brandNameEng="easypay_samsungpay" setSel={setSel} />
@@ -269,7 +269,7 @@ function Service1() {
                     iconName="category_cafebakery"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="스타벅스" brandNameEng="cafebakery_starbucks" setSel={setSel} />
                     <Brands brandNameKor="스타벅스 APP 사이렌오더" brandNameEng="cafebakery_starbuckssirenorder" setSel={setSel} />
                     <Brands brandNameKor="투썸플레이스" brandNameEng="cafebakery_twosomeplace" setSel={setSel} />
@@ -303,7 +303,7 @@ function Service1() {
                     iconName="category_beauty"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="올리브영" brandNameEng="beauty_oliveyoung" setSel={setSel} />
                     <Brands brandNameKor="랄라블라" brandNameEng="beauty_lalavla" setSel={setSel} />
                     <Brands brandNameKor="롭스" brandNameEng="beauty_lohbs" setSel={setSel} />
@@ -319,7 +319,7 @@ function Service1() {
                     iconName="category_dining"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="아웃백스테이크하우스" brandNameEng="dining_outback" setSel={setSel} />
                     <Brands brandNameKor="T.G.I.F" brandNameEng="dining_tgif" setSel={setSel} />
                     <Brands brandNameKor="세븐스프링스" brandNameEng="dining_sevensprings" setSel={setSel} />
@@ -351,7 +351,7 @@ function Service1() {
                     iconName="category_books"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="교보문고" brandNameEng="books_kyobobooks" setSel={setSel} />
                     <Brands brandNameKor="반디앤루니스" brandNameEng="books_bandinlunis" setSel={setSel} />
                     <Brands brandNameKor="영풍문고" brandNameEng="books_ypbooks" setSel={setSel} />
@@ -373,7 +373,7 @@ function Service1() {
                     iconName="category_themepark"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="롯데월드" brandNameEng="themepark_lotteworld" setSel={setSel} />
                     <Brands brandNameKor="에버랜드" brandNameEng="themepark_everland" setSel={setSel} />
                     <Brands brandNameKor="서울랜드" brandNameEng="themepark_seoulland" setSel={setSel} />
@@ -391,7 +391,7 @@ function Service1() {
                     iconName="category_fuel"
                 />
 
-                <div className={styles.service1Row}>
+                <div className={styles.serviceRow}>
                     <Brands brandNameKor="GS칼텍스 휘발유" brandNameEng="fuel_gsgas" setSel={setSel} />
                     <Brands brandNameKor="SK엔크린 휘발유" brandNameEng="fuel_skgas" setSel={setSel} />
                     <Brands brandNameKor="현대오일뱅크 휘발유" brandNameEng="fuel_hobgas" setSel={setSel} />

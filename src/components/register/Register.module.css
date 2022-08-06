@@ -10,12 +10,9 @@
 }
 
 .registerZone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: calc(50vw - 600px);
     margin-right: calc(50vw - 600px);
-    min-height: 100vh;
+    margin-top: calc(50vh - 310px);
     height: 700px;
     width: 1200px;
 }
@@ -29,10 +26,10 @@
 }
 
 .registerZoneRight {
-    float: right;
-    background-color: rgb(255, 255, 255);
     height: 700px;
     width: 700px;
+    float: right;
+    background-color: rgb(255, 255, 255);
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -51,6 +48,7 @@
     color: rgb(160, 160, 160);
     text-align: left;
     margin-left: 50px;
+    margin-bottom: 50px;
 }
 
 .inputZone input {
@@ -127,14 +125,14 @@
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px), (max-height: 900px) {
     .registerZone {
-        margin-left: 0vw;
-        margin-right: 0vw;
-        margin-top: 0vh;
-        margin-bottom: 0vh;
-        width: 100vw;
-        height: 100vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: calc(5vw + 80px);
+        margin-bottom: calc(5vw);
+        width: 90vw;
+        height: calc(100vh - 10vw - 80px);
         border-radius: 0px;
     }
 
@@ -147,51 +145,60 @@
 
     .registerZoneRight {
         background-color: rgb(255, 255, 255);
-        width: 80vw;
-        height: 650px;
+        width: 90vw;
+        height: calc(100vh - 10vw - 80px);
         border-radius: 10px;
     }
 
     .mainTitle {
         text-align: left;
-        font-size: 4rem;
+        font-size: 3rem;
         margin-left: 5vw;
-        margin-top: 30px;
+        margin-top: 5vh;
     }
 
     .subTitle {
         text-align: left;
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-left: 5vw;
+        margin-bottom: 20px;
     }
 
     .inputZone input {
-        width: 70vw;
-        height: 60px;
+        width: 80vw;
+        height: 50px;
         font-size: 2rem;
         margin-left: 5vw;
     }
 
+    .inputZone input::placeholder {
+        font-size: 1.2rem;
+    }
+
     .registerButton {
-        width: 70vw;
+        width: 80vw;
         height: 50px;
         font-size: 1.5rem;
-        margin-top: 40px;
+        margin-top: 30px;
         margin-left: 5vw;
     }
 
     .registerCancelButton {
         height: 40px;
         font-size: 1.1rem;
+        margin-top: -10px;
     }
 
     .checkedIDZone {
         font-size: 1rem;
         margin-left: 5vw;
+        margin-top: 0px;
+        margin-bottom: 10px;
     }
 
     .checkedPWZone {
         font-size: 1rem;
         margin-left: 5vw;
+        margin-top: 0px;
     }
 }

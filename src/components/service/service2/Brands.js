@@ -11,8 +11,7 @@ function Brands(props) {
             <div className={styles.iconbox}>
                 <div className={styles.zone1}>
                     <img
-                        alt={props.brandNameEng}
-                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + props.brandNameEng + ".png"} />
+                        alt={props.brandNameEng} className={styles.zone1Image} src={process.env.PUBLIC_URL + "/images/brands_logo/" + props.brandNameEng + ".png"} />
                 </div>
 
                 <div className={styles.zone2}>
@@ -21,7 +20,7 @@ function Brands(props) {
                     </div>
 
                     <div className={styles.zone22}>
-                        <input type="number" step="10000" className={styles.inputZone} value={cost} required="required" placeholder="0" min="0"
+                        <input type="number" step="10000"value={cost} required="required" placeholder="0" min="0"
                             onChange={event => {
                                 setCost(event.target.value);
                                 props.setSel(event.target.value);

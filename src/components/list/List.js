@@ -63,8 +63,6 @@ function List() {
             <Intro mainText="전체 카드 목록" subText="모든 카드를 이곳에서 확인해보세요!"/>
             <br /><br /><br />     
 
-            <table>
-                <tbody>
                     {typeof cards?.cardAll[indexOfFirst]?.id != 'undefined' &&
                         <ListElement
                             id={cards?.cardAll[indexOfFirst]?.id}
@@ -214,9 +212,6 @@ function List() {
                             link={cards?.cardAll[indexOfFirst + 14]?.link}
                         />
                     }
-
-                </tbody>
-            </table>
             <br /><br /><br />
 
             

@@ -16,6 +16,7 @@
     margin-top: 5px;
     height: 100px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .headerButton {
@@ -24,6 +25,7 @@
     right: 20vw;
     height: 40px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .headerClickedZone {
@@ -106,11 +108,13 @@
     .titleLogo {
         margin-left: 5vw;
         height: 80px;
+        transition: 0.5s;
     }
 
     .headerButton {
         right: 5vw;
         height: 30px;
+        transition: 0.5s;
     }
 
     .headerClickedZone {

@@ -35,7 +35,7 @@ function Login() {
             <div className={styles.loginZone}>
                 <div className={styles.loginZoneLeft}>
                     <div className={styles.mainTitle}>
-                        Login
+                        LOGIN
                     </div>
 
                     <div className={styles.subTitle}>

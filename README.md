@@ -151,6 +151,11 @@
 - *Home*, *Login* pages were modified.
 
 ### Ver. 1.3.5 (2022/08/05)
-- *Main*, *Register* pages were modified.
+- *Main*, *Register* pages were modified to support mobile experience.
 - *Header* was modified.
 - *Footer* was implemented.
+
+### Ver. 1.3.6 (2022/08/06)
+- *Home*, *Login* page was modified.
+- *Service1*, *Service2*, *List* pages were modified to support mobile experience.
+- *Intro*, *Brands*, *Categories* components were modified.

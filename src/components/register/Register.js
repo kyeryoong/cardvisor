@@ -101,7 +101,7 @@ function Register() {
                 <div className={styles.registerZoneRight}>
                     <div className={styles.registerZoneRightInside}>
                         <div className={styles.mainTitle}>
-                            Register
+                            REGISTER
                         </div>
 
                         <div className={styles.subTitle}>

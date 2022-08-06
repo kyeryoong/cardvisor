@@ -27,6 +27,8 @@ function HomeCarousel() {
         display: "block",
         margin: "0px auto",
         marginTop: "80px",
+        position: "absolute",
+        top: "0px"
     };
 
     return (

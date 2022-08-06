@@ -8,29 +8,29 @@ function HomeCarouselSlide1() {
             <img alt="graphic" className={styles.graphic} src={process.env.PUBLIC_URL + '/images/graphics/7.png'} />
 
             <div className={styles.textZone}>
-                <span className={styles.textGray}>
+                <span className={styles.text1}>
                     나에게 딱 맞는&nbsp;
                 </span>
 
-                <span className={styles.textBlue}>
+                <span className={styles.text2}>
                     카드
                 </span>
 
-                <span className={styles.textGray}>
+                <span className={styles.text1}>
                     를
                 </span>
             </div>
 
             <div className={styles.textZone}>
-                <span className={styles.textGray}>
+                <span className={styles.text1}>
                     몇 번의 클릭으로&nbsp;
                 </span>
 
-                <span className={styles.textBlue}>
+                <span className={styles.text2}>
                     간편
                 </span>
 
-                <span className={styles.textGray}>
+                <span className={styles.text1}>
                     하게
                 </span>
             </div>

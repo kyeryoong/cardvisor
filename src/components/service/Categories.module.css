@@ -1,77 +1,70 @@
-.hrline {
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid rgb(200, 200, 200);
-    padding-top: 40px;
-    margin-bottom: 10px;
+.summaryZone {
+    width: 60vw;
+    height: 70px;
+    margin-left: 20vw;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px 8px 8px 8px;
+    transition: 0.5s;
 }
 
-.zone1 {
-    width: 860px;
-    float: left;
+.summaryZone::marker {
+    font-size: 0px;
 }
 
-.zone2 {
-    width: 20px;
-    margin-right: 5px;
-    float: right;
+.summaryZone:hover {
+    background-color: rgba(0, 200, 200, 0.3);
 }
 
-.icon {
-    width: 28px;
-    margin-bottom: -5px;
-    margin-right: 25px;
+.categoryIcon {
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .categoryNameKor {
-    width: 105%;
-    height: 40px;
-    margin-bottom: 300px;
-    text-align: left;
+    margin-left: 20px;
+    position: relative;
+    top: -26px;
     font-size: 1.5rem;
     font-weight: 1000;
-    color: rgb(50, 50, 50);
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
-    z-index: 1;
+    color: rgb(0, 200, 200);
 }
 
 .categoryNameEng {
     margin-left: 10px;
-    width: 105%;
-    height: 40px;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 100;
-    color: rgb(170, 170, 170);
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
-    z-index: 1;
+    position: relative;
+    top: -26px;
+    font-size: 1.2rem;
+    color: rgb(150, 150, 150);
 }
 
-.hideShow {
-    height: 40px;
-    text-align: left;
-    font-size: 1.5rem;
-    color: rgb(50, 50, 50);
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
-    z-index: 1;
+details[open] > .summaryZone {
+    background-color: rgb(0, 200, 200);
+    border-radius: 8px 8px 0px 0px;
+    transition: 0.5s;
 }
 
-.summaryZone ::marker {
-    font-size: 0px;
+details[open] > .summaryZone .categoryIcon {
+    filter: invert();
 }
 
-.summaryZone {
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
+details[open] > .summaryZone .categoryNameKor {
+    color: rgb(255, 255, 255);
 }
 
-.arrow {
-    height: 20px;
+details[open] > .summaryZone .categoryNameEng {
+    color: rgb(255, 255, 255);
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .summaryZone {
+        width: 90vw;
+        margin-left: 5vw;
+    }
 }

@@ -1,89 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .iconbox {
-    width: 430px;
-    height: 130px;
+    width: 1fr;
+    height: 120px;
     flex-direction: column;
-    align-items: center;
-    background: linear-gradient(to right, rgb(240, 240, 240) 40%, rgb(224, 224, 224) 30%);
+    background-color: rgb(240, 240, 240);
     color: rgb(100, 100, 100);
-    border-radius: 3px;
+    border: 1px solid rgb(255, 255, 255);
     font-size: 1.5rem;
     user-select: none;
-    margin: 10px;
+    transition: 0.5s;
 }
 
 .zone1 {
-    width: 160px;
-    height: 100%;
+    width: 35%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: left;
-    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-right: 1px solid rgb(180, 180, 180);
 }
 
-.zone1 img {
-    text-align: center;
-    width: 180px;
-    height: 90px;
-    margin-top: 18px;
-    margin-left: -3px;
+.zone1 > .zone1Image {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .zone2 {
-    margin-top: 17px;
-    margin-left: 30px;
-    width: 200px;
+    width: 55%;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
     float: left;
-    text-align: left;
     font-size: 1.3rem;
     font-weight: 1000;
 }
 
 .zone21 {
+    width: 100%;
+    height: 30px;
     text-align: left;
     align-items: center;
-    margin-left: 13px;
 }
 
-.zone22 {
-    width: 210px;
-    text-align: left;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.zone23 {
-    width: 210px;
-    align-items: center;
-    margin-left: 10.5px;
-}
-
-.inputZone {
-    width: 203px;
-    height: 40px;
+.zone22 input {
+    width: 100%;
+    height: 35px;
     font-family: 'Poppins', serif;
-    font-size: 1.6rem;
-    font-weight: 1000;
+    font-size: 1.5rem;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 200, 200);
     text-align: right;
     border-radius: 5px;
-    border: 1px solid rgb(224, 224, 224);
-    margin-top: 5px;
+    border: transparent;
+    padding-right: 10px;
 }
 
-.inputZone:valid {
-    background-color: rgb(200, 255, 255);
-    color: rgb(0, 200, 200);
+.zone22 input:valid {
+    background-color: rgb(250, 150, 0);
+    color: rgb(255, 255, 255);
 }
 
-.inputZone::placeholder {
+.zone22 input::placeholder {
     color: rgb(210, 210, 210);
 }
 
+.zone23 {
+    width: 100%;
+}
+
 .costButton {
-    font-family: 'NanumBarunGothic';
-    width: 56px;
-    height: 30px;
+    width: 30%;
+    height: 25px;
     font-size: 1rem;
     color: rgb(255, 255, 255);
     background-color: rgb(180, 180, 180);
@@ -93,9 +85,8 @@
 }
 
 .resetButton {
-    font-family: 'NanumBarunGothic';
-    width: 35px;
-    height: 30px;
+    width: 10%;
+    height: 25px;
     line-height: 1px;
     font-size: 1rem;
     font-weight: 1000;

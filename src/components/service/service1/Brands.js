@@ -31,7 +31,9 @@ function Brands(props) {
                         src={process.env.PUBLIC_URL + "/images/brands_logo/" + props.brandNameEng + ".png"} />
                 </div>
 
-                <div className={styles.brandNameKor}>{props.brandNameKor}</div>
+                <div className={styles.brandNameKor}>
+                    {props.brandNameKor}
+                </div>
             </div>
         </label>
     );

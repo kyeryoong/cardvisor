@@ -1,21 +1,54 @@
+.introZone {
+    width: 100vw;
+    height: 200px;
+    background: linear-gradient(135deg, rgb(0,200,200) 10%, rgb(50, 100, 200) 90%);
+    margin-top: 80px;
+    margin-bottom: -20px;
+    padding-top: 55px;
+    transition: 0.5s;
+}
+
 .mainText {
-    width: 900px;
+    width: fit-content;
     font-size: 3rem;
     font-weight: 1000;
-    color: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
     text-align: left;
     position: relative;
-    margin-top: -30px;
-    margin-bottom: 10px;
+    margin-left: 20vw;
+    transition: 0.5s;
 }
 
 .subText {
-    width: 900px;
-    font-size: 1.3rem;
+    width: fit-content;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: rgb(150, 150, 150);
+    color: rgba(255, 255, 255, 0.7);
     text-align: left;
     position: relative;
-    margin-top: -15px;
-    margin-bottom: 10px;
+    margin-top: -5px;
+    margin-left: 20vw;
+    transition: 0.5s;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .introZone {
+        height: 100px;
+        padding-top: 23px;
+        transition: 0.5s;
+    }
+
+    .mainText {
+        font-size: 2rem;
+        margin-left: 5vw;
+        transition: 0.5s;
+    }
+
+    .subText {
+        font-size: 1rem;
+        margin-left: 5vw;
+        transition: 0.5s;
+    }
 }

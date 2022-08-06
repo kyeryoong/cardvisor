@@ -1,133 +1,56 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.cardElementZone {
+    background-color: rgb(240, 240, 240);
+    width: 60vw;
+    height: 80px;
+    margin-left: 20vw;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-.introText {
-    font-size: 3rem;
-    font-weight: 1000;
-    text-align: left;
+.cardElementZone:hover {
+    background-color: rgb(0, 200, 200);
+    transition: 0.5s;
+}
+
+.cardElementZone:hover>.cardName {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
 }
 
 .cardImages {
-    height: 55px;
+    height: 60px;
     border: 1px rgb(170, 170, 170) solid;
     border-radius: 4px;
-    box-shadow: 0px 2px 3px rgb(100, 100, 100);
-    margin-top: 2px;
+    box-shadow: 0px 5px 10px 0px rgba(160, 160, 160);
+    margin-left: 20px;
 }
 
-.cardCompanyImages{
-    padding-left: 20px;
-    height: 80px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-td {
-    border-bottom: 1px solid rgb(190, 190, 190);
+.cardCompanyImage {
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .cardName {
-    width: 700px;
+    width: calc(60vw - 270px);
+    height: 80px;
+    position: relative;
+    top: -75px;
+    left: 260px;
     font-size: 1.5rem;
     font-weight: 1000;
-    padding-left: 20px;
-    text-align: left;
-}
-
-.toMainButton {
-    margin: auto;
-    display: block;
-    width: 200px;
-    height: 50px;
-    font-size: 1.5rem;
+    display: flex;
     align-items: center;
-    background-color: rgb(160, 160, 160);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.cardInfoButton {
-    margin: auto;
-    display: block;
-    width: 100px;
-    height: 40px;
-    font-size: 1rem;
-    align-items: center;
-    background-color: rgb(250, 150, 0);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.homepageButton {
-    margin: auto;
-    display: block;
-    width: 100px;
-    height: 40px;
-    font-size: 1rem;
-    align-items: center;
-    background-color: rgb(52, 152, 219);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.moreCardInfoButton1 {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    text-align: center;
-    font-size: 1.2rem;
-    background-color: rgb(250, 150, 0);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.moreCardInfoImage1 {
-    filter: invert();
-    width: 26px;
-    margin: 12px;
-}
-
-.moreCardInfoButton2 {
-    width: 50px;
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    text-align: center;
-    font-size: 1.2rem;
-    background-color: rgb(52, 152, 219);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.moreCardInfoImage2 {
-    filter: invert();
-    width: 26px;
-    margin: 12px;
-
+    word-break: keep-all;
 }
 
 .pageButtonCurrentPage {
     margin-bottom: 7px;
     padding-top: 3px;
     height: 40px;
-    width: 45px;
+    width: 50px;
     font-size: 1.3rem;
     font-weight: 1000;
     background-color: transparent;
@@ -135,25 +58,32 @@ td {
     border: transparent;
     border-bottom: 3px solid rgb(0, 200, 200);
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .pageButtonNotCurrentPage {
     margin-bottom: 7px;
     padding-top: 3px;
     height: 40px;
-    width: 45px;
+    width: 50px;
     font-size: 1.3rem;
     background-color: transparent;
     color: rgb(160, 160, 160);
     border: transparent;
     border-bottom: 3px solid rgb(220, 220, 220);
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.pageButtonNotCurrentPage:hover {
+    color: rgb(0, 200, 200);
+    transition: 0.5s;
 }
 
 .leftPageButton {
     margin-right: 20px;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     font-size: 2rem;
     font-weight: 1000;
     background-color: transparent;
@@ -164,8 +94,8 @@ td {
 
 .rightPageButton {
     margin-left: 20px;
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     font-size: 2rem;
     font-weight: 1000;
     background-color: transparent;
@@ -181,4 +111,105 @@ td {
 
 .pageButtonGroup {
     text-align: center;
+}
+
+.toMainButton {
+    margin: auto;
+    margin-bottom: 100px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    align-items: center;
+    background-color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .cardElementZone {
+        width: 90vw;
+        height: 60px;
+        margin-left: 5vw;
+    }
+
+    .cardImages {
+        height: 40px;
+        border-radius: 3px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .cardCompanyImage {
+        height: 0px;
+    }
+
+    .cardName {
+        width: calc(90vw - 100px);
+        height: 60px;
+        position: relative;
+        top: -55px;
+        left: 90px;
+        font-size: 1rem;
+        font-weight: 1000;
+        display: flex;
+        align-items: center;
+        word-break: keep-all;
+    }
+
+    .pageButtonCurrentPage {
+        height: 40px;
+        width: 25px;
+        font-size: 1rem;
+        font-weight: 1000;
+        background-color: transparent;
+        color: rgb(0, 200, 200);
+        border: transparent;
+        border-bottom: 3px solid rgb(0, 200, 200);
+        cursor: pointer;
+    }
+
+    .pageButtonNotCurrentPage {
+        height: 40px;
+        width: 25px;
+        font-size: 1rem;
+        background-color: transparent;
+        color: rgb(160, 160, 160);
+        border: transparent;
+        border-bottom: 3px solid rgb(220, 220, 220);
+        cursor: pointer;
+    }
+
+    .leftPageButton {
+        margin-right: 10px;
+        height: 40px;
+        width: 20px;
+        font-size: 2rem;
+        font-weight: 1000;
+        background-color: transparent;
+        color: rgb(0, 200, 200);
+        border: transparent;
+        cursor: pointer;
+    }
+
+    .rightPageButton {
+        margin-left: 10px;
+        height: 40px;
+        width: 20px;
+        font-size: 2rem;
+        font-weight: 1000;
+        background-color: transparent;
+        color: rgb(0, 200, 200);
+        border: transparent;
+        cursor: pointer;
+    }
+
+    .arrow {
+        height: 20px;
+        margin-bottom: -4px;
+    }
 }
