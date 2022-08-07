@@ -8,13 +8,21 @@
     user-select: none;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     appearance: none;
     border-radius: 0;
     -moz-appearance: none;
     -moz-border-radius: 0;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
+
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 @font-face {
