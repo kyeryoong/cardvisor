@@ -69,7 +69,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst]?.link}
+                            type={cards?.cardAll[indexOfFirst]?.type}
                         />
                     }
 
@@ -79,7 +79,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 1]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 1]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 1]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 1]?.link}
+                            type={cards?.cardAll[indexOfFirst + 1]?.type}                            
                         />
                     }
 
@@ -89,7 +89,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 2]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 2]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 2]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 2]?.link}
+                            type={cards?.cardAll[indexOfFirst + 2]?.type}
                         />
                     }
 
@@ -99,7 +99,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 3]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 3]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 3]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 3]?.link}
+                            type={cards?.cardAll[indexOfFirst + 3]?.type}
                         />
                     }
 
@@ -109,7 +109,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 4]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 4]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 4]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 4]?.link}
+                            type={cards?.cardAll[indexOfFirst + 4]?.type}
                         />
                     }
 
@@ -119,7 +119,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 5]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 5]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 5]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 5]?.link}
+                            type={cards?.cardAll[indexOfFirst + 5]?.type}
                         />
                     }
 
@@ -129,7 +129,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 6]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 6]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 6]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 6]?.link}
+                            type={cards?.cardAll[indexOfFirst + 6]?.type}
                         />
                     }
 
@@ -139,7 +139,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 7]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 7]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 7]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 7]?.link}
+                            type={cards?.cardAll[indexOfFirst + 7]?.type}
                         />
                     }
 
@@ -149,7 +149,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 8]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 8]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 8]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 8]?.link}
+                            type={cards?.cardAll[indexOfFirst + 8]?.type}
                         />
                     }
 
@@ -159,7 +159,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 9]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 9]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 9]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 9]?.link}
+                            type={cards?.cardAll[indexOfFirst + 9]?.type}
                         />
                     }
 
@@ -169,7 +169,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 10]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 10]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 10]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 10]?.link}
+                            type={cards?.cardAll[indexOfFirst + 10]?.type}
                         />
                     }
 
@@ -179,7 +179,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 11]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 11]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 11]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 11]?.link}
+                            type={cards?.cardAll[indexOfFirst + 11]?.type}
                         />
                     }
 
@@ -189,7 +189,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 12]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 12]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 12]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 12]?.link}
+                            type={cards?.cardAll[indexOfFirst + 12]?.type}
                         />
                     }
 
@@ -199,7 +199,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 13]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 13]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 13]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 13]?.link}
+                            type={cards?.cardAll[indexOfFirst + 13]?.type}
                         />
                     }
 
@@ -209,7 +209,7 @@ function List() {
                             cardName={cards?.cardAll[indexOfFirst + 14]?.name}
                             companyNameKor={cards?.cardAll[indexOfFirst + 14]?.company}
                             companyNameEng={cards?.cardAll[indexOfFirst + 14]?.company_eng}
-                            link={cards?.cardAll[indexOfFirst + 14]?.link}
+                            type={cards?.cardAll[indexOfFirst + 14]?.type}
                         />
                     }
             <br /><br /><br />

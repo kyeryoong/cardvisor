@@ -1,6 +1,8 @@
 import styles from './List.module.css';
 
-function ListElement({ id, cardName, companyNameKor, companyNameEng, link }) {
+
+
+function ListElement({ id, cardName, companyNameKor, companyNameEng }) {
     return (
         <div className={styles.cardElementZone} onClick={() => {
             window.open("/cardinfo/" + id);

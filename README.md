@@ -156,6 +156,9 @@
 - *Footer* was implemented.
 
 ### Ver. 1.3.6 (2022/08/06)
-- *Home*, *Login* page was modified.
+- *Home*, *Login* pages were modified.
 - *Service1*, *Service2*, *List* pages were modified to support mobile experience.
 - *Intro*, *Brands*, *Categories* components were modified.
+
+### Ver. 1.3.6 (2022/08/07)
+- *Service1Results* page was modified to support mobile experience.

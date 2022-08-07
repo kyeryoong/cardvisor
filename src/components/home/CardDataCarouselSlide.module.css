@@ -13,9 +13,11 @@
 }
 
 .type {
-    width: 85px;
+    width: 90px;
     height: fit-content;
     margin-top: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
     font-size: 2rem;
     font-weight: 1000;
     text-align: left;
@@ -23,8 +25,9 @@
 }
 
 .value {
-    width: 130px;
+    width: 140px;
     height: fit-content;
+    margin-left: -15px;
     font-size: 3.5rem;
     font-weight: 1000;
     text-align: right;
