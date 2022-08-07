@@ -8,6 +8,15 @@
     user-select: none;
 }
 
+input, textarea, button {
+    appearance: none;
+    border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
 @font-face {
     font-family: "SDGothicNeoB";
     src: url("../public/fonts/AppleSDGothicNeoB.ttf") format("truetype");
