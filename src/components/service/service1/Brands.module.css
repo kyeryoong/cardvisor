@@ -2,9 +2,10 @@
     width: 1fr;
     height: 120px;
     flex-direction: column;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     color: rgb(100, 100, 100);
-    border: 1px solid rgb(255, 255, 255);
     font-size: 1.5rem;
     user-select: none;
     transition: 0.5s;
@@ -12,6 +13,7 @@
 
 .iconbox:hover {
     background-color: rgba(250, 150, 0, 0.3);
+    cursor: pointer;
 }
 
 .brandLogo {

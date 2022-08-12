@@ -2,9 +2,17 @@ import styles from './Service1Results.module.css';
 
 import { useNavigate } from 'react-router';
 import { useState, useEffect } from 'react';
+import SelectedBrands from './SelectedBrands';
+
+
+let jsonArr = [];
 
 
 function Service1Results() {
+    for (var i = 0; i < SelectedBrands.length; i++) {
+        jsonArr[i] = { "memberId": 1, "brandName": SelectedBrands[i] }
+    }
+
     const navigate = useNavigate();
     const [like, setLike] = useState(false);
 
@@ -14,7 +22,13 @@ function Service1Results() {
     });
 
     useEffect(() => {
-        fetch("/results")
+        fetch("/select", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(jsonArr)
+        })
             .then((response) => {
                 return response.json();
             })
@@ -23,28 +37,26 @@ function Service1Results() {
             });
     }, []);
 
-
-
-    function benefitParser(feeType, numberOne, numberTwo) {
-        if (feeType === "PBD") { return numberOne + "% 청구 할인"; }
-        else if (feeType === "PID") { return numberOne + "% 즉시 할인"; }
-        else if (feeType === "PND") { return numberOne + "% 할인"; }
-        else if (feeType === "PCB") { return numberOne + "% 캐시백"; }
-        else if (feeType === "PGP") { return numberOne + "% 포인트/마일리지 적립"; }
-        else if (feeType === "WBD") { return numberOne + "원 청구 할인"; }
-        else if (feeType === "WID") { return numberOne + "원 즉시 할인"; }
-        else if (feeType === "WND") { return numberOne + "원 할인"; }
-        else if (feeType === "WCB") { return numberOne + "원 캐시백"; }
-        else if (feeType === "FGP") { return numberOne + "원당" + numberTwo + "포인트/마일리지 적립"; }
-        else if (feeType === "FBD") { return numberOne + "원당" + numberTwo + "원 청구 할인"; }
-        else if (feeType === "FID") { return numberOne + "원당" + numberTwo + "원 즉시 할인"; }
-        else if (feeType === "FND") { return numberOne + "원당" + numberTwo + "원 할인"; }
-        else if (feeType === "NGP") { return numberOne + "포인트/마일리지 적립"; }
-        else if (feeType === "LBD") { return "1리터당" + numberOne + "원 청구 할인"; }
-        else if (feeType === "LID") { return "1리터당" + numberOne + "원 즉시 할인"; }
-        else if (feeType === "LND") { return "1리터당" + numberOne + "원 할인"; }
-        else if (feeType === "LGP") { return "1리터당" + numberOne + "포인트/마일리지 적립"; }
-        else if (feeType === "LCB") { return "1리터당" + numberOne + "원 캐시백"; }
+    function benefitParser(type, numberOne, numberTwo) {
+        if (type === "PBD") { return numberOne + "% 청구 할인"; }
+        else if (type === "PID") { return numberOne + "% 즉시 할인"; }
+        else if (type === "PND") { return numberOne + "% 할인"; }
+        else if (type === "PCB") { return numberOne + "% 캐시백"; }
+        else if (type === "PGP") { return numberOne + "% 포인트/마일리지 적립"; }
+        else if (type === "WBD") { return numberOne + "원 청구 할인"; }
+        else if (type === "WID") { return numberOne + "원 즉시 할인"; }
+        else if (type === "WND") { return numberOne + "원 할인"; }
+        else if (type === "WCB") { return numberOne + "원 캐시백"; }
+        else if (type === "FGP") { return numberOne + "원당" + numberTwo + "포인트/마일리지 적립"; }
+        else if (type === "FBD") { return numberOne + "원당" + numberTwo + "원 청구 할인"; }
+        else if (type === "FID") { return numberOne + "원당" + numberTwo + "원 즉시 할인"; }
+        else if (type === "FND") { return numberOne + "원당" + numberTwo + "원 할인"; }
+        else if (type === "NGP") { return numberOne + "포인트/마일리지 적립"; }
+        else if (type === "LBD") { return "1리터당" + numberOne + "원 청구 할인"; }
+        else if (type === "LID") { return "1리터당" + numberOne + "원 즉시 할인"; }
+        else if (type === "LND") { return "1리터당" + numberOne + "원 할인"; }
+        else if (type === "LGP") { return "1리터당" + numberOne + "포인트/마일리지 적립"; }
+        else if (type === "LCB") { return "1리터당" + numberOne + "원 캐시백"; }
     }
 
     function typeParser(type) {
@@ -53,7 +65,7 @@ function Service1Results() {
         else if (type === "hybrid\r" || type === "hybrid") { return "하이브리드 카드" }
     }
 
-    function BrandElements(props) {
+    function BenefitElements(props) {
         return (
             <div className={styles.brandsZone}>
                 <div className={styles.brandImageZone}>
@@ -121,7 +133,7 @@ function Service1Results() {
                         <br /><br />
                     </div>
 
-                    <div className={styles.bestCardButtonsZone}>
+                    {/* <div className={styles.bestCardButtonsZone}>
                         <button className={styles.bestCardMoreInfoButton} onClick={() => {
                             window.open("/cardinfo/" + cards?.topTenCards[0]?.id);
                         }}>
@@ -137,13 +149,7 @@ function Service1Results() {
                                 카드사 홈페이지
                             </span>
                         </button>
-
-                        {/* <button className={styles.likeButton} onClick={() => {
-                        setLike(!like);
-                    }}> {like ? "♡" : "♥"}
-                        찜하기
-                    </button> */}
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -154,11 +160,11 @@ function Service1Results() {
             </div>
 
             <div className={styles.brandsRow}>
-                <BrandElements order={0} />
-                <BrandElements order={1} />
-                <BrandElements order={2} />
-                <BrandElements order={3} />
-                <BrandElements order={4} />
+                <BenefitElements order={0} />
+                <BenefitElements order={1} />
+                <BenefitElements order={2} />
+                <BenefitElements order={3} />
+                <BenefitElements order={4} />
             </div>
 
 

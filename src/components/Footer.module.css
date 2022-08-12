@@ -5,8 +5,7 @@
     text-align: center;
     background-color: rgb(220, 220, 220);
     color: rgb(150, 150, 150);
-    margin-top: auto;
-    margin-bottom: auto;
+    float: bottom;
 }
 
 .cardvisorLogo1 {

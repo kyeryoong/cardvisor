@@ -46,4 +46,5 @@ input {
 
 * {
     font-family: "SDGothicNeoM", sans-serif;
+    transition: 0.5s;
 }

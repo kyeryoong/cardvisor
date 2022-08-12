@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import styles from './App.css'
+import './App.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,7 +17,7 @@ import Service2Analysis from './components/service/service2/Service2Analysis';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
-import NotFound from './components/notfound/NotFound'
+import NotFound from './components/notfound/NotFound';
 
 
 
@@ -121,7 +121,7 @@ function App() {
 
             <ScrollToTop />
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

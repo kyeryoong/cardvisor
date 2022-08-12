@@ -1,142 +1,354 @@
-hr {
-    width: 100%;
-    position: relative;
-    margin-bottom: 10px;
+.backgroundZone {
+    width: 100vw;
+    height: 450px;
+    background: linear-gradient(135deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%);
+    margin-top: 80px;
+    transition: 0.5s;
 }
 
-.categoryZone {
-    width: 860px;
-    float: left;
-    margin-left: 20vw;
-}
-
-.categoryName {
-    width: 105%;
-    height: 40px;
-    text-align: left;
-    font-size: 1.5rem;
-    color: rgb(50, 50, 50);
-    font-weight: 1000;
-    background-color: transparent;
-    border: transparent;
-    z-index: 1;
-}
-
-.paySystemRow {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 50px;
-}
-
-.benefitsZone {
-    display: flex;
-    flex-direction: row;
-}
-
-.zone1 {
-    float: left;
-    width: 20%;
-    background-color: rgb(0, 200, 200);
-    color: rgb(255, 255, 255);
-    text-align: left;
-    padding-top: 13px;
-    padding-left: 20px;
-    font-size: 1.5rem;
-    font-weight: 1000;
-}
-
-.zone2 {
-    float: right;
-    width: 80%;
-    margin-left: 20px;
-    font-size: 1.5rem;
-    font-weight: 1000;
-}
-
-.moreInfoButton {
-    width: 350px;
-    height: 50px;
-    font-size: 1.5rem;
-    align-items: center;
-    background-color: rgb(250, 150, 0);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.likeButton {
-    width: 150px;
-    height: 50px;
-    font-size: 1.5rem;
-    align-items: center;
-    background-color: rgb(231, 76, 60);
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.cardInfoZone {
-    display: flex;
-    margin-bottom: 50px;
-    margin-left: 20vw;
-    margin-top: 300px;
-}
-
-.cardName {
-    font-size: 2rem;
-    font-weight: 1000;
-    text-align: left;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-
-.cardCompanyZone {
-    display: flex;
-}
-
-.cardCompanyName {
-    font-size: 1.5rem;
-    font-weight: 1000;
-    text-align: left;
-    margin-left: 10px;
-}
-
-.cardCompanySeperator {
-    font-size: 1.5rem;
-    font-weight: 1000;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.cardCompanyLogo {
-    font-size: 1.5rem;
-    font-weight: 1000;
-    text-align: left;
-}
-
-.cardInfoZone2 {
-    margin-left: 40px;
-    float: right;
+.cardZone {
+    width: 60vw;
+    margin: 0px auto;
+    padding-top: 55px;
+    transition: 0.5s;
 }
 
 .cardImage {
-    width: 215px;
-    float: left;
+    height: 200px;
+    margin-left: 10px;
+    border-radius: 14px;
+    box-shadow: 0px 4px 5px rgb(100, 100, 100);
+    transition: 0.5s;
+}
+
+.cardName {
+    font-size: 2.5rem;
+    font-weight: 1000;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.cardType {
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.cardCompanyImage {
+    height: 100px;
+    margin-bottom: -41px;
+    transition: 0.5s;
+}
+
+.mainText1 {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+}
+
+.mainText2 {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+}
+
+.mainText3 {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    margin-top: 60px;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+}
+
+.paySystemZone {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.paySystemElements {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    width: calc(30vw - 10px);
+    height: 80px;
     border-radius: 10px;
-    box-shadow: 0px 2px 3px rgb(100, 100, 100);
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.paySystemImage {
+    height: 80px;
+    margin-left: 10px;
+    float: left;
+}
+
+.paySystemName {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 1000;
+    float: left;
+    line-height: 80px;
+}
+
+.paySystemFee {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+    float: right;
+    line-height: 80px;
+    padding-right: 20px;
+}
+
+.benefitsZone {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 10vw 50vw;
+}
+
+.benefitZoneCategoies {
+    width: calc(10vw - 10px);
+    border-radius: 10px;
+    background-color: rgb(0, 200, 200);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    font-size: 2rem;
+    font-weight: 1000;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}
+
+.benefitElements {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    width: 50vw;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.benefitImage {
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+.benefitName {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 1000;
+    float: left;
+    line-height: 80px;
+}
+
+.benefitInfo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+    float: right;
+    line-height: 80px;
+    padding-right: 20px;
 }
 
 .caution {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    padding-bottom: 100px;
     text-align: left;
     color: rgb(120, 120, 120);
+    font-size: 1.3rem;
+    word-break: keep-all;
 }
 
 .cautionHighlight {
     text-align: left;
     font-weight: 1000;
     color: rgb(243, 156, 18);
+}
+
+
+
+@media screen and (max-width: 1700px) {
+    .paySystemZone {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .paySystemElements {
+        width: 60vw;
+    }
+
+    .paySystemName {
+        font-size: 1.5rem;
+    }
+
+    .paySystemFee {
+        font-size: 1.5rem;
+    }
+
+    .benefitsZone {
+        grid-template-columns: 15vw 45vw;
+    }
+
+    .benefitZoneCategoies {
+        width: calc(15vw - 10px);
+        font-size: 1.5rem;
+    }
+
+    .benefitElements {
+        width: 45vw;
+    }
+
+    .benefitName {
+        width: 20vw;
+        height: 25px;
+        line-height: normal;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        float: left;
+        margin-top: 15px;
+    }
+
+    .benefitInfo {
+        width: 20vw;
+        height: 25px;
+        line-height: normal;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        float: left;
+    }
+
+    .caution {
+        font-size: 1rem;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .backgroundZone {
+        height: 310px;
+        transition: 0.5s;
+    }
+
+    .cardZone {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-top: 35px;
+        transition: 0.5s;
+    }
+
+    .cardImage {
+        height: 100px;
+        margin-left: 0px;
+        border-radius: 7px;
+        box-shadow: 0px 4px 5px rgb(100, 100, 100);
+        transition: 0.5s;
+    }
+
+    .cardName {
+        font-size: 1.6rem;
+        font-weight: 1000;
+        text-align: left;
+        color: rgb(255, 255, 255);
+        margin-top: 15px;
+        margin-bottom: -8px;
+        margin-left: 0px;
+        transition: 0.5s;
+        line-height: 1;
+    }
+
+    .cardType {
+        font-size: 1rem;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        margin-left: 0px;
+        transition: 0.5s;
+    }
+
+    .cardCompanyImage {
+        height: 50px;
+        margin-bottom: -20px;
+        transition: 0.5s;
+    }
+
+    .paySystemZone {
+        width: 90vw;
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .paySystemElements {
+        width: 90vw;
+    }
+
+    .benefitsZone {
+        width: 90vw;
+        display: block;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: 0vw 90vw;
+    }
+
+    .benefitZoneCategoies {
+        width: 0;
+        font-size: 0;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .benefitElements {
+        width: 90vw;
+    }
+
+    .benefitName {
+        width: 60vw;
+    }
+
+    .benefitInfo {
+        width: 60vw;
+    }
+
+    .caution {
+        width: 90vw;
+    }
 }

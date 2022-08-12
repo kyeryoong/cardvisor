@@ -1,4 +1,4 @@
-![cardvisor_md](https://user-images.githubusercontent.com/98510309/180853547-c7678261-1ba1-4613-8b8a-7fc34f1dff9d.png)
+<p align="center"><img src="./public/images/cardvisor_md.png" width="1200" height="=400"></p>
 
 
 
@@ -162,3 +162,7 @@
 
 ### Ver. 1.3.6 (2022/08/07)
 - *Service1Results* page was modified to support mobile experience.
+
+### Ver. 1.3.7 (2022/08/12)
+- *CardInfo* page was modified.
+- Minor changes in designs.

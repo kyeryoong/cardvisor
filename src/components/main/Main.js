@@ -19,7 +19,7 @@ function Main() {
                 <div className={styles.button1} onClick={() => {
                     navigate("/service1");
                 }}>
-                    <img alt="graphic" className={styles.buttonGraphic} src={process.env.PUBLIC_URL + '/images/menu_logo/1.png'} />
+                    <img alt="graphic" className={styles.buttonGraphic} src={process.env.PUBLIC_URL + '/images/menu_logo/1_blue.png'} />
                     <div className={styles.textZone}>
                         <div className={styles.mainText}>카드 추천받기</div>
                         <div className={styles.subText}>혜택 선택</div>
@@ -29,7 +29,7 @@ function Main() {
                 <div className={styles.button2} onClick={() => {
                     navigate("/service2");
                 }}>
-                    <img alt="graphic" className={styles.buttonGraphic} src={process.env.PUBLIC_URL + '/images/menu_logo/2.png'} />
+                    <img alt="graphic" className={styles.buttonGraphic} src={process.env.PUBLIC_URL + '/images/menu_logo/2_blue.png'} />
                     <div className={styles.textZone}>
                         <div className={styles.mainText}>카드 추천받기</div>
                         <div className={styles.subText}>금액 입력</div>
@@ -39,7 +39,7 @@ function Main() {
                 <div className={styles.button3} onClick={() => {
                     navigate("/list");
                 }}>
-                    <img alt="graphic" className={styles.buttonGraphic} src={process.env.PUBLIC_URL + '/images/menu_logo/3.png'} />
+                    <img alt="graphic" className={styles.buttonGraphic} src={process.env.PUBLIC_URL + '/images/menu_logo/3_blue.png'} />
                     <div className={styles.textZone}>
                         <div className={styles.mainText}>전체 카드 목록</div>
                     </div>

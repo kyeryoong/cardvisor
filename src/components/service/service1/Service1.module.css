@@ -1,22 +1,23 @@
 .serviceRow {
+    display: block;
+    margin: 0px auto;
+    width: 60vw;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin-bottom: 20px;
-    width: 60vw;
-    margin-left: 20vw;
 }
 
 .sendButton {
+    display: block;
+    margin: 0px auto;
     width: 60vw;
     height: 70px;
     font-size: 1.8rem;
-    margin-left: 20vw;
-    background-color: rgb(243, 156, 18);
+    background-color: rgb(250, 150, 0);
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .toMainButton {
@@ -31,6 +32,18 @@
     border: transparent;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.selectedBrandsZone {
+    width: 60vw;
+    margin: 0px auto;
+    background-color: rgb(250, 150, 0);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.selectedBrandsImage {
+    height: 60px;
 }
 
 

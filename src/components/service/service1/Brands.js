@@ -4,35 +4,36 @@ import SelectedBrands from './SelectedBrands';
 
 
 
-function Brands(props) {
+function Brands({ brandNameKor, brandNameEng, setSelNumber, setSelArray }) {
     return (
         <label>
             <input type="checkbox" name="" />
 
             <div className={styles.iconbox} onClick={() => {
-                if (!SelectedBrands.includes(props.brandNameEng)) {
-                    SelectedBrands.push(props.brandNameEng);
+                if (!SelectedBrands.includes(brandNameEng)) {
+                    SelectedBrands.push(brandNameEng);
                 }
 
                 else {
-                    var index = SelectedBrands.indexOf(props.brandNameEng)
+                    var index = SelectedBrands.indexOf(brandNameEng);
 
                     if (index > -1) {
                         SelectedBrands.splice(index, 1);
                     }
                 }
 
-                props.setSel(SelectedBrands.length);
+                setSelNumber(SelectedBrands.length);
+                setSelArray(SelectedBrands);
             }
             }>
                 <div className={styles.brandLogo}>
                     <img
-                        alt={props.brandNameEng}
-                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + props.brandNameEng + ".png"} />
+                        alt={brandNameEng}
+                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + brandNameEng + ".png"} />
                 </div>
 
                 <div className={styles.brandNameKor}>
-                    {props.brandNameKor}
+                    {brandNameKor}
                 </div>
             </div>
         </label>
