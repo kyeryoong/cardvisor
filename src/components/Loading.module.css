@@ -1,0 +1,19 @@
+.loadingContainer {
+    height: 100px;
+}
+
+.loadingZone {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    margin-top: 45vh;
+    padding-top: 10px;
+}
+
+.messageText {
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(120, 120, 120);
+    text-align: center;
+    margin-top: 30px;
+}

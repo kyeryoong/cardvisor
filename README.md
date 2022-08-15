@@ -1,4 +1,4 @@
-<p align="center"><img src="./public/images/cardvisor_md.png" width="1200" height="=400"></p>
+<p align="center"><img src="./public/MD/cardvisor_md.png" width="1200" height="=400"></p>
 
 
 
@@ -23,11 +23,34 @@
 
 # Technologies and Software Used
 
-#### Style Sheet Language &nbsp; | &nbsp; CSS
-#### Programming Languages &nbsp; | &nbsp; JavaScript, JSX
-#### Frontend Server &nbsp; | &nbsp; React.js
-#### Deployment &nbsp; | &nbsp; Netlify
-#### Version Control &nbsp; | &nbsp; Git, GitHub
+#### Stylesheet Languages
+<p align="center"><img src="./public/MD/CSS.png" height="60">
+</p>
+<br>
+
+#### Programming Languages
+<p align="center"><img src="./public/MD/JavaScript.png" height="60">
+</p>
+<br>
+
+#### Frontend Server
+<p align="center"><img src="./public/MD/React.png" height="60">
+</p>
+<br>
+
+#### Deployment
+<p align="center">
+<img src="./public/MD/Netlify.png" height="60">
+</p>
+<br>
+
+#### Version Control
+<p align="center">
+<img src="./public/MD/Git.png" height="60">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./public/MD/GitHub.png" height="60">
+</p>
+<br><br><br>
 <br><br><br>
 
 
@@ -166,3 +189,8 @@
 ### Ver. 1.3.7 (2022/08/12)
 - *CardInfo* page was modified.
 - Minor changes in designs.
+
+### Ver. 1.3.8 (2022/08/15)
+- *Loading* component was created.
+- *Service1ResultsMore* page was modified.
+- *MoreCards* component was renamed to *MoreCardsElements*.

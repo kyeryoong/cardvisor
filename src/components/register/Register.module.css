@@ -23,6 +23,7 @@
     height: 700px;
     width: 500px;
     border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
 }
 
 .registerZoneRight {
@@ -31,11 +32,12 @@
     float: right;
     background-color: rgb(255, 255, 255);
     border-radius: 0px 10px 10px 0px;
+    box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
 }
 
 .mainTitle {
     font-size: 4rem;
-    font-family: 'Poppins', serif;
+    font-family: 'Poppins';
     color: rgb(0, 200, 200);
     text-align: left;
     margin-left: 50px;
@@ -48,13 +50,14 @@
     color: rgb(160, 160, 160);
     text-align: left;
     margin-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .inputZone input {
     text-align: center;
     width: 600px;
     height: 60px;
+    font-family: 'Poppins';
     font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
@@ -68,6 +71,7 @@
 
 .inputZone input:focus {
     outline: none;
+    font-family: 'Poppins';
 }
 
 .inputZone input::placeholder {
@@ -112,7 +116,6 @@
     font-weight: 1000;
     color: rgb(255, 100, 100);
     margin-left: 50px;
-    margin-top: 10px;
 }
 
 .checkedPWZone {
@@ -120,7 +123,6 @@
     font-weight: 1000;
     color: rgb(255, 100, 100);
     margin-left: 50px;
-    margin-top: 10px;
 }
 
 

@@ -16,7 +16,6 @@
     margin-top: 5px;
     height: 100px;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .headerButton {
@@ -25,7 +24,6 @@
     right: 20vw;
     height: 40px;
     cursor: pointer;
-    transition: 0.5s;
 }
 
 .headerClickedZone {
@@ -85,7 +83,6 @@
     background-color: rgb(250, 150, 0);
     border-radius: 5px;
     cursor: pointer;
-    margin-top: -10px;
 }
 
 .headerClickedZoneButton2 {

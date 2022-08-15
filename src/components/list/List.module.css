@@ -27,6 +27,7 @@
     border-radius: 4px;
     box-shadow: 0px 3px 3px 0px rgba(150, 150, 150, 0.3);
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 .cardCompanyImage {
@@ -39,13 +40,14 @@
     width: calc(60vw - 270px);
     height: 80px;
     position: relative;
-    top: -75px;
+    top: -72px;
     left: 260px;
     font-size: 1.5rem;
     font-weight: 1000;
     display: flex;
     align-items: center;
     word-break: keep-all;
+    line-height: 1;
 }
 
 .pageButtonCurrentPage {
@@ -153,14 +155,9 @@
     .cardName {
         width: calc(90vw - 100px);
         height: 60px;
-        position: relative;
         top: -55px;
         left: 90px;
         font-size: 1rem;
-        font-weight: 1000;
-        display: flex;
-        align-items: center;
-        word-break: keep-all;
     }
 
     .pageButtonCurrentPage {

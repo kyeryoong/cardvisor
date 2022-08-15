@@ -1,12 +1,14 @@
+import { useNavigate } from 'react-router';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
+import SelectedBrands from './SelectedBrands';
+import Loading from '../../Loading';
 import styles from './Service1Results.module.css';
 
-import { useNavigate } from 'react-router';
-import { useState, useEffect } from 'react';
-import SelectedBrands from './SelectedBrands';
 
 
 let jsonArr = [];
-
 
 function Service1Results() {
     for (var i = 0; i < SelectedBrands.length; i++) {
@@ -14,8 +16,7 @@ function Service1Results() {
     }
 
     const navigate = useNavigate();
-    const [like, setLike] = useState(false);
-
+    const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState({
         topTenCards: [{}],
         bestCardBenefits: [{}],
@@ -33,7 +34,10 @@ function Service1Results() {
                 return response.json();
             })
             .then(data => {
-                setCards(data);
+                setTimeout(() => {
+                    setCards(data);
+                    setLoading(false);
+                }, 1000)
             });
     }, []);
 
@@ -112,28 +116,34 @@ function Service1Results() {
 
     return (
         <div>
-            <div className={styles.backgroundZone}>
-                <div className={styles.bestCardZone}>
-                    <img
-                        className={styles.bestCardImage}
-                        alt="cards"
-                        src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[0]?.id + ".png"} />
+            {
+                loading
+                    ?
+                    <Loading message="데이터 분석중" />
+                    :
+                    <div>
+                        <div className={styles.backgroundZone}>
+                            <div className={styles.bestCardZone}>
+                                <img
+                                    className={styles.bestCardImage}
+                                    alt="cards"
+                                    src={process.env.PUBLIC_URL + "/images/card_images/" + cards?.topTenCards[0]?.id + ".png"} />
 
 
-                    <div className={styles.bestCardName}>
-                        {cards?.topTenCards[0]?.name}
-                    </div>
+                                <div className={styles.bestCardName}>
+                                    {cards?.topTenCards[0]?.name}
+                                </div>
 
-                    <div className={styles.bestCardType}>
-                        {typeParser(cards?.topTenCards[0]?.type)} &nbsp; │
-                        <img
-                            className={styles.bestCardCompanyImage}
-                            alt="cards"
-                            src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cards?.topTenCards[0]?.company_eng + ".png"} />
-                        <br /><br />
-                    </div>
+                                <div className={styles.bestCardType}>
+                                    {typeParser(cards?.topTenCards[0]?.type)} &nbsp; │
+                                    <img
+                                        className={styles.bestCardCompanyImage}
+                                        alt="cards"
+                                        src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cards?.topTenCards[0]?.company_eng + ".png"} />
+                                    <br /><br />
+                                </div>
 
-                    {/* <div className={styles.bestCardButtonsZone}>
+                                {/* <div className={styles.bestCardButtonsZone}>
                         <button className={styles.bestCardMoreInfoButton} onClick={() => {
                             window.open("/cardinfo/" + cards?.topTenCards[0]?.id);
                         }}>
@@ -150,52 +160,48 @@ function Service1Results() {
                             </span>
                         </button>
                     </div> */}
-                </div>
-            </div>
+                            </div>
+                        </div>
 
+                        <div className={styles.subText}>
+                            주요 맟춤 혜택
+                        </div>
 
+                        <div className={styles.brandsRow}>
+                            <BenefitElements order={0} />
+                            <BenefitElements order={1} />
+                            <BenefitElements order={2} />
+                            <BenefitElements order={3} />
+                            <BenefitElements order={4} />
+                        </div>                      
 
-            <div className={styles.subText}>
-                주요 맟춤 혜택
-            </div>
+                        <div className={styles.subText}>
+                            이 카드는 어때요?
+                        </div>
 
-            <div className={styles.brandsRow}>
-                <BenefitElements order={0} />
-                <BenefitElements order={1} />
-                <BenefitElements order={2} />
-                <BenefitElements order={3} />
-                <BenefitElements order={4} />
-            </div>
+                        <div className={styles.moreCardsRow}>
+                            <CardElements order={1} />
+                            <CardElements order={2} />
+                            <CardElements order={3} />
+                            <CardElements order={4} />
+                        </div>
 
+                        <div className={styles.extraButtonsZone}>
+                            <button className={styles.toMoreCardsButton} onClick={() => {
+                                navigate("/service1/results/more");
+                            }}>
+                                더 많은 카드 보기
+                            </button>
+                            <br /><br />
 
-
-            <div className={styles.subText}>
-                이 카드는 어때요?
-            </div>
-
-            <div className={styles.moreCardsRow}>
-                <CardElements order={1} />
-                <CardElements order={2} />
-                <CardElements order={3} />
-                <CardElements order={4} />
-            </div>
-
-
-
-            <div className={styles.extraButtonsZone}>
-                <button className={styles.toMoreCardsButton} onClick={() => {
-                    navigate("/service1/results/more");
-                }}>
-                    더 많은 카드 보기
-                </button>
-                <br /><br />
-
-                <button className={styles.goBackButton} onClick={() => {
-                    navigate(-1);
-                }}>
-                    혜택 다시 선택하기
-                </button>
-            </div>
+                            <button className={styles.goBackButton} onClick={() => {
+                                navigate(-1);
+                            }}>
+                                혜택 다시 선택하기
+                            </button>
+                        </div>
+                    </div>
+            }
         </div>
     );
 }

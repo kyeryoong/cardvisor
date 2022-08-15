@@ -21,26 +21,28 @@
 
 .categoryIcon {
     height: 40px;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-right: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .categoryNameKor {
     margin-left: 20px;
-    position: relative;
-    top: -26px;
     font-size: 1.5rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
+    position: relative;
+    top: 5px;
 }
 
 .categoryNameEng {
     margin-left: 10px;
     position: relative;
-    top: -26px;
     font-size: 1.2rem;
     color: rgb(150, 150, 150);
+    position: relative;
+    top: 5px;
 }
 
 details[open] > .summaryZone {

@@ -3,7 +3,7 @@ import styles from './Home.module.css';
 
 import HomeCarousel from './HomeCarousel';
 import CardDataCarousel from './CardDataCarousel';
-import Loading from './Loading';
+import Connection from './Connection';
 
 
 
@@ -49,7 +49,7 @@ function Home() {
 
 
             <img alt="graphic" className={styles.cardDataIcon} src={process.env.PUBLIC_URL + '/images/graphics/12.png'} />
-            <Loading />
+            <Connection />
 
             <div className={styles.cardDataIntro}>
                 카드 데이터 현황
