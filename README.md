@@ -194,3 +194,8 @@
 - *Loading* component was created.
 - *Service1ResultsMore* page was modified.
 - *MoreCards* component was renamed to *MoreCardsElements*.
+
+### Ver. 1.3.9 (2022/08/26)
+- Security function with access and refresh token was implemented.
+- Login function was implemented.
+- Page access was implemented depending on whether user is logged in or not.
