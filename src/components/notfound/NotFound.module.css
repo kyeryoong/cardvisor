@@ -5,24 +5,35 @@
     margin-top: 200px;
 }
 
+.fourZeroFourContainer {
+    width: 600px;
+    height: 200px;
+    display: block;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
+
 .four {
+    height: 200px;
     color: rgb(0, 200, 200);
-    font-size: 17rem;
+    font-size: 16rem;
     font-weight: 1000;
+    line-height: 170px;
 }
 
 .deadFace {
-    height: 210px;
+    height: 200px;
     border: 20px solid rgb(0, 200, 200);
-    border-radius: 105px;
+    border-radius: 100px;
 }
 
 .pageNotFound {
     color: rgb(0, 200, 200);
-    margin-top: -80px;
     font-family: 'Poppins', serif;
     font-size: 3rem;
     font-weight: 1000;
+    margin-top: 50px;
 }
 
 .text {

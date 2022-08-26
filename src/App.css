@@ -58,5 +58,6 @@ input {
 
 * {
     font-family: "Noto Sans KR", sans-serif;
+    font-weight: 1000;
     transition: 0.5s;
 }

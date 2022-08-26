@@ -38,6 +38,7 @@
 .mainTitle {
     font-size: 4rem;
     font-family: 'Poppins';
+    font-weight: 500;
     color: rgb(0, 200, 200);
     text-align: left;
     margin-left: 50px;
@@ -55,9 +56,8 @@
 
 .inputZone input {
     text-align: center;
-    width: 600px;
+    width: 400px;
     height: 60px;
-    font-family: 'Poppins';
     font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
@@ -71,16 +71,11 @@
 
 .inputZone input:focus {
     outline: none;
-    font-family: 'Poppins';
 }
 
 .inputZone input::placeholder {
     font-size: 1.5rem;
-    font-weight: 100;
     color: rgb(200, 200, 200);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .registerButton {
@@ -173,13 +168,9 @@
         margin-left: 5vw;
     }
 
-    .inputZone input::placeholder {
-        font-size: 1.2rem;
-    }
-
     .registerButton {
         width: 80vw;
-        height: 50px;
+        height: 60px;
         font-size: 1.5rem;
         margin-top: 30px;
         margin-left: 5vw;

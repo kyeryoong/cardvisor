@@ -37,7 +37,7 @@ function Service1Results() {
                 setTimeout(() => {
                     setCards(data);
                     setLoading(false);
-                }, 1000)
+                }, 0)
             });
     }, []);
 

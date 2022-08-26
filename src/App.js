@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { useState } from 'react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -22,100 +23,29 @@ import NotFound from './components/notfound/NotFound';
 
 
 function App() {
+    const [isLogined, setIsLogined] = useState(window.localStorage.getItem("accessToken"));
+
+
+
     return (
         <div>
             <BrowserRouter>
+                <Header isLogined={isLogined} setIsLogined={setIsLogined}/>
+
                 <Routes>
-                    <Route exact path="/" element={
-                        <div>
-                            <Header logined={false} />
-                            <Home />
-                        </div>}
-                    />
-
-                    <Route exact path="/login" element={
-                        <div>
-                            <Header logined={false} />
-                            <Login />
-                        </div>}
-                    />
-
-                    <Route exact path="/register" element={
-                        <div>
-                            <Header logined={false} />
-                            <Register />
-                        </div>}
-                    />
-
-                    <Route exact path="/main" element={
-                        <div>
-                            <Header logined={true} />
-                            <Main />
-                        </div>}
-                    />
-
-                    <Route exact path="/service1" element={
-                        <div>
-                            <Header logined={true} />
-                            <Service1 />
-                        </div>}
-                    />
-
-                    <Route exact path="/service1/results" element={
-                        <div>
-                            <Header logined={true} />
-                            <Service1Results />
-                        </div>}
-                    />
-
-                    <Route exact path="/service1/results/more" element={
-                        <div>
-                            <Header logined={true} />
-                            <Service1ResultsMore />
-                        </div>}
-                    />
-
-                    <Route exact path="/service2" element={
-                        <div>
-                            <Header logined={true} />
-                            <Service2 />
-                        </div>}
-                    />
-
-                    <Route exact path="/service2/analysis" element={
-                        <div>
-                            <Header logined={true} />
-                            <Service2Analysis />
-                        </div>}
-                    />
-
-                    <Route exact path="/list" element={
-                        <div>
-                            <Header logined={true} />
-                            <List />
-                        </div>}
-                    />
-
-                    <Route exact path="/mypage" element={
-                        <div>
-                            <Header logined={true} />
-                            <MyPage />
-                        </div>}
-                    />
-
-                    <Route exact path="/cardinfo/:card_code" element={
-                        <div>
-                            <Header logined={true} />
-                            <CardInfo />
-                        </div>}
-                    />
-
-                    <Route path="*" element={
-                        <div>
-                            <Header logined={false} />
-                            <NotFound />
-                        </div>}
-                    />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={!isLogined && <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/register" element={!isLogined && <Register />} />
+                    <Route path="/main" element={isLogined ? <Main /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/service1" element={isLogined ? <Service1 /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/service1/results" element={isLogined ? <Service1Results /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/service1/results/more" element={isLogined ? <Service1ResultsMore /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/service2" element={isLogined ? <Service2 /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/service2/analysis" element={isLogined ? <Service2Analysis /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/list" element={isLogined ? <List /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/mypage" element={isLogined ? <MyPage /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="/cardinfo/:card_code" element={isLogined ? <CardInfo /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
+                    <Route path="*" element={isLogined && <NotFound />} />
                 </Routes>
             </BrowserRouter>
 

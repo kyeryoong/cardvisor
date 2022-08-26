@@ -40,7 +40,7 @@ function Service1ResultsMore() {
                 setTimeout(() => {
                     setCards(data);
                     setLoading(false);
-                }, 1000)
+                }, 0)
             });
     }, []);
 

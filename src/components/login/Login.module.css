@@ -38,6 +38,7 @@
 .mainTitle {
     font-size: 4rem;
     font-family: 'Poppins', serif;
+    font-weight: 500;
     color: rgb(0, 200, 200);
     text-align: left;
     margin-left: 50px;
@@ -74,11 +75,7 @@
 
 .inputZone input::placeholder {
     font-size: 1.5rem;
-    font-weight: 100;
     color: rgb(200, 200, 200);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .loginButton {
@@ -172,7 +169,7 @@
 
     .loginButton {
         width: 80vw;
-        height: 50px;
+        height: 60px;
         font-size: 1.5rem;
         margin-top: 40px;
         margin-left: 5vw;
