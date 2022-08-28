@@ -34,7 +34,9 @@ function Header({ isLogined, setIsLogined }) {
 
                     &&
 
-                    <div className={styles.button1} onClick={() => { alert("준비중") }}>
+                    <div className={styles.button1} onClick={() => { 
+                        navigate("/mypage");
+                     }}>
                         내 정보
                     </div>
                 }

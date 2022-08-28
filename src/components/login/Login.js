@@ -34,18 +34,21 @@ function Login({ isLogined, setIsLogined }) {
             data: JSON.stringify(info),
         };
 
-        axios(option).then(({ data }) => {
+        axios(option).then(({ data }) => {          
             try {
                 localStorage.setItem("accessToken", data.access_token);
                 localStorage.setItem("refreshToken", data.refresh_token);
                 setIsLogined(true);
+                
                 return navigate("/main");
             } catch (error) {
-                alert(error);
+                console.log(error.response);
                 alert("아이디와 비밀번호를 확인해주세요");
 
                 return navigate("/login");
             }
+
+            console.log(data);
         });
     };
 
