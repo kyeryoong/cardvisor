@@ -90,6 +90,11 @@ function List() {
         }
     }
 
+
+
+
+
+
     return (
         <div>
             {loading ? (
@@ -100,9 +105,7 @@ function List() {
                         mainText="전체 카드 목록"
                         subText="모든 카드를 이곳에서 확인해보세요!"
                     />
-                    <br />
-                    <br />
-                    <br />
+                    <br /><br /><br />
 
                     {typeof cards.cardAll[indexOfFirst].id != "undefined" && (
                         <ListElement
@@ -419,9 +422,7 @@ function List() {
                             />
                         </button>
                     </div>
-                    <br />
-                    <br />
-                    <br />
+                    <br /><br /><br />
 
                     <div>
                         <button

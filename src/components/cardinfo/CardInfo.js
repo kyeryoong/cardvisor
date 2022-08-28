@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import { useEffect } from 'react';
+import axios from "axios";
 
 import styles from './CardInfo.module.css';
 
@@ -8,22 +9,41 @@ import styles from './CardInfo.module.css';
 
 function CardInfo() {
     let { card_code } = useParams();
-
-    const [cards, setCards] = useState({
-        cardAll: [{}],
+    const [loading, setLoading] = useState(true);
+    const [cardInfo, setCardInfo] = useState({
+        benefits:[{}],
+        fee:[{}],
+        category:[{}],
+        card:[{}],
     });
 
     const [like, setLike] = useState(false);
 
     useEffect(() => {
-        fetch("/cards")
-            .then((response) => {
-                return response.json();
-            })
-            .then(data => {
-                setCards(data);
-            });
+        getCardInfo();
     }, []);
+
+
+    const getCardInfo = () => {
+        const accessToken = localStorage.getItem("accessToken");
+
+        const option = {
+            method: "GET",
+            url: "/card/" + card_code,
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        };
+
+        axios(option).then(({ data }) => {
+            setTimeout(() => {
+                setCardInfo(data);
+                setLoading(false);
+            }, 500);
+        });
+    };
+
+    console.log(cardInfo)
 
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") { return numberOne + "% 청구 할인"; }

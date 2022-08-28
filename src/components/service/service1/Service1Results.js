@@ -54,26 +54,7 @@ function Service1Results() {
         });
     };
 
-    // useEffect(() => {
-    //     fetch("/benefit/select", {
-    //         method: "post",
-    //         headers: {
-    //             "Content-Type": "application/json; charset=UTF-8",
-    //             Authorization: `Bearer ${accessToken}`,
-    //         },
-    //         body: JSON.stringify(jsonArr),
-    //     })
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             setTimeout(() => {
-    //                 setCards(data);
-    //                 setLoading(false);
-    //                 jsonArr = [];
-    //             }, 1000);
-    //         });
-    // }, []);
+
 
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") {

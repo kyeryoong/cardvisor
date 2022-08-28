@@ -1,5 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import styles from "./Register.module.css";
 
@@ -89,6 +91,38 @@ function Register() {
 
 
 
+    
+    const handleClick = () => {
+        const option = {
+            method: "POST",
+            url: "/home/join",
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+            },
+            data: JSON.stringify({
+                nickname: info.id,
+                pw: info.pw,
+                gender: "female",
+                date: "1999/09/09"
+            }),
+        };
+
+        axios(option).then(({ data }) => {
+            
+
+
+            console.log(info);
+            console.log("SUCCESS");
+        })
+            .catch((error) => {
+                alert("failed");
+
+                return navigate("/login");
+            })
+    };
+
+
+
     return (
         <div className={styles.container}>
             <div className={styles.registerZone}>
@@ -132,15 +166,17 @@ function Register() {
                             </div>
 
                             <button type="submit" className={styles.registerButton} onClick={() => {
-                                if (checkID() && checkPW()) {
-                                    alert("Failed");
-                                    navigate("/login");
-                                }
+                                // if (checkID() && checkPW()) {
+                                //     alert("Failed");
+                                //     navigate("/login");
+                                // }
 
-                                else {
-                                    alert("Failed");
-                                    navigate("/login");
-                                }
+                                // else {
+                                //     alert("Failed");
+                                //     navigate("/login");
+                                // }
+
+                                handleClick();
                             }}>
                                 회원가입
                             </button>
