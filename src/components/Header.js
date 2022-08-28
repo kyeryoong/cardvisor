@@ -61,6 +61,15 @@ function Header({ isLogined, setIsLogined }) {
 
                     &&
 
+                    <div>
+                    </div>
+                }
+
+                {
+                    !isLogined
+
+                    &&
+
                     <div className={styles.button2} onClick={() => {
                         navigate("/login");
                     }}>

@@ -199,3 +199,7 @@
 - Security function with access and refresh token was implemented.
 - Login function was implemented.
 - Page access was implemented depending on whether user is logged in or not.
+
+### Ver. 1.4.0 (2022/08/28)
+- *MyPage* page was implemented.
+- Some minor changes in *Header* component.
