@@ -14,17 +14,16 @@ function Login({ isLogined, setIsLogined }) {
 
     function handleChange(event) {
         event.preventDefault();
-        setInfo((info) => {
-            const updated = {
-                ...info,
-                [event.target.name]: event.target.value,
-            };
-
-            return updated;
+        setInfo((prev) => {
+            return { ...prev, [event.target.name]: event.target.value }
         });
     }
 
-    const handleClick = () => {
+
+
+    const handleClick = (event) => {
+        event.preventDefault();
+
         const option = {
             method: "POST",
             url: "/login",
@@ -51,44 +50,54 @@ function Login({ isLogined, setIsLogined }) {
 
 
     return (
-        <div className={styles.container} onSubmit={(e) => e.preventDefault()}>
+        <div className={styles.container}>
             <div className={styles.loginZone}>
                 <div className={styles.loginZoneLeft}>
-                    <div className={styles.mainTitle}>LOGIN</div>
+                    사용자 소비 패턴 기반<br />
+                    카드 추천 서비스<br />
+
+                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} />
+                    <br />
+
+                    <img alt="home" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/14.png"} />
+                </div>
+
+
+
+                <div className={styles.loginZoneRight}>
+                    <div className={styles.mainTitle}>
+                        LOGIN
+                    </div>
 
                     <div className={styles.subTitle}>
                         Cardvisor에 오신것을 환영합니다!
                     </div>
 
-                    <form>
+                    <form onSubmit={handleClick}>
                         <div className={styles.inputZone}>
                             <input
                                 type="text"
-                                className={styles.inputBox}
                                 name="username"
                                 placeholder="아이디"
                                 onChange={handleChange}
                                 autoComplete="off"
-                                method="post"
+                                spellcheck="false"
                             />
                         </div>
 
                         <div className={styles.inputZone}>
                             <input
                                 type="password"
-                                className={styles.inputBox}
                                 name="password"
                                 placeholder="비밀번호"
                                 onChange={handleChange}
                                 autoComplete="off"
-                                method="post"
                             />
                         </div>
 
                         <button
                             type="submit"
                             className={styles.loginButton}
-                            onClick={() => { handleClick(); }}
                         >
                             로그인
                         </button>
@@ -117,10 +126,6 @@ function Login({ isLogined, setIsLogined }) {
                             비밀번호 찾기
                         </span>
                     </div>
-                </div>
-
-                <div className={styles.loginZoneRight}>
-                    {/* <LoginCarousel /> */}
                 </div>
             </div>
         </div>

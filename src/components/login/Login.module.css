@@ -1,38 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100vw;
-    background: linear-gradient(135deg, rgb(230, 255, 255) 40%, rgb(0,200,200) 100%);
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(0, 200, 200) 40%, rgb(50, 100, 200) 90%);
 }
 
 .loginZone {
-    margin-left: calc(50vw - 600px);
-    margin-right: calc(50vw - 600px);
-    margin-top: calc(50vh - 310px);
-    height: 700px;
-    width: 1200px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: calc(50vh - 400px);
+    width: 60vw;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 500px;
 }
 
 .loginZoneLeft {
-    height: 700px;
-    width: 500px;
-    float: left;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
+    width: calc(60vw - 500px);
+    height: 800px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 .loginZoneRight {
-    float: right;
-    background: linear-gradient(45deg, rgb(0, 120, 120) 0%, rgb(0, 240, 240) 80%);
-    height: 700px;
-    width: 700px;
-    border-radius: 0px 10px 10px 0px;
+    width: 500px;
+    height: 800px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
+    padding: 50px;
+}
+
+.titleLogo {
+    height: 300px;
+    filter: brightness(0) invert(1);
+}
+
+.graphic {
+    height: 300px;
+    float: right;
+    margin-right: 200px;
 }
 
 .mainTitle {
@@ -40,18 +51,13 @@
     font-family: 'Poppins', serif;
     font-weight: 500;
     color: rgb(0, 200, 200);
-    text-align: left;
-    margin-left: 50px;
-    margin-top: 30px;
     letter-spacing: -3px;
 }
 
 .subTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: rgb(160, 160, 160);
-    text-align: left;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .inputZone input {
@@ -65,7 +71,6 @@
     background-color: rgb(255, 255, 255);
     border: transparent;
     border-bottom: 2px solid rgb(0, 200, 200);
-    margin-left: 50px;
     margin-bottom: 10px;
 }
 
@@ -80,7 +85,6 @@
 
 .loginButton {
     width: 400px;
-    height: 70px;
     font-size: 2rem;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -89,7 +93,6 @@
     border-radius: 5px;
     padding: 10px;
     margin-top: 50px;
-    margin-left: 50px;
     cursor: pointer;
 }
 
@@ -121,67 +124,50 @@
 
 
 
-@media screen and (max-width: 1300px), (max-height: 900px) {
+@media screen and (max-width: 1200px) {
     .loginZone {
         margin-left: 5vw;
         margin-right: 5vw;
-        margin-top: calc(5vw + 80px);
-        margin-bottom: calc(5vw);
+        margin-top: calc(5vh + 40px);
         width: 90vw;
-        height: calc(100vh - 10vw - 80px);
-        border-radius: 0px;
+        height: 90vh;
+        display: block;
     }
 
     .loginZoneLeft {
-        background-color: rgb(255, 255, 255);
-        width: 90vw;
-        height: calc(100vh - 10vw - 80px);
-        border-radius: 10px;
+        display: none;
     }
 
     .loginZoneRight {
-        background: transparent;
-        width: 0px;
-        height: 0px;
-        border-radius: 0px;
+        width: 90vw;
+        height: 90vh;
+        padding: 5vw;
     }
 
     .mainTitle {
-        text-align: left;
         font-size: 3rem;
-        margin-left: 5vw;
-        margin-top: 5vh;
+        margin-top: 20px;
     }
 
     .subTitle {
-        text-align: left;
         font-size: 1rem;
-        margin-left: 5vw;
-        margin-bottom: 20px;
     }
 
     .inputZone input {
         width: 80vw;
-        height: 50px;
-        font-size: 2rem;
-        margin-left: 5vw;
     }
 
     .loginButton {
-        width: 80vw;
-        height: 60px;
+        width: 80vw;;
         font-size: 1.5rem;
-        margin-top: 40px;
-        margin-left: 5vw;
+        margin-top: 25px;
     }
 
     .registerZone {
-        font-size: 1rem;
-        margin-left: 0vw;
+        font-size: 0.85rem;
     }
 
     .findPasswordZone {
-        font-size: 1rem;
-        margin-left: 0vw;
-    }    
+        font-size: 0.85rem;
+    }
 }

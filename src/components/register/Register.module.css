@@ -1,71 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100vw;
-    background: linear-gradient(135deg, rgb(230, 255, 255) 40%, rgb(0,200,200) 100%);
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(0, 200, 200) 40%, rgb(50, 100, 200) 90%);
 }
 
 .registerZone {
-    margin-left: calc(50vw - 600px);
-    margin-right: calc(50vw - 600px);
-    margin-top: calc(50vh - 310px);
-    height: 700px;
-    width: 1200px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: calc(50vh - 400px);
+    width: 60vw;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 500px;
 }
 
 .registerZoneLeft {
-    float: left;
-    background: linear-gradient(45deg, rgb(0, 120, 120) 0%, rgb(0, 240, 240) 80%);
-    height: 700px;
-    width: 500px;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
+    width: calc(60vw - 500px);
+    height: 800px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 .registerZoneRight {
-    height: 700px;
-    width: 700px;
-    float: right;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px 10px 10px 0px;
+    width: 500px;
+    height: 800px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
+    padding: 50px;
+}
+
+.titleLogo {
+    height: 300px;
+    filter: brightness(0) invert(1);
+}
+
+.graphic {
+    height: 300px;
+    float: right;
+    margin-right: 200px;
 }
 
 .mainTitle {
     font-size: 4rem;
-    font-family: 'Poppins';
+    font-family: 'Poppins', serif;
     font-weight: 500;
     color: rgb(0, 200, 200);
-    text-align: left;
-    margin-left: 50px;
-    margin-top: 30px;
     letter-spacing: -3px;
 }
 
 .subTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: rgb(160, 160, 160);
-    text-align: left;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .inputZone input {
     text-align: center;
-    width: 600px;
-    height: 60px;
-    font-size: 2rem;
+    width: 400px;
+    height: 50px;
+    font-size: 1.8rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: left;
     background-color: rgb(255, 255, 255);
     border: transparent;
     border-bottom: 2px solid rgb(0, 200, 200);
-    margin-left: 50px;
     margin-bottom: 10px;
 }
 
@@ -78,120 +83,187 @@
     color: rgb(200, 200, 200);
 }
 
+.infoType {
+    display: inline-block;
+    width: 100px;
+    font-size: 1.2rem;
+}
+
+.genderButtonOn {
+    width: 150px;
+    height: 50px;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 2px solid rgb(0, 200, 200);
+    color: rgb(0, 200, 200);
+    background-color: rgb(255, 255, 255);
+}
+
+.genderButtonOff {
+    width: 150px;
+    height: 50px;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    background-color: rgb(255, 255, 255);
+}
+
+.birthInputZone input {
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    font-size: 1.8rem;
+    font-weight: 1000;
+    color: rgb(0, 200, 200);
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border: transparent;
+    border-bottom: 2px solid rgb(0, 200, 200);
+    margin-bottom: 10px;
+}
+
+.birthInputZone input:focus {
+    outline: none;
+}
+
 .registerButton {
-    width: 600px;
-    height: 70px;
+    width: 400px;
     font-size: 2rem;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgb(250, 150, 0);
     border: none;
     border-radius: 5px;
-    margin-top: 40px;
-    margin-left: 50px;
+    padding: 10px;
+    margin-top: 50px;
     cursor: pointer;
 }
 
-.registerCancelButton {
-    display: block;
-    margin: 0px auto;
-    width: 200px;
-    height: 50px;
-    font-size: 1.5rem;
+.registerButton:disabled {
+    width: 400px;
+    font-size: 2rem;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgb(160, 160, 160);
     border: none;
     border-radius: 5px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.registerCancelButton {
+    font-size: 1.2rem;
+    color: rgb(160, 160, 160);
+    text-align: center;
+    margin-top: 20px;
     cursor: pointer;
 }
 
-.checkedIDZone {
-    font-size: 1.3rem;
-    font-weight: 1000;
-    color: rgb(255, 100, 100);
-    margin-left: 50px;
+.offscreen {
+    position: absolute;
+    left: -9999px;
 }
 
-.checkedPWZone {
-    font-size: 1.3rem;
-    font-weight: 1000;
-    color: rgb(255, 100, 100);
-    margin-left: 50px;
+.hide {
+    display: none;
+}
+
+.iconValid {
+    color: limegreen;
+    margin-right: 0.25rem;
+}
+
+.iconInvalid {
+    color: red;
+    margin-right: 0.25rem;
+}
+
+.line {
+    display: inline-block;
 }
 
 
 
-@media screen and (max-width: 1300px), (max-height: 900px) {
+@media screen and (max-width: 1200px) {
     .registerZone {
         margin-left: 5vw;
         margin-right: 5vw;
-        margin-top: calc(5vw + 80px);
-        margin-bottom: calc(5vw);
+        margin-top: calc(5vh + 40px);
         width: 90vw;
-        height: calc(100vh - 10vw - 80px);
-        border-radius: 0px;
+        height: 90vh;
+        display: block;
     }
 
     .registerZoneLeft {
-        background: transparent;
-        width: 0px;
-        height: 0px;
-        border-radius: 0px;
+        display: none;
     }
 
     .registerZoneRight {
-        background-color: rgb(255, 255, 255);
         width: 90vw;
-        height: calc(100vh - 10vw - 80px);
-        border-radius: 10px;
+        height: 90vh;
+        padding: 5vw;
     }
 
     .mainTitle {
-        text-align: left;
         font-size: 3rem;
-        margin-left: 5vw;
-        margin-top: 5vh;
+        margin-top: 20px;
     }
 
     .subTitle {
-        text-align: left;
-        font-size: 0.8rem;
-        margin-left: 5vw;
-        margin-bottom: 20px;
+        font-size: 0.9rem;
     }
 
     .inputZone input {
         width: 80vw;
         height: 50px;
-        font-size: 2rem;
-        margin-left: 5vw;
+        font-size: 1.2rem;
+    }
+
+    .inputZone input::placeholder {
+        font-size: 1.2rem;
+    }
+
+    .loginButton {
+        width: 80vw;
+    }
+
+    .genderButtonOn {
+        width: calc(40vw - 50px);
+        font-size: 1.2rem;
+    }
+
+    .genderButtonOff {
+        width: calc(40vw - 50px);
+        font-size: 1.2rem;
+    }
+
+    .birthInputZone input {
+        width: calc(80vw - 100px);
+        font-size: 1.2rem;
+    }
+
+    .registerZone {
+        font-size: 1rem;
+    }
+
+    .findPasswordZone {
+        font-size: 1rem;
     }
 
     .registerButton {
         width: 80vw;
-        height: 60px;
         font-size: 1.5rem;
-        margin-top: 30px;
-        margin-left: 5vw;
+        margin-top: 15px;
     }
 
-    .registerCancelButton {
-        height: 40px;
-        font-size: 1.1rem;
-        margin-top: -10px;
+    .registerButton:disabled {
+        width: 80vw;
+        font-size: 1.5rem;
+        margin-top: 15px;
     }
 
-    .checkedIDZone {
-        font-size: 1rem;
-        margin-left: 5vw;
-        margin-top: 0px;
-        margin-bottom: 10px;
-    }
-
-    .checkedPWZone {
-        font-size: 1rem;
-        margin-left: 5vw;
-        margin-top: 0px;
+    .instructions {
+        font-size: 0.8rem;
     }
 }

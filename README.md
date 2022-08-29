@@ -200,6 +200,10 @@
 - Login function was implemented.
 - Page access was implemented depending on whether user is logged in or not.
 
-### Ver. 1.4.0 (2022/08/28)
+### Ver. 1.3.10 (2022/08/28)
 - *MyPage* page was implemented.
 - Some minor changes in *Header* component.
+
+### Ver. 1.3.11 (2022/08/29)
+- Security functiion was implemented in *Login* and *Register* page.
+- Some design changes in *Login* and *Register* page.
