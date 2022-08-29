@@ -1,6 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 
 import styles from "./Register.module.css";
@@ -10,9 +12,6 @@ import styles from "./Register.module.css";
 function Register() {
     const navigate = useNavigate();
 
-    const [checkedID, setCheckedID] = useState("아이디를 입력하세요.");
-    const [checkedPW, setCheckedPW] = useState("비밀번호를 입력하세요.");
-
     const [info, setInfo] = useState({
         id: "",
         pw: "",
@@ -21,7 +20,7 @@ function Register() {
 
 
 
-    function handleChangeID(event) {
+    function handleChange(event) {
         event.preventDefault();
 
         setInfo(info => {
@@ -36,66 +35,10 @@ function Register() {
 
 
 
-    function handleChangePW(event) {
-        event.preventDefault();
-
-        setInfo(info => {
-            const updated = {
-                ...info,
-                [event.target.name]: event.target.value
-            };
-
-            return updated;
-        });
-    };
-
-
-
-    function checkID() {
-        if (info.id.length > 4) {
-            return true;
-        }
-
-        else {
-            setCheckedID("아이디가 너무 짧습니다.");
-            return false;
-        }
-    }
-
-
-
-    function checkPW() {
-        if (info.pw === info.pwcheck) {
-            if (info.pw.length > 7) {
-                return true;
-            }
-
-            else {
-                setCheckedPW("비밀번호가 너무 짧습니다.");
-                return false;
-            }
-        }
-
-        else {
-            if (info.pw.length > 7) {
-                setCheckedPW("비밀번호가 일치하지 않습니다.");
-                return false;
-            }
-
-            else {
-                setCheckedPW("비밀번호가 너무 짧습니다.");
-                return false;
-            }
-        }
-    }
-
-
-
-    
     const handleClick = () => {
         const option = {
             method: "POST",
-            url: "/home/join",
+            url: "/register",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },
@@ -108,11 +51,9 @@ function Register() {
         };
 
         axios(option).then(({ data }) => {
+            alert("회원가입이 완료되었습니다.")
             
-
-
-            console.log(info);
-            console.log("SUCCESS");
+            return navigate("/login");
         })
             .catch((error) => {
                 alert("failed");
@@ -146,38 +87,39 @@ function Register() {
 
                         <form>
                             <div className={styles.inputZone}>
-                                <input type="text" className={styles.inputBox} name="id" placeholder="아이디" onChange={handleChangeID} autoComplete="off" method="post" />
-                            </div>
-
-                            <div className={styles.checkedIDZone}>
-                                {checkedID}
+                                <input 
+                                    type="text"
+                                    className={styles.inputBox}
+                                    name="id" 
+                                    placeholder="아이디" 
+                                    onChange={handleChange} 
+                                    autoComplete="off" 
+                                />
                             </div>
 
                             <div className={styles.inputZone}>
-                                <input type="password" className={styles.inputBox} name="pw" placeholder="비밀번호" onChange={handleChangePW} autoComplete="off" method="post" />
+                                <input 
+                                    type="password" 
+                                    className={styles.inputBox} 
+                                    name="pw" 
+                                    placeholder="비밀번호" 
+                                    onChange={handleChange} 
+                                    autoComplete="off" 
+                                />
                             </div>
 
                             <div className={styles.inputZone}>
-                                <input type="password" className={styles.inputBox} name="pwcheck" placeholder="비밀번호 확인" onChange={handleChangePW} autoComplete="off" method="post" />
+                                <input
+                                    type="password"
+                                    className={styles.inputBox}
+                                    name="pwcheck"
+                                    placeholder="비밀번호 확인"
+                                    onChange={handleChange}
+                                    autoComplete="off"
+                                />
                             </div>
 
-                            <div className={styles.checkedPWZone}>
-                                {checkedPW}
-                            </div>
-
-                            <button type="submit" className={styles.registerButton} onClick={() => {
-                                // if (checkID() && checkPW()) {
-                                //     alert("Failed");
-                                //     navigate("/login");
-                                // }
-
-                                // else {
-                                //     alert("Failed");
-                                //     navigate("/login");
-                                // }
-
-                                handleClick();
-                            }}>
+                            <button type="submit" className={styles.registerButton} onClick={handleClick}>
                                 회원가입
                             </button>
                         </form>
