@@ -12,23 +12,23 @@
 .registerZone {
     margin-left: 20vw;
     margin-right: 20vw;
-    margin-top: calc(50vh - 400px);
+    margin-top: calc(50vh - 270px);
     width: 60vw;
-    height: 800px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr 500px;
 }
 
 .registerZoneLeft {
     width: calc(60vw - 500px);
-    height: 800px;
+    height: 600px;
     font-size: 2rem;
     color: rgb(255, 255, 255);
 }
 
 .registerZoneRight {
     width: 500px;
-    height: 800px;
+    height: 600px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
@@ -36,7 +36,7 @@
 }
 
 .titleLogo {
-    height: 300px;
+    height: 200px;
     filter: brightness(0) invert(1);
 }
 
@@ -47,31 +47,33 @@
 }
 
 .mainTitle {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Poppins', serif;
     font-weight: 500;
     color: rgb(0, 200, 200);
     letter-spacing: -3px;
+    margin-top: -10px;
 }
 
 .subTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgb(160, 160, 160);
-    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 15px;
 }
 
 .inputZone input {
     text-align: center;
     width: 400px;
-    height: 50px;
-    font-size: 1.8rem;
+    height: 40px;
+    font-size: 1.5rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: left;
     background-color: rgb(255, 255, 255);
     border: transparent;
     border-bottom: 2px solid rgb(0, 200, 200);
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .inputZone input:focus {
@@ -79,7 +81,7 @@
 }
 
 .inputZone input::placeholder {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: rgb(200, 200, 200);
 }
 
@@ -91,8 +93,8 @@
 
 .genderButtonOn {
     width: 150px;
-    height: 50px;
-    font-size: 1.6rem;
+    height: 40px;
+    font-size: 1.5rem;
     border: none;
     border-bottom: 2px solid rgb(0, 200, 200);
     color: rgb(0, 200, 200);
@@ -101,8 +103,8 @@
 
 .genderButtonOff {
     width: 150px;
-    height: 50px;
-    font-size: 1.6rem;
+    height: 40px;
+    font-size: 1.5rem;
     border: none;
     border-bottom: 2px solid rgb(200, 200, 200);
     color: rgb(200, 200, 200);
@@ -112,8 +114,8 @@
 .birthInputZone input {
     text-align: center;
     width: 300px;
-    height: 50px;
-    font-size: 1.8rem;
+    height: 40px;
+    font-size: 1.5rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: left;
@@ -129,35 +131,40 @@
 
 .registerButton {
     width: 400px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgb(250, 150, 0);
     border: none;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
 .registerButton:disabled {
     width: 400px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgb(160, 160, 160);
     border: none;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
+    cursor: auto;
 }
 
 .registerCancelButton {
     font-size: 1.2rem;
     color: rgb(160, 160, 160);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
+}
+
+.messageInvalid {
+    font-size: 0.9rem;
 }
 
 .offscreen {

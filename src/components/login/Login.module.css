@@ -12,23 +12,23 @@
 .loginZone {
     margin-left: 20vw;
     margin-right: 20vw;
-    margin-top: calc(50vh - 400px);
+    margin-top: calc(50vh - 270px);
     width: 60vw;
-    height: 800px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr 500px;
 }
 
 .loginZoneLeft {
     width: calc(60vw - 500px);
-    height: 800px;
+    height: 600px;
     font-size: 2rem;
     color: rgb(255, 255, 255);
 }
 
 .loginZoneRight {
     width: 500px;
-    height: 800px;
+    height: 600px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
@@ -36,7 +36,7 @@
 }
 
 .titleLogo {
-    height: 300px;
+    height: 200px;
     filter: brightness(0) invert(1);
 }
 
@@ -47,16 +47,18 @@
 }
 
 .mainTitle {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Poppins', serif;
     font-weight: 500;
     color: rgb(0, 200, 200);
     letter-spacing: -3px;
+    margin-top: -10px;
 }
 
 .subTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgb(160, 160, 160);
+    margin-top: -10px;
     margin-bottom: 20px;
 }
 
@@ -85,7 +87,7 @@
 
 .loginButton {
     width: 400px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: rgb(250, 150, 0);
@@ -99,7 +101,7 @@
 .registerZone {
     font-size: 1.3rem;
     color: rgb(160, 160, 160);
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -112,7 +114,6 @@
 .findPasswordZone {
     font-size: 1.3rem;
     color: rgb(160, 160, 160);
-    margin-top: 10px;
     text-align: center;
 }
 

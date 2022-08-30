@@ -22,7 +22,6 @@ function Register() {
     const navigate = useNavigate();
 
     const userRef = useRef();
-    const errRef = useRef();
 
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
@@ -138,10 +137,6 @@ function Register() {
                     </div>
 
                     <section>
-                        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-
-
-
                         <form onSubmit={handleClick}>
                             <div className={styles.inputZone}>
                                 <input
@@ -173,7 +168,7 @@ function Register() {
 
                                 &&
 
-                                <span>
+                                <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
                                     아이디는 최소 6자리여야 합니다.
                                 </span>
@@ -184,7 +179,7 @@ function Register() {
 
                                 &&
 
-                                <span>
+                                <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faCheck} className={styles.iconValid} />
                                     사용 가능한 아이디입니다.
                                 </span>
@@ -219,7 +214,7 @@ function Register() {
 
                                 &&
 
-                                <span>
+                                <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
                                     비밀번호는 알파벳, 숫자, 특수기호가 포함되어야 합니다.
                                 </span>
@@ -230,7 +225,7 @@ function Register() {
 
                                 &&
 
-                                <span>
+                                <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faCheck} className={styles.iconValid} />
                                     사용 가능한 비밀번호 입니다.
                                 </span>
@@ -267,7 +262,7 @@ function Register() {
 
                                 &&
 
-                                <span>
+                                <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
                                     비밀번호가 일치하지 않습니다.<br />
                                 </span>
@@ -278,7 +273,7 @@ function Register() {
 
                                 &&
 
-                                <span>
+                                <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faCheck} className={styles.iconValid} />
                                     비밀번호가 일치합니다.<br />
                                 </span>
