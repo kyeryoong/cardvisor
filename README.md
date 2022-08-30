@@ -205,5 +205,9 @@
 - Some minor changes in *Header* component.
 
 ### Ver. 1.3.11 (2022/08/29)
-- Security functiion was implemented in *Login* and *Register* page.
+- Security function was implemented in *Login* and *Register* page.
 - Some design changes in *Login* and *Register* page.
+
+### Ver. 1.3.12 (2022/08/30)
+- Some function was implemented in*CardInfo* page.
+- *Login* and *Register* page was changed.

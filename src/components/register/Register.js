@@ -68,6 +68,37 @@ function Register() {
 
 
 
+    const handleDuplicate = async (event) => {
+        event.preventDefault();
+
+        try {
+            const response = await axios.get(
+                "http://localhost:8080/duplicate",
+                JSON.stringify(user),
+                {
+                    headers: { "Content-Type": "application/json" }
+                }
+            )
+            console.log(response.data);
+        } catch (error) {
+            if (!error?.response) {
+                alert("No Server Response");
+            }
+
+            else if (error.response?.status === 400) {
+                alert("이미 사용중인 아이디입니다.");
+            }
+
+            else {
+                alert("서버 오류.");
+            }
+
+            console.log(error)
+        }
+    }
+
+
+
     const handleClick = async (event) => {
         event.preventDefault();
 
@@ -92,22 +123,29 @@ function Register() {
             }),
         };
 
-        axios(option).then(({ data }) => {
-            setSuccess(true);
-            //clear state and controlled inputs
-            //need value attrib on inputs for this
-            setUser('');
-            setPwd('');
-            setMatchPwd('');
+        axios(option)
+            .then(({ data }) => {
+                setSuccess(true);
+                setUser("");
+                setPwd("");
+                setMatchPwd("");
 
-            alert("회원가입이 완료되었습니다.")
-
-            return navigate("/login");
-        })
-            .catch((error) => {
-                alert("회원가입에 실패했습니다.");
+                alert("회원가입이 완료되었습니다.")
 
                 return navigate("/login");
+            })
+            .catch((error) => {
+                if (!error?.response) {
+                    alert("서버 응답 없음");
+                }
+
+                else if (error.response?.status === 400) {
+                    alert("이미 사용중인 아이디입니다.");
+                }
+
+                else {
+                    alert("서버 오류.");
+                }
             })
     };
 
@@ -121,6 +159,7 @@ function Register() {
                     카드 추천 서비스<br />
 
                     <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} />
+                    <br />
 
                     <img alt="home" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/14.png"} />
                 </div>
@@ -138,22 +177,30 @@ function Register() {
 
                     <section>
                         <form onSubmit={handleClick}>
-                            <div className={styles.inputZone}>
+                            <div>
+                            <input
+                                type="text"
+                                id="username"
+                                ref={userRef}
+                                autoComplete="off"
+                                onChange={(e) => setUser(e.target.value)}
+                                value={user}
+                                required
+                                aria-invalid={validName ? "false" : "true"}
+                                aria-describedby="uidnote"
+                                onFocus={() => setUserFocus(true)}
+                                onBlur={() => setUserFocus(false)}
+                                className={styles.inputIDZone}
+                                placeholder="아이디"
+                                spellCheck="false"
+                            />
+
+
                                 <input
-                                    type="text"
-                                    id="username"
-                                    ref={userRef}
-                                    autoComplete="off"
-                                    onChange={(e) => setUser(e.target.value)}
-                                    value={user}
-                                    required
-                                    aria-invalid={validName ? "false" : "true"}
-                                    aria-describedby="uidnote"
-                                    onFocus={() => setUserFocus(true)}
-                                    onBlur={() => setUserFocus(false)}
-                                    className={styles.inputZone}
-                                    placeholder="아이디"
-                                    spellcheck="false"
+                                    type="button"
+                                    onClick={handleDuplicate}
+                                    className={styles.checkIDButton}
+                                    value="중복 확인"
                                 />
                             </div>
 
@@ -187,21 +234,19 @@ function Register() {
 
 
 
-                            <div className={styles.inputZone}>
-                                <input
-                                    type="password"
-                                    id="password"
-                                    onChange={(e) => setPwd(e.target.value)}
-                                    value={pwd}
-                                    required
-                                    aria-invalid={validPwd ? "false" : "true"}
-                                    aria-describedby="pwdnote"
-                                    onFocus={() => setPwdFocus(true)}
-                                    onBlur={() => setPwdFocus(false)}
-                                    className={styles.inputZone}
-                                    placeholder="비밀번호"
-                                />
-                            </div>
+                            <input
+                                type="password"
+                                id="password"
+                                onChange={(e) => setPwd(e.target.value)}
+                                value={pwd}
+                                required
+                                aria-invalid={validPwd ? "false" : "true"}
+                                aria-describedby="pwdnote"
+                                onFocus={() => setPwdFocus(true)}
+                                onBlur={() => setPwdFocus(false)}
+                                className={styles.inputPWZone}
+                                placeholder="비밀번호"
+                            />
 
                             {
                                 !pwd &&
@@ -216,7 +261,7 @@ function Register() {
 
                                 <span className={styles.messageInvalid}>
                                     <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
-                                    비밀번호는 알파벳, 숫자, 특수기호가 포함되어야 합니다.
+                                    알파벳, 숫자, 특수기호가 포함되어야 합니다.
                                 </span>
                             }
 
@@ -233,21 +278,19 @@ function Register() {
 
 
 
-                            <div className={styles.inputZone}>
-                                <input
-                                    type="password"
-                                    id="confirm_pwd"
-                                    onChange={(e) => setMatchPwd(e.target.value)}
-                                    value={matchPwd}
-                                    required
-                                    aria-invalid={validMatch ? "false" : "true"}
-                                    aria-describedby="confirmnote"
-                                    onFocus={() => setMatchFocus(true)}
-                                    onBlur={() => setMatchFocus(false)}
-                                    className={styles.inputZone}
-                                    placeholder="비밀번호 확인"
-                                />
-                            </div>
+                            <input
+                                type="password"
+                                id="confirm_pwd"
+                                onChange={(e) => setMatchPwd(e.target.value)}
+                                value={matchPwd}
+                                required
+                                aria-invalid={validMatch ? "false" : "true"}
+                                aria-describedby="confirmnote"
+                                onFocus={() => setMatchFocus(true)}
+                                onBlur={() => setMatchFocus(false)}
+                                className={styles.inputPWZone}
+                                placeholder="비밀번호 확인"
+                            />
 
                             {
                                 !matchPwd
@@ -300,23 +343,23 @@ function Register() {
                             </span>
 
                             <span className={styles.birthInputZone}>
-                                <input type="date" value={birth} onChange={(event) => setBirth(event.target.value)} required/>
+                                <input type="date" value={birth} onChange={(event) => setBirth(event.target.value)} required />
                             </span>
 
 
 
-                            <button 
+                            <button
                                 disabled={!validName || !validPwd || !validMatch || !birth ? true : false}
                                 className={styles.registerButton}>
-                                    회원가입
+                                회원가입
                             </button>
 
-                            <div 
-                                className={styles.registerCancelButton} 
+                            <div
+                                className={styles.registerCancelButton}
                                 onClick={() => {
                                     navigate("/login");
                                 }}>
-                            회원가입 취소
+                                회원가입 취소
                             </div>
                         </form>
                     </section>

@@ -43,8 +43,6 @@ function CardInfo() {
         });
     };
 
-    console.log(cardInfo)
-
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") { return numberOne + "% 청구 할인"; }
         else if (type === "PID") { return numberOne + "% 즉시 할인"; }
@@ -73,19 +71,19 @@ function CardInfo() {
         else if (type === "hybrid\r" || type === "hybrid") { return "하이브리드 카드" }
     }
 
-    function PaySystemElements({ paySystemKor, paySystemEng, paySystemFee }) {
+    function FeeElements({ nameKor, nameEng, fee }) {
         return (
             <div className={styles.paySystemElements}>
                 <img className={styles.paySystemImage}
-                    alt={paySystemEng}
-                    src={process.env.PUBLIC_URL + "/images/paysystem_logo/left_aligned/" + paySystemEng + ".png"} />
+                    alt={nameEng}
+                    src={process.env.PUBLIC_URL + "/images/fee_logo/left_aligned/" + nameEng + ".png"} />
 
                 <label className={styles.paySystemName}>
-                    {paySystemKor}
+                    {nameKor}
                 </label>
 
                 <label className={styles.paySystemFee}>
-                    {paySystemFee}원
+                    {fee}원
                 </label>
             </div>
         )
@@ -109,6 +107,11 @@ function CardInfo() {
             </div>
         )
     }
+    
+
+    console.log(cardInfo.fee[0])
+    console.log(cardInfo.fee[1])
+    
 
     return (
         <div>
@@ -120,15 +123,15 @@ function CardInfo() {
                         src={process.env.PUBLIC_URL + "/images/card_images/" + card_code + ".png"} />
 
                     <div className={styles.cardName}>
-                        {card_code}
+                        {cardInfo.card[0].name}
                     </div>
 
                     <div className={styles.cardType}>
-                        신용카드 &nbsp; │
+                        {typeParser(cardInfo.card[0].type)} &nbsp; │
                         <img
                             className={styles.cardCompanyImage}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/kb.png"} />
+                            src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cardInfo.card[0].company_eng + ".png"} />
                         <br /><br />
                     </div>
                 </div>
@@ -140,11 +143,11 @@ function CardInfo() {
                 </div>
 
                 <div className={styles.paySystemZone}>
-                    <PaySystemElements paySystemKor="마스터카드" paySystemEng="ma" paySystemFee="20000" />
-                    <PaySystemElements paySystemKor="마스터카드" paySystemEng="ma" paySystemFee="20000" />
-                    <PaySystemElements paySystemKor="마스터카드" paySystemEng="ma" paySystemFee="20000" />
-                    <PaySystemElements paySystemKor="마스터카드" paySystemEng="ma" paySystemFee="20000" />
-                    <PaySystemElements paySystemKor="마스터카드" paySystemEng="ma" paySystemFee="20000" />
+                    {
+                        cardInfo.fee.map(current =>
+                            <FeeElements paySystemKor={current.provider} paySystemEng={current.provider} paySystemFee={current.pay} />
+                        )
+                    }
                 </div>
 
 

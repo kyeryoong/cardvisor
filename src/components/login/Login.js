@@ -42,6 +42,7 @@ function Login({ isLogined, setIsLogined }) {
         })
             .catch((error) => {
                 alert("아이디와 비밀번호를 확인해주세요");
+                console.log(error);
 
                 return navigate("/login");
             })
@@ -55,7 +56,7 @@ function Login({ isLogined, setIsLogined }) {
                 <div className={styles.loginZoneLeft}>
                     사용자 소비 패턴 기반<br />
                     카드 추천 서비스<br />
-
+                    
                     <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} />
                     <br />
 
@@ -81,7 +82,7 @@ function Login({ isLogined, setIsLogined }) {
                                 placeholder="아이디"
                                 onChange={handleChange}
                                 autoComplete="off"
-                                spellcheck="false"
+                                spellCheck="false"
                             />
                         </div>
 
