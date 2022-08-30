@@ -26,7 +26,7 @@ function Login({ isLogined, setIsLogined }) {
 
         const option = {
             method: "POST",
-            url: "/login",
+            url: "http://localhost:8080/login",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },
@@ -56,7 +56,7 @@ function Login({ isLogined, setIsLogined }) {
                 <div className={styles.loginZoneLeft}>
                     사용자 소비 패턴 기반<br />
                     카드 추천 서비스<br />
-                    
+
                     <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} />
                     <br />
 
@@ -75,26 +75,24 @@ function Login({ isLogined, setIsLogined }) {
                     </div>
 
                     <form onSubmit={handleClick}>
-                        <div className={styles.inputZone}>
-                            <input
-                                type="text"
-                                name="username"
-                                placeholder="아이디"
-                                onChange={handleChange}
-                                autoComplete="off"
-                                spellCheck="false"
-                            />
-                        </div>
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="아이디"
+                            onChange={handleChange}
+                            autoComplete="off"
+                            spellCheck="false"
+                            className={styles.inputIDZone}
+                        />
 
-                        <div className={styles.inputZone}>
-                            <input
-                                type="password"
-                                name="password"
-                                placeholder="비밀번호"
-                                onChange={handleChange}
-                                autoComplete="off"
-                            />
-                        </div>
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="비밀번호"
+                            onChange={handleChange}
+                            autoComplete="off"
+                            className={styles.inputPWZone}
+                        />
 
                         <button
                             type="submit"

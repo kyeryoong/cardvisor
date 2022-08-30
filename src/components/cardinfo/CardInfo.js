@@ -29,7 +29,7 @@ function CardInfo() {
 
         const option = {
             method: "GET",
-            url: "/card/" + card_code,
+            url: "http://localhost:8080/card/" + card_code,
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
@@ -44,25 +44,25 @@ function CardInfo() {
     };
 
     function benefitParser(type, numberOne, numberTwo) {
-        if (type === "PBD") { return numberOne + "% 청구 할인"; }
-        else if (type === "PID") { return numberOne + "% 즉시 할인"; }
-        else if (type === "PND") { return numberOne + "% 할인"; }
-        else if (type === "PCB") { return numberOne + "% 캐시백"; }
-        else if (type === "PGP") { return numberOne + "% 포인트/마일리지 적립"; }
-        else if (type === "WBD") { return numberOne + "원 청구 할인"; }
-        else if (type === "WID") { return numberOne + "원 즉시 할인"; }
-        else if (type === "WND") { return numberOne + "원 할인"; }
-        else if (type === "WCB") { return numberOne + "원 캐시백"; }
-        else if (type === "FGP") { return numberOne + "원당" + numberTwo + "포인트/마일리지 적립"; }
-        else if (type === "FBD") { return numberOne + "원당" + numberTwo + "원 청구 할인"; }
-        else if (type === "FID") { return numberOne + "원당" + numberTwo + "원 즉시 할인"; }
-        else if (type === "FND") { return numberOne + "원당" + numberTwo + "원 할인"; }
-        else if (type === "NGP") { return numberOne + "포인트/마일리지 적립"; }
-        else if (type === "LBD") { return "1리터당" + numberOne + "원 청구 할인"; }
-        else if (type === "LID") { return "1리터당" + numberOne + "원 즉시 할인"; }
-        else if (type === "LND") { return "1리터당" + numberOne + "원 할인"; }
-        else if (type === "LGP") { return "1리터당" + numberOne + "포인트/마일리지 적립"; }
-        else if (type === "LCB") { return "1리터당" + numberOne + "원 캐시백"; }
+        if (type === "PBD") { return numberOne + "% 청구 할인" }
+        else if (type === "PID") { return numberOne + "% 즉시 할인" }
+        else if (type === "PND") { return numberOne + "% 할인" }
+        else if (type === "PCB") { return numberOne + "% 캐시백" }
+        else if (type === "PGP") { return numberOne + "% 포인트/마일리지 적립" }
+        else if (type === "WBD") { return numberOne + "원 청구 할인" }
+        else if (type === "WID") { return numberOne + "원 즉시 할인" }
+        else if (type === "WND") { return numberOne + "원 할인" }
+        else if (type === "WCB") { return numberOne + "원 캐시백" }
+        else if (type === "FGP") { return numberOne + "원당 " + numberTwo + "포인트/마일리지 적립" }
+        else if (type === "FBD") { return numberOne + "원당 " + numberTwo + "원 청구 할인" }
+        else if (type === "FID") { return numberOne + "원당 " + numberTwo + "원 즉시 할인" }
+        else if (type === "FND") { return numberOne + "원당 " + numberTwo + "원 할인" }
+        else if (type === "NGP") { return numberOne + "포인트/마일리지 적립" }
+        else if (type === "LBD") { return "1리터당 " + numberOne + "원 청구 할인" }
+        else if (type === "LID") { return "1리터당 " + numberOne + "원 즉시 할인" }
+        else if (type === "LND") { return "1리터당 " + numberOne + "원 할인" }
+        else if (type === "LGP") { return "1리터당 " + numberOne + "포인트/마일리지 적립" }
+        else if (type === "LCB") { return "1리터당 " + numberOne + "원 캐시백" }
     }
 
     function typeParser(type) {
@@ -71,46 +71,86 @@ function CardInfo() {
         else if (type === "hybrid\r" || type === "hybrid") { return "하이브리드 카드" }
     }
 
-    function FeeElements({ nameKor, nameEng, fee }) {
-        return (
-            <div className={styles.paySystemElements}>
-                <img className={styles.paySystemImage}
-                    alt={nameEng}
-                    src={process.env.PUBLIC_URL + "/images/fee_logo/left_aligned/" + nameEng + ".png"} />
+    function feeParser(name) {
+        if (name === "amex") { return "아메리칸 익스프레스" }
+        else if (name === "amexFamily") { return "아메리칸 익스프레스(가족 전용)" }
+        else if (name === "amexMobile") { return "아메리칸 익스프레스(모바일 전용)" }
+        else if (name === "bc") { return "BC" }
+        else if (name === "bcGlobal") { return "BC 글로벌" }
+        else if (name === "bcDomestic") { return "BC(국내 전용)" }
+        else if (name === "jcb") { return "JCB" }
+        else if (name === "jcbOneWay") { return "JCB(One Way)" }
+        else if (name === "jcbGold") { return "JCB(골드)" }
+        else if (name === "jcbMobile") { return "JCB(모바일 전용)" }
+        else if (name === "jcbSilver") { return "JCB(실버)" }
+        else if (name === "kWorld") { return "K-WORLD" }
+        else if (name === "kWorldJcb") { return "K-WORLD(JCB)" }
+        else if (name === "kWorldUpi") { return "K-WORLD(UPI)" }
+        else if (name === "kWorldMobile") { return "K-WORLD(모바일 전용)" }
+        else if (name === "master") { return "마스터카드" }
+        else if (name === "masterPlatinum") { return "마스터카드(플래티넘)" }
+        else if (name === "masterFamliy") { return "마스터카드(가족 전용)" }
+        else if (name === "masterGold") { return "마스터카드(골드)" }
+        else if (name === "masterDomestic") { return "마스터카드(국내 전용(" }
+        else if (name === "masterMobile") { return "마스터카드(모바일 전용(" }
+        else if (name === "masterSilver") { return "마스터카드(실버)" }
+        else if (name === "masterOverseas") { return "마스터카드(해외 전용)" }
+        else if (name === "oneWay") { return "One Way" }
+        else if (name === "sAnd") { return "S&" }
+        else if (name === "unionPay") { return "유니온페이" }
+        else if (name === "unionPayDomestic") { return "유니온페이(국내 전용)" }
+        else if (name === "unionPayMobile") { return "유니온페이(모바일 전용)" }
+        else if (name === "upi") { return "UPI" }
+        else if (name === "urs") { return "URS" }
+        else if (name === "visa") { return "비자" }
+        else if (name === "visaPlatinum") { return "비자(플래티넘)" }
+        else if (name === "visaFamily") { return "비자(가족 전용)" }
+        else if (name === "visaGold") { return "비자(골드)" }
+        else if (name === "visaDomesticAndOverseas") { return "비자(국내외 겸용)" }
+        else if (name === "visaMobile") { return "비자(모바일 전용)" }
+        else if (name === "visaSilver") { return "비자(실버)" }
+        else if (name === "domestic") { return "국내 전용" }
+        else if (name === "domesticFamily") { return "국내 전용(가족 전용)" }
+        else if (name === "domesticMobile") { return "국내 전용(모바일 전용)" }
+    }
 
-                <label className={styles.paySystemName}>
-                    {nameKor}
+    function FeeElements({ providerName, fee }) {
+        return (
+            <div className={styles.feeElements}>
+                <img className={styles.feeImage}
+                    alt={providerName}
+                    src={process.env.PUBLIC_URL + "/images/fee_logo/left_aligned/" + providerName + ".png"} />
+
+                <label className={styles.feeName}>
+                    {feeParser(providerName)}
                 </label>
 
-                <label className={styles.paySystemFee}>
-                    {fee}원
+                <label className={styles.feeValue}>
+                    {fee === 0 ? <span>연회비 없음</span> : <span>{fee}원</span>}
                 </label>
             </div>
         )
     }
 
-    function BenefitElements({ brandNameKor, brandNameEng, type, numberOne, numberTwo }) {
+    function BenefitElements({ nameKor, nameEng, feeType, numberOne, numberTwo }) {
         return (
             <div className={styles.benefitElements}>
                 <img
                     className={styles.benefitImage}
                     alt="brands"
-                    src={process.env.PUBLIC_URL + "/images/brands_logo/" + brandNameEng + ".png"} />
+                    src={process.env.PUBLIC_URL + "/images/brands_logo/" + nameEng + ".png"} />
 
                 <label className={styles.benefitName}>
-                    {brandNameKor}
+                    {nameKor}
                 </label>
 
                 <label className={styles.benefitInfo}>
-                    {benefitParser(type, numberOne, numberTwo)}
+                    {benefitParser(feeType, numberOne, numberTwo)}
                 </label>
             </div>
         )
     }
-    
-
-    console.log(cardInfo.fee[0])
-    console.log(cardInfo.fee[1])
+ 
     
 
     return (
@@ -142,10 +182,10 @@ function CardInfo() {
                     연회비
                 </div>
 
-                <div className={styles.paySystemZone}>
+                <div className={styles.feeZone}>
                     {
                         cardInfo.fee.map(current =>
-                            <FeeElements paySystemKor={current.provider} paySystemEng={current.provider} paySystemFee={current.pay} />
+                            <FeeElements providerName={current.provider} fee={current.pay} />
                         )
                     }
                 </div>
@@ -157,26 +197,368 @@ function CardInfo() {
                 </div>
 
                 <div className={styles.benefitsZone}>
-                    <div className={styles.benefitZoneCategoies}>
-                        통신
-                    </div>
+                    {
+                        cardInfo.category.includes("transport")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            교통
+                        </div>
+                    }
+
 
                     <div className={styles.benefitZoneBrands}>
-                        <BenefitElements brandNameKor="SK텔레콤" brandNameEng="communication_skt" type="WCB" numberOne={1000} />
-                        <BenefitElements brandNameKor="SK텔레콤" brandNameEng="communication_skt" type="WCB" numberOne={1000} />
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "transport"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
                     </div>
                 </div>
 
                 <div className={styles.benefitsZone}>
-                    <div className={styles.benefitZoneCategoies}>
-                        카페 & 베이커리
-                    </div>
+                    {
+                        cardInfo.category.includes("communication")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            통신
+                        </div>
+                    }
 
                     <div className={styles.benefitZoneBrands}>
-                        <BenefitElements brandNameKor="SK텔레콤" brandNameEng="communication_skt" type="WCB" numberOne={1000} />
-                        <BenefitElements brandNameKor="SK텔레콤" brandNameEng="communication_skt" type="WCB" numberOne={1000} />
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "communication"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
                     </div>
                 </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("mart")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            마트
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "mart"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("convstore")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            편의점
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "convstore"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("movies")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            영화
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "movies"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("entertainment")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            엔터테인먼트
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "entertainment"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("deptstore")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            백화점
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "deptstore"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("onlineshopping")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            온라인 쇼핑몰
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "onlineshopping"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("easypay")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            간편결제
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "easypay"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("cafebakery")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            카페/베이커리
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "cafebakery"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("beauty")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            뷰티
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "beauty"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("dining")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            외식
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "dining"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("books")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            도서
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "books"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("themepark")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            테마파크
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "themepark"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={styles.benefitsZone}>
+                    {
+                        cardInfo.category.includes("fuel")
+
+                        &&
+
+                        <div className={styles.benefitZoneCategoies}>
+                            주유
+                        </div>
+                    }
+
+                    <div className={styles.benefitZoneBrands}>
+                        {
+                            cardInfo.benefits.map(current => (
+                                current.categoryName === "fuel"
+
+                                &&
+
+                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                            ))
+                        }
+                    </div>
+                </div>
+
+
+
 
 
 
@@ -191,17 +573,18 @@ function CardInfo() {
                     혜택은 전원실적과 특정 조건 및 상황에 따라 다르게 제공되거나 제공되지 않을 수 있습니다.<br />
                     연회비는 결제사의 상황에 따라 지원이 중단되거나 변동될 수 있습니다.<br /><br />
 
-                    카드사의 상황에 따라 신규 발급 또는 가입이 중단될 수 있습니다.<br /><br />
+                    해당 카드는 카드사의 상황에 따라 신규 발급 또는 가입이 중단될 수 있습니다.<br /><br />
 
                     카드의 상세한 정보와 자세한 안내 사항은 각 카드사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br />
-                    결제사의 상세한 정보와 자세한 안내 사항은 각 결제사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br /><br />
+                    결제사의 상세한 정보와 자세한 안내 사항은 각 결제사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br />
+                    혜택 브랜드의 상세한 정보와 자세한 안내 사항은 각 브랜드사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br /><br />
 
-                    국민은행 홈페이지 │ <a className={styles.cautionHighlight}>www.kbstar.com</a><br />
-                    국민은행 고객센터 │ <a className={styles.cautionHighlight}>1588-9999</a><br /><br />
+                    ????? 홈페이지 │ <span className={styles.cautionHighlight}>www.?????.com</span><br />
+                    ????? 고객센터 │ <span className={styles.cautionHighlight}>?????-?????.</span><br /><br />
 
-                    VISA 홈페이지 │ <a className={styles.cautionHighlight}>ww.visakorea.com</a><br />
-                    Mastercard 홈페이지 │ <a className={styles.cautionHighlight}>www.mastercard.co.kr</a><br />
-                    UnionPay 홈페이지 │ <a className={styles.cautionHighlight}>www.unionpayintl.com/kr</a><br />
+                    ????? 홈페이지 │ <span className={styles.cautionHighlight}>www.?????.com</span><br />
+                    ????? 홈페이지 │ <span className={styles.cautionHighlight}>www.?????.co.kr</span><br />
+                    ????? 홈페이지 │ <span className={styles.cautionHighlight}>www.?????.com/kr</span><br />
                 </div>
             </div>
         </div>

@@ -77,7 +77,7 @@
     color: rgb(0, 200, 200);
 }
 
-.paySystemZone {
+.feeZone {
     width: 60vw;
     display: block;
     margin: 0px auto;
@@ -86,7 +86,7 @@
     gap: 10px;
 }
 
-.paySystemElements {
+.feeElements {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
@@ -97,13 +97,13 @@
     margin-bottom: 10px;
 }
 
-.paySystemImage {
+.feeImage {
     height: 80px;
     margin-left: 10px;
     float: left;
 }
 
-.paySystemName {
+.feeName {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 1000;
@@ -111,7 +111,7 @@
     line-height: 80px;
 }
 
-.paySystemFee {
+.feeValue {
     text-align: center;
     font-size: 2rem;
     font-weight: 1000;
@@ -136,12 +136,13 @@
     color: rgb(255, 255, 255);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 1000;
     padding-top: 20px;
     padding-left: 20px;
     margin-bottom: 10px;
     word-break: keep-all;
+    line-height: 1.0;
 }
 
 .benefitElements {
@@ -201,20 +202,20 @@
 
 
 @media screen and (max-width: 1700px) {
-    .paySystemZone {
+    .feeZone {
         grid-template-columns: 1fr;
         gap: 0px;
     }
 
-    .paySystemElements {
+    .feeElements {
         width: 60vw;
     }
 
-    .paySystemName {
+    .feeName {
         font-size: 1.5rem;
     }
 
-    .paySystemFee {
+    .feeValue {
         font-size: 1.5rem;
     }
 
@@ -307,13 +308,25 @@
         transition: 0.5s;
     }
 
-    .paySystemZone {
+    .mainText1 {
+        width: 90vw;
+    }
+
+    .mainText2 {
+        width: 90vw;
+    }
+
+    .mainText3 {
+        width: 90vw;
+    }
+
+    .feeZone {
         width: 90vw;
         grid-template-columns: 1fr;
         gap: 0px;
     }
 
-    .paySystemElements {
+    .feeElements {
         width: 90vw;
     }
 

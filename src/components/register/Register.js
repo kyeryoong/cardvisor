@@ -26,6 +26,7 @@ function Register() {
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
+    const [notDuplicate, setNotDuplicate] = useState(false);
 
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
@@ -61,6 +62,7 @@ function Register() {
     }, [user, pwd, matchPwd])
 
 
+
     var date = new Date(birth);
     var year = String(date.getFullYear()).padStart(4, "0");
     var month = String(date.getMonth() + 1).padStart(2, "0");
@@ -68,24 +70,27 @@ function Register() {
 
 
 
-    const handleDuplicate = async (event) => {
-        event.preventDefault();
+    const handleDuplicate = async (e) => {
+        e.preventDefault();
 
         try {
             const response = await axios.get(
                 "http://localhost:8080/duplicate",
-                JSON.stringify(user),
                 {
-                    headers: { "Content-Type": "application/json" }
+                    headers: { "nickname": user }
                 }
             )
-            console.log(response.data);
-        } catch (error) {
-            if (!error?.response) {
+
+            alert("사용 가능한 아이디입니다.");
+            setNotDuplicate(true);
+        }
+
+        catch (err) {
+            if (!err?.response) {
                 alert("No Server Response");
             }
 
-            else if (error.response?.status === 400) {
+            else if (err.response?.status === 400) {
                 alert("이미 사용중인 아이디입니다.");
             }
 
@@ -93,7 +98,7 @@ function Register() {
                 alert("서버 오류.");
             }
 
-            console.log(error)
+            setNotDuplicate(false);
         }
     }
 
@@ -111,7 +116,7 @@ function Register() {
 
         const option = {
             method: "POST",
-            url: "/register",
+            url: "http://localhost:8080/register",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },
@@ -177,13 +182,15 @@ function Register() {
 
                     <section>
                         <form onSubmit={handleClick}>
-                            <div>
                             <input
                                 type="text"
                                 id="username"
                                 ref={userRef}
                                 autoComplete="off"
-                                onChange={(e) => setUser(e.target.value)}
+                                onChange={(e) => {
+                                    setUser(e.target.value);
+                                    setNotDuplicate(false);
+                                }}
                                 value={user}
                                 required
                                 aria-invalid={validName ? "false" : "true"}
@@ -195,41 +202,56 @@ function Register() {
                                 spellCheck="false"
                             />
 
-
-                                <input
-                                    type="button"
-                                    onClick={handleDuplicate}
-                                    className={styles.checkIDButton}
-                                    value="중복 확인"
-                                />
-                            </div>
+                            <input
+                                type="button"
+                                onClick={handleDuplicate}
+                                className={styles.checkIDButton}
+                                value="중복 확인"
+                            />
 
                             {
-                                !user &&
+                                !user
 
-                                <div><br /></div>
-                            }
+                                    ?
 
-                            {
-                                user && !validName
+                                    <div><br /></div>
 
-                                &&
+                                    :
 
-                                <span className={styles.messageInvalid}>
-                                    <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
-                                    아이디는 최소 6자리여야 합니다.
-                                </span>
-                            }
+                                    <span>
+                                        {
+                                            user && !notDuplicate
 
-                            {
-                                validName
+                                                ?
 
-                                &&
+                                                <span className={styles.messageInvalid}>
+                                                    <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
+                                                    아이디 중복 확인을 해주세요.
+                                                </span>
 
-                                <span className={styles.messageInvalid}>
-                                    <FontAwesomeIcon icon={faCheck} className={styles.iconValid} />
-                                    사용 가능한 아이디입니다.
-                                </span>
+                                                :
+
+                                                <span>
+                                                    {
+                                                        user && !validName
+
+                                                            ?
+
+                                                            <span className={styles.messageInvalid}>
+                                                                <FontAwesomeIcon icon={faTimes} className={styles.iconInvalid} />
+                                                                아이디는 최소 6자리여야 합니다.
+                                                            </span>
+
+                                                            :
+
+                                                            <span className={styles.messageInvalid}>
+                                                                <FontAwesomeIcon icon={faCheck} className={styles.iconValid} />
+                                                                사용 가능한 아이디입니다.
+                                                            </span>
+                                                    }
+                                                </span>
+                                        }
+                                    </span>
                             }
 
 
@@ -349,7 +371,7 @@ function Register() {
 
 
                             <button
-                                disabled={!validName || !validPwd || !validMatch || !birth ? true : false}
+                                disabled={!validName || !validPwd || !validMatch || !birth || !notDuplicate ? true : false}
                                 className={styles.registerButton}>
                                 회원가입
                             </button>

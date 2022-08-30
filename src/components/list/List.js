@@ -25,7 +25,7 @@ function List() {
 
         const option = {
             method: "GET",
-            url: "/card/cards",
+            url: "http://localhost:8080/card/cards",
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
