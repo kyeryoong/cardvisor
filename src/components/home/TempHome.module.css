@@ -1,0 +1,120 @@
+
+.pageOne {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.pageTwo {
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 200, 200);
+}
+
+.pageThree {
+    height: 100vh;
+    color: rgb(0, 200, 200);
+    background-color: rgb(255, 255, 255);
+}
+
+.pageOneText {
+    font-size: 4rem;
+    margin-left: 20vw;
+    padding-top: 200px;
+    animation: textAppearLargeScreen 1s;
+}
+
+.pageTwoText {
+    font-size: 4rem;
+    margin-left: 20vw;
+    padding-top: 200px;
+    animation: textAppearLargeScreen 1s;
+}
+
+.pageThreeText {
+    font-size: 4rem;
+    margin-left: 20vw;
+    padding-top: 200px;
+    animation: textAppearLargeScreen 1s;
+}
+
+.hide {
+    font-size: 4rem;
+    margin-left: -50vw;
+    padding-top: 200px;
+    animation: textDisappearLargeScreen 1s;
+}
+
+
+
+@keyframes textAppearLargeScreen {
+    from {
+        margin-left: -50vw;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 20vw;
+        opacity: 1;
+    }
+}
+
+@keyframes textDisappearLargeScreen {
+    from {
+        margin-left: 20vw;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: -50vw;
+        opacity: 0;
+    }
+}
+
+@keyframes textAppearSmallScreen {
+    from {
+        margin-left: -50vw;
+        opacity: 0;
+    }
+
+    to {
+        margin-left: 5vw;
+        opacity: 1;
+    }
+}
+
+@keyframes textDisappearSmallScreen {
+    from {
+        margin-left: 5vw;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: -50vw;
+        opacity: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    .pageOneText {
+        margin-left: 5vw;
+        animation: textAppearSmallScreen 1s;
+    }
+    
+    .pageTwoText {
+        margin-left: 5vw;
+        animation: textAppearSmallScreen 1s;
+    }
+    
+    .pageThreeText {
+        margin-left: 5vw;
+        animation: textAppearSmallScreen 1s;
+    }
+
+    .hide {
+        margin-left: -50vw;
+        padding-top: 200px;
+        animation: textDisappearSmallScreen 1s;
+    }
+}

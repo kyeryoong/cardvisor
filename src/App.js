@@ -19,6 +19,8 @@ import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
 
+import TempHome from './components/home/TempHome';
+
 
 
 function App() {
@@ -44,19 +46,7 @@ function App() {
                     <Route path="/cardinfo/:card_code" element={isLogined ? <CardInfo /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
                     <Route path="*" element={isLogined && <NotFound />} />
 
-                    {/* <Route path="/" element={<Home />} />
-                    <Route path="/login" element={!isLogined && <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/register" element={!isLogined && <Register />} />
-                    <Route path="/main" element={<Main />} />
-                    <Route path="/service1" element={<Service1 />} />
-                    <Route path="/service1/results" element={<Service1Results />} />
-                    <Route path="/service1/results/more" element={<Service1ResultsMore />} />
-                    <Route path="/service2" element={<Service2 />} />
-                    <Route path="/service2/analysis" element={<Service2Analysis />} />
-                    <Route path="/list" element={<List />} />
-                    <Route path="/mypage" element={<MyPage />} />
-                    <Route path="/cardinfo/:card_code" element={<CardInfo />} />
-                    <Route path="*" element={<NotFound />} /> */}
+                    <Route path="/temphome" element={<TempHome />} />
                 </Routes>
             </BrowserRouter>
 
