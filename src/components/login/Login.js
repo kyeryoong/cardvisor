@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import styles from "./Login.module.css";
@@ -54,11 +54,11 @@ function Login({ isLogined, setIsLogined }) {
         <div className={styles.container}>
             <div className={styles.loginZone}>
                 <div className={styles.loginZoneLeft}>
-                    사용자 소비 패턴 기반<br />
-                    카드 추천 서비스<br />
-
-                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} />
-                    <br />
+                    <div>
+                        사용자 소비 패턴 기반<br />
+                        카드 추천 서비스<br />
+                        <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_nomargin_white.png"} />
+                    </div>
 
                     <img alt="home" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/14.png"} />
                 </div>
@@ -67,7 +67,7 @@ function Login({ isLogined, setIsLogined }) {
 
                 <div className={styles.loginZoneRight}>
                     <div className={styles.mainTitle}>
-                        LOGIN
+                        login
                     </div>
 
                     <div className={styles.subTitle}>

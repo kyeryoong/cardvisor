@@ -36,10 +36,9 @@ function Service1Results() {
 
         const option = {
             method: "POST",
-            url: "/benefit/select",
+            url: "http://localhost:8080/benefit/select",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
-                // 회원가입과 로그인을 제외한 프론트와 백의 모든 통신은 헤더에 아래와 같이 액세스 토큰을 넣어줘야함.
                 Authorization: `Bearer ${accessToken}`,
             },
             data: parsedUrlEncodedData,
@@ -47,7 +46,6 @@ function Service1Results() {
 
         axios(option).then(({ data }) => {
             setTimeout(() => {
-                console.log("Post 요청");
                 setCards(data);
                 setLoading(false);
             }, 500);

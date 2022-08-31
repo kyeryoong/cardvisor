@@ -211,3 +211,6 @@
 ### Ver. 1.3.12 (2022/08/30)
 - Some function was implemented in *CardInfo* page.
 - *Login* and *Register* page was changed.
+
+### Ver. 1.3.13 (2022/08/31)
+- Some changes in *Login* and *Register* page.

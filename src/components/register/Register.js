@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
@@ -6,7 +5,6 @@ import { useEffect } from "react";
 import axios from "axios";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./Register.module.css";
@@ -160,20 +158,21 @@ function Register() {
         <div className={styles.container}>
             <div className={styles.registerZone}>
                 <div className={styles.registerZoneLeft}>
-                    사용자 소비 패턴 기반<br />
-                    카드 추천 서비스<br />
-
-                    <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} />
-                    <br />
+                    <div>
+                        사용자 소비 패턴 기반<br />
+                        카드 추천 서비스<br />
+                        <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_nomargin_white.png"} />
+                    </div>
 
                     <img alt="home" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/14.png"} />
                 </div>
 
 
 
+
                 <div className={styles.registerZoneRight}>
                     <div className={styles.mainTitle}>
-                        REGISTER
+                        register
                     </div>
 
                     <div className={styles.subTitle}>

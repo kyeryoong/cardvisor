@@ -12,23 +12,25 @@
 .registerZone {
     margin-left: 20vw;
     margin-right: 20vw;
-    margin-top: calc(50vh - 270px);
+    margin-top: calc(50vh - 320px);
     width: 60vw;
-    height: 600px;
+    height: 700px;
     display: grid;
     grid-template-columns: 1fr 500px;
 }
 
 .registerZoneLeft {
     width: calc(60vw - 400px);
-    height: 600px;
+    height: 700px;
     font-size: 2rem;
     color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: 1fr 300px;
 }
 
 .registerZoneRight {
     width: 400px;
-    height: 600px;
+    height: 700px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(100, 100, 100, 0.3);
@@ -36,8 +38,9 @@
 }
 
 .titleLogo {
-    height: 200px;
-    filter: brightness(0) invert(1);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
 }
 
 .graphic {
@@ -56,15 +59,14 @@
 .subTitle {
     font-size: 0.9rem;
     color: rgb(160, 160, 160);
-    margin-top: -10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .inputIDZone {
     text-align: center;
     width: 220px;
-    height: 40px;
-    font-size: 1.5rem;
+    height: 55px;
+    font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: left;
@@ -79,13 +81,13 @@
 }
 
 .inputIDZone::placeholder {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: rgb(200, 200, 200);
 }
 
 .checkIDButton {
     width: 75px;
-    height: 40px;
+    height: 45px;
     margin-left: 5px;
     border: none;
     border-radius: 5px;
@@ -96,8 +98,8 @@
 .inputPWZone {
     text-align: center;
     width: 300px;
-    height: 40px;
-    font-size: 1.5rem;
+    height: 55px;
+    font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     text-align: left;
@@ -113,7 +115,7 @@
 }
 
 .inputPWZone::placeholder {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: rgb(200, 200, 200);
     letter-spacing: normal;
 }
@@ -126,7 +128,7 @@
 
 .genderButtonOn {
     width: 100px;
-    height: 40px;
+    height: 60px;
     font-size: 1.5rem;
     border: none;
     border-bottom: 2px solid rgb(0, 200, 200);
@@ -136,7 +138,7 @@
 
 .genderButtonOff {
     width: 100px;
-    height: 40px;
+    height: 60px;
     font-size: 1.5rem;
     border: none;
     border-bottom: 2px solid rgb(200, 200, 200);
@@ -147,7 +149,7 @@
 .birthInputZone input {
     text-align: center;
     width: 200px;
-    height: 40px;
+    height: 60px;
     font-size: 1.5rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
@@ -225,13 +227,21 @@
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px), (max-height: 900px) {
+    .container {
+        position: relative;
+        width: 100vw;
+        height: fit-content;
+        max-width: 100%;
+        background: linear-gradient(135deg, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 90%);
+    }
+
     .registerZone {
-        margin-left: 5vw;
-        margin-right: 5vw;
-        margin-top: calc(5vh + 40px);
-        width: 90vw;
-        height: 90vh;
+        margin: 0;
+        margin-top: 80px;
+        width: 100vw;
+        max-width: 100%;
+        height: fit-content;
         display: block;
     }
 
@@ -240,9 +250,12 @@
     }
 
     .registerZoneRight {
-        width: 90vw;
-        height: 90vh;
+        width: 100vw;
+        max-width: 100%;
+        height: fit-content;
         padding: 5vw;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .mainTitle {
@@ -255,19 +268,19 @@
     }
 
     .inputIDZone {
-        width: calc(80vw - 80px);
+        width: calc(100% - 80px);
         height: 50px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .inputIDZone::placeholder {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .inputPWZone {
-        width: 80vw;
+        width: 100%;
         height: 50px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .checkIDButton {
@@ -275,46 +288,43 @@
     }
 
     .inputPWZone::placeholder {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .loginButton {
-        width: 80vw;
+        width: 90vw;
     }
 
     .genderButtonOn {
-        width: calc(40vw - 50px);
-        font-size: 1.2rem;
+        width: calc(50% - 50px);
+        font-size: 1.5rem;
     }
 
     .genderButtonOff {
-        width: calc(40vw - 50px);
-        font-size: 1.2rem;
+        width: calc(50% - 50px);
+        font-size: 1.5rem;
     }
 
     .birthInputZone input {
-        width: calc(80vw - 100px);
-        font-size: 1.2rem;
-    }
-
-    .registerZone {
-        font-size: 1rem;
-    }
-
-    .findPasswordZone {
-        font-size: 1rem;
+        width: calc(100% - 100px);
+        font-size: 1.5rem;
     }
 
     .registerButton {
-        width: 80vw;
+        width: 100%;
         font-size: 1.5rem;
-        margin-top: 15px;
+        margin-top: 50px;
     }
 
     .registerButton:disabled {
-        width: 80vw;
+        width: 100%;
         font-size: 1.5rem;
-        margin-top: 15px;
+        margin-top: 50px;
+    }
+
+    .registerCancelButton {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .instructions {
