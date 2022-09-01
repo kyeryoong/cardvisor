@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import Header from './components/Header';
 import ScrollToTop from './components/ScrollToTop';
@@ -18,8 +19,6 @@ import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
-
-import TempHome from './components/home/TempHome';
 
 
 
@@ -45,8 +44,6 @@ function App() {
                     <Route path="/mypage" element={isLogined ? <MyPage /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
                     <Route path="/cardinfo/:card_code" element={isLogined ? <CardInfo /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
                     <Route path="*" element={isLogined && <NotFound />} />
-
-                    <Route path="/temphome" element={<TempHome />} />
                 </Routes>
             </BrowserRouter>
 

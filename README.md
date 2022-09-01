@@ -214,3 +214,7 @@
 
 ### Ver. 1.3.13 (2022/08/31)
 - Some changes in *Login* and *Register* page.
+
+### Ver. 1.4.1 (2022/09/1)
+- *Home* page was modified with lots of updates and design changes.
+- Lots of components in *Home* page was removed and modified.

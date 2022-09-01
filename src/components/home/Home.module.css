@@ -1,146 +1,386 @@
-.backgroundZone {
-    height: 600px;
-    width: 100vw;
-    background: linear-gradient(135deg, rgb(0,200,200) 10%, rgb(50, 100, 200) 90%);
+.pageOne {
+    height: 100vh;
+    z-index: -20;
 }
 
-.startText {
-    display: block;
-    margin: 0px auto;
-    color: rgb(250, 150, 0);
-    width: fit-content;
+.pageOneBackground {
+    position: fixed;
+    background: linear-gradient(135deg, rgb(0,200,200) 10%, rgb(0, 50, 250) 90%);
+    top: 80px;
+    width: 100%;
+    z-index: -1;
+    padding-top: 100px;
+    padding-bottom: 100vh;
+    animation: fadeIn 1s;
+}
+
+.pageOneShow {
+    animation: fadeIn 1s;
+}
+
+.pageOneHide {
+    opacity: 0;
+    animation: fadeOut 1s;
+}
+
+.pageOneText {
+    padding-top: 15vh;
     font-size: 2rem;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
-.startButton {
+.pageOneLogo {
+    width: 1200px;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pageOneStartZone {
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pageOneStartText {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.pageOneStartButton {
+    width: 200px;
+    height: 50px;
     display: block;
     margin: 0px auto;
-    width: 200px;
-    height: 60px;
-    font-size: 2rem;
-    font-weight: 1000;
-    align-items: center;
-    background-color: rgb(250, 150, 0);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
     color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 6px;
-    cursor: pointer;
+    background-color: rgb(250, 150, 0);
+}
+
+.pageOneScroll {
+    width: 200px;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    top: 95vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(200, 200, 200);
+}
+
+.pageOneScrollArrow {
+    width: 30px;
+    animation: floating 2s infinite;
+}
+
+.pageTwo {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.pageTwoAppear {
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    top: 200px;
+    left: 20vw;
+    color: rgb(0, 200, 200);
+    animation: appearLeft 2s;
+}
+
+.pageTwoCarousel {
+    width: 100%;
+    position: relative;
+    top: 50vh;
+}
+
+.pageTwoCarouselElements {
+    width: 6vw;
+    padding: 2vw;
+}
+
+.pageThree {
+    height: 100vh;
+    background-color: rgb(0, 200, 200);
+}
+
+.pageThreeAppear {
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    top: 200px;
+    left: 20vw;
+    color: rgb(255, 255, 255);
+    animation: appearLeft 2s;
+}
+
+.pageThreeGraphicShow {
+    width: 300px;
+    position: relative;
+    float: right;
+    margin-right: 20vw;
+    top: 30vh;
+    animation: fadeIn 2s;
+}
+
+.pageThreeGraphicHide {
+    width: 300px;
+    position: relative;
+    float: right;
+    margin-right: 20vw;
+    top: 30vh;
+    animation: fadeOut 2s;
+}
+
+.pageFour {
+    height: 100vh;
+    background-color: rgb(0, 100, 250);
+}
+
+.pageFourAppear {
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    top: 200px;
+    left: 20vw;
+    color: rgb(255, 255, 255);
+    animation: appearLeft 2s;
+}
+
+.pageFourContainer {
+    width: 60vw;
+    display: block;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    position: relative;
+    top: 35vh
+}
+
+.pageFourElements {
+    height: 200px;
+    font-size: 1.2rem;
+    color: rgb(0, 100, 250);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.pageFourIcon {
+    width: 40px;
+}
+
+.pageFourTypes {
+    font-size: 1.2rem;
     margin-top: 10px;
 }
 
-.startButton:hover {
-    background-color: rgb(0, 200, 200);
-    transition: 500ms;
+.pageFourValues {
+    font-size: 3rem;
+    position: relative;
+    top: 30px;
+    text-align: right;
 }
 
-.registerZone {
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px auto;
+.pageFourGae {
+    font-size: 1.5rem;
 }
 
-.registerText {
-    font-size: 1.3rem;
-    font-weight: 1000;
-    color: rgb(160, 160, 160);
-    margin-right: 5px;
-}
-
-.registerButton {
-    font-size: 1.3rem;
-    font-weight: 1000;
-    color: rgb(250, 150, 0);
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.cardDataIcon {
-    height: 80px;
-    display: block;
-    margin: 0px auto;
-    margin-top: 100px;
-    margin-bottom: 20px;
-}
-
-.cardDataIntro {
-    width: fit-content;
-    height: fit-content;
-    display: block;
-    margin: 0px auto;
-    margin-bottom: 20px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 500;
-    background-color: rgb(0, 120, 250);
+.hide {
+    font-size: 3rem;
+    position: relative;
+    top: 200px;
+    left: -100vw;
     color: rgb(255, 255, 255);
-    border-radius: 6px;
-}
-
-.cardDataZone {
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px auto;
-}
-
-.cardDataText {
-    font-size: 1.3rem;
-    font-weight: 1000;
-    color: rgb(160, 160, 160);
-    margin-right: 5px;
-}
-
-.cardDataButton {
-    font-size: 1.3rem;
-    font-weight: 1000;
-    color: rgb(0, 120, 250);
-    cursor: pointer;
-    margin-left: 5px;
+    opacity: 0;
+    animation: disappearLeft 2s;
 }
 
 
-
-@media screen and (max-width: 600px) {
-    .backgroundZone {
-        height: 450px;
-        transition: 0.5s;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    .startText {
-        margin-top: 20px;
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
     }
 
-    .registerText {
-        width: 100vw;
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes appearLeft {
+    from {
+        left: -50vw;
+        opacity: 0;
+    }
+
+    to {
+        left: 20vw;
+        opacity: 1;
+    }
+}
+
+@keyframes disappearLeft {
+    from {
+        left: 20vw;
+        opacity: 1;
+    }
+
+    to {
+        left: -50vw;
+        opacity: 0;
+    }
+}
+
+@keyframes floating {
+    from {
+        margin-bottom: 0px;
+    }
+
+    50% {
+        margin-bottom: 30px;
+    }
+
+    to {
+        margin-bottom: 0px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .pageOneGraphic {
+        margin-top: 100px;
+        width: 60%;
+        max-width: 300px;
+    }
+
+    .pageOneText {
+        font-size: 1.2rem;
         text-align: center;
-        margin-right: 0px;
     }
-
-    .registerButton {
-        width: 100vw;
+    
+    .pageOneLogo {
+        width: 90%;
+        max-width: 1200px;
+    }
+    
+    .pageOneStartButton {
+        width: 200px;
+        height: 50px;
+        display: block;
+        margin: 0px auto;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(250, 150, 0);
+    }
+    
+    .pageOneScroll {
+        width: 200px;
         text-align: center;
-        margin-left: 0px;
+        position: absolute;
+        top: 95vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(150, 150, 150);
     }
 
-    .cardDataIcon {
-        margin-top: 60px;
+    .pageTwoAppear {
+        font-size: 1.5rem;
+        left: 5vw;
     }
 
-    .cardDataText {
-        width: 100vw;
-        text-align: center;
-        margin-right: 0px;
+    .pageThreeAppear {
+        font-size: 1.5rem;
+        left: 5vw;
+    }
+    
+    .pageThreeGraphicShow {
+        width: 50%;
+        margin-right: 5vw;
     }
 
-    .cardDataButton {
-        width: 100vw;
-        text-align: center;
-        margin-left: 0px;
+    .pageThreeGraphicHide {
+        width: 50%;
+        margin-right: 5vw;
+    }
+
+    .pageFourAppear {
+        font-size: 1.5rem;
+        left: 5vw;
+    }
+
+    .pageFourContainer {
+        width: 90vw;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .pageFourElements {
+        height: 150px;
+        font-size: 1.2rem;
+        color: rgb(0, 100, 250);
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .pageFourValues {
+        font-size: 1.8rem;
+        position: relative;
+        top: 5px;
+        text-align: right;
+    }
+    
+    .pageFourGae {
+        font-size: 1rem;
+    }
+
+    .hide {
+        font-size: 1.5rem;
+    }
+
+    @keyframes appearLeft {
+        from {
+            left: -50vw;
+            opacity: 0;
+        }
+    
+        to {
+            left: 5vw;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes disappearLeft {
+        from {
+            left: 5vw;
+            opacity: 1;
+        }
+    
+        to {
+            left: -50vw;
+            opacity: 0;
+        }
     }
 }
