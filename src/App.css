@@ -12,6 +12,14 @@ input {
     user-select: text;
 }
 
+* {
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
 /* @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;

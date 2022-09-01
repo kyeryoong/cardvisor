@@ -48,8 +48,6 @@ function Home() {
         }
     }
 
-    console.log(scrollY, window.innerHeight, showOne)
-
     useEffect(() => {
         const watch = () => {
             window.addEventListener("scroll", handleFollow)
@@ -75,20 +73,20 @@ function Home() {
 
 
     return (
-        <div>
+        <section>
             <div className={styles.container}>
-                <img alt="home" className={styles.pageOneBackground} src={process.env.PUBLIC_URL + "/images/background.png"} />
+                <div className={styles.pageOneBackground}>
+                    <img alt="home" src={process.env.PUBLIC_URL + "/images/background.png"} />
+                </div>
 
                 <div className={styles.pageOne}>
-                    
-
                     <div className={showOne ? styles.pageOneShow : styles.pageOneHide}>
                         <div className={styles.pageOneText}>
                             사용자 소비 패턴 기반<br />
                             카드 추천 서비스<br />
                         </div>
 
-                        <img alt="home" className={styles.pageOneLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_title_white.png"} />
+                        <img alt="home" className={styles.pageOneLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_nomargin_white.png"} />
 
                         <div className={styles.pageOneStartZone}>
                             <div className={styles.pageOneStartText}>
@@ -238,8 +236,8 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div >
-        </div>
+            </div>
+        </section>
     );
 }
 
