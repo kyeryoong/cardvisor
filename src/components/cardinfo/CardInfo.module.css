@@ -91,34 +91,47 @@
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     width: calc(30vw - 10px);
-    height: 80px;
+    height: 100px;
     border-radius: 10px;
     transition: 0.5s;
     margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
 }
 
 .feeImage {
-    height: 80px;
-    margin-left: 10px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
     float: left;
+}
+
+.feeInfo {
+    display: grid;
+    grid-template-rows: 25px 25px;
+    margin-top: 25px;
+    margin-left: 20px;
 }
 
 .feeName {
-    text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 1000;
-    float: left;
-    line-height: 80px;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
 }
 
 .feeValue {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 1000;
+    height: 25px;
+    line-height: 25px;
     color: rgb(0, 200, 200);
-    float: right;
-    line-height: 80px;
     padding-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .benefitsZone {
@@ -136,7 +149,7 @@
     color: rgb(255, 255, 255);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 1000;
     padding-top: 20px;
     padding-left: 20px;
@@ -166,7 +179,7 @@
 
 .benefitName {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 1000;
     float: left;
     line-height: 80px;
@@ -174,7 +187,7 @@
 
 .benefitInfo {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);
     float: right;
@@ -233,10 +246,10 @@
     }
 
     .benefitName {
-        width: 20vw;
+        width: calc(100% - 140px);
         height: 25px;
         line-height: normal;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         display: flex;
         align-items: center;
         float: left;
@@ -244,10 +257,10 @@
     }
 
     .benefitInfo {
-        width: 20vw;
+        width: calc(100% - 140px);
         height: 25px;
         line-height: normal;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         display: flex;
         align-items: center;
         float: left;
@@ -328,6 +341,14 @@
 
     .feeElements {
         width: 90vw;
+    }
+
+    .feeName {
+        font-size: 1.2rem;
+    }
+
+    .feeValue {
+        font-size: 1.2rem;
     }
 
     .benefitsZone {

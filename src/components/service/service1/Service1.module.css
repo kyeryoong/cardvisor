@@ -36,14 +36,40 @@
 
 .selectedBrandsZone {
     width: 60vw;
-    margin: 0px auto;
-    background-color: rgb(250, 150, 0);
+    height: 70px;
+    position: fixed;
+    top: 90vh;
+    left: 20vw;
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 210, 250);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     border-radius: 5px;
+    text-align: left;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 120px 1px 1fr;
+}
+
+.selectedBrandsNumber {
     text-align: center;
+    line-height: 70px;
+}
+
+.selectedBrandsValue {
+    font-size: 2rem;
+}
+
+.selectedBrandsLine {
+    border-right: 1px solid rgb(255, 255, 255);
+    height: 50px;
+    margin-top: 10px;
 }
 
 .selectedBrandsImage {
-    height: 60px;
+    height: 50px;
+    margin-top: 10px;
+    z-index: 4;
 }
 
 
@@ -63,6 +89,11 @@
         width: 90vw;
         margin-left: 5vw;
         transition: 0.5s;
+    }
+
+    .selectedBrandsZone {
+        width: 90vw;
+        left: 5vw;
     }
 
     .sendButton {

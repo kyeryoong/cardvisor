@@ -10,34 +10,55 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-let jsonArr = [];
-
-function MapSelectedBrands({ array }) {
-    return (
-        <div className={styles.selectedBrandsZone}>
-            {array.map(elements =>
-                <img
-                    alt={elements}
-                    className={styles.selectedBrandsImage}
-                    src={process.env.PUBLIC_URL + "/images/brands_logo/" + elements + ".png"} />
-            )
-            }
-        </div>
-    )
-}
-
-
-
 function Service1() {
     const navigate = useNavigate();
     const [selNumber, setSelNumber] = useState(0);
     const [selArray, setSelArray] = useState([]);
-    // const [summary, setSummary] = useState(false);
+
+
+
+    function SelectedBrandsZone() {
+        return (
+            <div>
+                {
+                    selNumber !== 0
+
+                    &&
+
+                    <div className={styles.selectedBrandsZone}>
+                        <div className={styles.selectedBrandsNumber}>
+                            <span className={styles.selectedBrandsValue}>
+                                {selNumber}
+                            </span>
+                            개 선택
+                        </div>
+
+                        <div className={styles.selectedBrandsLine} />
+
+                        <div>
+                            {
+                                selArray.map(current => (
+                                        <img
+                                        alt="brand"
+                                        className={styles.selectedBrandsImage}
+                                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + current + ".png"} />
+                                ))
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        )
+    }
+
+
 
     return (
         <div>
             <Intro mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요!" />
             <br /><br /><br />
+
+            <SelectedBrandsZone />
 
             <div>
                 <details className={styles.detailsZone}>

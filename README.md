@@ -215,6 +215,10 @@
 ### Ver. 1.3.13 (2022/08/31)
 - Some changes in *Login* and *Register* page.
 
-### Ver. 1.4.1 (2022/09/1)
+### Ver. 1.4.1 (2022/09/01)
 - *Home* page was modified with lots of updates and design changes.
 - Lots of components in *Home* page was removed and modified.
+
+### Ver. 1.4.2 (2022/09/08)
+- All of the card provider's logos were added.
+- Banner was added in *Service1* page bottom to show selected brands.

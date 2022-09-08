@@ -26,6 +26,7 @@ function Brands({ brandNameKor, brandNameEng, setSelNumber, setSelArray }) {
                 setSelArray(SelectedBrands);
             }
             }>
+                
                 <div className={styles.brandLogo}>
                     <img
                         alt={brandNameEng}
