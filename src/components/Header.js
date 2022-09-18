@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { useNavigate } from 'react-router';
-import { useState } from 'react';
 import styles from './Header.module.css';
 
 

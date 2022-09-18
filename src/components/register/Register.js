@@ -73,7 +73,7 @@ function Register() {
 
         try {
             const response = await axios.get(
-                "http://13.125.232.174:8080/duplicate",
+                "/duplicate",
                 {
                     headers: { "nickname": user }
                 }
@@ -114,7 +114,7 @@ function Register() {
 
         const option = {
             method: "POST",
-            url: "http://13.125.232.174:8080/register",
+            url: "/register",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },

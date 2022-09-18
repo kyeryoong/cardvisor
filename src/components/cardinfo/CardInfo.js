@@ -29,7 +29,7 @@ function CardInfo() {
 
         const option = {
             method: "GET",
-            url: "http://localhost:8080/card/" + card_code,
+            url: "/card/" + card_code,
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },

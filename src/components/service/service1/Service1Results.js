@@ -36,7 +36,7 @@ function Service1Results() {
 
         const option = {
             method: "POST",
-            url: "http://localhost:8080/benefit/select",
+            url: "/benefit/select",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
                 Authorization: `Bearer ${accessToken}`,
