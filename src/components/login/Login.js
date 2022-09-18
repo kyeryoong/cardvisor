@@ -26,7 +26,7 @@ function Login({ isLogined, setIsLogined }) {
 
         const option = {
             method: "POST",
-            url: "http://3.39.9.218:8080/login",
+            url: "http://13.125.232.174:8080/login",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },
