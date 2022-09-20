@@ -2,12 +2,12 @@
 
 
 
-# Deployment in Progress!
+<!-- # Deployment in Progress!
 
 ### Visit our website to check this project!
 [<h3 style="border-bottom: none">cardvisor.site</h3>](https://cardvisor.site)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d71965f0-5d59-4418-b152-506e74899ef6/deploy-status)](https://app.netlify.com/sites/cardvisor/deploys)
-<br><br><br>
+<br><br><br> -->
 
 
 
