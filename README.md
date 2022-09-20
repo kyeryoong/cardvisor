@@ -222,3 +222,6 @@
 ### Ver. 1.4.2 (2022/09/08)
 - All of the card provider's logos were added.
 - Banner was added in *Service1* page bottom to show selected brands.
+
+### Ver. 1.4.3 (2022/09/19)
+- Frontend and backend server was deployed using Amazon EC2 and Amazon Route 53.
