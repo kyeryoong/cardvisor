@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
 
@@ -18,38 +18,53 @@ import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
+import Unauthorized from "./components/Unauthorized";
+import RequireAuth from "./components/RequireAuth";
+import Layout from "./components/Layout";
+import PersistLogin from "./components/PersistLogin";
+
+const ROLES = {
+    'User' : 'ROLE_USER',
+    'Admin' : 'ROLE_ADMIN'
+}
 
 
 
 function App() {
-    const [isLogined, setIsLogined] = useState(window.localStorage.getItem("accessToken"));
+    // const [isLogined, setIsLogined] = useState(window.localStorage.getItem("accessToken"));
 
     return (
-        <div>
-            <BrowserRouter>
-                <Header isLogined={isLogined} setIsLogined={setIsLogined} />
+        <main className="App">
+            <Header />
+            <Routes>
+                <Route path="/" element={<Layout />}>
 
-                <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/login" element={!isLogined && <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/register" element={!isLogined && <Register />} />
-                    <Route path="/main" element={isLogined ? <Main /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/service1" element={isLogined ? <Service1 /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/service1/results" element={isLogined ? <Service1Results /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/service1/results/more" element={isLogined ? <Service1ResultsMore /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/service2" element={isLogined ? <Service2 /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/service2/analysis" element={isLogined ? <Service2Analysis /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/list" element={isLogined ? <List /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/mypage" element={isLogined ? <MyPage /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="/cardinfo/:card_code" element={isLogined ? <CardInfo /> : <Login isLogined={isLogined} setIsLogined={setIsLogined} />} />
-                    <Route path="*" element={isLogined && <NotFound />} />
-                </Routes>
-            </BrowserRouter>
+                    <Route path="login" element={<Login  />} />
+                    <Route path="register" element={<Register />} />
+                    <Route path="unauthorized" element={<Unauthorized />} />
+
+                    <Route element={<PersistLogin />}>
+                        <Route element={<RequireAuth allowedRoles={[ROLES.User, ROLES.Admin]} />}>
+                            <Route path="main" element={<Main />} />
+                            <Route path="service1" element={<Service1 />} />
+                            <Route path="service1/results" element={<Service1Results />} />
+                            <Route path="service1/results/more" element={<Service1ResultsMore />} />
+                            <Route path="service2" element={<Service2 />} />
+                            <Route path="service2/analysis" element={<Service2Analysis />} />
+                            <Route path="list" element={<List />} />
+                            <Route path="cardinfo/:card_code" element={<CardInfo />} />
+                            <Route path="mypage" element={<MyPage />} />
+                        </Route>
+                    </Route>
+
+
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes>
 
             <ScrollToTop />
-
-            {/* <Footer /> */}
-        </div>
+        </main>
     );
 }
 

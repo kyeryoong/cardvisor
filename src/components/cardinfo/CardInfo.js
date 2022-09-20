@@ -1,14 +1,20 @@
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import { useEffect } from 'react';
-import axios from "axios";
+import { useNavigate, useLocation } from "react-router";
 
 import styles from './CardInfo.module.css';
+import useAuth from "../hooks/useAuth";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import Loading from "../Loading";
 
 
 
 function CardInfo() {
     let { card_code } = useParams();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const axiosPrivate = useAxiosPrivate();
     const [loading, setLoading] = useState(true);
     const [cardInfo, setCardInfo] = useState({
         benefits: [{}],
@@ -20,28 +26,46 @@ function CardInfo() {
     const [like, setLike] = useState(false);
 
     useEffect(() => {
+        // const getCardInfo = async () => {
+        //     // const accessToken = localStorage.getItem("accessToken");
+        //     const option = {
+        //         method: "GET",
+        //         url: "http://localhost:8080/card/" + card_code,
+        //         headers: {
+        //             Authorization: `Bearer ${auth.accessToken}`,
+        //         },
+        //     };
+        //
+        //     axios(option).then(({ data }) => {
+        //         setTimeout(() => {
+        //             setCardInfo(data);
+        //             setLoading(false);
+        //         }, 500);
+        //     });
+        // };
+
+        const getCardInfo = async () => {
+            try {
+                const response = await axiosPrivate.get('/card/' + card_code.toString(), {
+                });
+                setTimeout(() => {
+                    setCardInfo(response.data);
+                    setLoading(false);
+                }, 500)
+                // console.log(response.data);
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+        }
+
+        // getCardList();
+
         getCardInfo();
     }, []);
 
 
-    const getCardInfo = () => {
-        const accessToken = localStorage.getItem("accessToken");
 
-        const option = {
-            method: "GET",
-            url: "/card/" + card_code,
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        };
-
-        axios(option).then(({ data }) => {
-            setTimeout(() => {
-                setCardInfo(data);
-                setLoading(false);
-            }, 500);
-        });
-    };
 
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") { return numberOne + "% 청구 할인" }
@@ -197,8 +221,8 @@ function CardInfo() {
         return (
             <div className={styles.feeElements}>
                 <img className={styles.feeImage}
-                    alt={providerName}
-                    src={process.env.PUBLIC_URL + "/images/fee_logo/left_aligned/" + providerName + ".png"} />
+                     alt={providerName}
+                     src={process.env.PUBLIC_URL + "/images/fee_logo/left_aligned/" + providerName + ".png"} />
 
                 <div className={styles.feeInfo}>
                     <div className={styles.feeName}>
@@ -236,438 +260,442 @@ function CardInfo() {
 
     return (
         <div>
-            <div className={styles.backgroundZone}>
-                <div className={styles.cardZone}>
-                    <img
-                        className={styles.cardImage}
-                        alt="cards"
-                        src={process.env.PUBLIC_URL + "/images/card_images/" + card_code + ".png"} />
-
-                    <div className={styles.cardName}>
-                        {cardInfo.card[0].name}
-                    </div>
-
-                    <div className={styles.cardType}>
-                        {typeParser(cardInfo.card[0].type)} &nbsp; │
+            {loading ? (
+                <Loading message="데이터 불러오는중" />
+            ) : (
+                <div className={styles.backgroundZone}>
+                    <div className={styles.cardZone}>
                         <img
-                            className={styles.cardCompanyImage}
+                            className={styles.cardImage}
                             alt="cards"
-                            src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cardInfo.card[0].company_eng + ".png"} />
-                        <br /><br />
-                    </div>
-                </div>
+                            src={process.env.PUBLIC_URL + "/images/card_images/" + card_code + ".png"} />
 
-
-
-                <div className={styles.mainText1}>
-                    연회비
-                </div>
-
-                <div className={styles.feeZone}>
-                    {
-                        cardInfo.fee.map(current =>
-                            <FeeElements providerName={current.provider} fee={current.pay} />
-                        )
-                    }
-                </div>
-
-
-
-                <div className={styles.mainText2}>
-                    브랜드 및 혜택
-                </div>
-
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("transport")
-
-                        &&
-
-                        <div className={styles.benefitZoneCategoies}>
-                            교통
+                        <div className={styles.cardName}>
+                            {cardInfo.card[0].name}
                         </div>
-                    }
+
+                        <div className={styles.cardType}>
+                            {typeParser(cardInfo.card[0].type)} &nbsp; │
+                            <img
+                                className={styles.cardCompanyImage}
+                                alt="cards"
+                                src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cardInfo.card[0].company_eng + ".png"} />
+                            <br /><br />
+                        </div>
+                    </div>
 
 
-                    <div className={styles.benefitZoneBrands}>
+
+                    <div className={styles.mainText1}>
+                        연회비
+                    </div>
+
+                    <div className={styles.feeZone}>
                         {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "transport"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
+                            cardInfo.fee.map(current =>
+                                <FeeElements providerName={current.provider} fee={current.pay} />
+                            )
                         }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("communication")
 
-                        &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            통신
-                        </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "communication"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
+                    <div className={styles.mainText2}>
+                        브랜드 및 혜택
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("mart")
-
-                        &&
-
-                        <div className={styles.benefitZoneCategoies}>
-                            마트
-                        </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
+                    <div className={styles.benefitsZone}>
                         {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "mart"
+                            cardInfo.category.includes("transport")
 
-                                &&
+                            &&
 
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
+                            <div className={styles.benefitZoneCategoies}>
+                                교통
+                            </div>
                         }
-                    </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("convstore")
 
-                        &&
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "transport"
 
-                        <div className={styles.benefitZoneCategoies}>
-                            편의점
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "convstore"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("movies")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("communication")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            영화
+                            <div className={styles.benefitZoneCategoies}>
+                                통신
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "communication"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "movies"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("entertainment")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("mart")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            엔터테인먼트
+                            <div className={styles.benefitZoneCategoies}>
+                                마트
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "mart"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "entertainment"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("deptstore")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("convstore")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            백화점
+                            <div className={styles.benefitZoneCategoies}>
+                                편의점
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "convstore"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "deptstore"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("onlineshopping")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("movies")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            온라인 쇼핑몰
+                            <div className={styles.benefitZoneCategoies}>
+                                영화
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "movies"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "onlineshopping"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("easypay")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("entertainment")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            간편결제
+                            <div className={styles.benefitZoneCategoies}>
+                                엔터테인먼트
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "entertainment"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "easypay"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("cafebakery")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("deptstore")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            카페/베이커리
+                            <div className={styles.benefitZoneCategoies}>
+                                백화점
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "deptstore"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "cafebakery"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("beauty")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("onlineshopping")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            뷰티
+                            <div className={styles.benefitZoneCategoies}>
+                                온라인 쇼핑몰
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "onlineshopping"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "beauty"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("dining")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("easypay")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            외식
+                            <div className={styles.benefitZoneCategoies}>
+                                간편결제
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "easypay"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "dining"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("books")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("cafebakery")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            도서
+                            <div className={styles.benefitZoneCategoies}>
+                                카페/베이커리
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "cafebakery"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "books"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("themepark")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("beauty")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            테마파크
+                            <div className={styles.benefitZoneCategoies}>
+                                뷰티
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "beauty"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "themepark"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                <div className={styles.benefitsZone}>
-                    {
-                        cardInfo.category.includes("fuel")
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("dining")
 
-                        &&
+                            &&
 
-                        <div className={styles.benefitZoneCategoies}>
-                            주유
+                            <div className={styles.benefitZoneCategoies}>
+                                외식
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "dining"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
                         </div>
-                    }
-
-                    <div className={styles.benefitZoneBrands}>
-                        {
-                            cardInfo.benefits.map(current => (
-                                current.categoryName === "fuel"
-
-                                &&
-
-                                <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
-                            ))
-                        }
                     </div>
-                </div>
 
-                {console.log(cardInfo.fee)}
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("books")
 
-                <div className={styles.mainText3}>
-                    안내 사항
-                </div>
+                            &&
 
-                <div className={styles.caution}>
-                    <br />
-                    해당 페이지에서 안내하는 혜택은 실제 카드사에서 제공하는 혜택과 다를수 있습니다.<br />
-                    혜택은 전원실적과 특정 조건 및 상황에 따라 다르게 제공되거나 제공되지 않을 수 있습니다.<br />
-                    연회비는 결제사의 상황에 따라 지원이 중단되거나 변동될 수 있습니다.<br /><br />
+                            <div className={styles.benefitZoneCategoies}>
+                                도서
+                            </div>
+                        }
 
-                    해당 카드는 카드사의 상황에 따라 신규 발급 또는 가입이 중단될 수 있습니다.<br /><br />
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "books"
 
-                    카드의 상세한 정보와 자세한 안내 사항은 각 카드사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br />
-                    결제사의 상세한 정보와 자세한 안내 사항은 각 결제사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br />
-                    혜택 브랜드의 상세한 정보와 자세한 안내 사항은 각 브랜드사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br /><br />
+                                    &&
 
-                    {cardInfo.card[0].company} 홈페이지 │ <span className={styles.cautionHighlight}>{cardLinkParser(cardInfo.card[0].company)}</span><br />
-                    {cardInfo.card[0].company} 고객센터 │ <span className={styles.cautionHighlight}>{cardPhoneNumberParser(cardInfo.card[0].company)}</span><br /><br />
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
+                        </div>
+                    </div>
 
-                    {
-                        cardInfo.fee.map(current => (
-                            <span>
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("themepark")
+
+                            &&
+
+                            <div className={styles.benefitZoneCategoies}>
+                                테마파크
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "themepark"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <div className={styles.benefitsZone}>
+                        {
+                            cardInfo.category.includes("fuel")
+
+                            &&
+
+                            <div className={styles.benefitZoneCategoies}>
+                                주유
+                            </div>
+                        }
+
+                        <div className={styles.benefitZoneBrands}>
+                            {
+                                cardInfo.benefits.map(current => (
+                                    current.categoryName === "fuel"
+
+                                    &&
+
+                                    <BenefitElements nameKor={current.brandNameKor} nameEng={current.brandName} feeType={current.feeType} numberOne={current.numberOne} numberTwo={current.numberTwo} />
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    {/*{console.log(cardInfo.fee)}*/}
+
+                    <div className={styles.mainText3}>
+                        안내 사항
+                    </div>
+
+                    <div className={styles.caution}>
+                        <br />
+                        해당 페이지에서 안내하는 혜택은 실제 카드사에서 제공하는 혜택과 다를수 있습니다.<br />
+                        혜택은 전원실적과 특정 조건 및 상황에 따라 다르게 제공되거나 제공되지 않을 수 있습니다.<br />
+                        연회비는 결제사의 상황에 따라 지원이 중단되거나 변동될 수 있습니다.<br /><br />
+
+                        해당 카드는 카드사의 상황에 따라 신규 발급 또는 가입이 중단될 수 있습니다.<br /><br />
+
+                        카드의 상세한 정보와 자세한 안내 사항은 각 카드사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br />
+                        결제사의 상세한 정보와 자세한 안내 사항은 각 결제사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br />
+                        혜택 브랜드의 상세한 정보와 자세한 안내 사항은 각 브랜드사 홈페이지를 방문하거나 고객센터에 문의하시길 바랍니다.<br /><br />
+
+                        {cardInfo.card[0].company} 홈페이지 │ <span className={styles.cautionHighlight}>{cardLinkParser(cardInfo.card[0].company)}</span><br />
+                        {cardInfo.card[0].company} 고객센터 │ <span className={styles.cautionHighlight}>{cardPhoneNumberParser(cardInfo.card[0].company)}</span><br /><br />
+
+                        {
+                            cardInfo.fee.map(current => (
+                                <span>
                                 {feeNameParser(current.provider)} 홈페이지 │ <span className={styles.cautionHighlight}>{feeLinkParser(current.provider)}</span><br />
                             </span>
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
                 </div>
-            </div>
+            )};
         </div>
     );
 }

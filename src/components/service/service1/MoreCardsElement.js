@@ -1,4 +1,5 @@
 import styles from './MoreCardsElement.module.css';
+import { useNavigate } from "react-router";
 
 function rankParser(rank) {
     if (rank === "1") { return <label className={styles.moreCardRankGold}>{rank}</label> }
@@ -8,9 +9,12 @@ function rankParser(rank) {
 }
 
 function MoreCardsElement({ rank, id, cardName, companyName }) {
+
+    const navigate = useNavigate();
+
     return (
         <div className={styles.moreCardsZone} onClick={() => {
-            window.open("/cardinfo/" + id);
+            navigate("/cardinfo/" + id);
         }}>
             {rankParser(rank)}
 

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -7,37 +7,59 @@ import ListElement from "./ListElement";
 import Loading from "../Loading";
 
 import styles from "./List.module.css";
-import axios from "axios";
+import axios from "../api/axios";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 function List() {
     const navigate = useNavigate();
+    const location = useLocation();
     const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState({
-        cardAll: [{}],
+        cardAll: [{}]
     });
+    const axiosPrivate = useAxiosPrivate();
 
     useEffect(() => {
+        // getCardList();
+
+        const getCardList = async () => {
+            try {
+                const response = await axiosPrivate.get('/card/cards', {
+                });
+                setTimeout(() => {
+                    setCards(response.data);
+                    setLoading(false);
+                }, 500)
+                // console.log(response.data);
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+        }
+
         getCardList();
+
     }, []);
 
-    const getCardList = () => {
-        const accessToken = localStorage.getItem("accessToken");
 
-        const option = {
-            method: "GET",
-            url: "/card/cards",
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        };
-
-        axios(option).then(({ data }) => {
-            setTimeout(() => {
-                setCards(data);
-                setLoading(false);
-            }, 500);
-        });
-    };
+    // const getCardList = () => {
+    //     const accessToken = localStorage.getItem("accessToken");
+    //
+    //     const option = {
+    //         method: "GET",
+    //         url: "/card/cards",
+    //         headers: {
+    //             Authorization: `Bearer ${accessToken}`,
+    //         },
+    //     };
+    //
+    //     axios(option).then(({ data }) => {
+    //         setTimeout(() => {
+    //             setCards(data);
+    //             setLoading(false);
+    //         }, 500);
+    //     });
+    // };
 
     // useEffect(() => {
     //     fetch("/card/cards")
@@ -57,7 +79,7 @@ function List() {
 
     const indexOfLast = currentPage * elementsPerPage;
     const indexOfFirst = indexOfLast - elementsPerPage;
-    const totalPages = Math.ceil(cards.cardAll.length / elementsPerPage);
+    const totalPages = Math.ceil(cards?.cardAll.length / elementsPerPage);
 
     const [startOfPage, setStartOfPage] = useState(1);
     const [endOfPage, setEndOfPage] = useState(10);

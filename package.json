@@ -26,12 +26,12 @@
     "react-spinners": "^0.13.4",
     "reactstrap": "^9.0.2",
     "sass": "^1.54.0",
+    "serve": "^14.0.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
     "swiper": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

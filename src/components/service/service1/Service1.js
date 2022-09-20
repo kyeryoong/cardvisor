@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Service1() {
+function Service1 () {
     const navigate = useNavigate();
     const [selNumber, setSelNumber] = useState(0);
     const [selArray, setSelArray] = useState([]);

@@ -1,24 +1,21 @@
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
-
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import SelectedBrands from "./SelectedBrands";
 import Loading from "../../Loading";
 import styles from "./Service1Results.module.css";
 
-function Service1Results() {
+function Service1Results () {
     let jsonArr = [];
 
-    for (var i = SelectedBrands.length - 1; i >= 0; i--) {
-        jsonArr[i] = { memberId: 1, brandName: SelectedBrands[i] };
-        // SelectedBrands 리스트 비우기!!!
-        SelectedBrands.pop();
-    }
+
 
     // SelectedBrands = [];
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const axiosPrivate = useAxiosPrivate();
     const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState({
         topTenCards: [{}],
@@ -26,31 +23,59 @@ function Service1Results() {
     });
 
     useEffect(() => {
+
+        for (var i = SelectedBrands.length - 1; i >= 0; i--) {
+            jsonArr[i] = { memberId: 1, brandName: SelectedBrands[i] };
+            // SelectedBrands 리스트 비우기!!!
+            SelectedBrands.pop();
+        }
+
+        const getResults = async () => {
+            // console.log(jsonArr);
+
+            const parsedUrlEncodedData = JSON.stringify(jsonArr);
+
+            try {
+                const response = await axiosPrivate({
+                    method : "POST",
+                    url: "/benefit/select",
+                    data: parsedUrlEncodedData,
+                });
+                setTimeout(() => {
+                    setCards(response.data);
+                    setLoading(false);
+                }, 500)
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+        }
+
         getResults();
     }, []);
 
-    const getResults = () => {
-        const accessToken = localStorage.getItem("accessToken");
-
-        const parsedUrlEncodedData = JSON.stringify(jsonArr);
-
-        const option = {
-            method: "POST",
-            url: "/benefit/select",
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8",
-                Authorization: `Bearer ${accessToken}`,
-            },
-            data: parsedUrlEncodedData,
-        };
-
-        axios(option).then(({ data }) => {
-            setTimeout(() => {
-                setCards(data);
-                setLoading(false);
-            }, 500);
-        });
-    };
+    // const getResults = () => {
+    //     const accessToken = localStorage.getItem("accessToken");
+    //
+    //     const parsedUrlEncodedData = JSON.stringify(jsonArr);
+    //
+    //     const option = {
+    //         method: "POST",
+    //         url: "http://localhost:8080/benefit/select",
+    //         headers: {
+    //             "Content-Type": "application/json; charset=UTF-8",
+    //             Authorization: `Bearer ${accessToken}`,
+    //         },
+    //         data: parsedUrlEncodedData,
+    //     };
+    //
+    //     axios(option).then(({ data }) => {
+    //         setTimeout(() => {
+    //             setCards(data);
+    //             setLoading(false);
+    //         }, 500);
+    //     });
+    // };
 
 
 

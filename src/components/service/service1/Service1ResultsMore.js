@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
-
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import SelectedBrands from "./SelectedBrands";
 import Loading from "../../Loading";
 import MoreCardsElement from "./MoreCardsElement";
@@ -12,36 +11,56 @@ import styles from "./Service1ResultsMore.module.css";
 
 function Service1ResultsMore() {
     const navigate = useNavigate();
+    const location = useLocation();
+    const axiosPrivate = useAxiosPrivate();
     const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState({
         topTenCards: [{}],
     });
 
     useEffect(() => {
+
+        const getResults = async () => {
+
+            try {
+                const response = await axiosPrivate({
+                    method: "GET",
+                    url: "/benefit/resultMore",
+                });
+                setTimeout(() => {
+                    setCards(response.data);
+                    setLoading(false);
+                }, 500)
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state : { from : location }, replace: true });
+            }
+        }
+
         getResults();
     }, []);
 
-    const getResults = () => {
-        const accessToken = localStorage.getItem("accessToken");
-
-        const option = {
-            method: "GET",
-            url: "/benefit/resultMore",
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8",
-                // 회원가입과 로그인을 제외한 프론트와 백의 모든 통신은 헤더에 아래와 같이 액세스 토큰을 넣어줘야함.
-                Authorization: `Bearer ${accessToken}`,
-            },
-        };
-
-        axios(option).then(({ data }) => {
-            setTimeout(() => {
-                console.log("Get 요청");
-                setCards(data);
-                setLoading(false);
-            }, 500);
-        });
-    };
+    // const getResults = () => {
+    //     const accessToken = localStorage.getItem("accessToken");
+    //
+    //     const option = {
+    //         method: "GET",
+    //         url: "http://localhost:8080/benefit/resultMore",
+    //         headers: {
+    //             "Content-Type": "application/json; charset=UTF-8",
+    //             // 회원가입과 로그인을 제외한 프론트와 백의 모든 통신은 헤더에 아래와 같이 액세스 토큰을 넣어줘야함.
+    //             Authorization: `Bearer ${accessToken}`,
+    //         },
+    //     };
+    //
+    //     axios(option).then(({ data }) => {
+    //         setTimeout(() => {
+    //             console.log("Get 요청");
+    //             setCards(data);
+    //             setLoading(false);
+    //         }, 500);
+    //     });
+    // };
 
     return (
         <div>

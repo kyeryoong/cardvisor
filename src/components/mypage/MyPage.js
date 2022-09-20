@@ -1,12 +1,33 @@
-import { useNavigate } from "react-router";
-import { useState } from "react";
+import {useLocation, useNavigate} from "react-router";
+import {useEffect, useState} from "react";
 
 import Intro from "../Intro";
-import styles from "./MyPage.module.css"
+import styles from "./MyPage.module.css";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+// import useAuth from "../hooks/useAuth";
 
 
-function MyPage() {
+const MyPage = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const axiosPrivate = useAxiosPrivate();
+    const [username, setUsername] = useState("");
+
+    useEffect(() => {
+        const getUsername = async () => {
+            try {
+                const response = await axiosPrivate.get('/member/username', {});
+                setUsername(response.data);
+
+            } catch (err) {
+                console.error(err);
+                navigate('/login', {state: {from: location}, replace: true});
+            }
+        }
+
+
+        getUsername();
+    }, []);
 
     const [info, setInfo] = useState({
         id: "",
@@ -63,7 +84,8 @@ function MyPage() {
                     아이디
                 </span>
                 <span className={styles.infoValue}>
-                    Username
+                    {/*Username*/}
+                    {username}
                 </span>
                 <br />
 

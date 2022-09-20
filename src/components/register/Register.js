@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useEffect } from "react";
-import axios from "axios";
+import axios from "../api/axios";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +12,7 @@ import styles from "./Register.module.css";
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{5,23}$/;
-const PWD_REGEX = /^(?=.*[A-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const PWD_REGEX = /^(?=.*[A-z])(?=.*[0-9])(?=.*[!@#$%^&*~]).{8,24}$/;
 
 
 
@@ -37,9 +37,13 @@ function Register() {
     const [gender, setGender] = useState("male");
     const [birth, setBirth] = useState(null);
 
-    const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false);
 
+    const current = new Date()
+            .toLocaleDateString("ko-KR")
+            .replace(/\./g, "")
+            .split(" ")
+            .map((v, i) => (i > 0 && v.length < 2 ? "0" + v : v))
+            .join("-");
 
 
     useEffect(() => {
@@ -55,10 +59,6 @@ function Register() {
         setValidMatch(pwd === matchPwd);
     }, [pwd, matchPwd])
 
-    useEffect(() => {
-        setErrMsg('');
-    }, [user, pwd, matchPwd])
-
 
 
     var date = new Date(birth);
@@ -73,7 +73,7 @@ function Register() {
 
         try {
             const response = await axios.get(
-                "/duplicate",
+                "/auth/duplicate",
                 {
                     headers: { "nickname": user }
                 }
@@ -108,16 +108,17 @@ function Register() {
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
         if (!v1 || !v2) {
-            setErrMsg("Invalid Entry");
+            // setErrMsg("Invalid Entry");
             return;
         }
 
         const option = {
             method: "POST",
-            url: "/register",
+            url: "/auth/register",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },
+            withCredentials: true,
             data: JSON.stringify({
                 nickname: user,
                 pw: pwd,
@@ -126,9 +127,8 @@ function Register() {
             }),
         };
 
-        axios(option)
+        const response = await axios(option)
             .then(({ data }) => {
-                setSuccess(true);
                 setUser("");
                 setPwd("");
                 setMatchPwd("");
@@ -180,6 +180,8 @@ function Register() {
                     </div>
 
                     <section>
+                        {/*<p ref={errRef} className={errMsg ? "errmsg" :*/}
+                        {/*"offscreen"} aria-live="assertive">{errMsg}</p>*/}
                         <form onSubmit={handleClick}>
                             <input
                                 type="text"
@@ -364,13 +366,13 @@ function Register() {
                             </span>
 
                             <span className={styles.birthInputZone}>
-                                <input type="date" value={birth} onChange={(event) => setBirth(event.target.value)} required />
+                                <input type="date" value={birth || current} onChange={(event) => setBirth(event.target.value)} required />
                             </span>
 
 
 
                             <button
-                                disabled={!validName || !validPwd || !validMatch || !birth || !notDuplicate ? true : false}
+                                disabled={!validName || !validPwd || !validMatch || !notDuplicate ? true : false}
                                 className={styles.registerButton}>
                                 회원가입
                             </button>

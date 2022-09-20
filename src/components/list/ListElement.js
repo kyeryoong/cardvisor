@@ -1,11 +1,13 @@
 import styles from './List.module.css';
-
+import {useNavigate} from "react-router";
 
 
 function ListElement({ id, cardName, companyNameKor, companyNameEng }) {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.cardElementZone} onClick={() => {
-            window.open("/cardinfo/" + id);
+            navigate("/cardinfo/" + id);
         }}>
             <img
                 className={styles.cardImages}

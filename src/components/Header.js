@@ -1,20 +1,42 @@
-import React from 'react';
-
+import React, {useEffect, useState} from 'react';
+import useAuth from "./hooks/useAuth";
 import { useNavigate } from 'react-router';
 import styles from './Header.module.css';
+import useLogout from "./hooks/useLogout";
+import { isLoggedIn } from "./PersistLogin";
 
 
 
-function Header({ isLogined, setIsLogined }) {
+const Header = () => {
     const navigate = useNavigate();
+    const { auth } = useAuth();
+    const logout = useLogout();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
+    const signOut = async () => {
+        await logout();
+        // setIsLoggedIn(false);
+        navigate('/login');
+    }
+
+    // console.log(auth?.accessToken);
+
+    useEffect(() => {
+        auth?.accessToken ? setIsLoggedIn(true) : setIsLoggedIn(false);
+    }, [auth])
+
+    // console.log(isLoggedIn);
+    // console.log(auth?.accessToken);
 
 
     return (
         <div>
             <div className={styles.header}>
                 {
-                    isLogined
+                    // auth?.user !== undefined
 
+                    isLoggedIn
                         ?
 
                         <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} onClick={() => {
@@ -29,28 +51,23 @@ function Header({ isLogined, setIsLogined }) {
                 }
 
                 {
-                    isLogined
+                    isLoggedIn
 
                     &&
 
-                    <div className={styles.button1} onClick={() => { 
+                    <div className={styles.button1} onClick={() => {
                         navigate("/mypage");
-                     }}>
+                    }}>
                         내 정보
                     </div>
                 }
 
                 {
-                    isLogined
+                    isLoggedIn
 
                     &&
 
-                    <div className={styles.button2} onClick={() => {
-                        window.localStorage.removeItem("accessToken");
-                        window.localStorage.removeItem("refreshToken");
-                        setIsLogined(false);
-                        navigate("/");
-                    }}>
+                    <div className={styles.button2} onClick={signOut}>
                         로그아웃
                     </div>
 
@@ -58,7 +75,7 @@ function Header({ isLogined, setIsLogined }) {
                 }
 
                 {
-                    !isLogined
+                    !isLoggedIn
 
                     &&
 
@@ -67,7 +84,7 @@ function Header({ isLogined, setIsLogined }) {
                 }
 
                 {
-                    !isLogined
+                    !isLoggedIn
 
                     &&
 

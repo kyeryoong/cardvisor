@@ -1,52 +1,110 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
-
+import { useRef, useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import axios from "../api/axios";
 import styles from "./Login.module.css";
 
-function Login({ isLogined, setIsLogined }) {
+const LOGIN_URL = "/auth/signin";
+
+const Login = () => {
+    const { setAuth } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/main";
+
+    const userRef = useRef();
+    // const errRef = useRef();
+
+    const [user, setUser] = useState("");
+    const [pwd, setPwd] = useState("");
+    // const [errMsg, setErrMsg]  = useState("");
+
+    useEffect(() => {
+        userRef.current.focus();
+    }, []);
+
+    // useEffect(() => {
+    //     setErrMsg("");
+    // }, [user, pwd]);
 
     const [info, setInfo] = useState({
         username: "",
         password: "",
     });
 
-    function handleChange(event) {
-        event.preventDefault();
-        setInfo((prev) => {
-            return { ...prev, [event.target.name]: event.target.value }
-        });
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-
-
-    const handleClick = (event) => {
-        event.preventDefault();
-
-        const option = {
-            method: "POST",
-            url: "/login",
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8",
-            },
-            data: JSON.stringify(info),
-        };
-
-        axios(option).then(({ data }) => {
-            localStorage.setItem("accessToken", data.access_token);
-            localStorage.setItem("refreshToken", data.refresh_token);
-            setIsLogined(true);
-
-            return navigate("/main");
-        })
-            .catch((error) => {
-                alert("아이디와 비밀번호를 확인해주세요");
-                console.log(error);
-
-                return navigate("/login");
-            })
+        try {
+            const response = await axios.post(
+                LOGIN_URL,
+                JSON.stringify({
+                    username: user,
+                    password: pwd,
+                }),
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    withCredentials: true
+                }
+            );
+            // console.log(response?.data);
+            const accessToken = response?.data?.access_token;
+            const roles = response?.data?.roles;
+            setAuth({ user, pwd, roles, accessToken });
+            setUser("");
+            setPwd("");
+            navigate(from, { replace: true } );
+            // navigate('/main');
+        } catch (err) {
+            if (!err?.response) {
+                alert("No Server Response");
+            } else if (err.response?.status === 401) {
+                alert("Wrong Username or Password");
+            } else {
+                alert("Login Failed");
+            }
+            // errRef.current.focus();
+        }
     };
+
+    // function handleChange(event) {
+    //     event.preventDefault();
+    //     setInfo((prev) => {
+    //         return { ...prev, [event.target.name]: event.target.value }
+    //     });
+    // }
+
+
+
+    // const handleClick = (event) => {
+    //     event.preventDefault();
+    //
+    //     const option = {
+    //         method: "POST",
+    //         url: "http://localhost:8080/login",
+    //         headers: {
+    //             "Content-Type": "application/json; charset=UTF-8",
+    //         },
+    //         data: JSON.stringify(info),
+    //     };
+    //
+    //     axios(option).then(({ data }) => {
+    //         localStorage.setItem("accessToken", data.access_token);
+    //         localStorage.setItem("refreshToken", data.refresh_token);
+    //         setIsLogined(true);
+    //
+    //         return navigate("/main");
+    //     })
+    //         .catch((error) => {
+    //             alert("아이디와 비밀번호를 확인해주세요");
+    //             console.log(error);
+    //
+    //             return navigate("/login");
+    //         })
+    // };
 
 
 
@@ -74,23 +132,28 @@ function Login({ isLogined, setIsLogined }) {
                         Cardvisor에 오신것을 환영합니다!
                     </div>
 
-                    <form onSubmit={handleClick}>
+                    <form onSubmit={handleSubmit}>
                         <input
                             type="text"
-                            name="username"
+                            id="username"
+                            ref={userRef}
                             placeholder="아이디"
-                            onChange={handleChange}
+                            onChange={(e) => setUser(e.target.value)}
+                            value={user}
                             autoComplete="off"
                             spellCheck="false"
+                            required
                             className={styles.inputIDZone}
                         />
 
                         <input
                             type="password"
-                            name="password"
+                            id="password"
                             placeholder="비밀번호"
-                            onChange={handleChange}
+                            onChange={(e) => setPwd(e.target.value)}
+                            value={pwd}
                             autoComplete="off"
+                            required
                             className={styles.inputPWZone}
                         />
 
