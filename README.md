@@ -2,12 +2,11 @@
 
 
 
-<!-- # Deployment in Progress!
+# Deployment in Progress!
 
 ### Visit our website to check this project!
-[<h3 style="border-bottom: none">cardvisor.site</h3>](https://cardvisor.site)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d71965f0-5d59-4418-b152-506e74899ef6/deploy-status)](https://app.netlify.com/sites/cardvisor/deploys)
-<br><br><br> -->
+[<h3 style="border-bottom: none">cardvisor.ga</h3>](http://cardvisor.ga)
+<br><br><br>
 
 
 
@@ -29,7 +28,7 @@
 <br>
 
 #### Programming Languages
-<p align="center"><img src="./public/MD/JavaScript.png" height="60">
+<p align="center"><img src="./public/MD/JavaScript.png" height="80">
 </p>
 <br>
 
@@ -40,14 +39,15 @@
 
 #### Deployment
 <p align="center">
-<img src="./public/MD/Netlify.png" height="60">
+<img src="./public/MD/Amazon EC2.png" height="60">
+<img src="./public/MD/NGINX.png" height="60">
 </p>
 <br>
 
 #### Version Control
 <p align="center">
 <img src="./public/MD/Git.png" height="60">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./public/MD/GitHub.png" height="60">
 </p>
 <br><br><br>
@@ -225,3 +225,11 @@
 
 ### Ver. 1.4.3 (2022/09/19)
 - Frontend and backend server was deployed using Amazon EC2 and Amazon Route 53.
+
+### Ver. 1.4.4 (2022/09/20)
+- New domain cardvisor.ga was connected.
+
+### Ver. 1.4.5 (2022/09/21)
+- Amazon EC2's memory and drive settings were changed. 
+- NGINX server was used to deploy frontend project in more efficient way.
+- *Mypage* component was modified to support mobile experience.
