@@ -235,4 +235,4 @@
 - *Mypage* component was modified to support mobile experience.
 
 ### Ver. 1.4.6 (2022/09/23)
-- *Service1Results* component was modified.
+- *Service1Results* and *CardInfo* components were modified.

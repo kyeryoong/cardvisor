@@ -24,7 +24,6 @@
 
 .bestCardName {
     font-size: 2.5rem;
-    font-weight: 1000;
     text-align: left;
     color: rgb(255, 255, 255);
     margin-top: 20px;
@@ -280,7 +279,6 @@
 
     .bestCardName {
         font-size: 1.6rem;
-        font-weight: 1000;
         margin-top: 15px;
         margin-bottom: 0px;
         margin-left: 0px;

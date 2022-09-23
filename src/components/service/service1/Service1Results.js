@@ -151,7 +151,7 @@ function Service1Results() {
 
     function CardElements(props) {
         return (
-            <div className={styles.moreCardsZone} onClick={() => { window.open("/cardinfo/" + cards.topTenCards[props.order].id) }}>
+            <div className={styles.moreCardsZone} onClick={() => {navigate("/cardinfo/" + cards.topTenCards[props.order].id) }}>
                 <img
                     className={styles.moreCardsImage}
                     alt="cards"
@@ -228,8 +228,6 @@ function Service1Results() {
                                                 ".png"
                                             }
                                         />
-                                        <br />
-                                        <br />
                                     </div>
                                 </div>
                             </div>

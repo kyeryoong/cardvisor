@@ -14,7 +14,7 @@
 }
 
 .cardImage {
-    height: 200px;
+    width: 300px;
     margin-left: 10px;
     border-radius: 14px;
     box-shadow: 0px 4px 5px rgb(100, 100, 100);
@@ -23,26 +23,32 @@
 
 .cardName {
     font-size: 2.5rem;
-    font-weight: 1000;
     text-align: left;
     color: rgb(255, 255, 255);
     margin-top: 20px;
-    margin-bottom: -30px;
+    margin-bottom: -10px;
     margin-left: 10px;
+    margin-right: 10px;
     transition: 0.5s;
 }
 
 .cardType {
     font-size: 1.6rem;
+    height: 40px;
+    line-height: 40px;
     color: rgb(255, 255, 255);
     text-align: left;
     margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 30px;
+    border-right: 1px solid rgb(255, 255, 255);
     transition: 0.5s;
 }
 
 .cardCompanyImage {
     height: 100px;
     transition: 0.5s;
+    margin-top: -10px;
 }
 
 .mainText1 {
@@ -288,7 +294,9 @@
     }
 
     .cardImage {
-        height: 100px;
+        width: 35%;
+        min-width: 200px;
+        max-width: 300px;
         margin-left: 0px;
         border-radius: 7px;
         box-shadow: 0px 4px 5px rgb(100, 100, 100);
@@ -297,27 +305,23 @@
 
     .cardName {
         font-size: 1.6rem;
-        font-weight: 1000;
-        text-align: left;
-        color: rgb(255, 255, 255);
         margin-top: 15px;
-        margin-bottom: -8px;
+        margin-bottom: 0px;
         margin-left: 0px;
         transition: 0.5s;
-        line-height: 1;
     }
 
     .cardType {
         font-size: 1rem;
-        color: rgb(255, 255, 255);
-        text-align: left;
+        height: 30px;
+        line-height: 30px;
         margin-left: 0px;
+        padding-right: 20px;
         transition: 0.5s;
     }
 
     .cardCompanyImage {
         height: 50px;
-        margin-bottom: -20px;
         transition: 0.5s;
     }
 
