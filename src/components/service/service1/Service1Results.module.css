@@ -7,14 +7,15 @@
 }
 
 .bestCardZone {
-    width: 850px;
-    margin: 0px auto;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     padding-top: 55px;
     transition: 0.5s;
 }
 
 .bestCardImage {
-    height: 200px;
+    width: 300px;
     margin-left: 10px;
     border-radius: 14px;
     box-shadow: 0px 4px 5px rgb(100, 100, 100);
@@ -27,22 +28,29 @@
     text-align: left;
     color: rgb(255, 255, 255);
     margin-top: 20px;
-    margin-bottom: -30px;
+    margin-bottom: -10px;
     margin-left: 10px;
+    margin-right: 10px;
     transition: 0.5s;
 }
 
 .bestCardType {
     font-size: 1.6rem;
+    height: 40px;
+    line-height: 40px;
     color: rgb(255, 255, 255);
     text-align: left;
     margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 30px;
+    border-right: 1px solid rgb(255, 255, 255);
     transition: 0.5s;
 }
 
 .bestCardCompanyImage {
     height: 100px;
     transition: 0.5s;
+    margin-top: -10px;
 }
 
 .bestCardButtonsZone {
@@ -120,92 +128,98 @@
 }
 
 .brandsRow {
-    width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .brandsZone {
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 10px;
     text-align: center;
-    width: 170px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .brandImageZone {
-    width: 140px;
-    height: 140px;
-    margin-left: 15px;
     text-align: center;
-    border-radius: 80px;
-    background-color: rgb(204, 244, 244);
 }
 
 .brandImage {
-    width: 140px;
-    height: 70px;
-    margin-top: 35px;
+    height: 60px;
+    display: block;
+    margin: 0px auto;
+    margin-top: 30px;
 }
 
 .brandBenefitName {
-    width: 160px;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    width: 100%;
     text-align: center;
+    font-size: 1.3rem;
     word-break: keep-all;
-    font-size: 1.5rem;
-    font-weight: 1000;
 }
 
 .brandBenefitInfo {
-    width: 160px;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    width: 100%;
     text-align: center;
-    word-break: keep-all;
     font-size: 1.3rem;
-    font-weight: 1000;
     color: rgb(0, 200, 200);
+    margin-bottom: 30px;
+    word-break: keep-all;
 }
 
 .moreCardsRow {
-    width: 880px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     margin-bottom: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
 
 .moreCardsZone {
-    width: 220px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.moreCardsZone:hover {
+    background-color: rgb(0, 200, 200);
+}
+
+.moreCardsZone:hover>.moreCardsName {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
 }
 
 .moreCardsImage {
-    width: 160px;
-    margin-left: 30px;
-    margin-right: 30px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
     text-align: center;
     border-radius: 6px;
     box-shadow: 0px 2px 3px rgb(100, 100, 100);
 }
 
 .moreCardsCompanyImage {
-    width: 160px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: -20px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
 }
 
 .moreCardsName {
-    width: 220px;
+    font-size: 1.2rem;
     margin-top: -20px;
+    padding-bottom: 20px;
     text-align: center;
-    font-size: 1.3rem;
-    font-weight: 1000;
     word-break: keep-all;
 }
 
@@ -240,7 +254,7 @@
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
     .backgroundZone {
         height: 310px;
         transition: 0.5s;
@@ -255,7 +269,9 @@
     }
 
     .bestCardImage {
-        height: 100px;
+        width: 35%;
+        min-width: 200px;
+        max-width: 300px;
         margin-left: 0px;
         border-radius: 7px;
         box-shadow: 0px 4px 5px rgb(100, 100, 100);
@@ -265,26 +281,23 @@
     .bestCardName {
         font-size: 1.6rem;
         font-weight: 1000;
-        text-align: left;
-        color: rgb(255, 255, 255);
         margin-top: 15px;
-        margin-bottom: -8px;
+        margin-bottom: 0px;
         margin-left: 0px;
         transition: 0.5s;
-        line-height: 1;
     }
 
     .bestCardType {
         font-size: 1rem;
-        color: rgb(255, 255, 255);
-        text-align: left;
+        height: 30px;
+        line-height: 30px;
         margin-left: 0px;
+        padding-right: 20px;
         transition: 0.5s;
     }
 
     .bestCardCompanyImage {
         height: 50px;
-        margin-bottom: -20px;
         transition: 0.5s;
     }
 
@@ -332,53 +345,30 @@
         width: 90vw;
         margin-left: 5vw;
         margin-right: 5vw;
-        display: grid;
-        grid-template-columns: 1fr;
-        transition: 0.5s;
     }
-
+    
     .brandsZone {
-        width: 90vw;
-        height: 90px;
+        height: 150px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
     }
-
-    .brandImageZone {
-        width: 80px;
-        height: 80px;
-        margin-top: 10px;
-        margin-left: 0px;
-        border-radius: 40px;
-    }
-
+    
     .brandImage {
-        width: 80px;
         height: 40px;
-        margin-top: 20px;
+        display: block;
+        margin: 0px auto;
+        margin-top: 30px;
     }
-
-    .brandBenefitZone {
-        width: calc(90vw - 120px);
-        position: relative;
-        top: -65px;
-        left: 100px;
-    }
-
+    
     .brandBenefitName {
-        width: calc(90vw - 120px);
-        margin: 0px;
-        text-align: left;
-        font-size: 1.2rem;
-        font-weight: 1000;
-    }
-
-    .brandBenefitInfo {
-        width: calc(90vw - 120px);
-        margin: 0px;
-        text-align: left;
         font-size: 1rem;
-        font-weight: 1000;
-        color: rgb(0, 200, 200);
     }
+    
+    .brandBenefitInfo {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }    
 
     .moreCardsRow {
         width: 90vw;
@@ -390,35 +380,33 @@
 
     .moreCardsZone {
         width: 90vw;
-        height: 55px;
-        margin-bottom: 10px;
+        height: 100px;
+        padding: 15px;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 120px 1fr;
     }
 
     .moreCardsImage {
-        width: 80px;
-        margin-left: 0px;
-        margin-top: 2.5px;
+        width: 105px;
+        height: 70px;
+        padding: 0px;
+        margin: 0px;
         border-radius: 3px;
     }
 
     .moreCardsCompanyImage {
-        width: 0px;
+        display: none;
     }
 
     .moreCardsName {
-        width: calc(90vw - 90px);
-        height: 55px;
         font-size: 1.2rem;
-        position: relative;
-        top: -37px;
-        left: 100px;
-        display: flex;
+        height: 100px;
+        line-height: 100px;
         text-align: left;
-        align-items: center;
     }
 
     .toMoreCardsButton {
-        width: 90vw;
         margin-top: -50px;
     }
 
