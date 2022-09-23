@@ -40,15 +40,15 @@
 #### Deployment
 <p align="center">
 <img src="./public/MD/Amazon EC2.png" height="60">
-<img src="./public/MD/NGINX.png" height="60">
+<img src="./public/MD/NGINX.png" height="65">
 </p>
 <br>
 
 #### Version Control
 <p align="center">
-<img src="./public/MD/Git.png" height="60">
+<img src="./public/MD/Git.png" height="50">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="./public/MD/GitHub.png" height="60">
+<img src="./public/MD/GitHub.png" height="50">
 </p>
 <br><br><br>
 <br><br><br>
@@ -233,3 +233,6 @@
 - Amazon EC2's memory and drive settings were changed. 
 - NGINX server was used to deploy frontend project in more efficient way.
 - *Mypage* component was modified to support mobile experience.
+
+### Ver. 1.4.6 (2022/09/23)
+- *Service1Results* component was modified.
