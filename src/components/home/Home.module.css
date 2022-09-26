@@ -9,7 +9,6 @@
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    animation: fadeIn 1s;
 }
 
 .pageOneBackground img {
@@ -35,14 +34,14 @@
     padding-top: 15vh;
     display: block;
     margin: 0px auto;
-    width: 1200px;
-    font-size: 2rem;
+    width: 1000px;
+    font-size: 1.8rem;
     color: rgb(255, 255, 255);
     text-align: right;
 }
 
 .pageOneLogo {
-    width: 1200px;
+    width: 1000px;
     position: absolute;
     top: 50vh;
     left: 50%;
@@ -97,14 +96,34 @@
     background-color: rgb(255, 255, 255);
 }
 
-.pageTwoAppear {
+.pageTwoZone {
+    display: grid;
+    grid-template-columns: 3fr 1fr
+}
+
+.pageTwoMainText {
     width: fit-content;
     font-size: 3rem;
     position: relative;
     top: 200px;
     left: 20vw;
     color: rgb(0, 200, 200);
-    animation: appearLeft 2s;
+}
+
+.pageTwoSubText {
+    width: fit-content;
+    font-size: 1.8rem;
+    position: relative;
+    top: 220px;
+    left: 20vw;
+    color: rgb(180, 180, 180);
+}
+
+.pageTwoIllustration {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    color: rgb(100, 100, 100);
 }
 
 .pageTwoCarousel {
@@ -123,14 +142,22 @@
     background-color: rgb(0, 200, 200);
 }
 
-.pageThreeAppear {
+.pageThreeMainText {
     width: fit-content;
     font-size: 3rem;
     position: relative;
     top: 200px;
     left: 20vw;
     color: rgb(255, 255, 255);
-    animation: appearLeft 2s;
+}
+
+.pageThreeSubText {
+    width: fit-content;
+    font-size: 1.8rem;
+    position: relative;
+    top: 220px;
+    left: 20vw;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .pageThreeGraphicShow {
@@ -139,7 +166,6 @@
     float: right;
     margin-right: 20vw;
     top: 30vh;
-    animation: fadeIn 2s;
 }
 
 .pageThreeGraphicHide {
@@ -148,7 +174,6 @@
     float: right;
     margin-right: 20vw;
     top: 30vh;
-    animation: fadeOut 2s;
 }
 
 .pageFour {
@@ -163,7 +188,6 @@
     top: 200px;
     left: 20vw;
     color: rgb(255, 255, 255);
-    animation: appearLeft 2s;
 }
 
 .pageFourContainer {
@@ -213,72 +237,11 @@
     left: -100vw;
     color: rgb(255, 255, 255);
     opacity: 0;
-    animation: disappearLeft 2s;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes appearLeft {
-    from {
-        left: -50vw;
-        opacity: 0;
-    }
-
-    to {
-        left: 20vw;
-        opacity: 1;
-    }
-}
-
-@keyframes disappearLeft {
-    from {
-        left: 20vw;
-        opacity: 1;
-    }
-
-    to {
-        left: -50vw;
-        opacity: 0;
-    }
-}
-
-@keyframes floating {
-    from {
-        margin-bottom: 0px;
-    }
-
-    50% {
-        margin-bottom: 30px;
-    }
-
-    to {
-        margin-bottom: 0px;
-    }
 }
 
 
 
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
     .pageOneGraphic {
         margin-top: 100px;
         width: 60%;
@@ -300,13 +263,25 @@
         max-width: 1200px;
     }
 
-    .pageTwoAppear {
+    .pageTwoMainText {
         font-size: 1.5rem;
         left: 5vw;
     }
 
-    .pageThreeAppear {
+    .pageTwoSubText {
+        font-size: 1rem;
+        top: 210px;
+        left: 5vw;
+    }
+
+    .pageThreeMainText {
         font-size: 1.5rem;
+        left: 5vw;
+    }
+
+    .pageThreeSubText {
+        font-size: 1rem;
+        top: 210px;
         left: 5vw;
     }
 
@@ -353,29 +328,5 @@
 
     .hide {
         font-size: 1.5rem;
-    }
-
-    @keyframes appearLeft {
-        from {
-            left: -50vw;
-            opacity: 0;
-        }
-
-        to {
-            left: 5vw;
-            opacity: 1;
-        }
-    }
-
-    @keyframes disappearLeft {
-        from {
-            left: 5vw;
-            opacity: 1;
-        }
-
-        to {
-            left: -50vw;
-            opacity: 0;
-        }
     }
 }

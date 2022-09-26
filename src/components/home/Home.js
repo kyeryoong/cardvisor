@@ -111,10 +111,16 @@ function Home() {
 
 
                 <div className={styles.pageTwo}>
-                    <div className={showTwo ? styles.pageTwoAppear : styles.hide}>
+                    <div className={styles.pageTwoMainText}>
                         원하는 브랜드를 선택해서<br />
                         카드를 추천받을 수 있어요.
                     </div>
+
+                    <div className={styles.pageTwoSubText}>
+                        약 400개의 브랜드 선택 가능
+                    </div>
+
+
 
                     <div className={styles.pageTwoCarousel}>
                         <Slider {...settings}>
@@ -154,9 +160,13 @@ function Home() {
 
 
                 <div className={styles.pageThree}>
-                    <div className={showThree ? styles.pageThreeAppear : styles.hide}>
+                    <div className={styles.pageThreeMainText}>
                         브랜드마다 금액을 입력하면<br />
                         더 상세한 정보를 받을 수 있어요.
+                    </div>
+
+                    <div className={styles.pageThreeSubText}>
+                        빅데이터 기반 추천 서비스 제공
                     </div>
 
                     <img alt="home" className={showThree ? styles.pageThreeGraphicShow : styles.pageThreeGraphicHide} src={process.env.PUBLIC_URL + "/images/graphics/7.png"} />
@@ -165,7 +175,7 @@ function Home() {
 
 
                 <div className={styles.pageFour}>
-                    <div className={showFour ? styles.pageFourAppear : styles.hide}>
+                    <div className={styles.pageFourAppear}>
                         카드 데이터 현황
                     </div>
 
