@@ -236,3 +236,6 @@
 
 ### Ver. 1.4.6 (2022/09/23)
 - *Service1Results* and *CardInfo* components were modified.
+
+### Ver. 1.4.7 (2022/09/26)
+- *Home* page was modified.
