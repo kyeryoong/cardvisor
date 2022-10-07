@@ -5,7 +5,7 @@
 # Deployment in Progress!
 
 ### Visit our website to check this project!
-[<h3 style="border-bottom: none">cardvisor.ga</h3>](http://cardvisor.ga)
+### [cardvisor.ga](http://cardvisor.ga)
 <br><br><br>
 
 
