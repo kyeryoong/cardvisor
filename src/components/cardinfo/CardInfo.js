@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router";
 
 import styles from './CardInfo.module.css';
-import useAuth from "../hooks/useAuth";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import Loading from "../Loading";
 
