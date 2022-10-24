@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './Brands.module.css';
 
 import SelectedBrands from './SelectedBrands';

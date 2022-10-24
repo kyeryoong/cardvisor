@@ -1,62 +1,27 @@
-import { useNavigate, useLocation } from "react-router";
-import { useState } from "react";
-import { useEffect } from "react";
-import useAxiosPrivate from "../../hooks/useAxiosPrivate";
-import SelectedBrands from "./SelectedBrands";
-import Loading from "../../Loading";
-import Slider from 'react-slick';
+import { useNavigate } from "react-router";
+import Slider from "react-slick";
 
 import styles from "./Service1Results.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
 
 
-function Service1Results() {
-    let jsonArr = [];
 
+const Service1Results = () => {
     const navigate = useNavigate();
-    const location = useLocation();
-    const axiosPrivate = useAxiosPrivate();
-    const [loading, setLoading] = useState(true);
-    const [cards, setCards] = useState({
-        topTenCards: [{}],
-        bestCardBenefits: [{}],
+
+    const [result, setResult] = useState(() => {
+        const item = localStorage.getItem("serviceone");
+        const parsedItem = JSON.parse(item);
+        return parsedItem || {};
     });
 
-
-
     useEffect(() => {
-        for (var i = SelectedBrands.length - 1; i >= 0; i--) {
-            jsonArr[i] = { memberId: 1, brandName: SelectedBrands[i] };
-            // SelectedBrands 리스트 비우기!!!
-            SelectedBrands.pop();
-        }
-
-        const getResults = async () => {
-            // console.log(jsonArr);
-
-            const parsedUrlEncodedData = JSON.stringify(jsonArr);
-
-            try {
-                const response = await axiosPrivate({
-                    method: "POST",
-                    url: "/benefit/select",
-                    data: parsedUrlEncodedData,
-                });
-                setTimeout(() => {
-                    setCards(response.data);
-                    setLoading(false);
-                }, 500)
-            } catch (err) {
-                console.error(err);
-                navigate('/login', { state: { from: location }, replace: true });
-            }
-        }
-
-        getResults();
-    }, []);
-
-
+        const item = localStorage.getItem("serviceone");
+        const parsedItem = JSON.parse(item);
+        setResult(parsedItem);
+    }, [localStorage.length]);
 
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") {
@@ -100,8 +65,6 @@ function Service1Results() {
         }
     }
 
-
-
     function typeParser(type) {
         if (type === "credit\r" || type === "credit") {
             return "신용카드";
@@ -111,8 +74,6 @@ function Service1Results() {
             return "하이브리드 카드";
         }
     }
-
-
 
     function BenefitElements(props) {
         return (
@@ -124,7 +85,7 @@ function Service1Results() {
                         src={
                             process.env.PUBLIC_URL +
                             "/images/brands_logo/" +
-                            cards.bestCardBenefits[props.order].brandName +
+                            result.bestCardBenefits[props.order].brandName +
                             ".png"
                         }
                     />
@@ -132,14 +93,14 @@ function Service1Results() {
 
                 <div className={styles.brandBenefitZone}>
                     <div className={styles.brandBenefitName}>
-                        {cards.bestCardBenefits[props.order].brandNameKor}
+                        {result.bestCardBenefits[props.order].brandNameKor}
                     </div>
 
                     <div className={styles.brandBenefitInfo}>
                         {benefitParser(
-                            cards.bestCardBenefits[props.order].feeType,
-                            cards.bestCardBenefits[props.order].numberOne,
-                            cards.bestCardBenefits[props.order].numberTwo
+                            result.bestCardBenefits[props.order].feeType,
+                            result.bestCardBenefits[props.order].numberOne,
+                            result.bestCardBenefits[props.order].numberTwo
                         )}
                     </div>
                 </div>
@@ -147,18 +108,21 @@ function Service1Results() {
         );
     }
 
-
-
     function CardElements(props) {
         return (
-            <div className={styles.moreCardsZone} onClick={() => {navigate("/cardinfo/" + cards.topTenCards[props.order].id) }}>
+            <div
+                className={styles.moreCardsZone}
+                onClick={() => {
+                    navigate("/cardinfo/" + result.topTenCards[props.order].id);
+                }}
+            >
                 <img
                     className={styles.moreCardsImage}
                     alt="cards"
                     src={
                         process.env.PUBLIC_URL +
                         "/images/card_images/" +
-                        cards.topTenCards[props.order].id +
+                        result.topTenCards[props.order].id +
                         ".png"
                     }
                 />
@@ -169,133 +133,111 @@ function Service1Results() {
                     src={
                         process.env.PUBLIC_URL +
                         "/images/card_logo/center_aligned/" +
-                        cards.topTenCards[props.order].company_eng +
+                        result.topTenCards[props.order].company_eng +
                         ".png"
                     }
                 />
 
                 <div className={styles.moreCardsName}>
-                    {cards.topTenCards[props.order].name}
+                    {result.topTenCards[props.order].name}
                 </div>
             </div>
         );
     }
 
-
-
     return (
         <div>
             {
-                loading
-
-                    ?
-
-                    <Loading message="데이터 분석중" />
-
-                    :
-
-                    (
-                        <div>
-                            <div className={styles.backgroundZone}>
-                                <div className={styles.bestCardZone}>
-                                    <img
-                                        className={styles.bestCardImage}
-                                        alt="cards"
-                                        src={
-                                            process.env.PUBLIC_URL +
-                                            "/images/card_images/" +
-                                            cards.topTenCards[0].id +
-                                            ".png"
-                                        }
-                                    />
-
-                                    <div className={styles.bestCardName}>
-                                        {cards.topTenCards[0].name}
-                                    </div>
-
-                                    <div>
-                                        <label className={styles.bestCardType}>
-                                            {typeParser(cards.topTenCards[0].type)}
-                                        </label>
-
-                                        <img
-                                            className={styles.bestCardCompanyImage}
-                                            alt="cards"
-                                            src={
-                                                process.env.PUBLIC_URL +
-                                                "/images/card_logo/left_aligned/" +
-                                                cards.topTenCards[0].company_eng +
-                                                ".png"
-                                            }
-                                        />
-                                    </div>
-                                </div>
+                <div>
+                    <div className={styles.backgroundZone}>
+                        <div className={styles.bestCardZone}>
+                            <img
+                                className={styles.bestCardImage}
+                                alt="cards"
+                                src={
+                                    process.env.PUBLIC_URL +
+                                    "/images/card_images/" +
+                                    result.topTenCards[0].id +
+                                    ".png"
+                                }
+                            />
+                            <div className={styles.bestCardName}>
+                                {result.topTenCards[0].name}
                             </div>
 
+                            <div>
+                                <label className={styles.bestCardType}>
+                                    {typeParser(result.topTenCards[0].type)}
+                                </label>
 
-
-                            <div className={styles.subText}>
-                                주요 맟춤 혜택
-                            </div>
-                            <div className={styles.brandsRow}>
-                                <Slider {...{
-                                    dots: false,
-                                    arrows: false,
-                                    infinite: true,
-                                    slidesToShow: 3,
-                                    slidesToScroll: 1,
-                                    autoplay: true,
-                                    speed: 2000,
-                                    autoplaySpeed: 2000,
-                                    pauseOnHover: false,
-                                }}>
-                                    {
-                                        cards.bestCardBenefits.map((current, index) => (
-                                            <BenefitElements order={index} />
-                                        ))
+                                <img
+                                    className={styles.bestCardCompanyImage}
+                                    alt="cards"
+                                    src={
+                                        process.env.PUBLIC_URL +
+                                        "/images/card_logo/left_aligned/" +
+                                        result.topTenCards[0].company_eng +
+                                        ".png"
                                     }
-                                </Slider>
-                            </div>
-
-
-
-                            <div className={styles.subText}>
-                                이 카드는 어때요?
-                            </div>
-                            <div className={styles.moreCardsRow}>
-                                <CardElements order={1} />
-                                <CardElements order={2} />
-                                <CardElements order={3} />
-                                <CardElements order={4} />
-                            </div>
-
-
-
-                            <div className={styles.extraButtonsZone}>
-                                <button
-                                    className={styles.toMoreCardsButton}
-                                    onClick={() => {
-                                        navigate("/service1/results/more");
-                                    }}
-                                >
-                                    더 많은 카드 보기
-                                </button>
-                                <br />
-                                <br />
-
-                                <button
-                                    className={styles.goBackButton}
-                                    onClick={() => {
-                                        navigate(-1);
-                                    }}
-                                >
-                                    혜택 다시 선택하기
-                                </button>
+                                />
                             </div>
                         </div>
-                    )}
+                    </div>
+
+                    <div className={styles.subText}>주요 맟춤 혜택</div>
+                    <div className={styles.brandsRow}>
+                        <Slider
+                            {...{
+                                dots: false,
+                                arrows: false,
+                                infinite: true,
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                                autoplay: true,
+                                speed: 2000,
+                                autoplaySpeed: 2000,
+                                pauseOnHover: false,
+                            }}
+                        >
+                            {result.bestCardBenefits.map((current, index) => (
+                                <BenefitElements order={index} />
+                            ))}
+                        </Slider>
+                    </div>
+
+                    <div className={styles.subText}>이 카드는 어때요?</div>
+                    <div className={styles.moreCardsRow}>
+                        <CardElements order={1} />
+                        <CardElements order={2} />
+                        <CardElements order={3} />
+                        <CardElements order={4} />
+                    </div>
+
+                    <div className={styles.extraButtonsZone}>
+                        <button
+                            className={styles.toMoreCardsButton}
+                            onClick={() => {
+                                navigate("/service1/results/more");
+                            }}
+                        >
+                            더 많은 카드 보기
+                        </button>
+                        <br />
+                        <br />
+
+                        <button
+                            className={styles.goBackButton}
+                            onClick={() => {
+                                navigate("/service1");
+                            }}
+                        >
+                            혜택 다시 선택하기
+                        </button>
+                    </div>
+                </div>
+            }
         </div>
     );
-}
+};
 
 export default Service1Results;
