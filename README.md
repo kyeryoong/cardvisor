@@ -239,3 +239,10 @@
 
 ### Ver. 1.4.7 (2022/09/26)
 - *Home* page was modified.
+
+### Ver. 1.4.8 (2022/10/20)
+- HTTPS connection was established.
+
+### Ver. 1.4.9 (2022/10/23)
+- *Service2* page was changed.
+- Chart was added in *Service2Analysis* page.
