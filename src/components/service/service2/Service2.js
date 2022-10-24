@@ -397,7 +397,7 @@ function Service2() {
                     var checkSum = 0;
 
                     for (var i = 0; i < 15; i++) {
-                        sumByCategories[i] = SelectedBrands[i][0]
+                        sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr)
                     }
 
                     for (i = 0; i < 15; i++) {
@@ -405,8 +405,6 @@ function Service2() {
                             checkSum = checkSum + 1;
                         }
                     }
-
-                    console.log(sumByCategories)
 
                     if (checkSum > 1) {
                         navigate("analysis");

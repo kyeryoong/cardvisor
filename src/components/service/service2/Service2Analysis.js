@@ -30,7 +30,7 @@ function Service2Analysis() {
     var maxValue = 0;
 
     for (var i = 0; i < 15; i++) {
-        sumByCategories[i] = SelectedBrands[i][0]
+        sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr);
         total = total + sumByCategories[i];
 
         if (sumByCategories[i] > maxValue) {
