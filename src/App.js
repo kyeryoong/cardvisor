@@ -13,6 +13,7 @@ import Service1Results from './components/service/service1/Service1Results';
 import Service1ResultsMore from './components/service/service1/Service1ResultsMore';
 import Service2 from './components/service/service2/Service2';
 import Service2Analysis from './components/service/service2/Service2Analysis';
+import Service2Results from './components/service/service2/Service2Results';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
@@ -50,6 +51,7 @@ function App() {
                             <Route path="service1/results/more" element={<Service1ResultsMore />} />
                             <Route path="service2" element={<Service2 />} />
                             <Route path="service2/analysis" element={<Service2Analysis />} />
+                            <Route path="service2/results" element={<Service2Results />} />
                             <Route path="list" element={<List />} />
                             <Route path="cardinfo/:card_code" element={<CardInfo />} />
                             <Route path="mypage" element={<MyPage />} />

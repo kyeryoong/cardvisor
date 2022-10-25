@@ -1,24 +1,26 @@
 import { useNavigate } from "react-router";
 import Slider from "react-slick";
 
-import styles from "./Service1Results.module.css";
+import styles from "./Service2Results.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 
 
 
-const Service1Results = () => {
+const Service2Results = () => {
     const navigate = useNavigate();
 
     const [result, setResult] = useState(() => {
-        const item = localStorage.getItem("serviceone");
+        const item = localStorage.getItem("servicetwo");
         const parsedItem = JSON.parse(item);
         return parsedItem || {};
     });
 
+    console.log(result);
+
     // useEffect(() => {
-    //     const item = localStorage.getItem("serviceone");
+    //     const item = localStorage.getItem("servicetwo");
     //     const parsedItem = JSON.parse(item);
     //     setResult(parsedItem);
     // }, [localStorage.length]);
@@ -145,6 +147,8 @@ const Service1Results = () => {
         );
     }
 
+    console.log("results confirmed")
+
     return (
         <div>
             {
@@ -228,7 +232,7 @@ const Service1Results = () => {
                         <button
                             className={styles.goBackButton}
                             onClick={() => {
-                                navigate("/service1");
+                                navigate("/service2");
                             }}
                         >
                             혜택 다시 선택하기
@@ -240,4 +244,4 @@ const Service1Results = () => {
     );
 };
 
-export default Service1Results;
+export default Service2Results;

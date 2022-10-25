@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from "react-router";
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 import SelectedBrands from './SelectedBrands';
 
@@ -12,6 +14,10 @@ import styles from './Service2Analysis.module.css';
 
 function Service2Analysis() {
     const navigate = useNavigate();
+    const location = useLocation();
+    const axiosPrivate = useAxiosPrivate();
+
+    localStorage.clear();
 
     const categoriesKor = ["교통", "통신", "마트", "편의점", "영화", "엔터테인먼트", "백화점", "온라인쇼핑몰", "간편결제", "카페/베이커리", "뷰티", "외식", "도서", "테마파크", "주유"]
 
@@ -19,7 +25,7 @@ function Service2Analysis() {
 
     const colors = ["#FF355E", "#FD5B78", "#FF6037", "#FF9966", "#FF9933", "#FFCC33", "#FFFF66", "#CCFF00", "#66FF66", "#AAF0D1", "#16D0CB", "#50BFE6", "#9C27B0", "#EE34D2", "#FF00CC"]
 
-    
+
 
     var sumByCategories = new Array(15).fill(0);
     var ratioByCategories = new Array(15).fill(0);
@@ -28,6 +34,8 @@ function Service2Analysis() {
     var total = 0;
     var maxIndex = 0;
     var maxValue = 0;
+
+    var jsonArr = []
 
     for (var i = 0; i < 15; i++) {
         sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr);
@@ -45,6 +53,10 @@ function Service2Analysis() {
 
     for (i = 0; i < 15; i++) {
         ratioByMaxValue[i] = sumByCategories[i] / maxValue;
+    }
+
+    for (i = 0; i < 15; i++) {
+        jsonArr[i] = { memberId: 9999, categoryName: categoriesEng[i], cost: ratioByCategories[i] }
     }
 
 
@@ -79,7 +91,7 @@ function Service2Analysis() {
 
                         <div className={styles.chartZoneIconBackground} style={{ backgroundColor: colors[maxIndex] }}>
                             <img
-                            alt={categoriesKor[maxIndex]} className={styles.chartZoneIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + categoriesEng[maxIndex] + ".png"} />
+                                alt={categoriesKor[maxIndex]} className={styles.chartZoneIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + categoriesEng[maxIndex] + ".png"} />
                         </div>
 
                         <div className={styles.chartZoneCategory} style={{ color: colors[maxIndex] }}>
@@ -118,7 +130,28 @@ function Service2Analysis() {
 
             <div>
                 <button className={styles.sendButton} onClick={() => {
-                    alert("준비중");
+                    const getResults = async () => {
+                        // console.log(jsonArr);
+
+                        const parsedUrlEncodedData = JSON.stringify(jsonArr);
+
+                        try {
+                            const response = await axiosPrivate({
+                                method: "POST",
+                                url: "/benefit/recommendTwo",
+                                data: parsedUrlEncodedData,
+                            });
+                            setTimeout(() => {
+                                localStorage.setItem('servicetwo', JSON.stringify(response.data));
+                                navigate("/service2/results");
+                            }, 100)
+                        } catch (err) {
+                            console.error(err);
+                            navigate('/login', { state: { from: location }, replace: true });
+                        }
+                    }
+                    getResults();
+                    navigate('/loading', { state: { from: location }, replace: true });
                 }}>
                     카드 추천 받기
                 </button>
