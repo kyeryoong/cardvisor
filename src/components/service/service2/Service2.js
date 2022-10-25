@@ -391,41 +391,32 @@ function Service2() {
 
 
 
-            <div>
-                <button className={styles.sendButton} onClick={() => {
-                    var sumByCategories = new Array(15).fill(0);
-                    var checkSum = 0;
 
-                    for (var i = 0; i < 15; i++) {
-                        sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr)
+            <button className={styles.sendButton} onClick={() => {
+                var sumByCategories = new Array(15).fill(0);
+                var checkSum = 0;
+
+                for (var i = 0; i < 15; i++) {
+                    sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr)
+                }
+
+                for (i = 0; i < 15; i++) {
+                    if (sumByCategories[i] > 0) {
+                        checkSum = checkSum + 1;
                     }
+                }
 
-                    for (i = 0; i < 15; i++) {
-                        if (sumByCategories[i] > 0) {
-                            checkSum = checkSum + 1;
-                        }
-                    }
+                if (checkSum > 1) {
+                    navigate("analysis");
+                }
 
-                    if (checkSum > 1) {
-                        navigate("analysis");
-                    }
-
-                    else {
-                        alert("2개 이상의 카테고리에 금액을 입력해주세요.");
-                    }
-                }}>
-                    혜택 선택 완료
-                </button>
-            </div>
-            <br />
-
-            <div>
-                <button className={styles.toMainButton} onClick={() => {
-                    navigate("/main");
-                }}>
-                    홈 화면으로
-                </button>
-            </div>
+                else {
+                    alert("2개 이상의 카테고리에 금액을 입력해주세요.");
+                }
+            }}>
+                혜택 선택 완료
+            </button>
+            <br /><br /><br />
         </div >
     );
 }

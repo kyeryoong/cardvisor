@@ -1,14 +1,15 @@
 import { useNavigate } from "react-router";
-import Slider from "react-slick";
+import { useState } from "react";
 
-import styles from "./Service2Results.module.css";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
+
+import styles from "./Service2Results.module.css";
 
 
 
-const Service2Results = () => {
+function Service2Results () {
     const navigate = useNavigate();
 
     const [result, setResult] = useState(() => {
@@ -17,13 +18,7 @@ const Service2Results = () => {
         return parsedItem || {};
     });
 
-    console.log(result);
 
-    // useEffect(() => {
-    //     const item = localStorage.getItem("servicetwo");
-    //     const parsedItem = JSON.parse(item);
-    //     setResult(parsedItem);
-    // }, [localStorage.length]);
 
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") {
@@ -147,7 +142,7 @@ const Service2Results = () => {
         );
     }
 
-    console.log("results confirmed")
+
 
     return (
         <div>

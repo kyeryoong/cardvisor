@@ -1,13 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import useAuth from "./hooks/useAuth";
 import { useNavigate } from 'react-router';
-import styles from './Header.module.css';
+import styles from './HeaderTop.module.css';
 import useLogout from "./hooks/useLogout";
-import { isLoggedIn } from "./PersistLogin";
 
 
 
-const Header = () => {
+function HeaderTop() {
     const navigate = useNavigate();
     const { auth } = useAuth();
     const logout = useLogout();
@@ -16,26 +15,19 @@ const Header = () => {
 
     const signOut = async () => {
         await logout();
-        // setIsLoggedIn(false);
         navigate('/login');
     }
-
-    // console.log(auth?.accessToken);
 
     useEffect(() => {
         auth?.accessToken ? setIsLoggedIn(true) : setIsLoggedIn(false);
     }, [auth])
 
-    // console.log(isLoggedIn);
-    // console.log(auth?.accessToken);
 
 
     return (
         <div>
             <div className={styles.header}>
                 {
-                    // auth?.user !== undefined
-
                     isLoggedIn
                         ?
 
@@ -99,4 +91,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default HeaderTop;

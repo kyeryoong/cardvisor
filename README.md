@@ -98,6 +98,7 @@
 
 ### Ver. 1.1.3 (2022/05/27)
 - *Service1* and *Service2* was modified.
+- API connection was established in *Service1* page.
 
 ### Ver. 1.2.1 (2022/06/15)
 - All of card images was updated.
@@ -246,3 +247,7 @@
 ### Ver. 1.4.9 (2022/10/23)
 - *Service2* page was changed.
 - Chart was added in *Service2Analysis* page.
+
+### Ver. 1.4.10 (2022/10/25)
+- API connection was established in *Service2* page.
+- *Service1* page was modified with some design changes.

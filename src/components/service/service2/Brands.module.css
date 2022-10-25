@@ -67,7 +67,7 @@
 }
 
 .zone22 input:valid {
-    background-color: rgb(250, 150, 0);
+    background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
     color: rgb(255, 255, 255);
 }
 

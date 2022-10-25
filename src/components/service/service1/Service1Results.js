@@ -1,14 +1,15 @@
 import { useNavigate } from "react-router";
-import Slider from "react-slick";
+import { useState } from "react";
 
-import styles from "./Service1Results.module.css";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
+
+import styles from "./Service1Results.module.css";
 
 
 
-const Service1Results = () => {
+function Service1Results () {
     const navigate = useNavigate();
 
     const [result, setResult] = useState(() => {
@@ -17,11 +18,7 @@ const Service1Results = () => {
         return parsedItem || {};
     });
 
-    // useEffect(() => {
-    //     const item = localStorage.getItem("serviceone");
-    //     const parsedItem = JSON.parse(item);
-    //     setResult(parsedItem);
-    // }, [localStorage.length]);
+
 
     function benefitParser(type, numberOne, numberTwo) {
         if (type === "PBD") {
@@ -144,6 +141,8 @@ const Service1Results = () => {
             </div>
         );
     }
+
+    
 
     return (
         <div>

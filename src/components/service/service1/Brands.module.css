@@ -1,19 +1,31 @@
-.iconbox {
+.iconboxNotChecked {
     width: 1fr;
     height: 120px;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
+    color: rgb(100, 100, 100);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    color: rgb(100, 100, 100);
     font-size: 1.5rem;
-    user-select: none;
+    cursor: pointer;
     transition: 0.5s;
 }
 
-.iconbox:hover {
-    background-color: rgba(250, 150, 0, 0.3);
+.iconboxChecked {
+    width: 1fr;
+    height: 120px;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    font-size: 1.5rem;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.iconboxNotChecked:hover {
+    color: rgb(250, 150, 100);
 }
 
 .brandLogo {
@@ -36,16 +48,10 @@
     padding-top: 10px;
 }
 
-input[type="checkbox"] {
-    display: none;
+.iconboxNotChecked:hover > .brandNameKor {
+    border-top: 1px solid rgb(250, 150, 100);
 }
 
-input[type="checkbox"]:checked~.iconbox {
-    background-color: rgb(250, 150, 0);
-    color: rgb(255, 255, 255);
-    transition: 0.5s;
-}
-
-input[type="checkbox"]:checked~.iconbox .brandNameKor {
+.iconboxChecked > .brandNameKor {
     border-top: 1px solid rgb(255, 255, 255);
 }

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Header from './components/Header';
+import HeaderTop from './components/HeaderTop';
 import ScrollToTop from './components/ScrollToTop';
 
 import Home from './components/home/Home';
@@ -18,7 +18,6 @@ import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
-import Unauthorized from "./components/Unauthorized";
 import RequireAuth from "./components/RequireAuth";
 import Layout from "./components/Layout";
 import PersistLogin from "./components/PersistLogin";
@@ -34,14 +33,13 @@ const ROLES = {
 function App() {
     return (
         <main className="App">
-            <Header />
+            <HeaderTop />
             <Routes>
                 <Route path="/" element={<Layout />}>
-
                     <Route path="/" element={<Home />} />
                     <Route path="login" element={<Login  />} />
                     <Route path="register" element={<Register />} />
-                    <Route path="unauthorized" element={<Unauthorized />} />
+                    <Route path="unauthorized" element={<NotFound />} />
 
                     <Route element={<PersistLogin />}>
                         <Route element={<RequireAuth allowedRoles={[ROLES.User, ROLES.Admin]} />}>
@@ -58,7 +56,6 @@ function App() {
                             <Route path="loading" element={<Loading message="데이터 분석중" />} />
                         </Route>
                     </Route>
-
 
                     <Route path="*" element={<NotFound />} />
                 </Route>

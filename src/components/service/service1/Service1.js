@@ -1,18 +1,22 @@
-import styles from './Service1.module.css';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from "react-router";
+
+import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 import Brands from './Brands';
 import SelectedBrands from './SelectedBrands';
 import Categories from '../Categories';
-import Intro from '../../Intro';
-
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from "react-router";
-import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import HeaderBottom from '../../HeaderBottom';
+import brandParser from '../../Parser';
 
 
 
-const Service1 = () => {
+import styles from './Service1.module.css';
+
+
+
+function Service1() {
     const navigate = useNavigate();
     const location = useLocation();
     const axiosPrivate = useAxiosPrivate();
@@ -22,37 +26,41 @@ const Service1 = () => {
 
     localStorage.clear();
 
-    
 
-    function SelectedBrandsZone() {
+
+    function deleteAllSelected () {
+        for (var i = 0; i < SelectedBrands.length; i++) {
+            SelectedBrands.pop();
+        }
+    }
+
+
+
+    function SelectedZone() {
         return (
-            <div>
+            <div className={styles.selectedZone}>
                 {
-                    selNumber !== 0
-
-                    &&
-
-                    <div className={styles.selectedBrandsZone}>
-                        <div className={styles.selectedBrandsNumber}>
-                            <span className={styles.selectedBrandsValue}>
-                                {selNumber}
-                            </span>
-                            개 선택
-                        </div>
-
-                        <div className={styles.selectedBrandsLine} />
-
-                        <div>
-                            {
-                                selArray.map(current => (
-                                    <img
-                                        alt="brand"
-                                        className={styles.selectedBrandsImage}
-                                        src={process.env.PUBLIC_URL + "/images/brands_logo/" + current + ".png"} />
-                                ))
+                    selArray.map(current => (
+                        <span className={styles.selectedElements} onClick={() => {
+                            if (!SelectedBrands.includes(current)) {
+                                SelectedBrands.push(current);
                             }
-                        </div>
-                    </div>
+                
+                            else {
+                                var index = SelectedBrands.indexOf(current);
+                
+                                if (index > -1) {
+                                    SelectedBrands.splice(index, 1);
+                                }
+                            }
+                
+                            setSelNumber(SelectedBrands.length);
+                            setSelArray(SelectedBrands);
+                        }}>
+                            {brandParser(current)}
+                            <span className={styles.xLetter}>×</span>
+                        </span>
+                    ))
                 }
             </div>
         )
@@ -60,12 +68,18 @@ const Service1 = () => {
 
 
 
+    useEffect(() => {
+        deleteAllSelected();
+    }, [])
+
+
+
+
     return (
         <div>
-            <Intro mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요!" />
-            <br /><br /><br />
+            <HeaderBottom mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요" />
 
-            <SelectedBrandsZone />
+            {SelectedBrands.length !== 0 && <SelectedZone />}
 
             <div>
                 <details className={styles.detailsZone}>
@@ -422,55 +436,42 @@ const Service1 = () => {
                 </details>
                 <br /><br /><br />
 
-                <div>
-                    <button className={styles.sendButton} onClick={() => {
-                        if (SelectedBrands.length === 0) {
-                            alert("혜택을 선택해주세요");
+                <button className={SelectedBrands.length ? styles.sendButtonEnable : styles.sendButtonDisable} onClick={() => {
+                    if (SelectedBrands.length === 0) {
+                        alert("혜택을 선택해주세요");
+                    }
+
+                    else {
+                        for (let i = SelectedBrands.length - 1; i >= 0; i--) {
+                            jsonArr[i] = { memberId: 1, brandName: SelectedBrands[i] };
+                            SelectedBrands.pop();
                         }
 
-                        else {
-                            for (let i = SelectedBrands.length - 1; i >= 0; i--) {
-                                jsonArr[i] = { memberId: 1, brandName: SelectedBrands[i] };
-                                // SelectedBrands 리스트 비우기!!!
-                                SelectedBrands.pop();
+                        const getResults = async () => {
+                            const parsedUrlEncodedData = JSON.stringify(jsonArr);
+
+                            try {
+                                const response = await axiosPrivate({
+                                    method: "POST",
+                                    url: "/benefit/select",
+                                    data: parsedUrlEncodedData,
+                                });
+                                setTimeout(() => {
+                                    localStorage.setItem('serviceone', JSON.stringify(response.data));
+                                    navigate("/service1/results");
+                                }, 100)
+                            } catch (err) {
+                                console.error(err);
+                                navigate('/login', { state: { from: location }, replace: true });
                             }
-
-                            const getResults = async () => {
-                                // console.log(jsonArr);
-
-                                const parsedUrlEncodedData = JSON.stringify(jsonArr);
-
-                                try {
-                                    const response = await axiosPrivate({
-                                        method: "POST",
-                                        url: "/benefit/select",
-                                        data: parsedUrlEncodedData,
-                                    });
-                                    setTimeout(() => {
-                                        localStorage.setItem('serviceone', JSON.stringify(response.data));
-                                        navigate("/service1/results");
-                                    }, 100)
-                                } catch (err) {
-                                    console.error(err);
-                                    navigate('/login', { state: { from: location }, replace: true });
-                                }
-                            }
-                            getResults();
-                            navigate('/loading', { state: { from: location }, replace: true });
                         }
-                    }}>
-                        {selNumber}개 혜택 선택 완료
-                    </button>
-                </div>
-                <br />
-
-                <div>
-                    <button className={styles.toMainButton} onClick={() => {
-                        navigate("/main");
-                    }}>
-                        홈 화면으로
-                    </button>
-                </div>
+                        getResults();
+                        navigate('/loading', { state: { from: location }, replace: true });
+                    }
+                }}>
+                    {SelectedBrands.length}개 혜택 선택 완료
+                </button>
+                <br /><br /><br />
             </div>
         </div>
     );

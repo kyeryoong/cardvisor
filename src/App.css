@@ -1,25 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-select,
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    user-select: text;
-}
-
-* {
-    -ms-overflow-style: none;
-}
-
-*::-webkit-scrollbar {
-    display: none;
-}
-
 /* @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
@@ -67,5 +45,22 @@ input {
 * {
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 1000;
-    transition: 0.5s;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+select,
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    user-select: text;
 }

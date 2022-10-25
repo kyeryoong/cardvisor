@@ -1,0 +1,125 @@
+.blank {
+    height: 250px;
+}
+
+.containerNotScrolled {
+    width: 100vw;
+    max-width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 10;
+    transition: 0.5s;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.containerScrolled {
+    width: 100vw;
+    max-width: 100%;
+    height: 80px;
+    background: linear-gradient(135deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.mainTextNotScrolled {
+    font-size: 2.5rem;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    transition: 0.5s;
+}
+
+.mainTextScrolled {
+    font-size: 1.5rem;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    transition: 0.5s;
+}
+
+.subTextNotScrolled {
+    font-size: 1.2rem;
+    font-weight: 100;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    transition: 0.5s;
+}
+
+.subTextScrolled {
+    display: none;
+    transition: 0.5s;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .blank {
+        height: 200px;
+    }
+
+    .containerNotScrolled {
+        max-width: 100%;
+        height: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+    
+    .containerScrolled {
+        max-width: 100%;
+        height: 80px;
+        background: linear-gradient(135deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%);
+        position: fixed;
+        top: 0px;
+        left: 0;
+        z-index: 10;
+        transition: 0.5s;
+    }
+
+    .mainTextNotScrolled {
+        font-size: 1.5rem;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .mainTextScrolled {
+        font-size: 1.5rem;
+        height: 80px;
+        line-height: 80px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .subTextNotScrolled {
+        font-size: 1rem;
+        height: 20px;
+        line-height: 20px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
