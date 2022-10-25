@@ -34,7 +34,7 @@
 
 .selectedZone {
     width: 100vw;
-    height: 200px;
+    height: fit-content;
     position: fixed;
     bottom: 80px;
     padding-top: 10px;
