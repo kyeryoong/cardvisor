@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import SelectedBrands from './SelectedBrands';
 
 import Brands from './Brands';
 import Categories from '../Categories';
-import Intro from '../../Intro';
+import HeaderBottom from '../../HeaderBottom';
 
 import styles from './Service2.module.css';
+
+
 
 function Service2() {
     const navigate = useNavigate();
@@ -25,16 +28,13 @@ function Service2() {
     SelectedBrands[11] = new Array(19).fill(0);
     SelectedBrands[12] = new Array(9).fill(0);
     SelectedBrands[13] = new Array(5).fill(0);
-    SelectedBrands[14] = new Array(20).fill(0);
-
+    SelectedBrands[14] = new Array(20).fill(0); 
+    
 
 
     return (
         <div>
-            <Intro mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요!" />
-            <br /><br /><br />
-
-            <div></div>
+            <HeaderBottom mainText="카드 추천 받기" subText="선호하는 브랜드의 금액을 입력해주세요." />
 
             <details className={styles.detailsZone}>
                 <Categories
@@ -392,31 +392,33 @@ function Service2() {
 
 
 
-            <button className={styles.sendButton} onClick={() => {
-                var sumByCategories = new Array(15).fill(0);
-                var checkSum = 0;
+            <button
+                className={styles.sendButtonEnable}
 
-                for (var i = 0; i < 15; i++) {
-                    sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr)
-                }
+                onClick={() => {
+                    var sumByCategories = new Array(15).fill(0);
+                    var checkSum = 0;
 
-                for (i = 0; i < 15; i++) {
-                    if (sumByCategories[i] > 0) {
-                        checkSum = checkSum + 1;
+                    for (var i = 0; i < 15; i++) {
+                        sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr)
                     }
-                }
 
-                if (checkSum > 1) {
-                    navigate("analysis");
-                }
+                    for (i = 0; i < 15; i++) {
+                        if (sumByCategories[i] > 0) {
+                            checkSum = checkSum + 1;
+                        }
+                    }
 
-                else {
-                    alert("2개 이상의 카테고리에 금액을 입력해주세요.");
-                }
-            }}>
+                    if (checkSum > 1) {
+                        navigate("analysis");
+                    }
+
+                    else {
+                        alert("2개 이상의 카테고리에 금액을 입력해주세요.");
+                    }
+                }}>
                 혜택 선택 완료
             </button>
-            <br /><br /><br />
         </div >
     );
 }

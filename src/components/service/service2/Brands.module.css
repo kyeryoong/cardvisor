@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-.iconbox {
+.containerDisable {
     width: 1fr;
     height: 120px;
-    flex-direction: column;
+    font-size: 1.5rem;
     background-color: rgb(255, 255, 255);
+    color: rgb(100, 100, 100);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    color: rgb(100, 100, 100);
-    font-size: 1.5rem;
-    user-select: none;
-    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
-.zone1 {
-    width: 35%;
-    height: 100px;
+.containerEnable {
+    width: 1fr;
+    height: 120px;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
+    color: rgb(100, 100, 100);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.zone1Disable {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,57 +35,70 @@
     border-right: 1px solid rgb(180, 180, 180);
 }
 
-.zone1 > .zone1Image {
-    max-width: 100%;
-    max-height: 100%;
+.zone1Enable {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-right: 1px solid rgb(255, 255, 255);
 }
 
 .zone2 {
-    width: 55%;
-    height: 100px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 5%;
-    float: left;
-    font-size: 1.3rem;
-    font-weight: 1000;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.zone21 {
+.zone21Disable {
     width: 100%;
-    height: 25px;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
     text-align: left;
     align-items: center;
 }
 
-.zone22 input {
+.zone21Enable {
     width: 100%;
-    height: 35px;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    align-items: center;
+}
+
+.zone22Disable {
+    width: 100%;
+    height: 30px;
     font-family: 'Poppins', serif;
     font-size: 1.5rem;
     background-color: rgb(240, 240, 240);
     border-radius: 5px;
-    color: rgb(0, 200, 200);
+    color: rgb(120, 120, 120);
     text-align: right;
     border: transparent;
-    padding-right: 5px;
+    padding-right: 15px;
 }
 
-.zone22 input:focus {
-    outline: none;
+.zone22Enable {
+    width: 100%;
+    height: 30px;
+    font-family: 'Poppins', serif;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(250, 150, 0);
+    text-align: right;
+    border: transparent;
+    padding-right: 15px;
 }
 
-.zone22 input:valid {
-    background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
-    color: rgb(255, 255, 255);
-}
-
-.zone22 input::placeholder {
-    color: rgb(210, 210, 210);
-}
-
-.zone22 input::-webkit-outer-spin-button, .zone22 input::-webkit-inner-spin-button {
+.zone22Enable::-webkit-outer-spin-button, 
+.zone22Enable::-webkit-inner-spin-button, 
+.zone22Disable::-webkit-outer-spin-button, 
+.zone22Disable::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -84,8 +107,8 @@
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 1fr;
-    gap: 3px;
-    margin-top: 3px;
+    gap: 5px;
+    margin-top: 5px;
 }
 
 .costButton {
@@ -95,7 +118,7 @@
     color: rgb(255, 255, 255);
     background-color: rgb(180, 180, 180);
     border-radius: 4px;
-    border: 1px solid rgb(224, 224, 224);
+    border: none;
     cursor: pointer;
 }
 
@@ -108,6 +131,6 @@
     color: rgb(255, 255, 255);
     background-color: rgb(130, 130, 130);
     border-radius: 4px;
-    border: 1px solid rgb(224, 224, 224);
+    border: none;
     cursor: pointer;
 }

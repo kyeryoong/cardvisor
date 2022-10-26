@@ -4,13 +4,13 @@ import { useLocation } from "react-router";
 
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
-import Brands from './Brands';
 import SelectedBrands from './SelectedBrands';
+
+import Brands from './Brands';
 import Categories from '../Categories';
 import HeaderBottom from '../../HeaderBottom';
+
 import brandParser from '../../Parser';
-
-
 
 import styles from './Service1.module.css';
 
@@ -77,7 +77,7 @@ function Service1() {
 
     return (
         <div>
-            <HeaderBottom mainText="카드 추천 받기" subText="선호하는 혜택을 체크해주세요" />
+            <HeaderBottom mainText="카드 추천 받기" subText="선호하는 브랜드를 체크해주세요." />
 
             {SelectedBrands.length !== 0 && <SelectedZone />}
 
