@@ -1,281 +1,285 @@
-.cardZone {
-    height: 500px;
-    background: linear-gradient(135deg, rgb(0,200,200) 10%, rgb(50, 100, 200) 90%);
+.containerHeader {
+    width: 60vw;
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 0px auto;
+    margin-top: 130px;
+    margin-bottom: 10px;
+    color: rgb(0, 200, 200);
 }
 
-.cardElements {
+.containerHeader:nth-child(3) {
+    margin-top: 50px;
+}
+
+.containerTop {
     width: 60vw;
-    height: 500px;
-    margin-left: 20vw;
-    margin-top: 150px;
+    height: 300px;
+    margin: 0px auto;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+
+.containerTopLeft {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.containerTopButton {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: rgb(50, 50, 50);
+    padding: 20px;
+    padding-left: 30px;
+    border-right: 1px solid rgb(220, 220, 220);
     cursor: pointer;
 }
 
-.cardElementsHeader {
-    width: fit-content;
-    font-size: 1.2rem;
-    color: rgb(50, 100, 200);
-    border-bottom: 3px solid rgb(50, 100, 200);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+.containerTopButton:nth-child(1) {
+    border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-.cardElementsImage {
-    height: 200px;
-    border-radius: 14px;
-    box-shadow: 0px 4px 5px rgb(100, 100, 100);
-    transform: rotate(-45deg);
-    margin-top: -120px;
-    float: right;
+.containerTopButton:nth-child(2) {
+    border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-.cardElementsComment {
+.containerTopButton:nth-child(1):hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 200, 200);
+    border-radius: 10px 0px 0px 0px;
+    border-right: none;
+}
+
+.containerTopButton:nth-child(2):hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 200, 100);
+    border-right: none;
+}
+
+.containerTopButton:nth-child(3):hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 150, 250);
+    border-radius: 0px 0px 0px 10px;
+    border-right: none;
+}
+
+.containerTopRight1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    background: linear-gradient(90deg, rgb(0, 200, 200) 10%, rgb(0, 100, 200) 90%);
+}
+
+.containerTopRight2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    background: linear-gradient(90deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
+}
+
+.containerTopRight3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    background: linear-gradient(90deg, rgb(0, 150, 250) 10%, rgb(100, 0, 250) 90%);
+}
+
+.containerTopRightZone {
     font-size: 1.5rem;
-    text-align: left;
     color: rgb(255, 255, 255);
+    text-align: right;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.cardElementsName {
-    font-size: 3rem;
-    margin-top: -10px;
-    text-align: left;
-    color: rgb(255, 255, 255);
+.buttonImageColor {
+    width: 40px;
+    margin-right: 20px;
 }
 
-.cardElementsGoToButton {
-    color: rgb(100, 100, 100);
+.buttonImageWhite {
+    width: 40px;
+    margin-right: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.buttonArrow {
+    width: 30px;
+    margin-left: 20px;
+    filter: invert();
+}
+
+.containerImage {
+    width: 160px;
+}
+
+.containerWord {
+    font-size: 2rem;
     margin-top: 20px;
 }
 
-.buttonsZone {
+.cardSliderPage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.cardSliderLeft {
+    width: 100%;
+    height: 295px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardSliderRight {
+    width: 100%;
+    height: 295px;
+    display: flex;
+    align-items: center;
+}
+
+.cardSliderImage {
+    width: 200px;
+    box-shadow: -5px 0px 10px 2px rgba(150, 150, 150, 0.5);
+    border-radius: 8px;
+    transform: rotate(-90deg);
+}
+
+.cardSliderName {
+    font-size: 2.5rem;
+}
+
+.cardSliderComment {
+    font-size: 1.5rem;
+}
+
+.containerBottom {
     width: 60vw;
     height: 300px;
-    margin-top: 50px;
-    margin-bottom: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-} 
-
-.button1 {
-    width: 20vw;
-    height: 300px;
-    padding-top: 40px;
-    color: rgb(70, 70, 70);
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    border: 1px solid rgb(230, 230, 230);
-    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    border-radius: 15px 0px 0px 15px;
-    border-right: 1px solid white;
-    z-index: 5;
-}
-
-.button2 {
-    width: 20vw;
-    height: 300px;
-    padding-top: 40px;
-    color: rgb(70, 70, 70);
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    border: 1px solid rgb(230, 230, 230);
-    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    z-index: 4;
-}
-
-.button3 {
-    width: 20vw;
-    height: 300px;
-    padding-top: 40px;
-    color: rgb(70, 70, 70);
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    border: 1px solid rgb(230, 230, 230);
-    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    border-radius: 0px 15px 15px 0px;
-    border-left: 1px solid white;
-    z-index: 3;
-}
-
-.button1:hover {
-    background-color: rgb(250, 150, 0);
-    color: rgb(255, 255, 255);
-}
-
-.button2:hover {
-    background-color: rgb(50, 100, 200);
-    color: rgb(255, 255, 255);
-}
-
-.button3:hover {
-    background-color: rgb(150, 100, 200);
-    color: rgb(255, 255, 255);
-}
-
-.buttonGraphic {
-    width: 120px;
-    display: block;
     margin: 0px auto;
-    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
 
-.mainText {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 2rem;
-    font-weight: 1000;
+.recommendedCardElements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.subText {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1rem;
+.recommendedCardImage {
+    width: 100px;
+    height: 150px;
+    background-color: rgb(200, 200, 200);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 5px;
     text-align: center;
-    margin-top: -5px;
+}
+
+.recommendedCardName {
+    margin-top: 20px;
 }
 
 
 
-@media screen and (max-width: 1200px) {   
-    .cardZone {
-        height: 300px;
-    }
-    
-    .cardElements {
+@media screen and (max-width: 1200px) {
+    .containerHeader {
         width: 90vw;
-        height: 200px;
-        margin-left: 5vw;
-        margin-top: 100px;
     }
 
-    .cardElementsImage {
-        height: 150px;
-        position: relative;
-        top: -20px;
+    .containerTop {
+        width: 90vw;
     }
 
-    .buttonsZone {
-        width: 750px;
-    }
-
-    .button1 {
-        width: 250px;
-    }
-    
-    .button2 {
-        width: 250px;
-    }
-
-    .button3 {
-        width: 250px;
+    .containerBottom {
+        width: 90vw;
     }
 }
 
 
 
 @media screen and (max-width: 800px) {
-    .cardZone {
-        height: 300px;
-    }
-    
-    .cardElements {
-        width: 90vw;
-        height: 200px;
-        margin-left: 5vw;
-        margin-top: 100px;
-    }
-
-    .cardElementsImage {
-        height: 100px;
-        position: relative;
-        top: 100px;
-        border-radius: 7px;
-    }
-    
-    .cardElementsComment {
-        font-size: 0.8rem;
-        margin-top: -10px;
-    }
-    
-    .cardElementsName {
+    .containerHeader {
         font-size: 1.5rem;
-        margin-top: -5px;
-    } 
-
-    .buttonsZone {
-        width: 90vw;
-        height: calc(78vh - 180px - 12vw);
-        margin-top: 6vw;
-        margin-left: 5vw;
-        margin-bottom: 6vw;
-        z-index: 5;
+        margin-top: 110px;
     }
 
-    .button1 {
-        width: 90vw;
-        height: calc(26vh - 60px - 4vw);
-        padding-top: 0;
-        border-radius: 10px 10px 0px 0px;
-        border: 0px;
-        border-bottom: 1px solid white;
-        display: grid;
-        grid-template-columns: calc(13vh - 30px + 18vw) calc(72vw - 13vh + 30px);
+    .containerHeader:nth-child(3) {
+        margin-top: 30px;
     }
 
-    .button2 {
-        width: 90vw;
-        height: calc(26vh - 60px - 4vw);
-        padding-top: 0;
-        border: 0px;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        display: grid;
-        grid-template-columns: calc(13vh - 30px + 18vw) calc(72vw - 13vh + 30px);
+    .containerTop {
+        height: 120px;
+        grid-template-columns: 1fr;
     }
 
-    .button3 {
-        width: 90vw;
-        min-width: none;
-        height: calc(26vh - 60px - 4vw);
-        padding-top: 0;
-        border-radius: 0px 0px 10px 10px;
-        border: 0px;
-        border-top: 1px solid white;
-        display: grid;
-        grid-template-columns: calc(13vh - 30px + 18vw) calc(72vw - 13vh + 30px);
+    .containerTopLeft {
+        grid-template-columns: 1fr 1fr 1fr;
     }
     
-    .buttonGraphic {
-        margin: 0px;
-        margin-top: calc(6.5vh - 15px - 1vw);
-        margin-left: 10vw;
-        width: calc(13vh - 30px - 2vw);
-        height: calc(13vh - 30px - 2vw);
-    }
-
-    .textZone {
-        margin-top: auto;
-        margin-bottom: auto;
-        width: fit-content;
-    }
-
-    .mainText {
-        font-size: 1.8rem;
-        text-align: left;
-        margin: 0px;
+    .containerTopButton {
+        font-size: 1rem;
+        height: 120px;
+        padding: 10px;
+        border: none;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
         word-break: keep-all;
     }
 
-    .subText {
-        font-size: 1.2rem;
-        text-align: left;
-        margin: 0px;
-        word-break: keep-all;
+    .containerTopButton:nth-child(1) {
+        border-bottom: none;
+        border-right: 1px solid rgb(220, 220, 220);
+    }
+    
+    .containerTopButton:nth-child(2) {
+        border-bottom: none;
+        border-right: 1px solid rgb(220, 220, 220);
+    }
+    
+    .containerTopButton:nth-child(1):hover {
+        border-radius: 10px 0px 0px 10px;
+    }
+        
+    .containerTopButton:nth-child(3):hover {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .containerTopRight {
+        display: none;
+    }
+
+    .buttonArrow {
+        display: none;
+    }
+
+    .containerBottom {
+        height: 200px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .recommendedCardImage {
+        width: 80px;
+        height: 120px;
+    }
+    
+    .recommendedCardName {
+        margin-top: 10px;
     }
 }
