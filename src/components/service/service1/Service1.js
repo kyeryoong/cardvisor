@@ -18,15 +18,17 @@ import styles from './Service1.module.css';
 
 function Service1() {
     const navigate = useNavigate();
+
     const location = useLocation();
     const axiosPrivate = useAxiosPrivate();
-    const [selNumber, setSelNumber] = useState(0);
-    const [selArray, setSelArray] = useState([]);
     let jsonArr = [];
 
     localStorage.clear();
 
+    const [selNumber, setSelNumber] = useState(0);
+    const [selArray, setSelArray] = useState([]);
 
+    
 
     function deleteAllSelected () {
         for (var i = 0; i < SelectedBrands.length; i++) {

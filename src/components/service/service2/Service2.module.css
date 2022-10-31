@@ -12,7 +12,7 @@
     height: 80px;
     position: fixed;
     bottom: 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
     color: rgb(255, 255, 255);
     border: transparent;
@@ -25,7 +25,7 @@
     height: 80px;
     position: fixed;
     top: calc(100vh - 80px);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background-color: rgb(160, 160, 160);
     color: rgb(255, 255, 255);
     border: transparent;

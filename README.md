@@ -252,5 +252,8 @@
 - API connection was established in *Service2* page.
 - *Service1* page was modified with some design changes.
 
-### Ver. 1.4.10 (2022/10/25)
+### Ver. 1.4.11 (2022/10/25)
 - *Service2* page was modified with some design changes.
+
+### Ver. 1.4.12 (2022/10/31)
+- Some minor changes in *Service2* page.
