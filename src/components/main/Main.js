@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from '@mui/material'
+import { Paper } from '@mui/material'
 
 import styles from './Main.module.css';
 

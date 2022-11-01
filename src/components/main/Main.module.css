@@ -121,13 +121,13 @@
 }
 
 .containerWord {
-    font-size: 2rem;
+    font-size: 2vw;
     margin-top: 20px;
 }
 
 .cardSliderPage {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
 }
 
 .cardSliderLeft {
@@ -141,6 +141,7 @@
 .cardSliderRight {
     width: 100%;
     height: 295px;
+    padding-right: 30px;
     display: flex;
     align-items: center;
 }
@@ -153,11 +154,15 @@
 }
 
 .cardSliderName {
-    font-size: 2.5rem;
+    font-size: min(2.5rem, 2.5vw);
+    line-height: 2rem;
+    word-break: keep-all;
 }
 
 .cardSliderComment {
-    font-size: 1.5rem;
+    font-size: 1.2vw;
+    word-break: keep-all;
+    margin-top: 20px;
 }
 
 .containerBottom {
@@ -197,7 +202,7 @@
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .containerHeader {
         width: 90vw;
     }
@@ -233,9 +238,10 @@
     }
     
     .containerTopButton {
-        font-size: 1rem;
+        font-size: min(3.5vw, 1.2rem);
         height: 120px;
-        padding: 10px;
+        padding-left: 3vw;
+        padding-right: 3vw;
         border: none;
         display: grid;
         grid-template-rows: 1fr 1fr;

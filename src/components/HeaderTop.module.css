@@ -51,7 +51,7 @@
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .header {
         grid-template-columns: 1fr 80px 80px;
         gap: 5px;
