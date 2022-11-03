@@ -121,7 +121,7 @@
 }
 
 .containerWord {
-    font-size: 2vw;
+    font-size: 1.8vw;
     margin-top: 20px;
 }
 
@@ -176,28 +176,31 @@
     padding-left: 50px;
     padding-right: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    overflow-x: scroll;
 }
 
-.recommendedCardElements {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.recentCardElements {
+    width: 200px;
+    margin: 0px auto;
+    padding-top: 50px;
 }
 
-.recommendedCardImage {
+.recentCardImage {
     width: 100px;
     height: 150px;
     background-color: rgb(200, 200, 200);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     border-radius: 5px;
-    text-align: center;
+    margin: 0px auto;
 }
 
-.recommendedCardName {
+.recentCardName {
+    font-size: 1rem;
     margin-top: 20px;
+    text-align: center;
+    word-break: keep-all;
 }
 
 
@@ -219,9 +222,11 @@
 
 
 @media screen and (max-width: 800px) {
+
+
     .containerHeader {
         font-size: 1.5rem;
-        margin-top: 110px;
+        margin-top: 40px;
     }
 
     .containerHeader:nth-child(3) {
@@ -236,7 +241,7 @@
     .containerTopLeft {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+
     .containerTopButton {
         font-size: min(3.5vw, 1.2rem);
         height: 120px;
@@ -252,16 +257,16 @@
         border-bottom: none;
         border-right: 1px solid rgb(220, 220, 220);
     }
-    
+
     .containerTopButton:nth-child(2) {
         border-bottom: none;
         border-right: 1px solid rgb(220, 220, 220);
     }
-    
+
     .containerTopButton:nth-child(1):hover {
         border-radius: 10px 0px 0px 10px;
     }
-        
+
     .containerTopButton:nth-child(3):hover {
         border-radius: 0px 10px 10px 0px;
     }
@@ -274,18 +279,60 @@
         display: none;
     }
 
+    .cardSliderContainer {
+        width: 100vw;
+        height: 250px;
+        margin-top: 60px;
+        padding-top: 60px;
+    }
+
+    .cardSliderPage {
+        height: 300px;
+        display: block;
+        margin: 0px auto;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .cardSliderImage {
+        width: min(200px, 60vw);
+        box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.5);
+        border-radius: 8px;
+        transform: none;
+    }
+    
+    .cardSliderName {
+        font-size: min(1.5rem, 6vw);
+        line-height: 2rem;
+        word-break: keep-all;
+        margin-top: 20px;
+    }
+    
+    .cardSliderComment {
+        font-size: min(1rem, 3vw);
+        word-break: keep-all;
+        margin-top: 0px;
+    }
+
     .containerBottom {
         height: 200px;
         padding-left: 10px;
         padding-right: 10px;
+        gap: 0px;
     }
 
-    .recommendedCardImage {
+    .recentCardElements {
+        width: 130px;
+        padding-top: 25px;
+    }
+
+    .recentCardImage {
         width: 80px;
         height: 120px;
     }
-    
-    .recommendedCardName {
+
+    .recentCardName {
+        font-size: 0.7rem;
         margin-top: 10px;
     }
 }

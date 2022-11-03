@@ -7,12 +7,10 @@ import styles from "./HeaderBottom.module.css";
 function HeaderBottom({ mainText, subText }) {
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    const updateScroll = () => {
-        setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-    };
-
     useEffect(() => {
-        window.addEventListener("scroll", updateScroll);
+        window.addEventListener("scroll", () => {
+            setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+        });
     });
 
 

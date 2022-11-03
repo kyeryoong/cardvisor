@@ -258,3 +258,6 @@
 ### Ver. 1.4.12 (2022/10/31)
 - Some minor changes in *Service2* page.
 - *Main* page was modified with layout and design changes.
+
+### Ver. 1.4.13 (2022/11/3)
+- *Main* page was modified to support mobile experience.

@@ -56,55 +56,23 @@ const Login = () => {
             setAuth({ user, pwd, roles, accessToken });
             setUser("");
             setPwd("");
-            navigate(from, { replace: true } );
+            navigate(from, { replace: true });
             // navigate('/main');
         } catch (err) {
             if (!err?.response) {
-                alert("No Server Response");
-            } else if (err.response?.status === 401) {
-                alert("Wrong Username or Password");
-            } else {
-                alert("Login Failed");
+                alert("서버 응답 오류");
+            }
+
+            else if (err.response?.status === 401) {
+                alert("아이디 또는 비밀번호를 확인해주세요.");
+            }
+
+            else {
+                alert("로그인에 실패");
             }
             // errRef.current.focus();
         }
     };
-
-    // function handleChange(event) {
-    //     event.preventDefault();
-    //     setInfo((prev) => {
-    //         return { ...prev, [event.target.name]: event.target.value }
-    //     });
-    // }
-
-
-
-    // const handleClick = (event) => {
-    //     event.preventDefault();
-    //
-    //     const option = {
-    //         method: "POST",
-    //         url: "http://localhost:8080/login",
-    //         headers: {
-    //             "Content-Type": "application/json; charset=UTF-8",
-    //         },
-    //         data: JSON.stringify(info),
-    //     };
-    //
-    //     axios(option).then(({ data }) => {
-    //         localStorage.setItem("accessToken", data.access_token);
-    //         localStorage.setItem("refreshToken", data.refresh_token);
-    //         setIsLogined(true);
-    //
-    //         return navigate("/main");
-    //     })
-    //         .catch((error) => {
-    //             alert("아이디와 비밀번호를 확인해주세요");
-    //             console.log(error);
-    //
-    //             return navigate("/login");
-    //         })
-    // };
 
 
 
