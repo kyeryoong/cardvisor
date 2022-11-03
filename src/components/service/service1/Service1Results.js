@@ -1,5 +1,5 @@
+import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router";
-import { useState } from "react";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -25,14 +25,38 @@ function Service1Results() {
 
     var cardsBrands = [];
     
+    const [width, setWidth] = useState(window.innerWidth);
+    const [slidesToShow, setSlidesToShow] = useState(4);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => { 
+            setWidth(window.innerWidth); 
+
+            if (width > 1000) {
+                setSlidesToShow(4);
+            }
+
+            else if (width > 600) {
+                setSlidesToShow(3);
+            }
+
+            else if (width > 400) {
+                setSlidesToShow(2);
+            }
+
+            else {
+                setSlidesToShow(1);
+            }
+        });
+    });
 
 
 
     function BenefitElements(props) {
         return (
-            <div className={styles.brandsZone}>
+            <div className={styles.benefitElementsContainer}>
                 <img
-                    className={styles.brandImage}
+                    className={styles.benefitLogo}
                     alt="brands"
                     src={
                         process.env.PUBLIC_URL +
@@ -42,16 +66,18 @@ function Service1Results() {
                     }
                 />
 
-                <div className={styles.brandBenefitName}>
-                    {result.bestCardBenefits[props.order].brandNameKor}
-                </div>
+                <div className={styles.benefitInfo}>
+                    <div className={styles.benefitName}>
+                        {result.bestCardBenefits[props.order].brandNameKor}
+                    </div>
 
-                <div className={styles.brandBenefitInfo}>
-                    {benefitParser(
-                        result.bestCardBenefits[props.order].feeType,
-                        result.bestCardBenefits[props.order].numberOne,
-                        result.bestCardBenefits[props.order].numberTwo
-                    )}
+                    <div className={styles.benefitValue}>
+                        {benefitParser(
+                            result.bestCardBenefits[props.order].feeType,
+                            result.bestCardBenefits[props.order].numberOne,
+                            result.bestCardBenefits[props.order].numberTwo
+                        )}
+                    </div>
                 </div>
             </div>
         );
@@ -62,7 +88,7 @@ function Service1Results() {
     function CardElements(props) {
         return (
             <div
-                className={styles.moreCardsZone}
+                className={styles.moreCardsElements}
                 onClick={() => {
                     navigate("/cardinfo/" + result.topTenCards[props.order].id);
                 }}
@@ -112,59 +138,65 @@ function Service1Results() {
         <div>
             {
                 <div>
-                    <div className={styles.backgroundZone}>
-                        <div className={styles.bestCardZone}>
-                            <img className={styles.bestCardImage} alt="cards" src={process.env.PUBLIC_URL + "/images/card_images/" + result.topTenCards[0].id + ".png"} />
+                    <div className={styles.bestCardContainer}>
+                        <img className={styles.bestCardImage} alt="cards" src={process.env.PUBLIC_URL + "/images/card_images/" + result.topTenCards[0].id + ".png"} />
+
+                        <div className={styles.bestCardBottom}>
                             <div className={styles.bestCardName}>
                                 {result.topTenCards[0].name}
                             </div>
 
-                            <div>
-                                <label className={styles.bestCardType}>
-                                    {typeParser(result.topTenCards[0].type)}
-                                </label>
 
-                                <img className={styles.bestCardCompanyImage} alt="cards" src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + result.topTenCards[0].company_eng + ".png"} />
+                            <div className={styles.bestCardInfo}>
+                                <div className={styles.bestCardType}>
+                                    {typeParser(result.topTenCards[0].type)}
+                                </div>
+
+                                <img className={styles.bestCardCompanyLogo} alt="cards" src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + result.topTenCards[0].company_eng + ".png"} />
                             </div>
                         </div>
                     </div>
 
-
+                    <button className={styles.goToCardInfoButton} onClick={() => {
+                        navigate("/cardinfo/" + result.topTenCards[0].id)
+                    }}>
+                        카드 상세 정보 보기
+                    </button>
 
                     <div className={styles.subText}>
                         맞춤 혜택
                     </div>
 
-                    <div className={styles.selectedBrandsContainer}>
-                        <div className={styles.selectedBrandsContainerLeft}>
-                            <div className={styles.selectedBrandsContainerLeftTop}>
-                                <div className={styles.selectedBrandsContainerLeftType}>
+                    <div className={styles.selectedContainer}>
+                        <div className={styles.selectedContainerLeft}>
+                            <div className={styles.selectedContainerLeftTop}>
+                                <div className={styles.selectedContainerLeftType}>
                                     포함된 혜택
                                 </div>
 
-                                <div className={styles.selectedBrandsContainerLeftValue}>
+                                <div className={styles.selectedContainerLeftValue}>
                                     {matched}
                                 </div>
                             </div>
 
-                            <div className={styles.selectedBrandsContainerLeftBottom}>
-                                <div className={styles.selectedBrandsContainerLeftType}>
+                            <div className={styles.selectedContainerLeftBottom}>
+                                <div className={styles.selectedContainerLeftType}>
                                     선택한 모든 혜택
                                 </div>
 
-                                <div className={styles.selectedBrandsContainerLeftValue}>
+                                <div className={styles.selectedContainerLeftValue}>
                                     {selectedBrands.length}
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.selectedBrandsContainerRight}>
+                        <div className={styles.selectedContainerRight}>
                             <Slider
                                 {...{
                                     dots: false,
                                     arrows: false,
                                     infinite: true,
-                                    slidesToShow: 4,
+                                    slidesToShow: slidesToShow,
                                     slidesToScroll: 1,
                                     autoplay: true,
                                     speed: 3000,
@@ -174,9 +206,9 @@ function Service1Results() {
                             >
                                 {
                                     selectedBrands.map((current) => (
-                                        <div className={styles.selectedBrandsContainerRightElements}>
+                                        <div className={styles.selectedContainerRightElements}>
                                             <img
-                                                className={styles.selectedBrandsImage}
+                                                className={styles.selectedLogo}
                                                 alt="brands"
                                                 src={
                                                     process.env.PUBLIC_URL +
@@ -186,7 +218,7 @@ function Service1Results() {
                                                 }
                                             />
 
-                                            <div className={styles.selectedBrandsName}>
+                                            <div className={styles.selectedName}>
                                                 {brandParser(current)}
                                             </div>
 
@@ -207,19 +239,7 @@ function Service1Results() {
                         </div>
                     </div>
 
-                    {/* {
-                        selectedBrands.map((current) => (
-                            <div className={styles.selectedBrandsContainerElements}>
-                                <div className={styles.selectedBrandsContainerBrands}>
-                                    {brandParser(current)}
-                                </div>
 
-                                <div className={styles.selectedBrandsContainerIncluded}>
-                                    {cardsBrands.includes(current) ? "true" : "false"}
-                                </div>
-                            </div>
-                        ))
-                    } */}
 
                     <div className={styles.subText}>
                         카드 전체 혜택
@@ -235,26 +255,18 @@ function Service1Results() {
                         이 카드는 어때요?
                     </div>
 
-                    <div className={styles.moreCardsRow}>
-                        <CardElements order={1} />
-                        <CardElements order={2} />
-                        <CardElements order={3} />
-                        <CardElements order={4} />
-                    </div>
+                    <div className={styles.moreCardsContainer}>
+                        <div className={styles.moreCardsRows}>
+                            <CardElements order={1} />
+                            <CardElements order={2} />
+                            <CardElements order={3} />
+                            <CardElements order={4} />
+                        </div>
 
-                    <div className={styles.extraButtonsZone}>
-                        <button className={styles.toMoreCardsButton} onClick={() => {
+                        <button className={styles.moreCardsButton} onClick={() => {
                             navigate("/service1/results/more");
                         }}>
                             더 많은 카드 보기
-                        </button>
-                        <br />
-                        <br />
-
-                        <button className={styles.goBackButton} onClick={() => {
-                            navigate("/service1");
-                        }}>
-                            혜택 다시 선택하기
                         </button>
                     </div>
                 </div>

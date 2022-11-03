@@ -204,15 +204,15 @@ function benefitParser(type, numberOne, numberTwo) {
     } else if (type === "NGP") {
         return numberOne + "포인트/마일리지 적립";
     } else if (type === "LBD") {
-        return "1리터당" + numberOne + "원 청구 할인";
+        return "1리터당 " + numberOne + "원 청구 할인";
     } else if (type === "LID") {
-        return "1리터당" + numberOne + "원 즉시 할인";
+        return "1리터당 " + numberOne + "원 즉시 할인";
     } else if (type === "LND") {
-        return "1리터당" + numberOne + "원 할인";
+        return "1리터당 " + numberOne + "원 할인";
     } else if (type === "LGP") {
-        return "1리터당" + numberOne + "포인트/마일리지 적립";
+        return "1리터당 " + numberOne + "포인트/마일리지 적립";
     } else if (type === "LCB") {
-        return "1리터당" + numberOne + "원 캐시백";
+        return "1리터당 " + numberOne + "원 캐시백";
     }
 }
 
