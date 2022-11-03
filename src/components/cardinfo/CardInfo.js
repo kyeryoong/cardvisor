@@ -3,9 +3,13 @@ import { useParams } from 'react-router';
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router";
 
-import styles from './CardInfo.module.css';
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
 import Loading from "../Loading";
+
+import { benefitParser, brandParser, typeParser, feeNameParser, feeLinkParser, cardLinkParser, cardPhoneNumberParser } from '../Parser';
+
+import styles from './CardInfo.module.css';
 
 
 
@@ -66,155 +70,6 @@ function CardInfo() {
 
 
 
-    function benefitParser(type, numberOne, numberTwo) {
-        if (type === "PBD") { return numberOne + "% 청구 할인" }
-        else if (type === "PID") { return numberOne + "% 즉시 할인" }
-        else if (type === "PND") { return numberOne + "% 할인" }
-        else if (type === "PCB") { return numberOne + "% 캐시백" }
-        else if (type === "PGP") { return numberOne + "% 포인트/마일리지 적립" }
-        else if (type === "WBD") { return numberOne + "원 청구 할인" }
-        else if (type === "WID") { return numberOne + "원 즉시 할인" }
-        else if (type === "WND") { return numberOne + "원 할인" }
-        else if (type === "WCB") { return numberOne + "원 캐시백" }
-        else if (type === "FGP") { return numberOne + "원당 " + numberTwo + "포인트/마일리지 적립" }
-        else if (type === "FBD") { return numberOne + "원당 " + numberTwo + "원 청구 할인" }
-        else if (type === "FID") { return numberOne + "원당 " + numberTwo + "원 즉시 할인" }
-        else if (type === "FND") { return numberOne + "원당 " + numberTwo + "원 할인" }
-        else if (type === "NGP") { return numberOne + "포인트/마일리지 적립" }
-        else if (type === "LBD") { return "1리터당 " + numberOne + "원 청구 할인" }
-        else if (type === "LID") { return "1리터당 " + numberOne + "원 즉시 할인" }
-        else if (type === "LND") { return "1리터당 " + numberOne + "원 할인" }
-        else if (type === "LGP") { return "1리터당 " + numberOne + "포인트/마일리지 적립" }
-        else if (type === "LCB") { return "1리터당 " + numberOne + "원 캐시백" }
-    }
-
-    function typeParser(type) {
-        if (type === "credit\r" || type === "credit") { return "신용카드" }
-        else if (type === "check\r" || type === "check") { return "체크카드" }
-        else if (type === "hybrid\r" || type === "hybrid") { return "하이브리드 카드" }
-    }
-
-    function feeNameParser(name) {
-        if (name === "amex") { return "아메리칸 익스프레스" }
-        else if (name === "amexFamily") { return "아메리칸 익스프레스(가족 전용)" }
-        else if (name === "amexMobile") { return "아메리칸 익스프레스(모바일 전용)" }
-        else if (name === "bc") { return "BC카드" }
-        else if (name === "bcGlobal") { return "BC 글로벌" }
-        else if (name === "bcDomestic") { return "BC카드(국내 전용)" }
-        else if (name === "jcb") { return "JCB" }
-        else if (name === "jcbOneWay") { return "JCB(One Way)" }
-        else if (name === "jcbGold") { return "JCB(골드)" }
-        else if (name === "jcbMobile") { return "JCB(모바일 전용)" }
-        else if (name === "jcbSilver") { return "JCB(실버)" }
-        else if (name === "kWorld") { return "K-WORLD" }
-        else if (name === "kWorldJcb") { return "K-WORLD(JCB)" }
-        else if (name === "kWorldUpi") { return "K-WORLD(UPI)" }
-        else if (name === "kWorldMobile") { return "K-WORLD(모바일 전용)" }
-        else if (name === "master") { return "마스터카드" }
-        else if (name === "masterPlatinum") { return "마스터카드(플래티넘)" }
-        else if (name === "masterFamliy") { return "마스터카드(가족 전용)" }
-        else if (name === "masterGold") { return "마스터카드(골드)" }
-        else if (name === "masterDomestic") { return "마스터카드(국내 전용)" }
-        else if (name === "masterMobile") { return "마스터카드(모바일 전용)" }
-        else if (name === "masterSilver") { return "마스터카드(실버)" }
-        else if (name === "masterOverseas") { return "마스터카드(해외 전용)" }
-        else if (name === "oneWay") { return "One Way" }
-        else if (name === "sAnd") { return "S&" }
-        else if (name === "unionPay") { return "유니온페이" }
-        else if (name === "unionPayDomestic") { return "유니온페이(국내 전용)" }
-        else if (name === "unionPayMobile") { return "유니온페이(모바일 전용)" }
-        else if (name === "upi") { return "UPI" }
-        else if (name === "urs") { return "URS" }
-        else if (name === "visa") { return "비자카드" }
-        else if (name === "visaPlatinum") { return "비자카드(플래티넘)" }
-        else if (name === "visaFamily") { return "비자카드(가족 전용)" }
-        else if (name === "visaGold") { return "비자카드(골드)" }
-        else if (name === "visaDomesticAndOverseas") { return "비자카드(국내외 겸용)" }
-        else if (name === "visaMobile") { return "비자카드(모바일 전용)" }
-        else if (name === "visaSilver") { return "비자카드(실버)" }
-        else if (name === "domestic") { return "국내 전용" }
-        else if (name === "domesticFamily") { return "국내 전용(가족 전용)" }
-        else if (name === "domesticMobile") { return "국내 전용(모바일 전용)" }
-    }
-
-    function feeLinkParser(name) {
-        if (name === "amex") { return "www.americanexpress.com/ko-kr/network/help" }
-        else if (name === "amexFamily") { return "www.americanexpress.com/ko-kr/network/help" }
-        else if (name === "amexMobile") { return "www.americanexpress.com/ko-kr/network/help" }
-        else if (name === "bc") { return "www.bccard.com" }
-        else if (name === "bcGlobal") { return "www.bccard.com" }
-        else if (name === "bcDomestic") { return "www.bccard.com" }
-        else if (name === "jcb") { return "www.kr.jcb" }
-        else if (name === "jcbOneWay") { return "www.kr.jcb" }
-        else if (name === "jcbGold") { return "www.kr.jcb" }
-        else if (name === "jcbMobile") { return "www.kr.jcb" }
-        else if (name === "jcbSilver") { return "www.kr.jcb" }
-        else if (name === "kWorld") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "kWorldJcb") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "kWorldUpi") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "kWorldMobile") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "master") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterPlatinum") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterFamliy") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterGold") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterDomestic") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterMobile") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterSilver") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "masterOverseas") { return "www.mastercard.co.kr/ko-kr/personal/get-support.html" }
-        else if (name === "oneWay") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "sAnd") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "unionPay") { return "www.unionpayintl.com/kr" }
-        else if (name === "unionPayDomestic") { return "www.unionpayintl.com/kr" }
-        else if (name === "unionPayMobile") { return "www.unionpayintl.com/kr" }
-        else if (name === "upi") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "urs") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "visa") { return "www.visakorea.com" }
-        else if (name === "visaPlatinum") { return "www.visakorea.com" }
-        else if (name === "visaFamily") { return "www.visakorea.com" }
-        else if (name === "visaGold") { return "www.visakorea.com" }
-        else if (name === "visaDomesticAndOverseas") { return "www.visakorea.com" }
-        else if (name === "visaMobile") { return "www.visakorea.com" }
-        else if (name === "visaSilver") { return "www.visakorea.com" }
-        else if (name === "domestic") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "domesticFamily") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-        else if (name === "domesticMobile") { return "해당 결제망은 전용 홈페이지가 존재하지 않습니다." }
-    }
-
-    function cardLinkParser(name) {
-        if (name === "NH카드") { return "card.nonghyup.com" }
-        else if (name === "국민카드") { return "card.kbcard.com" }
-        else if (name === "기업카드") { return "www.ibk.co.kr/card/mainList.ibk" }
-        else if (name === "대구은행") { return "www.dgb.co.kr" }
-        else if (name === "롯데카드") { return "www.lottecard.co.kr" }
-        else if (name === "부산은행") { return "www.busanbank.co.kr/ib20/mnu/FPM00001" }
-        else if (name === "삼성카드") { return "www.samsungcard.com" }
-        else if (name === "수협") { return "suhyup-bank.com" }
-        else if (name === "신한카드") { return "www.shinhancard.com" }
-        else if (name === "씨티카드") { return "www.citibank.co.kr" }
-        else if (name === "우리카드") { return "www.wooricard.com" }
-        else if (name === "케이뱅크") { return "www.kbanknow.com/ib20/mnu/FPMCRD000000" }
-        else if (name === "하나카드") { return "www.hanacard.co.kr" }
-        else if (name === "현대백화점") { return "www.ehyundai.com/newPortal/card/main.do" }
-        else if (name === "현대카드") { return "www.hyundaicard.com" }
-    }
-
-    function cardPhoneNumberParser(name) {
-        if (name === "NH카드") { return "1644-4000" }
-        else if (name === "국민카드") { return "1588-1688" }
-        else if (name === "기업카드") { return "1588-2588" }
-        else if (name === "대구은행") { return "1566-5050" }
-        else if (name === "롯데카드") { return "1588-8100" }
-        else if (name === "부산은행") { return "1588-6200" }
-        else if (name === "삼성카드") { return "1588-8700" }
-        else if (name === "수협") { return "1588-1515" }
-        else if (name === "신한카드") { return "1544-7000" }
-        else if (name === "씨티카드") { return "1566-1000" }
-        else if (name === "우리카드") { return "1588-9955" }
-        else if (name === "케이뱅크") { return "1522-1155" }
-        else if (name === "하나카드") { return "1800-1111" }
-        else if (name === "현대백화점") { return "1588-4560" }
-        else if (name === "현대카드") { return "1577-6000" }
-    }
 
     function FeeElements({ providerName, fee }) {
         return (
@@ -284,7 +139,7 @@ function CardInfo() {
                                     <label className={styles.cardType}>
                                         {typeParser(cardInfo.card[0].type)}
                                     </label>
-                                    
+
                                     <img
                                         className={styles.cardCompanyImage}
                                         alt="cards"
@@ -294,7 +149,7 @@ function CardInfo() {
 
 
 
-                            <div className={styles.mainText1}>
+                            <div className={styles.mainText}>
                                 연회비
                             </div>
 
@@ -308,7 +163,7 @@ function CardInfo() {
 
 
 
-                            <div className={styles.mainText2}>
+                            <div className={styles.mainText}>
                                 브랜드 및 혜택
                             </div>
 
@@ -673,14 +528,11 @@ function CardInfo() {
                                 </div>
                             </div>
 
-                            {/*{console.log(cardInfo.fee)}*/}
-
-                            <div className={styles.mainText3}>
+                            <div className={styles.mainText}>
                                 안내 사항
                             </div>
 
                             <div className={styles.caution}>
-                                <br />
                                 해당 페이지에서 안내하는 혜택은 실제 카드사에서 제공하는 혜택과 다를수 있습니다.<br />
                                 혜택은 전원실적과 특정 조건 및 상황에 따라 다르게 제공되거나 제공되지 않을 수 있습니다.<br />
                                 연회비는 결제사의 상황에 따라 지원이 중단되거나 변동될 수 있습니다.<br /><br />

@@ -26,7 +26,7 @@
 
 .containerTopLeft {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
 }
 
 .containerTopButton {
@@ -70,21 +70,21 @@
 
 .containerTopRight1 {
     width: 100%;
-    height: 100%;
+    height: 300px;
     border-radius: 0px 10px 10px 0px;
     background: linear-gradient(90deg, rgb(0, 200, 200) 10%, rgb(0, 100, 200) 90%);
 }
 
 .containerTopRight2 {
     width: 100%;
-    height: 100%;
+    height: 300px;
     border-radius: 0px 10px 10px 0px;
     background: linear-gradient(90deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
 }
 
 .containerTopRight3 {
     width: 100%;
-    height: 100%;
+    height: 300px;
     border-radius: 0px 10px 10px 0px;
     background: linear-gradient(90deg, rgb(0, 150, 250) 10%, rgb(100, 0, 250) 90%);
 }

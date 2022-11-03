@@ -2,13 +2,15 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import Intro from "../Intro";
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
+import HeaderBottom from '../HeaderBottom';
 import ListElement from "./ListElement";
 import Loading from "../Loading";
 
 import styles from "./List.module.css";
-import axios from "../api/axios";
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+
+
 
 function List() {
     const navigate = useNavigate();
@@ -20,8 +22,6 @@ function List() {
     const axiosPrivate = useAxiosPrivate();
 
     useEffect(() => {
-        // getCardList();
-
         const getCardList = async () => {
             try {
                 const response = await axiosPrivate.get('/card/cards', {
@@ -74,6 +74,8 @@ function List() {
     //         });
     // }, []);
 
+
+
     const [currentPage, setCurrentPage] = useState(1);
     const [elementsPerPage, setElementsPerPage] = useState(15);
 
@@ -114,20 +116,13 @@ function List() {
 
 
 
-
-
-
     return (
         <div>
             {loading ? (
                 <Loading message="데이터 불러오는중" />
             ) : (
                 <div>
-                    <Intro
-                        mainText="전체 카드 목록"
-                        subText="모든 카드를 이곳에서 확인해보세요!"
-                    />
-                    <br /><br /><br />
+                    <HeaderBottom mainText="전체 카드 목록" subText="모든 카드를 이곳에서 확인해보세요." />
 
                     {typeof cards.cardAll[indexOfFirst].id != "undefined" && (
                         <ListElement

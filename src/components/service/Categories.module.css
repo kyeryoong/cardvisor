@@ -39,7 +39,8 @@
 .categoryNameEng {
     margin-left: 10px;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 100;
     color: rgb(150, 150, 150);
     position: relative;
     top: 5px;
@@ -69,5 +70,13 @@ details[open] > .summaryZone .categoryNameEng {
     .summaryZone {
         width: 90vw;
         margin-left: 5vw;
+    }
+
+    .categoryNameKor {
+        font-size: 1.3rem;
+    }
+
+    .categoryNameEng {
+        font-size: 0.8rem;
     }
 }

@@ -112,7 +112,7 @@ function Main() {
                         onClick={() => { navigate("/service1") }}
                     >
                         <img
-                            alt="image"
+                            alt="menu"
                             src={process.env.PUBLIC_URL + "/images/menu_logo/1_color.png"}
                             className={hover === 1 ? styles.buttonImageWhite : styles.buttonImageColor}
                         />
@@ -127,7 +127,7 @@ function Main() {
                         onClick={() => { navigate("/service2") }}
                     >
                         <img
-                            alt="image"
+                            alt="menu"
                             src={process.env.PUBLIC_URL + "/images/menu_logo/2_color.png"}
                             className={hover === 2 ? styles.buttonImageWhite : styles.buttonImageColor}
                         />
@@ -142,7 +142,7 @@ function Main() {
                         onClick={() => { navigate("/list") }}
                     >
                         <img
-                            alt="image"
+                            alt="menu"
                             src={process.env.PUBLIC_URL + "/images/menu_logo/3_color.png"}
                             className={hover === 3 ? styles.buttonImageWhite : styles.buttonImageColor}
                         />
@@ -180,7 +180,7 @@ function Main() {
 
                                 <div className={styles.containerTopRight1}>
                                     <div className={styles.containerTopRightZone}>
-                                        <img alt="image" src={process.env.PUBLIC_URL + "/images/menu_logo/1_filled.png"} className={styles.containerImage} />
+                                        <img alt="menu" src={process.env.PUBLIC_URL + "/images/menu_logo/1_filled.png"} className={styles.containerImage} />
                                         <div className={styles.containerWord}>
                                             혜택과 브랜드를 빠르고 간편하게
                                         </div>
@@ -195,7 +195,7 @@ function Main() {
 
                                 <div className={styles.containerTopRight2}>
                                     <div className={styles.containerTopRightZone}>
-                                        <img alt="image" src={process.env.PUBLIC_URL + "/images/menu_logo/2_filled.png"} className={styles.containerImage} />
+                                        <img alt="menu" src={process.env.PUBLIC_URL + "/images/menu_logo/2_filled.png"} className={styles.containerImage} />
                                         <div className={styles.containerWord}>
                                             금액을 입력하여 소비 패턴 분석
                                         </div>
@@ -210,7 +210,7 @@ function Main() {
 
                                 <div className={styles.containerTopRight3}>
                                     <div className={styles.containerTopRightZone}>
-                                        <img alt="image" src={process.env.PUBLIC_URL + "/images/menu_logo/3_filled.png"} className={styles.containerImage} />
+                                        <img alt="menu" src={process.env.PUBLIC_URL + "/images/menu_logo/3_filled.png"} className={styles.containerImage} />
                                         <div className={styles.containerWord}>
                                             모든 카드를 한 꺼번에 보기
                                         </div>

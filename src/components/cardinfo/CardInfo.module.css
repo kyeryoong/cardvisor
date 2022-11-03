@@ -51,33 +51,12 @@
     margin-top: -10px;
 }
 
-.mainText1 {
+.mainText {
     width: 60vw;
     display: block;
     margin: 0px auto;
     margin-top: 100px;
     margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 1000;
-    color: rgb(0, 200, 200);
-}
-
-.mainText2 {
-    width: 60vw;
-    display: block;
-    margin: 0px auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 1000;
-    color: rgb(0, 200, 200);
-}
-
-.mainText3 {
-    width: 60vw;
-    display: block;
-    margin: 0px auto;
-    margin-top: 60px;
     font-size: 2rem;
     font-weight: 1000;
     color: rgb(0, 200, 200);

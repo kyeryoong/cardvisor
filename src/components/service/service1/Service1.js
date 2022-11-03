@@ -3,14 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router";
 
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
-
 import SelectedBrands from './SelectedBrands';
 
 import Brands from './Brands';
 import Categories from '../Categories';
 import HeaderBottom from '../../HeaderBottom';
 
-import brandParser from '../../Parser';
+import { brandParser } from '../../Parser';
 
 import styles from './Service1.module.css';
 
@@ -73,7 +72,6 @@ function Service1() {
     useEffect(() => {
         deleteAllSelected();
     }, [])
-
 
 
 
@@ -444,6 +442,8 @@ function Service1() {
                     }
 
                     else {
+                        localStorage.setItem('selectedBrands', JSON.stringify(SelectedBrands));
+
                         for (let i = SelectedBrands.length - 1; i >= 0; i--) {
                             jsonArr[i] = { memberId: 1, brandName: SelectedBrands[i] };
                             SelectedBrands.pop();
@@ -460,6 +460,7 @@ function Service1() {
                                 });
                                 setTimeout(() => {
                                     localStorage.setItem('serviceone', JSON.stringify(response.data));
+
                                     navigate("/service1/results");
                                 }, 100)
                             } catch (err) {
