@@ -262,3 +262,6 @@
 ### Ver. 1.4.13 (2022/11/3)
 - *Main* page was modified to support mobile experience.
 - *Service1Results* page was modified with layout and design changes.
+
+### Ver. 1.4.14 (2022/11/4)
+- *Service2Analysis* page was modified with some more data.

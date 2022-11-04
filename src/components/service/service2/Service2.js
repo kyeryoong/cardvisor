@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import SelectedBrands from './SelectedBrands';
 
@@ -8,8 +8,6 @@ import Categories from '../Categories';
 import HeaderBottom from '../../HeaderBottom';
 
 import styles from './Service2.module.css';
-
-
 
 function Service2() {
     const navigate = useNavigate();
@@ -29,8 +27,6 @@ function Service2() {
     SelectedBrands[12] = new Array(9).fill(0);
     SelectedBrands[13] = new Array(5).fill(0);
     SelectedBrands[14] = new Array(20).fill(0);
-
-
 
     var [selArray, setSelArray] = useState({
         0: 0,
@@ -56,11 +52,17 @@ function Service2() {
         total = total + selArray[i];
     }
 
+    var temp = selArray;
+
+    console.log(temp);
 
 
+    
     return (
         <div>
-            <HeaderBottom mainText="카드 추천 받기" subText="선호하는 브랜드의 금액을 입력해주세요." />
+            <HeaderBottom mainText="카드 추천 받기" subText="선호하는 브랜드를 체크해주세요." />
+
+
 
             <details className={styles.detailsZone}>
                 <Categories
@@ -418,34 +420,10 @@ function Service2() {
 
 
 
-            <button
-                disabled={(15 - Object.values(selArray).filter(element => 0 === element).length) >= 2 ? true : false}
-
-                className={(15 - Object.values(selArray).filter(element => 0 === element).length) >= 2 ? styles.sendButtonEnable : styles.sendButtonDisable}
-
-                onClick={() => {
-                    var sumByCategories = new Array(15).fill(0);
-                    var checkSum = 0;
-
-                    for (var i = 0; i < 15; i++) {
-                        sumByCategories[i] = SelectedBrands[i].reduce((accumulator, curr) => accumulator + curr)
-                    }
-
-                    for (i = 0; i < 15; i++) {
-                        if (sumByCategories[i] > 0) {
-                            checkSum = checkSum + 1;
-                        }
-                    }
-
-                    if (checkSum > 1) {
-                        navigate("analysis");
-                    }
-
-                    else {
-                        alert("최소 2개 이상의 카테고리에 금액을 입력해주세요.");
-                    }
-                }}>
-                {total}원 혜택 선택 완료
+            <button className={styles.sendButtonEnable} onClick={() => {
+                navigate("analysis");
+            }}>
+                혜택 선택 완료
             </button>
             <br /><br /><br />
         </div >

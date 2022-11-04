@@ -52,14 +52,10 @@ function AdCardElementsMobile({ number, name, comment }) {
 function RecentCardElements({ number, name }) {
     return (
         <div className={styles.recentCardElements}>
-            <div>
-                <div className={styles.recentCardImage}>
+            <img alt="card" className={styles.recentCardImage} src={process.env.PUBLIC_URL + "/images/card_images/" + number + ".png"} />
 
-                </div>
-
-                <div className={styles.recentCardName}>
-                    {name}
-                </div>
+            <div className={styles.recentCardName}>
+                {name}
             </div>
         </div>
     )
@@ -229,11 +225,11 @@ function Main() {
             </div>
 
             <div className={styles.containerBottom}>
-                <RecentCardElements number={4073} name="카드 이름카드 이름카드 이름카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
+                <RecentCardElements number={355} name="민 check 이름카드 이름카드 이름" />
+                <RecentCardElements number={1572} name="신한 Hi-Point 카드" />
+                <RecentCardElements number={1897} name="신한카드 B.Big(삑)" />
+                <RecentCardElements number={3286} name="Liiv Mate check" />
+                <RecentCardElements number={3555} name="위메프 우리체크" />
                 <RecentCardElements number={4073} name="카드 이름" />
                 <RecentCardElements number={4073} name="카드 이름" />
                 <RecentCardElements number={4073} name="카드 이름" />

@@ -1,52 +1,65 @@
 .elementsContainer {
     width: 60vw;
-    height: 70px;
+    height: 100px;
     margin: 0px auto;
     margin-top: 10px;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     display: grid;
-    grid-template-columns: 50px 1fr 200px 80px 220px;
+    grid-template-columns: 50px 600px 250px 200px;
 }
 
 .elementColor {
     width: 30px;
     height: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 35px;
+    margin-left: 35px;
     border-radius: 5px;
 }
 
 .elementName {
+    font-size: 1.5rem;
+    height: 100px;
+    line-height: 100px;
+    margin-left: 30px;
+}
+
+.elementValueContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.elementBarContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: -100px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.elementValueContainerTop {
+    font-size: 1.5rem;
+    line-height: 40px;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.elementValueContainerBottom {
     font-size: 1.2rem;
-    height: 70px;
-    line-height: 70px;
-    margin-left: 20px;
+    line-height: 40px;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .elementValue {
-    font-size: 1.5rem;
-    height: 70px;
-    line-height: 70px;
-    text-align: right;
-    margin-right: 20px;
-}
-
-.elementPercentageValue {
-    font-size: 1rem;
+    width: 100px;
     height: 30px;
-    line-height: 30px;
     color: rgb(255, 255, 255);
-    border-radius: 5px 0px 0px 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-radius: 5px;
     padding-left: 10px;
-}
-
-.elementPercentageBar {
-    border-radius: 0px 5px 5px 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
 }
