@@ -24,13 +24,13 @@ function Service1Results() {
     var matched = 0
 
     var cardsBrands = [];
-    
+
     const [width, setWidth] = useState(window.innerWidth);
     const [slidesToShow, setSlidesToShow] = useState(4);
 
     useEffect(() => {
-        window.addEventListener("resize", () => { 
-            setWidth(window.innerWidth); 
+        window.addEventListener("resize", () => {
+            setWidth(window.innerWidth);
 
             if (width > 1000) {
                 setSlidesToShow(4);
@@ -157,11 +157,7 @@ function Service1Results() {
                         </div>
                     </div>
 
-                    <button className={styles.goToCardInfoButton} onClick={() => {
-                        navigate("/cardinfo/" + result.topTenCards[0].id)
-                    }}>
-                        카드 상세 정보 보기
-                    </button>
+
 
                     <div className={styles.subText}>
                         맞춤 혜택
@@ -224,13 +220,13 @@ function Service1Results() {
 
 
                                             {
-                                                cardsBrands.includes(current) 
-                                                
-                                                && 
-                                                
+                                                cardsBrands.includes(current)
+
+                                                &&
+
                                                 <div className={styles.match}>
                                                     MATCH
-                                                </div> 
+                                                </div>
                                             }
                                         </div>
                                     ))
@@ -269,6 +265,12 @@ function Service1Results() {
                             더 많은 카드 보기
                         </button>
                     </div>
+
+                    <button className={styles.goToCardInfoButton} onClick={() => {
+                        navigate("/cardinfo/" + result.topTenCards[0].id)
+                    }}>
+                        카드 상세 정보 보기
+                    </button>
                 </div>
             }
         </div>

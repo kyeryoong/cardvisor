@@ -265,3 +265,8 @@
 
 ### Ver. 1.4.14 (2022/11/4)
 - *Service2Analysis* page was modified with some more data.
+
+### Ver. 1.4.15 (2022/11/5)
+- *Login* and *Register* pages were modified.
+- *Service2Analysis* page was modified.
+- *Service2Results* and *Service2ResultsMore* pages were modified with layout and design changes.

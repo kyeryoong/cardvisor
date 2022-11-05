@@ -28,33 +28,13 @@ function Service2() {
     SelectedBrands[13] = new Array(5).fill(0);
     SelectedBrands[14] = new Array(20).fill(0);
 
-    var [selArray, setSelArray] = useState({
-        0: 0,
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
-        7: 0,
-        8: 0,
-        9: 0,
-        10: 0,
-        11: 0,
-        12: 0,
-        13: 0,
-        14: 0
-    });
+    var [selArray, setSelArray] = useState(new Array(15).fill(0));
 
     var total = 0
 
     for (var i = 0; i < 15; i++) {
         total = total + selArray[i];
     }
-
-    var temp = selArray;
-
-    console.log(temp);
 
 
     
@@ -425,7 +405,6 @@ function Service2() {
             }}>
                 혜택 선택 완료
             </button>
-            <br /><br /><br />
         </div >
     );
 }

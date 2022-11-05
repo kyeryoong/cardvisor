@@ -154,15 +154,6 @@ function Service2Analysis() {
                     카드 추천 받기
                 </button>
             </div>
-            <br />
-
-            <div>
-                <button className={styles.toMainButton} onClick={() => {
-                    navigate("/service2");
-                }}>
-                    금액 다시 입력하기
-                </button>
-            </div>
         </div>
     )
 }
