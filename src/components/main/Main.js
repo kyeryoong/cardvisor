@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
+import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import Carousel from "react-material-ui-carousel";
 
 import styles from './Main.module.css';
@@ -50,12 +51,14 @@ function AdCardElementsMobile({ number, name, comment }) {
 
 
 function RecentCardElements({ number, name }) {
+    const navigate = useNavigate();
+
     return (
-        <div className={styles.recentCardElements}>
-            <img alt="card" className={styles.recentCardImage} src={process.env.PUBLIC_URL + "/images/card_images/" + number + ".png"} />
+        <div className={styles.recentCardElements} onClick={() => {navigate("/cardinfo/" + number)}}>
+            {number ? <img alt="card" className={styles.recentCardImage} src={process.env.PUBLIC_URL + "/images/card_images/" + number + ".png"} /> : <div className={styles.recentCardBlank} />}
 
             <div className={styles.recentCardName}>
-                {name}
+                {name && name}
             </div>
         </div>
     )
@@ -66,14 +69,54 @@ function RecentCardElements({ number, name }) {
 function Main() {
     const navigate = useNavigate();
 
+    const [loading, setLoading] = useState(true);
+
     const [hover, setHover] = useState(false);
 
     const [width, setWidth] = useState(window.innerWidth);
+
+    const axiosPrivate = useAxiosPrivate();
+    const [cards, setCards] = useState({
+        MyCards: [{}]
+    });
+
+
 
     useEffect(() => {
         window.addEventListener("resize", () => { setWidth(window.innerWidth); });
     });
 
+
+    var recentCards = [];
+    var recentCardsId = [];
+
+    useEffect(() => {
+        const getCardList = async () => {
+            try {
+                const response = await axiosPrivate.get('main/myCards', {
+                });
+                setTimeout(() => {
+                    setCards(response.data);
+
+                }, 500)
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        getCardList();
+    }, []);
+
+
+
+    for(var i = 0; i < cards.MyCards.length; i++) {
+        if (!recentCardsId.includes(cards.MyCards[i].cardId)) {
+            recentCardsId.push(cards.MyCards[i].cardId);
+            recentCards.push(cards.MyCards[i]);
+        }
+    }
+
+    console.log(recentCards)
 
 
     return (
@@ -93,7 +136,7 @@ function Main() {
                 </div>
             }
 
-            
+
 
             <div className={styles.containerHeader}>
                 카드 추천받기
@@ -225,16 +268,17 @@ function Main() {
             </div>
 
             <div className={styles.containerBottom}>
-                <RecentCardElements number={355} name="민 check 이름카드 이름카드 이름" />
-                <RecentCardElements number={1572} name="신한 Hi-Point 카드" />
-                <RecentCardElements number={1897} name="신한카드 B.Big(삑)" />
-                <RecentCardElements number={3286} name="Liiv Mate check" />
-                <RecentCardElements number={3555} name="위메프 우리체크" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
-                <RecentCardElements number={4073} name="카드 이름" />
+                <RecentCardElements number={recentCards[0]?.cardId} name={recentCards[0]?.cardName} />
+                <RecentCardElements number={recentCards[1]?.cardId} name={recentCards[1]?.cardName} />
+                <RecentCardElements number={recentCards[2]?.cardId} name={recentCards[2]?.cardName} />
+                <RecentCardElements number={recentCards[3]?.cardId} name={recentCards[3]?.cardName} />
+                <RecentCardElements number={recentCards[4]?.cardId} name={recentCards[4]?.cardName} />
+                <RecentCardElements number={recentCards[5]?.cardId} name={recentCards[5]?.cardName} />
+                <RecentCardElements number={recentCards[6]?.cardId} name={recentCards[6]?.cardName} />
+                <RecentCardElements number={recentCards[7]?.cardId} name={recentCards[7]?.cardName} />
+                <RecentCardElements number={recentCards[8]?.cardId} name={recentCards[8]?.cardName} />
+                <RecentCardElements number={recentCards[9]?.cardId} name={recentCards[9]?.cardName} />
+
             </div>
         </div>
     );

@@ -175,6 +175,7 @@
     border-radius: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 20px;
@@ -186,16 +187,29 @@
     margin: 0px auto;
     padding-top: 50px;
     text-align: center;
+    cursor: pointer;
+}
+
+.recentCardElements:hover > .recentCardName {
+    color: rgb(0, 200, 200);
 }
 
 .recentCardImage {
     width: 150px;
-    height: 100px;
-    background-color: rgb(200, 200, 200);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     border-radius: 5px;
     margin: 0px auto;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
+}
+
+.recentCardBlank {
+    width: 150px;
+    height: 95px;
+    margin: 0px auto;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 5px;
+    transform: rotate(-90deg);
 }
 
 .recentCardName {
@@ -324,17 +338,20 @@
     }
 
     .recentCardElements {
-        width: 130px;
-        padding-top: 25px;
+        padding-top: 15px;
     }
 
     .recentCardImage {
-        width: 80px;
-        height: 120px;
+        width: 120px;
+    }
+    
+    .recentCardBlank {
+        width: 120px;
+        height: 75px;
     }
 
     .recentCardName {
-        font-size: 0.7rem;
-        margin-top: 10px;
+        font-size: 1rem;
+        margin-top: 30px;
     }
 }

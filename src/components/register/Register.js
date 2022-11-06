@@ -156,7 +156,6 @@ function Register() {
 
 
 
-
                 <div className={styles.registerZoneRight}>
                     <div className={styles.mainTitle}>
                         register
