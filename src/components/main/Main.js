@@ -110,9 +110,9 @@ function Main() {
 
 
     for(var i = 0; i < cards.MyCards.length; i++) {
-        if (!recentCardsId.includes(cards.MyCards[i].cardId)) {
-            recentCardsId.push(cards.MyCards[i].cardId);
-            recentCards.push(cards.MyCards[i]);
+        if (!recentCardsId.includes(cards.MyCards[cards.MyCards.length - 1 - i].cardId)) {
+            recentCardsId.push(cards.MyCards[cards.MyCards.length - 1 - i].cardId);
+            recentCards.push(cards.MyCards[cards.MyCards.length - 1 - i]);
         }
     }
 
