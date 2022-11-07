@@ -122,7 +122,7 @@ function Service2Analysis() {
             <ChartElements color="#9C27B0" element={categoriesKor[12]} value={sumByCategories[12]} ratioByCategories={ratioByCategories[12]} ratioByMaxValue={ratioByMaxValue[12]} num1={0.1} num2={0.0} />
             <ChartElements color="#EE34D2" element={categoriesKor[13]} value={sumByCategories[13]} ratioByCategories={ratioByCategories[13]} ratioByMaxValue={ratioByMaxValue[13]} num1={0.1} num2={0.0} />
             <ChartElements color="#FF00CC" element={categoriesKor[14]} value={sumByCategories[14]} ratioByCategories={ratioByCategories[14]} ratioByMaxValue={ratioByMaxValue[14]} num1={69280} num2={0.0} />
-            <br /><br /><br />
+            <br /><br /><br /><br /><br /><br />
 
 
 

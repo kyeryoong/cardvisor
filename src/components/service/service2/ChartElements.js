@@ -19,9 +19,9 @@ function ChartElements({ color, element, value, ratioByCategories, ratioByMaxVal
                     {value}원
                 </div>
 
-                <div className={styles.elementValueContainerBottom}>
+                {/* <div className={styles.elementValueContainerBottom}>
                     {num2}원
-                </div>
+                </div> */}
             </div>
 
             <div className={styles.elementBarContainer}>
@@ -34,14 +34,14 @@ function ChartElements({ color, element, value, ratioByCategories, ratioByMaxVal
                     </div>
                 </div>
 
-                <div className={styles.elementBarContainerBottom}>
+                {/* <div className={styles.elementBarContainerBottom}>
                     <div className={styles.elementValue} style={{
                         backgroundColor: color,
                         width: (String(num1 * 200 + 150) + "px")
                     }}>
                         {(num1 * 100).toFixed(1)} %
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
