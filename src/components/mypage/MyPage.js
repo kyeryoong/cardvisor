@@ -1,13 +1,15 @@
 import {useLocation, useNavigate} from "react-router";
 import {useEffect, useState} from "react";
 
-import Intro from "../Intro";
-import styles from "./MyPage.module.css";
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
-// import useAuth from "../hooks/useAuth";
+
+import HeaderBottom from '../HeaderBottom';
+
+import styles from "./MyPage.module.css";
 
 
-const MyPage = () => {
+
+function MyPage () {
     const navigate = useNavigate();
     const location = useLocation();
     const axiosPrivate = useAxiosPrivate();
@@ -70,8 +72,7 @@ const MyPage = () => {
 
     return (
         <div>
-            <Intro mainText="내 정보" />
-            <br /><br /><br />
+            <HeaderBottom mainText="내 정보" subText="개인정보를 수정할 수 있습니다." />
 
             <div className={styles.container}>
                 <div className={styles.infoTitle}>
