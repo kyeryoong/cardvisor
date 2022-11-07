@@ -145,7 +145,7 @@ const Login = () => {
                         </span>
                     </div>
 
-                    <div className={styles.findPasswordZone}>
+                    {/* <div className={styles.findPasswordZone}>
                         비밀번호를 잊으셨나요? &nbsp;&nbsp;&nbsp;
                         <span
                             className={styles.findPasswordButton}
@@ -155,7 +155,7 @@ const Login = () => {
                         >
                             비밀번호 찾기
                         </span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

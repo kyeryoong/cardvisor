@@ -35,15 +35,9 @@ function Register() {
     const [matchFocus, setMatchFocus] = useState(false);
 
     const [gender, setGender] = useState("male");
-    const [birth, setBirth] = useState(null);
+    const [age, setAge] = useState(0);
+    const ageArray = ["one", "two", "three", "four", "five", "six"]
 
-
-    const current = new Date()
-            .toLocaleDateString("ko-KR")
-            .replace(/\./g, "")
-            .split(" ")
-            .map((v, i) => (i > 0 && v.length < 2 ? "0" + v : v))
-            .join("-");
 
 
     useEffect(() => {
@@ -58,13 +52,6 @@ function Register() {
         setValidPwd(PWD_REGEX.test(pwd));
         setValidMatch(pwd === matchPwd);
     }, [pwd, matchPwd])
-
-
-
-    var date = new Date(birth);
-    var year = String(date.getFullYear()).padStart(4, "0");
-    var month = String(date.getMonth() + 1).padStart(2, "0");
-    var day = String(date.getDate()).padStart(2, "0");
 
 
 
@@ -123,7 +110,7 @@ function Register() {
                 nickname: user,
                 pw: pwd,
                 gender: gender,
-                date: [year, month, day].join("/")
+                age: ageArray[age]
             }),
         };
 
@@ -166,7 +153,6 @@ function Register() {
 
                     <img alt="home" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/14.png"} />
                 </div>
-
 
 
 
@@ -347,27 +333,37 @@ function Register() {
 
 
 
-                            <span className={styles.infoType}>
-                                성별
-                            </span>
+                            <div className={styles.genderZone}>
+                                <div className={styles.infoType}>
+                                    성별
+                                </div>
 
-                            <button type="button" className={gender === "male" ? styles.genderButtonOn : styles.genderButtonOff} onClick={() => setGender("male")}>
-                                남
-                            </button>
-                            <button type="button" className={gender === "female" ? styles.genderButtonOn : styles.genderButtonOff} onClick={() => setGender("female")}>
-                                여
-                            </button>
-                            <br /><br />
+                                <button type="button" className={gender === "male" ? styles.genderButtonOn : styles.genderButtonOff} onClick={() => setGender("male")}>
+                                    남
+                                </button>
+                                
+                                <button type="button" className={gender === "female" ? styles.genderButtonOn : styles.genderButtonOff} onClick={() => setGender("female")}>
+                                    여
+                                </button>
+                            </div>
+                            <br />
 
 
 
-                            <span className={styles.infoType}>
-                                생년월일
-                            </span>
+                            <div className={styles.ageZone}>
+                                <div className={styles.infoType}>
+                                    나이
+                                </div>
 
-                            <span className={styles.birthInputZone}>
-                                <input type="date" value={birth || current} onChange={(event) => setBirth(event.target.value)} required />
-                            </span>
+                                <img alt="home" className={age != 0 ? styles.ageButtonEnabled : styles.ageButtonDisabled} src={age != 0 ? process.env.PUBLIC_URL + "/images/icons/arrow_left_blue.png" : process.env.PUBLIC_URL + "/images/icons/arrow_left_black.png"} onClick={() => { if(age != 0) {setAge(age - 1);} }} />
+
+                                <span className={styles.age}>
+                                    {(age + 1) * 10}대
+                                </span>
+
+                                <img alt="home" className={age != 5 ? styles.ageButtonEnabled : styles.ageButtonDisabled} src={age != 5 ? process.env.PUBLIC_URL + "/images/icons/arrow_right_blue.png" : process.env.PUBLIC_URL + "/images/icons/arrow_right_black.png"} onClick={() => { if(age != 5) {setAge(age + 1);} }} />
+                            </div>
+                            <br />
 
 
 
