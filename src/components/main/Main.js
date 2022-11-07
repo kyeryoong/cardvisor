@@ -260,36 +260,37 @@ function Main() {
                 </div>
             </div>
 
+
+
             <div className={styles.containerHeader}>
                 최근 추천받은 카드
             </div>
 
-            <div className={recentCards.length !== 0 ? styles.containerBottom : styles.containerEmpty}>
-                {
-                    recentCards.length !== 0
+            {
+                recentCards.length
 
-                        ?
+                    ?
 
-                        <div>
-                            <RecentCardElements number={recentCards[0]?.cardId} name={recentCards[0]?.cardName} />
-                            <RecentCardElements number={recentCards[1]?.cardId} name={recentCards[1]?.cardName} />
-                            <RecentCardElements number={recentCards[2]?.cardId} name={recentCards[2]?.cardName} />
-                            <RecentCardElements number={recentCards[3]?.cardId} name={recentCards[3]?.cardName} />
-                            <RecentCardElements number={recentCards[4]?.cardId} name={recentCards[4]?.cardName} />
-                            <RecentCardElements number={recentCards[5]?.cardId} name={recentCards[5]?.cardName} />
-                            <RecentCardElements number={recentCards[6]?.cardId} name={recentCards[6]?.cardName} />
-                            <RecentCardElements number={recentCards[7]?.cardId} name={recentCards[7]?.cardName} />
-                            <RecentCardElements number={recentCards[8]?.cardId} name={recentCards[8]?.cardName} />
-                            <RecentCardElements number={recentCards[9]?.cardId} name={recentCards[9]?.cardName} />
-                        </div>
+                    <div className={styles.containerBottom}>
+                        <RecentCardElements number={recentCards[0]?.cardId} name={recentCards[0]?.cardName} />
+                        <RecentCardElements number={recentCards[1]?.cardId} name={recentCards[1]?.cardName} />
+                        <RecentCardElements number={recentCards[2]?.cardId} name={recentCards[2]?.cardName} />
+                        <RecentCardElements number={recentCards[3]?.cardId} name={recentCards[3]?.cardName} />
+                        <RecentCardElements number={recentCards[4]?.cardId} name={recentCards[4]?.cardName} />
+                        <RecentCardElements number={recentCards[5]?.cardId} name={recentCards[5]?.cardName} />
+                        <RecentCardElements number={recentCards[6]?.cardId} name={recentCards[6]?.cardName} />
+                        <RecentCardElements number={recentCards[7]?.cardId} name={recentCards[7]?.cardName} />
+                        <RecentCardElements number={recentCards[8]?.cardId} name={recentCards[8]?.cardName} />
+                        <RecentCardElements number={recentCards[9]?.cardId} name={recentCards[9]?.cardName} />
+                    </div>
 
-                        :
+                    :
 
-                        <div>
-                            최근에 추천 받은 카드가 없습니다.
-                        </div>
-                }
-            </div>
+                    <div className={styles.containerEmpty}>
+                        최근에 추천받은 카드가 없습니다.
+                    </div>
+            }
+
         </div>
     );
 }
