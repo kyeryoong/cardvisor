@@ -3,64 +3,74 @@
     height: 100px;
     margin: 0px auto;
     margin-top: 10px;
-    padding: 35px;
+    padding: 30px;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     display: grid;
-    grid-template-columns: 50px 1fr 250px 200px;
+    grid-template-columns: 1fr 2fr;
+}
+
+.elementsContainer1 {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+.elementsContainer2 {
+    display: grid;
+    grid-template-columns: 120px 1fr;
 }
 
 .elementColor {
     width: 30px;
     height: 30px;
-
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
 
 .elementName {
-    font-size: 1.5rem;
-    height: 30px;
-    line-height: 30px;
-}
-
-.elementValueContainer {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.elementBarContainer {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    margin-left: -100px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-}
-
-.elementValueContainerTop {
-    font-size: 1.5rem;
-    line-height: 30px;
-    text-align: right;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: -15px;
-}
-
-.elementValueContainerBottom {
     font-size: 1.2rem;
-    line-height: 30px;
-    text-align: right;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 40px;
+    line-height: 40px;
 }
 
 .elementValue {
-    width: 100px;
-    height: 30px;
+    font-size: 1.2rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.elementBar {
     color: rgb(255, 255, 255);
     border-radius: 5px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding-left: 10px;
-    margin-top: -15px;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    .elementsContainer {
+        height: 140px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .elementValue {
+        text-align: left;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .elementsContainer {
+        width: 90vw;
+    }
 }
