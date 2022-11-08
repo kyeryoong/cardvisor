@@ -1,6 +1,6 @@
 import styles from './ChartElements.module.css';
 
-function ChartElements({ color, element, value, ratioByCategories, ratioByMaxValue, num1, num2 }) {
+function ChartElements({ color, elementKor, elementEng, value, ratioByCategories, ratioByMaxValue, num1, num2 }) {
     return (
         value !== 0
 
@@ -9,10 +9,11 @@ function ChartElements({ color, element, value, ratioByCategories, ratioByMaxVal
         <div className={styles.elementsContainer}>
             <div className={styles.elementsContainer1}>
                 <div className={styles.elementColor} style={{ backgroundColor: color }}>
+                    <img alt="icon" className={styles.elementIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + elementEng + ".png"} />
                 </div>
 
                 <div className={styles.elementName}>
-                    {element}
+                    {elementKor}
                 </div>
             </div>
 

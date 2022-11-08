@@ -5,7 +5,7 @@ import styles from './Service2Analysis.module.css';
 
 
 
-function PieChart({ data }) {
+function PieChart({ data, colors }) {
     return (
         <div className={styles.chartContainer}>
             <ResponsivePie
@@ -51,23 +51,7 @@ function PieChart({ data }) {
 
                 transitionMode={"startAngle"}
 
-                colors={[
-                    "#FF355E", 
-                    "#FD5B78", 
-                    "#FF6037", 
-                    "#FF9966", 
-                    "#FF9933",
-                    "#FFCC33", 
-                    "#FFFF66", 
-                    "#CCFF00", 
-                    "#66FF66", 
-                    "#AAF0D1",
-                    "#16D0CB", 
-                    "#50BFE6", 
-                    "#9C27B0", 
-                    "#EE34D2", 
-                    "#FF00CC"
-                ]}
+                colors={colors}
 
                 borderWidth={3}
                 borderColor={"rgb(255, 255, 255)"}

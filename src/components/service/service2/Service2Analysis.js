@@ -18,11 +18,23 @@ function Service2Analysis() {
 
     localStorage.clear();
 
-    const categoriesKor = ["교통", "통신", "마트", "편의점", "영화", "엔터테인먼트", "백화점", "온라인쇼핑몰", "간편결제", "카페/베이커리", "뷰티", "외식", "도서", "테마파크", "주유"]
+    const categoriesKor = [
+        "교통", "통신", "마트", "편의점", "영화",
+        "엔터테인먼트", "백화점", "온라인쇼핑몰", "간편결제", "카페/베이커리",
+        "뷰티", "외식", "도서", "테마파크", "주유"
+    ]
 
-    const categoriesEng = ["transportation", "communication", "mart", "convstore", "movies", "entertainment", "deptstore", "onlineshopping", "easypay", "cafebakery", "beauty", "dining", "books", "themepark", "fuel"]
+    const categoriesEng = [
+        "transportation", "communication", "mart", "convstore", "movies",
+        "entertainment", "deptstore", "onlineshopping", "easypay", "cafebakery",
+        "beauty", "dining", "books", "themepark", "fuel"
+    ]
 
-    const colors = ["#FF355E", "#FD5B78", "#FF6037", "#FF9966", "#FF9933", "#FFCC33", "#FFFF66", "#CCFF00", "#66FF66", "#AAF0D1", "#16D0CB", "#50BFE6", "#9C27B0", "#EE34D2", "#FF00CC"]
+    const colors = [
+        "#FF355E", "#FF7C80", "#996633", "#FF6037", "#FF9933",
+        "#FFC000", "#92D050", "#00B050", "#90ECC2", "#16D0CB",
+        "#50BFE6", "#0070C0", "#EE34D2", "#9C27B0", "#A6A6A6"
+    ]
 
 
 
@@ -65,7 +77,7 @@ function Service2Analysis() {
             <HeaderBottom mainText="소비 내역 분석" subText="입력하신 브랜드와 금액을 분석해드리는 화면입니다." />
 
             <div className={styles.chartZone}>
-                <PieChart data={sumByCategories} />
+                <PieChart data={sumByCategories} colors={colors} />
 
                 <div className={styles.chartZoneRight} >
                     <div className={styles.chartZoneRightTop}>
@@ -107,21 +119,21 @@ function Service2Analysis() {
                 </div>
             </div>
 
-            <ChartElements color="#FF355E" element={categoriesKor[0]} value={sumByCategories[0]} ratioByCategories={ratioByCategories[0]} ratioByMaxValue={ratioByMaxValue[0]} num1={0.12} num2={68950} />
-            <ChartElements color="#FD5B78" element={categoriesKor[1]} value={sumByCategories[1]} ratioByCategories={ratioByCategories[1]} ratioByMaxValue={ratioByMaxValue[1]} num1={0.09} num2={57910} />
-            <ChartElements color="#FF6037" element={categoriesKor[2]} value={sumByCategories[2]} ratioByCategories={ratioByCategories[2]} ratioByMaxValue={ratioByMaxValue[2]} num1={0.0} num2={0.0} />
-            <ChartElements color="#FF9966" element={categoriesKor[3]} value={sumByCategories[3]} ratioByCategories={ratioByCategories[3]} ratioByMaxValue={ratioByMaxValue[3]} num1={0.07} num2={38500} />
-            <ChartElements color="#FF9933" element={categoriesKor[4]} value={sumByCategories[4]} ratioByCategories={ratioByCategories[4]} ratioByMaxValue={ratioByMaxValue[4]} num1={0.0} num2={0.0} />
-            <ChartElements color="#FFCC33" element={categoriesKor[5]} value={sumByCategories[5]} ratioByCategories={ratioByCategories[5]} ratioByMaxValue={ratioByMaxValue[5]} num1={0.0} num2={0.0} />
-            <ChartElements color="#FFFF66" element={categoriesKor[6]} value={sumByCategories[6]} ratioByCategories={ratioByCategories[6]} ratioByMaxValue={ratioByMaxValue[6]} num1={0.1} num2={0.0} />
-            <ChartElements color="#CCFF00" element={categoriesKor[7]} value={sumByCategories[7]} ratioByCategories={ratioByCategories[7]} ratioByMaxValue={ratioByMaxValue[7]} num1={0.1} num2={0.0} />
-            <ChartElements color="#66FF66" element={categoriesKor[8]} value={sumByCategories[8]} ratioByCategories={ratioByCategories[8]} ratioByMaxValue={ratioByMaxValue[8]} num1={0.1} num2={0.0} />
-            <ChartElements color="#AAF0D1" element={categoriesKor[9]} value={sumByCategories[9]} ratioByCategories={ratioByCategories[9]} ratioByMaxValue={ratioByMaxValue[9]} num1={0.1} num2={0.0} />
-            <ChartElements color="#16D0CB" element={categoriesKor[10]} value={sumByCategories[10]} ratioByCategories={ratioByCategories[10]} ratioByMaxValue={ratioByMaxValue[10]} num1={0.1} num2={0.0} />
-            <ChartElements color="#50BFE6" element={categoriesKor[11]} value={sumByCategories[11]} ratioByCategories={ratioByCategories[11]} ratioByMaxValue={ratioByMaxValue[11]} num1={198200} num2={0.0} />
-            <ChartElements color="#9C27B0" element={categoriesKor[12]} value={sumByCategories[12]} ratioByCategories={ratioByCategories[12]} ratioByMaxValue={ratioByMaxValue[12]} num1={0.1} num2={0.0} />
-            <ChartElements color="#EE34D2" element={categoriesKor[13]} value={sumByCategories[13]} ratioByCategories={ratioByCategories[13]} ratioByMaxValue={ratioByMaxValue[13]} num1={0.1} num2={0.0} />
-            <ChartElements color="#FF00CC" element={categoriesKor[14]} value={sumByCategories[14]} ratioByCategories={ratioByCategories[14]} ratioByMaxValue={ratioByMaxValue[14]} num1={69280} num2={0.0} />
+            <ChartElements color={colors[0]} elementKor={categoriesKor[0]} elementEng={categoriesEng[0]} value={sumByCategories[0]} ratioByCategories={ratioByCategories[0]} ratioByMaxValue={ratioByMaxValue[0]} num1={0.12} num2={68950} />
+            <ChartElements color={colors[1]} elementKor={categoriesKor[1]} elementEng={categoriesEng[1]} value={sumByCategories[1]} ratioByCategories={ratioByCategories[1]} ratioByMaxValue={ratioByMaxValue[1]} num1={0.09} num2={57910} />
+            <ChartElements color={colors[2]} elementKor={categoriesKor[2]} elementEng={categoriesEng[2]} value={sumByCategories[2]} ratioByCategories={ratioByCategories[2]} ratioByMaxValue={ratioByMaxValue[2]} num1={0.0} num2={0.0} />
+            <ChartElements color={colors[3]} elementKor={categoriesKor[3]} elementEng={categoriesEng[3]} value={sumByCategories[3]} ratioByCategories={ratioByCategories[3]} ratioByMaxValue={ratioByMaxValue[3]} num1={0.07} num2={38500} />
+            <ChartElements color={colors[4]} elementKor={categoriesKor[4]} elementEng={categoriesEng[4]} value={sumByCategories[4]} ratioByCategories={ratioByCategories[4]} ratioByMaxValue={ratioByMaxValue[4]} num1={0.0} num2={0.0} />
+            <ChartElements color={colors[5]} elementKor={categoriesKor[5]} elementEng={categoriesEng[5]} value={sumByCategories[5]} ratioByCategories={ratioByCategories[5]} ratioByMaxValue={ratioByMaxValue[5]} num1={0.0} num2={0.0} />
+            <ChartElements color={colors[6]} elementKor={categoriesKor[6]} elementEng={categoriesEng[6]} value={sumByCategories[6]} ratioByCategories={ratioByCategories[6]} ratioByMaxValue={ratioByMaxValue[6]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[7]} elementKor={categoriesKor[7]} elementEng={categoriesEng[7]} value={sumByCategories[7]} ratioByCategories={ratioByCategories[7]} ratioByMaxValue={ratioByMaxValue[7]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[8]} elementKor={categoriesKor[8]} elementEng={categoriesEng[8]} value={sumByCategories[8]} ratioByCategories={ratioByCategories[8]} ratioByMaxValue={ratioByMaxValue[8]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[9]} elementKor={categoriesKor[9]} elementEng={categoriesEng[9]} value={sumByCategories[9]} ratioByCategories={ratioByCategories[9]} ratioByMaxValue={ratioByMaxValue[9]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[10]} elementKor={categoriesKor[10]} elementEng={categoriesEng[10]} value={sumByCategories[10]} ratioByCategories={ratioByCategories[10]} ratioByMaxValue={ratioByMaxValue[10]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[11]} elementKor={categoriesKor[11]} elementEng={categoriesEng[11]} value={sumByCategories[11]} ratioByCategories={ratioByCategories[11]} ratioByMaxValue={ratioByMaxValue[11]} num1={198200} num2={0.0} />
+            <ChartElements color={colors[12]} elementKor={categoriesKor[12]} elementEng={categoriesEng[12]} value={sumByCategories[12]} ratioByCategories={ratioByCategories[12]} ratioByMaxValue={ratioByMaxValue[12]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[13]} elementKor={categoriesKor[13]} elementEng={categoriesEng[13]} value={sumByCategories[13]} ratioByCategories={ratioByCategories[13]} ratioByMaxValue={ratioByMaxValue[13]} num1={0.1} num2={0.0} />
+            <ChartElements color={colors[14]} elementKor={categoriesKor[14]} elementEng={categoriesEng[14]} value={sumByCategories[14]} ratioByCategories={ratioByCategories[14]} ratioByMaxValue={ratioByMaxValue[14]} num1={69280} num2={0.0} />
             <br /><br /><br /><br /><br /><br />
 
 
