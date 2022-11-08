@@ -259,17 +259,20 @@
 - Some minor changes in *Service2* page.
 - *Main* page was modified with layout and design changes.
 
-### Ver. 1.4.13 (2022/11/3)
+### Ver. 1.4.13 (2022/11/03)
 - *Main* page was modified to support mobile experience.
 - *Service1Results* page was modified with layout and design changes.
 
-### Ver. 1.4.14 (2022/11/4)
+### Ver. 1.4.14 (2022/11/04)
 - *Service2Analysis* page was modified with some more data.
 
-### Ver. 1.4.15 (2022/11/5)
+### Ver. 1.4.15 (2022/11/05)
 - *Login* and *Register* pages were modified.
 - *Service2Analysis* page was modified.
 - *Service2Results* and *Service2ResultsMore* pages were modified with layout and design changes.
 
-### Ver. 1.4.16 (2022/11/6)
+### Ver. 1.4.16 (2022/11/06)
 - *Main* page was modified.
+
+### Ver. 1.4.17 (2022/11/08)
+- *Service2Analysis* page was modified.
