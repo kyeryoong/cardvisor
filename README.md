@@ -94,7 +94,7 @@
 - *Service1* page was completed.
 - *Service2* page was implemented.
 - *login* page was implemented. (NO LOGIN SECURITY FUNCTION!)
-- Major structural changes in *Service* pages. (*Service1* and *Service2* pages were moved to parent directory *service*)
+- Structure of *Service* pages were changed. (*service* directory contains *Service1* and *Service2* components.)
 
 ### Ver. 1.1.3 (2022/05/27)
 - *Service1* and *Service2* was modified.
@@ -276,3 +276,7 @@
 
 ### Ver. 1.4.17 (2022/11/08)
 - *Service2Analysis* page was modified.
+
+### Ver. 1.4.18 (2022/11/10)
+- *MyPage* page was modified with layout and design changes.
+- Structure of *MyPage* pages were changed. (*mypage* directory contains *MyPage*, *Password*, and *GenderAge* components.)

@@ -1,0 +1,185 @@
+.mainContainer {
+    width: 60vw;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    padding: 30px;
+}
+
+.subContainer {
+    width: 60vw;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    cursor: pointer;
+}
+
+.menuContainer {
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+.menuGraphic {
+    width: 40px;
+}
+
+.menuHeader {
+    font-size: 1.2rem;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+.genderContainer {
+    display: grid;
+    grid-template-columns: 100px 300px;
+}
+
+.ageContainer {
+    display: grid;
+    grid-template-columns: 100px 600px;
+}
+
+.infoType {
+    font-size: 1.2rem;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(0, 200, 200);
+    margin-bottom: 30px;
+}
+
+.genderButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ageButtons {
+    display: grid;
+    grid-template-columns: 20px 260px 20px;
+}
+
+.ageValue {
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.2rem;
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgb(0, 200, 200);
+    color: rgb(0, 200, 200);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.buttonOn {
+    font-size: 1.2rem;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(0, 200, 200);
+    border-bottom: 2px solid rgb(0, 200, 200);
+}
+
+.buttonOff {
+    font-size: 1.2rem;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(200, 200, 200);
+    border-bottom: 2px solid rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.ageButtonEnabled {
+    width: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.ageButtonDisabled {
+    width: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    filter: brightness(1.5);
+}
+
+.submitButton {
+    font-size: 1.2rem;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
+    color: rgb(255, 255, 255);
+    border: transparent;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .mainContainer {
+    width: 90vw;
+    }
+
+    .header {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .subContainer {
+        width: 90vw;
+    }
+
+    .submitButton {
+        width: 100%;
+    }
+    
+    .infoType {
+        margin-bottom: 00px;
+    }
+
+    .genderContainer {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 20px;
+    }
+    
+    .ageContainer {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 20px;
+    }
+
+    .ageButtons {
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+    }
+
+    .ageValue {
+        width: 100%;
+    }
+
+    .buttonOn {
+        width: 100%;
+    }
+
+    .buttonOff {
+        width: 100%;
+    }
+}

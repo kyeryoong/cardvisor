@@ -16,6 +16,8 @@ import Service2Analysis from './components/service/service2/Service2Analysis';
 import Service2Results from './components/service/service2/Service2Results';
 import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
+import Password from './components/mypage/Password';
+import GenderAge from './components/mypage/GenderAge';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
 import RequireAuth from "./components/RequireAuth";
@@ -53,6 +55,8 @@ function App() {
                             <Route path="list" element={<List />} />
                             <Route path="cardinfo/:card_code" element={<CardInfo />} />
                             <Route path="mypage" element={<MyPage />} />
+                            <Route path="mypage/password" element={<Password />} />
+                            <Route path="mypage/genderage" element={<GenderAge />} />
                             <Route path="loading" element={<Loading message="데이터 분석중" />} />
                         </Route>
                     </Route>

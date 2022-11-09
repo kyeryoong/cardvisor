@@ -1,5 +1,5 @@
-import {useLocation, useNavigate} from "react-router";
-import {useEffect, useState} from "react";
+import { useLocation, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
@@ -9,10 +9,11 @@ import styles from "./MyPage.module.css";
 
 
 
-function MyPage () {
+function MyPage() {
     const navigate = useNavigate();
     const location = useLocation();
     const axiosPrivate = useAxiosPrivate();
+
     const [username, setUsername] = useState("");
 
     useEffect(() => {
@@ -23,7 +24,7 @@ function MyPage () {
 
             } catch (err) {
                 console.error(err);
-                navigate('/login', {state: {from: location}, replace: true});
+                navigate('/login', { state: { from: location }, replace: true });
             }
         }
 
@@ -39,19 +40,6 @@ function MyPage () {
 
     const [age, setAge] = useState(null);
     const [gender, setGender] = useState(null);
-
-    function handleChangeID(event) {
-        event.preventDefault();
-
-        setInfo(info => {
-            const updated = {
-                ...info,
-                [event.target.name]: event.target.value
-            };
-
-            return updated;
-        });
-    };
 
 
 
@@ -75,117 +63,21 @@ function MyPage () {
             <HeaderBottom mainText="내 정보" subText="개인정보를 수정할 수 있습니다." />
 
             <div className={styles.container}>
-                <div className={styles.infoTitle}>
-                    필수 정보
+                <div className={styles.button} onClick={() => {navigate("/mypage/password")}}>
+                    <img alt="icon" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/password.png"} />
+
+                    <div className={styles.text}>
+                        비밀번호 변경하기
+                    </div>
                 </div>
 
+                <div className={styles.button} onClick={() => {navigate("/mypage/genderage")}}>
+                    <img alt="icon" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/gender.png"} />
 
-
-                <span className={styles.infoType}>
-                    아이디
-                </span>
-                <span className={styles.infoValue}>
-                    {/*Username*/}
-                    {username}
-                </span>
-                <br />
-
-                <span className={styles.infoType}>
-                    비밀번호
-                </span>
-                <input type="password" className={styles.inputBox} name="pw" placeholder="비밀번호" onChange={handleChangePW} autoComplete="off" />
-                <br />
-
-                <span className={styles.infoType}>
-                    비밀번호 확인
-                </span>
-                <input type="password" className={styles.inputBox} name="pw" placeholder="비밀번호 확인" onChange={handleChangePW} autoComplete="off" />
-                <br /><br /><br />
-
-
-
-                <div className={styles.infoTitle}>
-                    선택 정보
+                    <div className={styles.text}>
+                        성별 & 나이 변경하기
+                    </div>
                 </div>
-
-                <span className={styles.infoComment}>
-                    아래의 정보를 추가로 입력해주시면, 사용자에게 더 알맞은 카드를 추천하는데 사용됩니다.
-                </span>
-                <br /><br />
-
-
-
-                <span className={styles.infoType}>
-                    성별
-                </span>
-
-                <button className={gender === "male" ? styles.genderButtonOn : styles.genderButtonOff} onClick={() => {
-                    setGender("male");
-                }}>
-                    남
-                </button>
-
-                <button className={gender === "female" ? styles.genderButtonOn : styles.genderButtonOff} onClick={() => {
-                    setGender("female");
-                }}>
-                    여
-                </button>
-                <br />
-
-
-
-                <span className={styles.infoType}>
-                    나이
-                </span>
-
-                <button className={age === 10 ? styles.ageButtonOn : styles.ageButtonOff} onClick={() => {
-                    setAge(10);
-                }}>
-                    10대
-                </button>
-
-                <button className={age === 20 ? styles.ageButtonOn : styles.ageButtonOff} onClick={() => {
-                    setAge(20);
-                }}>
-                    20대
-                </button>
-
-                <button className={age === 30 ? styles.ageButtonOn : styles.ageButtonOff} onClick={() => {
-                    setAge(30);
-                }}>
-                    30대
-                </button>
-
-                <button className={age === 40 ? styles.ageButtonOn : styles.ageButtonOff} onClick={() => {
-                    setAge(40);
-                }}>
-                    40대
-                </button>
-
-                <button className={age === 50 ? styles.ageButtonOn : styles.ageButtonOff} onClick={() => {
-                    setAge(50);
-                }}>
-                    50대
-                </button>
-
-                <button className={age === 60 ? styles.ageButtonOn : styles.ageButtonOff} onClick={() => {
-                    setAge(60);
-                }}>
-                    60대 이상
-                </button>
-                <br /><br /><br />
-            </div>
-
-            <div className={styles.buttonZone}>
-                <button className={styles.sendButton}>
-                    정보 수정하기
-                </button>
-
-                <button className={styles.toMainButton} onClick={() => {
-                    navigate("/main");
-                }}>
-                    홈으로 가기
-                </button>
             </div>
         </div>
     );
