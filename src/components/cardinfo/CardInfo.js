@@ -26,8 +26,6 @@ function CardInfo() {
         card: [{}],
     });
 
-    const [like, setLike] = useState(false);
-
     useEffect(() => {
         // const getCardInfo = async () => {
         //     // const accessToken = localStorage.getItem("accessToken");

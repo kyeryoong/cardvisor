@@ -353,14 +353,14 @@ function Register() {
                                     나이
                                 </div>
 
-                                <img alt="home" className={age != 0 ? styles.ageButtonEnabled : styles.ageButtonDisabled} src={age != 0 ? process.env.PUBLIC_URL + "/images/icons/arrow_left_blue.png" : process.env.PUBLIC_URL + "/images/icons/arrow_left_black.png"} onClick={() => { if (age != 0) { setAge(age - 1); } }} />
+                                <img alt="home" className={age !== 0 ? styles.ageButtonEnabled : styles.ageButtonDisabled} src={age !== 0 ? process.env.PUBLIC_URL + "/images/icons/arrow_left_blue.png" : process.env.PUBLIC_URL + "/images/icons/arrow_left_black.png"} onClick={() => { if (age !== 0) { setAge(age - 1); } }} />
 
                                 <span className={styles.age}>
                                     {(age + 1) * 10 + "대"}
                                     {age === 5 && " 이상"}
                                 </span>
 
-                                <img alt="home" className={age != 5 ? styles.ageButtonEnabled : styles.ageButtonDisabled} src={age != 5 ? process.env.PUBLIC_URL + "/images/icons/arrow_right_blue.png" : process.env.PUBLIC_URL + "/images/icons/arrow_right_black.png"} onClick={() => { if (age != 5) { setAge(age + 1); } }} />
+                                <img alt="home" className={age !== 5 ? styles.ageButtonEnabled : styles.ageButtonDisabled} src={age !== 5 ? process.env.PUBLIC_URL + "/images/icons/arrow_right_blue.png" : process.env.PUBLIC_URL + "/images/icons/arrow_right_black.png"} onClick={() => { if (age !== 5) { setAge(age + 1); } }} />
                             </div>
                             <br />
 

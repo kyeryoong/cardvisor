@@ -69,8 +69,6 @@ function RecentCardElements({ number, name }) {
 function Main() {
     const navigate = useNavigate();
 
-    const [loading, setLoading] = useState(true);
-
     const [hover, setHover] = useState(false);
 
     const [width, setWidth] = useState(window.innerWidth);

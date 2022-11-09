@@ -1,10 +1,6 @@
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import { benefitParser, brandParser, typeParser } from '../../Parser';
 
 import styles from "./Service2Results.module.css";
