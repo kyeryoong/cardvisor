@@ -78,6 +78,14 @@ function MyPage() {
                         성별 & 나이 변경하기
                     </div>
                 </div>
+
+                <div className={styles.button} onClick={() => {navigate("/mypage/resign")}}>
+                    <img alt="icon" className={styles.graphic} src={process.env.PUBLIC_URL + "/images/graphics/resign.png"} />
+
+                    <div className={styles.text}>
+                        회원 탈퇴하기
+                    </div>
+                </div>
             </div>
         </div>
     );

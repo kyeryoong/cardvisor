@@ -282,4 +282,5 @@
 - Structure of *MyPage* pages were changed. (*mypage* directory contains *MyPage*, *Password*, and *GenderAge* components.)
 
 ### Ver. 1.4.19 (2022/11/10)
-- Changing password, gender, age functions were implemented. (221110)
+- Changing password, gender, and age functions were implemented. (221110)
+- Resigning function was implemented. (221110)

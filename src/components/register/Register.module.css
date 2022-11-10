@@ -237,7 +237,7 @@
 }
 
 .iconInvalid {
-    color: red;
+    color: rgb(255, 80, 80);
     margin-right: 0.25rem;
 }
 

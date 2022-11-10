@@ -51,7 +51,6 @@
     width: 200px;
     height: 40px;
     color: rgb(0, 200, 200);
-    margin-bottom: 30px;
 }
 
 .inputBox {
@@ -68,19 +67,19 @@
     outline: none;
 }
 
-.submitButtonEnabled {
+.resignButtonEnabled {
     font-size: 1.2rem;
     width: 150px;
     height: 50px;
     border-radius: 5px;
-    background: linear-gradient(135deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
+    background-color: rgb(255, 80, 80);
     color: rgb(255, 255, 255);
     border: transparent;
-    margin-top: 20px;
+    margin-top: 50px;
     cursor: pointer;
 }
 
-.submitButtonDisabled {
+.resignButtonDisabled {
     font-size: 1.2rem;
     width: 150px;
     height: 50px;
@@ -88,22 +87,7 @@
     background-color: rgb(160, 160, 160);
     color: rgb(255, 255, 255);
     border: transparent;
-    margin-top: 20px;
-}
-
-.alertContainer {
-    height: 50px;
-    margin-left: 200px;
-}
-
-.iconValid {
-    color: limegreen;
-    margin-right: 0.25rem;
-}
-
-.iconInvalid {
-    color: rgb(255, 80, 80);
-    margin-right: 0.25rem;
+    margin-top: 50px;
 }
 
 
@@ -126,11 +110,6 @@
 
     .inputBox {
         width: 100%;
-    }
-
-    .alertContainer {
-        margin-left: 0px;
-        margin-top: 20px;
     }
 
     .subContainer {

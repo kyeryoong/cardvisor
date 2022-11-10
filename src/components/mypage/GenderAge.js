@@ -170,9 +170,16 @@ function GenderAge() {
                     </div>
                 }
 
-
                 <input type="submit" className={styles.submitButton} value="변경하기" />
             </form>
+
+            <div className={styles.subContainer} onClick={() => { navigate("/mypage/resign") }}>
+                <img alt="icon" className={styles.menuGraphic} src={process.env.PUBLIC_URL + "/images/graphics/resign.png"} />
+
+                <div className={styles.menuHeader}>
+                    회원 탈퇴
+                </div>
+            </div>
         </div>
     )
 }

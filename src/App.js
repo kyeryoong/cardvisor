@@ -18,6 +18,7 @@ import List from './components/list/List';
 import MyPage from './components/mypage/MyPage';
 import Password from './components/mypage/Password';
 import GenderAge from './components/mypage/GenderAge';
+import Resign from './components/mypage/Resign';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
 import RequireAuth from "./components/RequireAuth";
@@ -57,6 +58,7 @@ function App() {
                             <Route path="mypage" element={<MyPage />} />
                             <Route path="mypage/password" element={<Password />} />
                             <Route path="mypage/genderage" element={<GenderAge />} />
+                            <Route path="mypage/resign" element={<Resign />} />
                             <Route path="loading" element={<Loading message="데이터 분석중" />} />
                         </Route>
                     </Route>

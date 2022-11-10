@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router";
+import { useState } from "react";
+import { useEffect } from "react";
+
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 
 import SelectedBrands from './SelectedBrands';
@@ -70,6 +73,28 @@ function Service2Analysis() {
         jsonArr[i] = { memberId: 9999, categoryName: categoriesEng[i], cost: ratioByCategories[i] }
     }
 
+    const [ageGenderData, setAgeGenderData] = useState({
+        result: []
+    })
+
+    useEffect(() => {
+        const getDonuts = async () => {
+            try {
+                const response = await axiosPrivate.get('/benefit/donuts', {
+                });
+                setTimeout(() => {
+                    setAgeGenderData(response.data);
+                }, 500)
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+        }
+
+        getDonuts();
+
+    }, []);
+
 
 
     return (
@@ -78,6 +103,8 @@ function Service2Analysis() {
 
             <div className={styles.chartZone}>
                 <PieChart data={sumByCategories} colors={colors} />
+
+
 
                 <div className={styles.chartZoneRight} >
                     <div className={styles.chartZoneRightTop}>
@@ -166,6 +193,10 @@ function Service2Analysis() {
                     카드 추천 받기
                 </button>
             </div>
+
+            {/* <div className={styles.chartZone}>
+                <PieChart data={ageGenderData.result} colors={colors} />
+            </div> */}
         </div>
     )
 }

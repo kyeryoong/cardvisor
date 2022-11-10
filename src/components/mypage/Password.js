@@ -25,6 +25,7 @@ function Password() {
     const navigate = useNavigate();
     const axiosPrivate = useAxiosPrivate();
     const location = useLocation();
+    const { setAuth } = useAuth();
 
     const userRef = useRef();
 
@@ -43,7 +44,7 @@ function Password() {
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
 
-    const { setAuth } = useAuth();
+
 
     useEffect(() => {
         setValidPwd(PWD_REGEX.test(pwd));
@@ -221,6 +222,14 @@ function Password() {
 
                 <div className={styles.menuHeader}>
                     성별 & 나이 변경
+                </div>
+            </div>
+
+            <div className={styles.subContainer} onClick={() => { navigate("/mypage/resign") }}>
+                <img alt="icon" className={styles.menuGraphic} src={process.env.PUBLIC_URL + "/images/graphics/resign.png"} />
+
+                <div className={styles.menuHeader}>
+                    회원 탈퇴
                 </div>
             </div>
         </div>
