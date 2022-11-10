@@ -280,3 +280,6 @@
 ### Ver. 1.4.18 (2022/11/10)
 - *MyPage* page was modified with layout and design changes.
 - Structure of *MyPage* pages were changed. (*mypage* directory contains *MyPage*, *Password*, and *GenderAge* components.)
+
+### Ver. 1.4.19 (2022/11/10)
+- Changing password, gender, age functions were implemented. (221110)
