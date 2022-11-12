@@ -123,25 +123,27 @@ function CardInfo() {
 
                     (
                         <div className={styles.backgroundZone}>
-                            <div className={styles.cardZone}>
+                            <div className={styles.bestCardContainer}>
                                 <img
-                                    className={styles.cardImage}
+                                    className={styles.bestCardImage}
                                     alt="cards"
                                     src={process.env.PUBLIC_URL + "/images/card_images/" + card_code + ".png"} />
 
-                                <div className={styles.cardName}>
-                                    {cardInfo.card[0].name}
-                                </div>
+                                <div className={styles.bestCardBottom}>
+                                    <div className={styles.bestCardName}>
+                                        {cardInfo.card[0].name}
+                                    </div>
 
-                                <div>
-                                    <label className={styles.cardType}>
-                                        {typeParser(cardInfo.card[0].type)}
-                                    </label>
+                                    <div className={styles.bestCardInfo}>
+                                        <div className={styles.bestCardType}>
+                                            {typeParser(cardInfo.card[0].type)}
+                                        </div>
 
-                                    <img
-                                        className={styles.cardCompanyImage}
-                                        alt="cards"
-                                        src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cardInfo.card[0].company_eng + ".png"} />
+                                        <img
+                                            className={styles.bestCardCompanyLogo}
+                                            alt="cards"
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + cardInfo.card[0].company_eng + ".png"} />
+                                    </div>
                                 </div>
                             </div>
 

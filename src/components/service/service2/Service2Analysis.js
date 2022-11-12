@@ -8,6 +8,7 @@ import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import SelectedBrands from './SelectedBrands';
 import HeaderBottom from '../../HeaderBottom';
 import PieChart from './PieChart';
+import PieChart2 from './PieChart2';
 import ChartElements from './ChartElements';
 
 import styles from './Service2Analysis.module.css';
@@ -92,8 +93,10 @@ function Service2Analysis() {
         }
 
         getDonuts();
-
     }, []);
+
+    const [toggle, setToggle] = useState(true);
+
 
 
 
@@ -102,46 +105,64 @@ function Service2Analysis() {
             <HeaderBottom mainText="소비 내역 분석" subText="입력하신 브랜드와 금액을 분석해드리는 화면입니다." />
 
             <div className={styles.chartZone}>
-                <PieChart data={sumByCategories} colors={colors} />
+                <div className={styles.chartButtonZone}>
+                    <button className={toggle ? styles.chartButtonLeftOn : styles.chartButtonLeftOff} onClick={() => { setToggle(true) }}>
+                        나의 소비 차트
+                    </button>
 
+                    <button  className={!toggle ? styles.chartButtonRightOn : styles.chartButtonRightOff} onClick={() => { setToggle(false) }}>
+                        평균 연령별/성별 소비 차트
+                    </button>
+                </div>
 
+                {
+                    toggle
 
-                <div className={styles.chartZoneRight} >
-                    <div className={styles.chartZoneRightTop}>
-                        <div className={styles.chartZoneHeader}>
-                            총 소비 금액
-                        </div>
+                        ?
 
-                        <div className={styles.chartZoneValue} style={{ color: "rgb(0, 200, 200)" }}>
-                            {total}
+                        <PieChart data={sumByCategories} colors={colors} />
 
-                            <span className={styles.won}>
-                                원
-                            </span>
-                        </div>
+                        :
+
+                        <PieChart2 data={ageGenderData.result} colors={colors} />
+                }
+            </div>
+
+            <div className={styles.analysisZone}>
+                <div className={styles.chartZoneRight}>
+                    <div className={styles.chartZoneHeader}>
+                        총 소비 금액
                     </div>
 
-                    <div className={styles.chartZoneRightBottom}>
-                        <div className={styles.chartZoneHeader}>
-                            가장 많이 소비한 카테고리
-                        </div>
+                    <div className={styles.chartZoneValue} style={{ color: "rgb(0, 200, 200)" }}>
+                        {total}
 
-                        <div className={styles.chartZoneIconBackground} style={{ backgroundColor: colors[maxIndex] }}>
-                            <img
-                                alt={categoriesKor[maxIndex]} className={styles.chartZoneIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + categoriesEng[maxIndex] + ".png"} />
-                        </div>
+                        <span className={styles.won}>
+                            원
+                        </span>
+                    </div>
+                </div>
 
-                        <div className={styles.chartZoneCategory} style={{ color: colors[maxIndex] }}>
-                            {categoriesKor[maxIndex]}
-                        </div>
+                <div className={styles.chartZoneLeft}>
+                    <div className={styles.chartZoneHeader}>
+                        가장 많이 소비한 카테고리
+                    </div>
 
-                        <div className={styles.chartZoneValue} style={{ color: colors[maxIndex] }}>
-                            {maxValue}
+                    <div className={styles.chartZoneIconBackground} style={{ backgroundColor: colors[maxIndex] }}>
+                        <img
+                            alt={categoriesKor[maxIndex]} className={styles.chartZoneIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + categoriesEng[maxIndex] + ".png"} />
+                    </div>
 
-                            <span className={styles.won}>
-                                원
-                            </span>
-                        </div>
+                    <div className={styles.chartZoneCategory} style={{ color: colors[maxIndex] }}>
+                        {categoriesKor[maxIndex]}
+                    </div>
+
+                    <div className={styles.chartZoneValue} style={{ color: colors[maxIndex] }}>
+                        {maxValue}
+
+                        <span className={styles.won}>
+                            원
+                        </span>
                     </div>
                 </div>
             </div>
@@ -193,10 +214,6 @@ function Service2Analysis() {
                     카드 추천 받기
                 </button>
             </div>
-
-            {/* <div className={styles.chartZone}>
-                <PieChart data={ageGenderData.result} colors={colors} />
-            </div> */}
         </div>
     )
 }
