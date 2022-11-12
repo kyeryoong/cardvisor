@@ -133,7 +133,7 @@ function List() {
                             </div>
 
                             {
-                                filterClicked
+                                !filterClicked
 
                                     ?
 
