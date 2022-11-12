@@ -114,7 +114,7 @@ function List() {
         }
     }
 
-    const [filterClicked, setFilterClicked] = useState(true);
+    const [filterClicked, setFilterClicked] = useState(false);
     const [filterCompany, setFilterCompany] = useState(null);
 
 
