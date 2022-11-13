@@ -18,6 +18,21 @@
     cursor: pointer;
 }
 
+.button:hover {
+    width: 60vw;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    background-color: rgb(0, 200, 200);
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    cursor: pointer;
+}
+
 .menuGraphic {
     width: 40px;
 }
