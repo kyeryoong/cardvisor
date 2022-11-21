@@ -15,6 +15,7 @@ import styles from "./List.module.css";
 function List() {
     const navigate = useNavigate();
     const location = useLocation();
+
     const [loading, setLoading] = useState(true);
     const [cards, setCards] = useState({
         cardAll: [{}]
@@ -30,7 +31,6 @@ function List() {
                     setCards(response.data);
                     setLoading(false);
                 }, 500)
-                // console.log(response.data);
             } catch (err) {
                 console.error(err);
                 navigate('/login', { state: { from: location }, replace: true });
@@ -40,39 +40,6 @@ function List() {
         getCardList();
 
     }, []);
-
-
-    // const getCardList = () => {
-    //     const accessToken = localStorage.getItem("accessToken");
-    //
-    //     const option = {
-    //         method: "GET",
-    //         url: "/card/cards",
-    //         headers: {
-    //             Authorization: `Bearer ${accessToken}`,
-    //         },
-    //     };
-    //
-    //     axios(option).then(({ data }) => {
-    //         setTimeout(() => {
-    //             setCards(data);
-    //             setLoading(false);
-    //         }, 500);
-    //     });
-    // };
-
-    // useEffect(() => {
-    //     fetch("/card/cards")
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             setTimeout(() => {
-    //                 setCards(data);
-    //                 setLoading(false);
-    //             }, 500);
-    //         });
-    // }, []);
 
 
 
@@ -99,7 +66,9 @@ function List() {
                         {pageNumber}
                     </button>
                 );
-            } else {
+            }
+
+            else {
                 return (
                     <button
                         onClick={() => {
@@ -114,11 +83,61 @@ function List() {
         }
     }
 
+
+
     const [filterClicked, setFilterClicked] = useState(false);
-    const [filterCompany, setFilterCompany] = useState(null);
+    const [filterCompany, setFilterCompany] = useState([]);
+    const [filterType, setFilterType] = useState([]);
+
+    const [filtered, setFiltered] = useState([]);
+
+    useEffect(() => {
+        var temp = [];
+
+        if (filterCompany.length !== 0 && filterType.length === 0) {
+            for (var i = 0; i < cards.cardAll.length; i++) {
+                if (filterCompany.includes(cards.cardAll[i].company)) {
+                    temp.push(cards.cardAll[i])
+                }
+            }
+
+            setFiltered(temp);
+        }
+
+        else if (filterCompany.length === 0 && filterType.length !== 0) {
+            for (var i = 0; i < cards.cardAll.length; i++) {
+                if (filterType.includes(cards.cardAll[i].type)) {
+                    temp.push(cards.cardAll[i])
+                }
+            }
+
+            setFiltered(temp);
+        }
+
+        else if (filterCompany.length !== 0 && filterType.length !== 0) {
+            for (var i = 0; i < cards.cardAll.length; i++) {
+                if (filterCompany.includes(cards.cardAll[i].company) && filterType.includes(cards.cardAll[i].type)) {
+                    temp.push(cards.cardAll[i])
+                }
+            }
+
+            setFiltered(temp);
+        }
+
+        else {
+            setFiltered([]);
+        }
+    }, [filterCompany, filterType])
 
 
-    
+
+    var x = [1, 2, 3,]
+
+    console.log(typeof x[5] === "undefined")
+
+
+
+
     return (
         <div>
             {loading ? (
@@ -150,8 +169,9 @@ function List() {
                                         alt="cards"
                                         src={process.env.PUBLIC_URL + "/images/icons/arrow_up_blue.png"} />
                             }
-
                         </div>
+
+
 
                         {
                             filterClicked
@@ -166,81 +186,233 @@ function List() {
 
                                     <div className={styles.filterZoneCompanies}>
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("부산은행") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/bnk.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/bnk.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("부산은행")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "부산은행"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "부산은행"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("씨티카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/citi.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/citi.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("씨티카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "씨티카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "씨티카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("대구은행") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/dgb.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/dgb.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("대구은행")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "대구은행"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "대구은행"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("하나카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/hana.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/hana.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("하나카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "하나카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "하나카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("현대카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/hyundai.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/hyundai.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("현대카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "현대카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "현대카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("기업카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/ibk.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/ibk.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("기업카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "기업카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "기업카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("국민카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/kb.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/kb.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("국민카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "국민카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "국민카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("케이뱅크") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/kbank.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/kbank.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("케이뱅크")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "케이뱅크"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "케이뱅크"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("롯데카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/lotte.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/lotte.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("롯데카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "롯데카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "롯데카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("NH카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/nh.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/nh.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("NH카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "NH카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "NH카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("삼성카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/samsung.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/samsung.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("삼성카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "삼성카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "삼성카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("수협") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/sh.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/sh.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("수협")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "수협"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "수협"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("신한카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/shinhan.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/shinhan.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("신한카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "신한카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "신한카드"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("현대백화점") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/thehyundai.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/thehyundai.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("현대백화점")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "현대백화점"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "현대백화점"]);
+                                                }
+                                            }}
+                                        />
 
                                         <img
-                                            className={styles.filterZoneCompaniesButton}
+                                            className={filterCompany.includes("우리카드") ? styles.filterZoneCompaniesButtonClicked : styles.filterZoneCompaniesButtonNotClicked}
                                             alt="cards"
-                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/woori.png"} />
+                                            src={process.env.PUBLIC_URL + "/images/card_logo/center_aligned/woori.png"}
+                                            onClick={() => {
+                                                if (filterCompany.includes("우리카드")) {
+                                                    setFilterCompany(filterCompany.filter((element) => element !== "우리카드"));
+                                                }
+
+                                                else {
+                                                    setFilterCompany(prev => [...prev, "우리카드"]);
+                                                }
+                                            }}
+                                        />
                                     </div>
                                 </div>
+
+
 
                                 <div className={styles.filterZoneInside}>
                                     <div className={styles.filterHeader}>
@@ -248,15 +420,45 @@ function List() {
                                     </div>
 
                                     <div className={styles.filterZoneCardTypeButtonsZone}>
-                                        <div className={styles.filterZoneCardTypeButton}>
+                                        <div className={filterType.includes("credit") ? styles.filterZoneCardTypeButtonClicked : styles.filterZoneCardTypeButtonNotClicked}
+                                            onClick={() => {
+                                                if (filterType.includes("credit")) {
+                                                    setFilterType(filterType.filter((element) => element !== "credit"));
+                                                }
+
+                                                else {
+                                                    setFilterType(prev => [...prev, "credit"]);
+                                                }
+                                            }}
+                                        >
                                             신용 카드
                                         </div>
 
-                                        <div className={styles.filterZoneCardTypeButton}>
+                                        <div className={filterType.includes("check") ? styles.filterZoneCardTypeButtonClicked : styles.filterZoneCardTypeButtonNotClicked}
+                                            onClick={() => {
+                                                if (filterType.includes("check")) {
+                                                    setFilterType(filterType.filter((element) => element !== "check"));
+                                                }
+
+                                                else {
+                                                    setFilterType(prev => [...prev, "check"]);
+                                                }
+                                            }}
+                                        >
                                             체크 카드
                                         </div>
 
-                                        <div className={styles.filterZoneCardTypeButton}>
+                                        <div className={filterType.includes("hybrid") ? styles.filterZoneCardTypeButtonClicked : styles.filterZoneCardTypeButtonNotClicked}
+                                            onClick={() => {
+                                                if (filterType.includes("hybrid")) {
+                                                    setFilterType(filterType.filter((element) => element !== "hybrid"));
+                                                }
+
+                                                else {
+                                                    setFilterType(prev => [...prev, "hybrid"]);
+                                                }
+                                            }}
+                                        >
                                             하이브리드 카드
                                         </div>
                                     </div>
@@ -265,230 +467,449 @@ function List() {
                         }
                     </div>
 
-                    {typeof cards.cardAll[indexOfFirst].id != "undefined" && (
-                        <ListElement
-                            id={cards.cardAll[indexOfFirst].id}
-                            cardName={cards.cardAll[indexOfFirst].name}
-                            companyNameKor={cards.cardAll[indexOfFirst].company}
-                            companyNameEng={
-                                cards.cardAll[indexOfFirst].company_eng
-                            }
-                            type={cards.cardAll[indexOfFirst].type}
-                        />
-                    )}
 
-                    {typeof cards.cardAll[indexOfFirst + 1].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 1].id}
-                                cardName={cards.cardAll[indexOfFirst + 1].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 1].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 1].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 1].type}
-                            />
-                        )}
 
-                    {typeof cards.cardAll[indexOfFirst + 2].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 2].id}
-                                cardName={cards.cardAll[indexOfFirst + 2].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 2].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 2].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 2].type}
-                            />
-                        )}
+                    {
+                        filtered.length
 
-                    {typeof cards.cardAll[indexOfFirst + 3].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 3].id}
-                                cardName={cards.cardAll[indexOfFirst + 3].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 3].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 3].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 3].type}
-                            />
-                        )}
+                            ?
 
-                    {typeof cards.cardAll[indexOfFirst + 4].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 4].id}
-                                cardName={cards.cardAll[indexOfFirst + 4].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 4].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 4].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 4].type}
-                            />
-                        )}
+                            <div>
+                                {
+                                    typeof filtered[indexOfFirst] != "undefined"
 
-                    {typeof cards.cardAll[indexOfFirst + 5].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 5].id}
-                                cardName={cards.cardAll[indexOfFirst + 5].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 5].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 5].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 5].type}
-                            />
-                        )}
+                                    &&
 
-                    {typeof cards.cardAll[indexOfFirst + 6].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 6].id}
-                                cardName={cards.cardAll[indexOfFirst + 6].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 6].company
+                                    <ListElement
+                                        id={filtered[indexOfFirst].id}
+                                        cardName={filtered[indexOfFirst].name}
+                                        companyNameKor={filtered[indexOfFirst].company}
+                                        companyNameEng={filtered[indexOfFirst].company_eng}
+                                        type={filtered[indexOfFirst].type}
+                                    />
                                 }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 6].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 6].type}
-                            />
-                        )}
 
-                    {typeof cards.cardAll[indexOfFirst + 7].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 7].id}
-                                cardName={cards.cardAll[indexOfFirst + 7].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 7].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 7].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 7].type}
-                            />
-                        )}
+                                {
+                                    typeof filtered[indexOfFirst + 1] != "undefined"
 
-                    {typeof cards.cardAll[indexOfFirst + 8].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 8].id}
-                                cardName={cards.cardAll[indexOfFirst + 8].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 8].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 8].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 8].type}
-                            />
-                        )}
+                                    &&
 
-                    {typeof cards.cardAll[indexOfFirst + 9].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 9].id}
-                                cardName={cards.cardAll[indexOfFirst + 9].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 9].company
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 1].id}
+                                        cardName={filtered[indexOfFirst + 1].name}
+                                        companyNameKor={filtered[indexOfFirst + 1].company}
+                                        companyNameEng={filtered[indexOfFirst + 1].company_eng}
+                                        type={filtered[indexOfFirst + 1].type}
+                                    />
                                 }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 9].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 9].type}
-                            />
-                        )}
 
-                    {typeof cards.cardAll[indexOfFirst + 10].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 10].id}
-                                cardName={cards.cardAll[indexOfFirst + 10].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 10].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 10].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 10].type}
-                            />
-                        )}
+                                {
+                                    typeof filtered[indexOfFirst + 2] != "undefined"
 
-                    {typeof cards.cardAll[indexOfFirst + 11].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 11].id}
-                                cardName={cards.cardAll[indexOfFirst + 11].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 11].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 11].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 11].type}
-                            />
-                        )}
+                                    &&
 
-                    {typeof cards.cardAll[indexOfFirst + 12].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 12].id}
-                                cardName={cards.cardAll[indexOfFirst + 12].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 12].company
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 2].id}
+                                        cardName={filtered[indexOfFirst + 2].name}
+                                        companyNameKor={filtered[indexOfFirst + 2].company}
+                                        companyNameEng={filtered[indexOfFirst + 2].company_eng}
+                                        type={filtered[indexOfFirst + 2].type}
+                                    />
                                 }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 12].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 12].type}
-                            />
-                        )}
 
-                    {typeof cards.cardAll[indexOfFirst + 13].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 13].id}
-                                cardName={cards.cardAll[indexOfFirst + 13].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 13].company
-                                }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 13].company_eng
-                                }
-                                type={cards.cardAll[indexOfFirst + 13].type}
-                            />
-                        )}
+                                {
+                                    typeof filtered[indexOfFirst + 3] != "undefined"
 
-                    {typeof cards.cardAll[indexOfFirst + 14].id !=
-                        "undefined" && (
-                            <ListElement
-                                id={cards.cardAll[indexOfFirst + 14].id}
-                                cardName={cards.cardAll[indexOfFirst + 14].name}
-                                companyNameKor={
-                                    cards.cardAll[indexOfFirst + 14].company
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 3].id}
+                                        cardName={filtered[indexOfFirst + 3].name}
+                                        companyNameKor={filtered[indexOfFirst + 3].company}
+                                        companyNameEng={filtered[indexOfFirst + 3].company_eng}
+                                        type={filtered[indexOfFirst + 3].type}
+                                    />
                                 }
-                                companyNameEng={
-                                    cards.cardAll[indexOfFirst + 14].company_eng
+
+                                {
+                                    typeof filtered[indexOfFirst + 4] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 4].id}
+                                        cardName={filtered[indexOfFirst + 4].name}
+                                        companyNameKor={filtered[indexOfFirst + 4].company}
+                                        companyNameEng={filtered[indexOfFirst + 4].company_eng}
+                                        type={filtered[indexOfFirst + 4].type}
+                                    />
                                 }
-                                type={cards.cardAll[indexOfFirst + 14].type}
-                            />
-                        )}
-                    <br />
-                    <br />
-                    <br />
+
+                                {
+                                    typeof filtered[indexOfFirst + 5] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 5].id}
+                                        cardName={filtered[indexOfFirst + 5].name}
+                                        companyNameKor={filtered[indexOfFirst + 5].company}
+                                        companyNameEng={filtered[indexOfFirst + 5].company_eng}
+                                        type={filtered[indexOfFirst + 5].type}
+                                    />
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 6] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 6].id}
+                                        cardName={filtered[indexOfFirst + 6].name}
+                                        companyNameKor={filtered[indexOfFirst + 6].company}
+                                        companyNameEng={filtered[indexOfFirst + 6].company_eng}
+                                        type={filtered[indexOfFirst + 6].type}
+                                    />
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 7] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 7].id}
+                                        cardName={filtered[indexOfFirst + 7].name}
+                                        companyNameKor={filtered[indexOfFirst + 7].company}
+                                        companyNameEng={filtered[indexOfFirst + 7].company_eng}
+                                        type={filtered[indexOfFirst + 7].type}
+                                    />
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 8] != "undefined"
+
+                                    &&
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 8].id}
+                                        cardName={filtered[indexOfFirst + 8].name}
+                                        companyNameKor={filtered[indexOfFirst + 8].company}
+                                        companyNameEng={filtered[indexOfFirst + 8].company_eng}
+                                        type={filtered[indexOfFirst + 8].type}
+                                    />
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 9] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 9].id}
+                                        cardName={filtered[indexOfFirst + 9].name}
+                                        companyNameKor={filtered[indexOfFirst + 9].company}
+                                        companyNameEng={filtered[indexOfFirst + 9].company_eng}
+                                        type={filtered[indexOfFirst + 9].type}
+                                    />
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 10] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 10].id}
+                                        cardName={filtered[indexOfFirst + 10].name}
+                                        companyNameKor={filtered[indexOfFirst + 10].company}
+                                        companyNameEng={filtered[indexOfFirst + 10].company_eng}
+                                        type={filtered[indexOfFirst + 10].type}
+                                    />
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 11] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 11].id}
+                                        cardName={filtered[indexOfFirst + 11].name}
+                                        companyNameKor={filtered[indexOfFirst + 11].company}
+                                        companyNameEng={filtered[indexOfFirst + 11].company_eng}
+                                        type={filtered[indexOfFirst + 11].type}
+                                    />
+
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 12] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 12].id}
+                                        cardName={filtered[indexOfFirst + 12].name}
+                                        companyNameKor={filtered[indexOfFirst + 12].company}
+                                        companyNameEng={filtered[indexOfFirst + 12].company_eng}
+                                        type={filtered[indexOfFirst + 12].type}
+                                    />
+
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 13] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 13].id}
+                                        cardName={filtered[indexOfFirst + 13].name}
+                                        companyNameKor={filtered[indexOfFirst + 13].company}
+                                        companyNameEng={filtered[indexOfFirst + 13].company_eng}
+                                        type={filtered[indexOfFirst + 13].type}
+                                    />
+
+                                }
+
+                                {
+                                    typeof filtered[indexOfFirst + 14] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={filtered[indexOfFirst + 14].id}
+                                        cardName={filtered[indexOfFirst + 14].name}
+                                        companyNameKor={filtered[indexOfFirst + 14].company}
+                                        companyNameEng={filtered[indexOfFirst + 14].company_eng}
+                                        type={filtered[indexOfFirst + 14].type}
+                                    />
+                                }
+                            </div>
+
+                            :
+
+                            <div>
+                                {
+                                    typeof cards.cardAll[indexOfFirst] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst].id}
+                                        cardName={cards.cardAll[indexOfFirst].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst].company_eng}
+                                        type={cards.cardAll[indexOfFirst].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 1] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 1].id}
+                                        cardName={cards.cardAll[indexOfFirst + 1].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 1].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 1].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 1].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 2] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 2].id}
+                                        cardName={cards.cardAll[indexOfFirst + 2].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 2].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 2].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 2].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 3] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 3].id}
+                                        cardName={cards.cardAll[indexOfFirst + 3].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 3].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 3].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 3].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 4] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 4].id}
+                                        cardName={cards.cardAll[indexOfFirst + 4].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 4].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 4].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 4].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 5] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 5].id}
+                                        cardName={cards.cardAll[indexOfFirst + 5].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 5].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 5].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 5].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 6] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 6].id}
+                                        cardName={cards.cardAll[indexOfFirst + 6].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 6].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 6].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 6].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 7] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 7].id}
+                                        cardName={cards.cardAll[indexOfFirst + 7].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 7].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 7].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 7].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 8] != "undefined"
+
+                                    &&
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 8].id}
+                                        cardName={cards.cardAll[indexOfFirst + 8].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 8].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 8].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 8].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 9] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 9].id}
+                                        cardName={cards.cardAll[indexOfFirst + 9].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 9].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 9].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 9].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 10] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 10].id}
+                                        cardName={cards.cardAll[indexOfFirst + 10].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 10].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 10].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 10].type}
+                                    />
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 11] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 11].id}
+                                        cardName={cards.cardAll[indexOfFirst + 11].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 11].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 11].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 11].type}
+                                    />
+
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 12] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 12].id}
+                                        cardName={cards.cardAll[indexOfFirst + 12].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 12].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 12].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 12].type}
+                                    />
+
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 13] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 13].id}
+                                        cardName={cards.cardAll[indexOfFirst + 13].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 13].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 13].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 13].type}
+                                    />
+
+                                }
+
+                                {
+                                    typeof cards.cardAll[indexOfFirst + 14] != "undefined"
+
+                                    &&
+
+                                    <ListElement
+                                        id={cards.cardAll[indexOfFirst + 14].id}
+                                        cardName={cards.cardAll[indexOfFirst + 14].name}
+                                        companyNameKor={cards.cardAll[indexOfFirst + 14].company}
+                                        companyNameEng={cards.cardAll[indexOfFirst + 14].company_eng}
+                                        type={cards.cardAll[indexOfFirst + 14].type}
+                                    />
+                                }
+                            </div>
+                    }
+
+
+
+
+
+                    <br /><br /><br />
 
                     <div className={styles.pageButtonGroup}>
                         <button
