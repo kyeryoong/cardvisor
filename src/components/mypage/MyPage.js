@@ -32,32 +32,8 @@ function MyPage() {
         getUsername();
     }, []);
 
-    const [info, setInfo] = useState({
-        id: "",
-        pw: "",
-        pwcheck: "",
-    });
 
-    const [age, setAge] = useState(null);
-    const [gender, setGender] = useState(null);
-
-
-
-    function handleChangePW(event) {
-        event.preventDefault();
-
-        setInfo(info => {
-            const updated = {
-                ...info,
-                [event.target.name]: event.target.value
-            };
-
-            return updated;
-        });
-    };
-
-
-
+    
     return (
         <div>
             <HeaderBottom mainText="내 정보" subText="개인정보를 수정할 수 있습니다." />

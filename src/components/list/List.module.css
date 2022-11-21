@@ -209,7 +209,37 @@
 
 
 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 1400px) {
+    .filterZoneCompanies {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 5px;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .filterZoneCompanies {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .filterBox {
+        width: 90vw;
+    }
+
+    .filterZoneCompanies {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .filterZoneCardTypeButtonsZone {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .cardElementZone {
         width: 90vw;
         height: 60px;
@@ -285,5 +315,27 @@
     .arrow {
         height: 20px;
         margin-bottom: -4px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .filterZoneCompanies {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .filterZoneCompanies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .filterZoneCompanies {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

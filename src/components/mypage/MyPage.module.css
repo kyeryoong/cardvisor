@@ -45,5 +45,15 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .container {
+        width: 90vw;
+    }
 
+    .button {
+        width: 90vw;
+    }
+
+    .button:hover {
+        width: 90vw;
+    }
 }
