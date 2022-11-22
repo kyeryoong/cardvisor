@@ -405,6 +405,7 @@ function Service2() {
             }}>
                 혜택 선택 완료
             </button>
+            <br /><br /><br />
         </div >
     );
 }

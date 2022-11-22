@@ -1106,17 +1106,6 @@ function List() {
                             </button>
                         </div>
                         <br /><br /><br />
-
-                        <div>
-                            <button
-                                className={styles.toMainButton}
-                                onClick={() => {
-                                    navigate("/main");
-                                }}
-                            >
-                                홈 화면으로
-                            </button>
-                        </div>
                     </div>
             }
         </div>
