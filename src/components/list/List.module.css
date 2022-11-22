@@ -1,50 +1,56 @@
 .filterBox {
+    width: 60vw;
+    height: fit-content;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    width: 60vw;
-    height: fit-content;
     margin: 0px auto;
     border-radius: 10px;
     margin-bottom: 30px;
-    padding: 30px;
-}
-
-.filterText {
-    font-size: 1.5rem;
-    line-height: 30px;
-    color: rgb(0, 200, 200);
 }
 
 .filterHeader {
+    height: 40px;
+    line-height: 40px;
     color: rgb(0, 200, 200);
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
-.filterButton {
+.filterButtonClicked {
+    font-size: 1.3rem;
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, rgb(0, 200, 200) 10%, rgb(50, 100, 200) 90%);
     display: grid;
     grid-template-columns: 1fr 30px;
+    cursor: pointer;
+}
+
+.filterButtonNotClicked {
+    font-size: 1.3rem;
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+    color: rgb(0, 200, 200);
+    background: none;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    cursor: pointer;
 }
 
 .filterArrow {
     width: 30px;
-    cursor: pointer;
 }
 
 .filterZone {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-}
-
-.filterZoneInside {
-    margin-top: 20px;
+    height: fit-content;
+    padding: 30px;
+    padding-top: 0px;
 }
 
 .filterZoneCompanies {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 5px;
 }
 
 .filterZoneCompaniesButtonNotClicked {
@@ -54,25 +60,22 @@
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     margin: 0px auto;
-    border-radius: 5px;
     cursor: pointer;
 }
 
 .filterZoneCompaniesButtonClicked {
     width: 100%;
     padding: 5px;
-    background-color: rgb(0, 200, 200);
+    background: linear-gradient(135deg, rgb(250, 200, 100) 0%, rgb(250, 150, 0) 100%);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     margin: 0px auto;
-    border-radius: 5px;
     cursor: pointer;
 }
 
 .filterZoneCardTypeButtonsZone {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
 }
 
 .filterZoneCardTypeButtonNotClicked {
@@ -82,7 +85,6 @@
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     margin: 0px auto;
-    border-radius: 5px;
     text-align: center;
     cursor: pointer;
 }
@@ -91,13 +93,28 @@
     width: 100%;
     padding: 20px;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 200, 200);
+    background: linear-gradient(135deg, rgb(250, 200, 100) 0%, rgb(250, 150, 0) 100%);
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     margin: 0px auto;
-    border-radius: 5px;
     text-align: center;
     cursor: pointer;
+}
+
+.filterNameBox {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: rgb(0, 200, 200);
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border: transparent;
+    border-bottom: 2px solid rgb(0, 200, 200);
+}
+
+.filterNameBox:focus {
+    outline: none;
 }
 
 .cardElementZone {
@@ -240,7 +257,6 @@
 @media screen and (max-width: 1400px) {
     .filterZoneCompanies {
         grid-template-columns: repeat(6, 1fr);
-        gap: 5px;
     }
 }
 
@@ -257,6 +273,15 @@
 @media screen and (max-width: 1000px) {
     .filterBox {
         width: 90vw;
+    }
+
+    .filterZone {
+        padding: 5vw;
+        padding-top: 0px;
+    }
+
+    .filterHeader {
+        margin-top: 5vw;
     }
 
     .filterZoneCompanies {

@@ -72,7 +72,7 @@
     border: none;
     border-radius: 5px;
     color: rgb(255, 255, 255);
-    background-color: rgb(250, 150, 0);
+    background: linear-gradient(135deg, rgb(250, 200, 100) 0%, rgb(250, 150, 0) 100%);
 }
 
 .pageOneScroll {

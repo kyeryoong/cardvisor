@@ -288,6 +288,10 @@
 ### Ver. 1.4.20 (2022/11/13)
 - Chart and Layout was changed in *Service2Analysis* page.
 
-### Ver. 1.4.21 (2022/11/22)
+### Ver. 1.4.21 (2022/11/21)
 - List and MyPage page was changed.
 - filtering(with card companies and card types) function was implemented in List page.
+
+### Ver. 1.4.22 (2022/11/21)
+- Some minor changes in designs.
+- filtering function(with keywords) was additionally implemented.

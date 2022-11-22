@@ -63,7 +63,6 @@
 }
 
 .inputIDZone {
-    text-align: center;
     width: 300px;
     height: 55px;
     font-size: 2rem;
@@ -86,7 +85,6 @@
 }
 
 .inputPWZone {
-    text-align: center;
     width: 300px;
     height: 55px;
     font-size: 2rem;
@@ -115,7 +113,7 @@
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: rgb(250, 150, 0);
+    background: linear-gradient(135deg, rgb(250, 200, 100) 0%, rgb(250, 150, 0) 100%);
     border: none;
     border-radius: 5px;
     padding: 10px;
