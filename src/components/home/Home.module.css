@@ -94,6 +94,7 @@
 
 .pageTwoShow {
     height: 100vh;
+    padding: 10vw;
     background-color: rgb(255, 255, 255);
 }
 
@@ -111,18 +112,13 @@
 .pageTwoMainText {
     width: fit-content;
     font-size: 3rem;
-    position: relative;
-    top: 200px;
-    left: 20vw;
+    display: block;
     color: rgb(0, 200, 200);
 }
 
 .pageTwoSubText {
     width: fit-content;
     font-size: 1.8rem;
-    position: relative;
-    top: 220px;
-    left: 20vw;
     color: rgb(180, 180, 180);
 }
 
@@ -135,17 +131,24 @@
 
 .pageTwoCarousel {
     width: 100%;
-    position: relative;
-    top: 50vh;
 }
 
 .pageTwoCarouselElements {
-    width: 6vw;
+    padding-top: 0vw;
+    padding-bottom: 0vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    display: block;
+    margin: 0px auto;
+}
+
+.pageTwoCarouselIcons {
     padding: 2vw;
 }
 
 .pageThreeShow {
     height: 100vh;
+    padding: 10vw;
     background-color: rgb(0, 200, 200);
 }
 
@@ -158,9 +161,6 @@
 .pageThreeMainText {
     width: fit-content;
     font-size: 3rem;
-    position: relative;
-    top: 200px;
-    left: 20vw;
     color: rgb(255, 255, 255);
 }
 
@@ -191,6 +191,7 @@
 
 .pageFourShow {
     height: 100vh;
+    padding: 10vw;
     background-color: rgb(0, 100, 250);
 }
 
@@ -203,25 +204,18 @@
 .pageFourAppear {
     width: fit-content;
     font-size: 3rem;
-    position: relative;
-    top: 200px;
-    left: 20vw;
     color: rgb(255, 255, 255);
 }
 
 .pageFourContainer {
-    width: 60vw;
-    display: block;
-    margin: 0px auto;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    position: relative;
-    top: 35vh
 }
 
 .pageFourElements {
-    height: 200px;
+    height: 100%;
     font-size: 1.2rem;
     color: rgb(0, 100, 250);
     background-color: rgb(255, 255, 255);
@@ -240,9 +234,6 @@
 
 .pageFourValues {
     font-size: 3rem;
-    position: relative;
-    top: 30px;
-    text-align: right;
 }
 
 .pageFourGae {
@@ -284,43 +275,44 @@
 
     .pageTwoMainText {
         font-size: 5vw;
-        left: 5vw;
     }
 
     .pageTwoSubText {
         font-size: 2vw;
-        top: 210px;
-        left: 5vw;
+    }
+
+    .pageTwoCarouselElements {
+        padding-left: 50px;
+        padding-right: 50px;
+        display: block;
+        margin: 0px auto;
+    }
+
+    .pageTwoCarouselIcons {
+        padding: 1vw;
     }
 
     .pageThreeMainText {
         font-size: 5vw;
-        left: 5vw;
     }
 
     .pageThreeSubText {
         font-size: 2vw;
-        top: 210px;
-        left: 5vw;
     }
 
     .pageThreeGraphicShow {
         width: 50%;
-        margin-right: 5vw;
     }
 
     .pageThreeGraphicHide {
         width: 50%;
-        margin-right: 5vw;
     }
 
     .pageFourAppear {
         font-size: 5vw;
-        left: 5vw;
     }
 
     .pageFourContainer {
-        width: 90vw;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }

@@ -6,6 +6,8 @@ import styles from './Home.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import Carousel from "react-material-ui-carousel";
+
 
 
 function Home() {
@@ -59,14 +61,27 @@ function Home() {
         }
     })
 
-    const settings = {
+    const settings1 = {
+        dots: false,
+        arrows: false,
+        fade: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 1000,
+        pauseOnHover: false,
+    };
+
+    const settings2 = {
         dots: false,
         arrows: false,
         infinite: true,
         slidesToShow: 10,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 0,
+        speed: 1000,
         autoplaySpeed: 2000,
         pauseOnHover: false,
     };
@@ -121,39 +136,61 @@ function Home() {
                         약 400개의 브랜드 선택 가능
                     </div>
 
+                    <div className={styles.pageTwoCarousel}>
+                        <Slider {...settings1}>
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/1.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/2.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/blank.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/3.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/4.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/blank.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/5.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/6.png"} />
+
+                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/blank.png"} />
+                        </Slider>
+                    </div>
+
 
 
                     <div className={styles.pageTwoCarousel}>
-                        <Slider {...settings}>
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/1.png"} />
+                        <Slider {...settings2}>
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/1.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/2.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/2.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/3.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/3.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/4.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/4.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/5.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/5.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/6.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/6.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/7.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/7.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/8.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/8.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/9.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/9.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/10.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/10.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/11.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/11.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/12.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/12.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/13.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/13.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/14.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/14.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/15.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/15.png"} />
                         </Slider>
                     </div>
                 </div>
