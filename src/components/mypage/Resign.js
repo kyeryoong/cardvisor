@@ -19,6 +19,28 @@ function Resign() {
 
     const [pwd, setPwd] = useState('');
 
+
+
+    const [username, setUsername] = useState("");
+
+    useEffect(() => {
+        const getUsername = async () => {
+            try {
+                const response = await axiosPrivate.get('/member/username', {});
+                setUsername(response.data);
+
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+        }
+
+
+        getUsername();
+    }, []);
+
+
+
     return (
         <div>
             <HeaderBottom mainText="내 정보" subText="개인정보를 수정할 수 있습니다." />
@@ -77,31 +99,43 @@ function Resign() {
                     </div>
                 </div>
 
-                <div className={styles.inputContainer}>
-                    <div className={styles.infoType}>
-                        비밀번호
-                    </div>
-
-                    <input
-                        id="pwd"
-                        type="password"
-                        onChange={(e) => setPwd(e.target.value)}
-                        value={pwd}
-                        className={styles.inputBox}
-                        required
-                    />
-                </div>
-
                 {
-                    pwd
+                    username === "test"
 
                         ?
 
-                        <input type="submit" className={styles.resignButtonEnabled} value="회원 탈퇴하기" />
+                        "이 계정은 시연 전용 계정이므로, 회원 탈퇴를 할 수 없습니다."
 
                         :
 
-                        <input type="submit" className={styles.resignButtonDisabled} value="회원 탈퇴하기" />
+                        <div>
+                            <div className={styles.inputContainer}>
+                                <div className={styles.infoType}>
+                                    비밀번호
+                                </div>
+
+                                <input
+                                    id="pwd"
+                                    type="password"
+                                    onChange={(e) => setPwd(e.target.value)}
+                                    value={pwd}
+                                    className={styles.inputBox}
+                                    required
+                                />
+                            </div>
+
+                            {
+                                pwd
+
+                                    ?
+
+                                    <input type="submit" className={styles.resignButtonEnabled} value="회원 탈퇴하기" />
+
+                                    :
+
+                                    <input type="submit" className={styles.resignButtonDisabled} value="회원 탈퇴하기" />
+                            }
+                        </div>
                 }
             </form>
         </div>

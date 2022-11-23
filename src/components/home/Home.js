@@ -111,7 +111,7 @@ function Home() {
 
 
 
-                <div className={styles.pageTwo}>
+                <div className={styles.pageTwoShow}>
                     <div className={styles.pageTwoMainText}>
                         원하는 브랜드를 선택해서<br />
                         카드를 추천받을 수 있어요.
@@ -160,7 +160,7 @@ function Home() {
 
 
 
-                <div className={styles.pageThree}>
+                <div className={styles.pageThreeShow}>
                     <div className={styles.pageThreeMainText}>
                         브랜드마다 금액을 입력하면<br />
                         더 상세한 정보를 받을 수 있어요.
@@ -175,7 +175,7 @@ function Home() {
 
 
 
-                <div className={styles.pageFour}>
+                <div className={styles.pageFourShow}>
                     <div className={styles.pageFourAppear}>
                         카드 데이터 현황
                     </div>

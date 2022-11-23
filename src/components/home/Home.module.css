@@ -26,6 +26,7 @@
 }
 
 .pageOneHide {
+    height: 100vh;
     opacity: 0;
     animation: fadeOut 1s;
 }
@@ -91,9 +92,15 @@
     animation: floating 2s infinite;
 }
 
-.pageTwo {
+.pageTwoShow {
     height: 100vh;
     background-color: rgb(255, 255, 255);
+}
+
+.pageTwoHide {
+    height: 100vh;
+    opacity: 0;
+    animation: fadeOut 1s;
 }
 
 .pageTwoZone {
@@ -137,9 +144,15 @@
     padding: 2vw;
 }
 
-.pageThree {
+.pageThreeShow {
     height: 100vh;
     background-color: rgb(0, 200, 200);
+}
+
+.pageThreeHide {
+    height: 100vh;
+    opacity: 0;
+    animation: fadeOut 1s;
 }
 
 .pageThreeMainText {
@@ -176,9 +189,15 @@
     top: 30vh;
 }
 
-.pageFour {
+.pageFourShow {
     height: 100vh;
     background-color: rgb(0, 100, 250);
+}
+
+.pageFourHide {
+    height: 100vh;
+    opacity: 0;
+    animation: fadeOut 1s;
 }
 
 .pageFourAppear {
@@ -196,7 +215,7 @@
     margin: 0px auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
+    gap: 10px;
     position: relative;
     top: 35vh
 }
@@ -241,7 +260,7 @@
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .pageOneGraphic {
         margin-top: 100px;
         width: 60%;
@@ -264,23 +283,23 @@
     }
 
     .pageTwoMainText {
-        font-size: 1.5rem;
+        font-size: 5vw;
         left: 5vw;
     }
 
     .pageTwoSubText {
-        font-size: 1rem;
+        font-size: 2vw;
         top: 210px;
         left: 5vw;
     }
 
     .pageThreeMainText {
-        font-size: 1.5rem;
+        font-size: 5vw;
         left: 5vw;
     }
 
     .pageThreeSubText {
-        font-size: 1rem;
+        font-size: 2vw;
         top: 210px;
         left: 5vw;
     }
@@ -296,7 +315,7 @@
     }
 
     .pageFourAppear {
-        font-size: 1.5rem;
+        font-size: 5vw;
         left: 5vw;
     }
 

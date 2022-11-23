@@ -20,8 +20,6 @@ function GenderAge() {
         age: ""
     });
 
-
-
     const [gender, setGender] = useState("");
     const [age, setAge] = useState("");
 
@@ -34,8 +32,6 @@ function GenderAge() {
             }
         }
     }
-
-
 
     useEffect(() => {
         const getMyInfo = async () => {
@@ -52,6 +48,26 @@ function GenderAge() {
         }
 
         getMyInfo();
+    }, []);
+
+
+
+    const [username, setUsername] = useState("");
+
+    useEffect(() => {
+        const getUsername = async () => {
+            try {
+                const response = await axiosPrivate.get('/member/username', {});
+                setUsername(response.data);
+
+            } catch (err) {
+                console.error(err);
+                navigate('/login', {state: {from: location}, replace: true});
+            }
+        }
+
+
+        getUsername();
     }, []);
 
 
