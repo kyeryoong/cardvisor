@@ -89,7 +89,7 @@
 
 .feeName {
     font-size: 1.5rem;
-    font-weight: 1000;
+    
     height: 25px;
     line-height: 25px;
     display: flex;
@@ -98,7 +98,7 @@
 
 .feeValue {
     font-size: 1.5rem;
-    font-weight: 1000;
+    
     height: 25px;
     line-height: 25px;
     color: rgb(0, 200, 200);
@@ -123,7 +123,7 @@
     border: 1px solid rgb(230, 230, 230);
     box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
     font-size: 1.5rem;
-    font-weight: 1000;
+    
     padding-top: 20px;
     padding-left: 20px;
     margin-bottom: 10px;
@@ -160,7 +160,7 @@
 .benefitInfo {
     text-align: center;
     font-size: 1.5rem;
-    font-weight: 1000;
+    
     color: rgb(0, 200, 200);
     float: right;
     line-height: 80px;
@@ -180,7 +180,7 @@
 
 .cautionHighlight {
     text-align: left;
-    font-weight: 1000;
+    
     color: rgb(243, 156, 18);
 }
 

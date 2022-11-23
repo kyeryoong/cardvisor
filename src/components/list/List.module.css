@@ -162,7 +162,7 @@
     top: -72px;
     left: 260px;
     font-size: 1.5rem;
-    font-weight: 1000;
+    
     display: flex;
     align-items: center;
     word-break: keep-all;
@@ -175,7 +175,7 @@
     height: 40px;
     width: 50px;
     font-size: 1.3rem;
-    font-weight: 1000;
+    
     background-color: transparent;
     color: rgb(0, 200, 200);
     border: transparent;
@@ -208,7 +208,7 @@
     height: 40px;
     width: 40px;
     font-size: 2rem;
-    font-weight: 1000;
+    
     background-color: transparent;
     color: rgb(0, 200, 200);
     border: transparent;
@@ -220,7 +220,7 @@
     height: 40px;
     width: 40px;
     font-size: 2rem;
-    font-weight: 1000;
+    
     background-color: transparent;
     color: rgb(0, 200, 200);
     border: transparent;
@@ -321,7 +321,7 @@
         height: 40px;
         width: 25px;
         font-size: 1rem;
-        font-weight: 1000;
+        
         background-color: transparent;
         color: rgb(0, 200, 200);
         border: transparent;
@@ -345,7 +345,7 @@
         height: 40px;
         width: 20px;
         font-size: 2rem;
-        font-weight: 1000;
+        
         background-color: transparent;
         color: rgb(0, 200, 200);
         border: transparent;
@@ -357,7 +357,7 @@
         height: 40px;
         width: 20px;
         font-size: 2rem;
-        font-weight: 1000;
+        
         background-color: transparent;
         color: rgb(0, 200, 200);
         border: transparent;
