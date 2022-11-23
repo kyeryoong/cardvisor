@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: normal;
-    src:
-      /* IE6-IE8 */ 
-      url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2') format('woff2'),
-      /* Super Modern Browsers */ 
-      url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
-      /* Safari, Android, iOS */ 
-      url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype'),
-  }
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
