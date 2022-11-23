@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 @font-face {
-    font-family: "Noto Sans KR";
+    font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 400;
-    src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'), 
-    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype'),
-}
-
-
+    font-weight: normal;
+    src:
+      /* IE6-IE8 */ 
+      url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2') format('woff2'),
+      /* Super Modern Browsers */ 
+      url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff') format('woff'),
+      /* Safari, Android, iOS */ 
+      url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf') format('opentype'),
+  }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: 1000;
+    font-family: "Noto Sans KR" sans-serif;
+    font-weight: 600;
 
     padding: 0;
     margin: 0;
@@ -30,8 +32,7 @@
     display: none;
 }
 
-select,
-input {
+select input details summary {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
