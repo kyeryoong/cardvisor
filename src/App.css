@@ -19,7 +19,7 @@
     display: none;
 }
 
-select input details summary {
+select, input, details, details summary {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
