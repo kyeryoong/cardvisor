@@ -6,8 +6,6 @@ import styles from './Home.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Carousel from "react-material-ui-carousel";
-
 
 
 function Home() {
@@ -61,20 +59,7 @@ function Home() {
         }
     })
 
-    const settings1 = {
-        dots: false,
-        arrows: false,
-        fade: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 500,
-        autoplaySpeed: 1000,
-        pauseOnHover: false,
-    };
-
-    const settings2 = {
+    const settings = {
         dots: false,
         arrows: false,
         infinite: true,
@@ -126,7 +111,7 @@ function Home() {
 
 
 
-                <div className={styles.pageTwoShow}>
+                <div className={styles.pageTwo}>
                     <div className={styles.pageTwoMainText}>
                         원하는 브랜드를 선택해서<br />
                         카드를 추천받을 수 있어요.
@@ -136,68 +121,46 @@ function Home() {
                         약 400개의 브랜드 선택 가능
                     </div>
 
-                    <div className={styles.pageTwoCarousel}>
-                        <Slider {...settings1}>
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/1.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/2.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/blank.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/3.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/4.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/blank.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/5.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/6.png"} />
-
-                            <img alt="brand" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/home/blank.png"} />
-                        </Slider>
-                    </div>
-
 
 
                     <div className={styles.pageTwoCarousel}>
-                        <Slider {...settings2}>
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/1.png"} />
+                        <Slider {...settings}>
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/1.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/2.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/2.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/3.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/3.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/4.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/4.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/5.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/5.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/6.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/6.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/7.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/7.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/8.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/8.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/9.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/9.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/10.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/10.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/11.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/11.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/12.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/12.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/13.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/13.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/14.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/14.png"} />
 
-                            <img alt="home" className={styles.pageTwoCarouselIcons} src={process.env.PUBLIC_URL + "/images/icons/filled/15.png"} />
+                            <img alt="home" className={styles.pageTwoCarouselElements} src={process.env.PUBLIC_URL + "/images/icons/filled/15.png"} />
                         </Slider>
                     </div>
                 </div>
 
 
 
-                <div className={styles.pageThreeShow}>
+                <div className={styles.pageThree}>
                     <div className={styles.pageThreeMainText}>
                         브랜드마다 금액을 입력하면<br />
                         더 상세한 정보를 받을 수 있어요.
@@ -212,7 +175,7 @@ function Home() {
 
 
 
-                <div className={styles.pageFourShow}>
+                <div className={styles.pageFour}>
                     <div className={styles.pageFourAppear}>
                         카드 데이터 현황
                     </div>
