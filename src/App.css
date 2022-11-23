@@ -19,9 +19,16 @@
     display: none;
 }
 
-select, input, details, details summary {
+select,
+input,
+details,
+details summary {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     user-select: text;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
 }
