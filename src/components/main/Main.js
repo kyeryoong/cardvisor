@@ -7,8 +7,15 @@ import Carousel from "react-material-ui-carousel";
 import styles from "./Main.module.css";
 
 function AdCardElements({ number, name, comment }) {
+    const navigate = useNavigate();
+
     return (
-        <div className={styles.cardSliderPage}>
+        <div
+            className={styles.cardSliderPage}
+            onClick={() => {
+                navigate("/cardinfo/" + number);
+            }}
+        >
             <div className={styles.cardSliderLeft}>
                 <img
                     alt="card"
@@ -34,8 +41,15 @@ function AdCardElements({ number, name, comment }) {
 }
 
 function AdCardElementsMobile({ number, name, comment }) {
+    const navigate = useNavigate();
+
     return (
-        <div className={styles.cardSliderPage}>
+        <div
+            className={styles.cardSliderPage}
+            onClick={() => {
+                navigate("/cardinfo/" + number);
+            }}
+        >
             <img
                 alt="card"
                 className={styles.cardSliderImage}

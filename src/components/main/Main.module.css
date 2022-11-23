@@ -72,21 +72,33 @@
     width: 100%;
     height: 300px;
     border-radius: 0px 10px 10px 0px;
-    background: linear-gradient(90deg, rgb(0, 200, 200) 10%, rgb(0, 100, 200) 90%);
+    background: linear-gradient(
+        90deg,
+        rgb(0, 200, 200) 10%,
+        rgb(0, 100, 200) 90%
+    );
 }
 
 .containerTopRight2 {
     width: 100%;
     height: 300px;
     border-radius: 0px 10px 10px 0px;
-    background: linear-gradient(90deg, rgb(250, 200, 100) 10%, rgb(250, 150, 0) 90%);
+    background: linear-gradient(
+        90deg,
+        rgb(250, 200, 100) 10%,
+        rgb(250, 150, 0) 90%
+    );
 }
 
 .containerTopRight3 {
     width: 100%;
     height: 300px;
     border-radius: 0px 10px 10px 0px;
-    background: linear-gradient(90deg, rgb(0, 150, 250) 10%, rgb(100, 0, 250) 90%);
+    background: linear-gradient(
+        90deg,
+        rgb(0, 150, 250) 10%,
+        rgb(100, 0, 250) 90%
+    );
 }
 
 .containerTopRightZone {
@@ -128,6 +140,7 @@
 .cardSliderPage {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    cursor: pointer;
 }
 
 .cardSliderLeft {
@@ -237,9 +250,6 @@
     word-break: keep-all;
 }
 
-
-
-
 @media screen and (max-width: 1300px) {
     .containerHeader {
         width: 90vw;
@@ -258,11 +268,7 @@
     }
 }
 
-
-
 @media screen and (max-width: 800px) {
-
-
     .containerHeader {
         font-size: 1.5rem;
         margin-top: 40px;
@@ -339,14 +345,14 @@
         border-radius: 8px;
         transform: none;
     }
-    
+
     .cardSliderName {
         font-size: min(1.5rem, 6vw);
         line-height: 2rem;
         word-break: keep-all;
         margin-top: 20px;
     }
-    
+
     .cardSliderComment {
         font-size: min(1rem, 3vw);
         word-break: keep-all;
@@ -367,7 +373,7 @@
     .recentCardImage {
         width: 120px;
     }
-    
+
     .recentCardBlank {
         width: 120px;
         height: 75px;
