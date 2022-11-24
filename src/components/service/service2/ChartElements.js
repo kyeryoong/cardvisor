@@ -1,6 +1,8 @@
 import styles from './ChartElements.module.css';
 
 function ChartElements({ color, elementKor, elementEng, value, ratioByCategories, comparison, age, gender }) {
+    console.log(!isNaN(comparison))
+
     return (
         value !== 0
 
@@ -23,12 +25,15 @@ function ChartElements({ color, elementKor, elementEng, value, ratioByCategories
                         {value}원
                     </div>
 
+                    <div className={styles.elementPercent1} style={{ color: color, border: String("1px solid " + color), borderRadius: "5px 0px 0px 5px" }}>
+                        {(ratioByCategories * 100).toFixed(1)}%
+                    </div>
 
                     <div className={styles.elementBar1} style={{
                         backgroundColor: color,
-                        width: "calc(100px + " + (String(ratioByCategories * 20)) + "vw)"
+                        width: String(ratioByCategories * 25) + "vw"
                     }}>
-                        {(ratioByCategories * 100).toFixed(1)} %
+
                     </div>
                 </div>
 
@@ -37,11 +42,15 @@ function ChartElements({ color, elementKor, elementEng, value, ratioByCategories
                         {age}대 {gender} 평균
                     </div>
 
+                    <div className={styles.elementPercent2} style={{ color: color, border: String("1px solid " + color), borderRadius: "5px 0px 0px 5px" }}>
+                        {(comparison * 100).toFixed(1)}%
+                    </div>
+
                     <div className={styles.elementBar2} style={{
                         backgroundColor: color,
-                        width: "calc(100px + " + (String(comparison * 20)) + "vw)"
+                        width: String(comparison * 25) + "vw"
                     }}>
-                        {(comparison * 100).toFixed(1)} %
+
                     </div>
                 </div>
             </div>

@@ -18,12 +18,12 @@
 
 .elementsContainer21 {
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 120px 90px 1fr;
 }
 
 .elementsContainer22 {
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 120px 90px 1fr;
 }
 
 .elementColor {
@@ -51,23 +51,39 @@
     height: 40px;
     line-height: 40px;
     text-align: right;
-    margin-right: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .elementValue2 {
     font-size: 0.8rem;
     height: 20px;
     line-height: 20px;
-    text-align: right;
+    text-align: center;
     margin-right: 10px;
+    margin-left: 20px;
+}
+
+.elementPercent1 {
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.elementPercent2 {
+    font-size: 1rem;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
 }
 
 .elementBar1 {
     font-size: 1.5rem;
     font-weight: 100;
     color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
     height: 40px;
     line-height: 40px;
     padding-left: 10px;
@@ -78,7 +94,7 @@
     font-size: 0.8rem;
     font-weight: 100;
     color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
     height: 20px;
     line-height: 20px;
     padding-left: 10px;
