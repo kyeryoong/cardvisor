@@ -5,7 +5,7 @@ import styles from './Service2Analysis.module.css';
 
 
 
-function PieChart2({ data, colors }) {
+function PieChart2({ data, colors, total }) {
     return (
         <div className={styles.chartContainer}>
             <ResponsivePie

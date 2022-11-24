@@ -40,7 +40,27 @@ function Service2Analysis() {
         "#50BFE6", "#0070C0", "#EE34D2", "#9C27B0", "#A6A6A6"
     ]
 
+    const [info, setInfo] = useState({
+        gender: "",
+        age: ""
+    });
 
+    useEffect(() => {
+        const getMyInfo = async () => {
+            try {
+                const response = await axiosPrivate.get('/member/showMyInfo', {
+                });
+                setTimeout(() => {
+                    setInfo(response.data);
+                }, 0)
+            } catch (err) {
+                console.error(err);
+                navigate('/login', { state: { from: location }, replace: true });
+            }
+        }
+
+        getMyInfo();
+    }, []);
 
     var sumByCategories = new Array(15).fill(0);
     var ratioByCategories = new Array(15).fill(0);
@@ -99,6 +119,18 @@ function Service2Analysis() {
 
 
 
+    const ageArray = ["one", "two", "three", "four", "five", "six"];
+    const ageText = ["10", "20", "30", "40", "50", "60"]
+
+    function ageParser(age) {
+        for (var i = 0; i < 6; i++) {
+            if (age === ageArray[i]) {
+                return ageText[i];
+            }
+        }
+    }
+
+
 
     return (
         <div>
@@ -120,21 +152,37 @@ function Service2Analysis() {
 
                         ?
 
-                        <PieChart data={sumByCategories} colors={colors} />
+                        <div>
+                            <div className={styles.chartDescribtion}>
+                                해당 차트는 내가 입력한 혜택을 보여주는 차트입니다.
+                            </div>
+
+                            <PieChart data={sumByCategories} colors={colors} />
+                        </div>
 
                         :
 
-                        <PieChart2 data={ageGenderData.result} colors={colors} />
+                        <div>
+                            <div className={styles.chartDescribtion}>
+                                해당 차트는 사용자의 연령대와 성별대인
+                                <br />
+                                <span className={styles.chartDescribtionBold}>
+                                {ageParser(info.age)}대 {info.gender === "male" ? "남성" : "여성"}
+                                </span>의 평균적인 소비 내역을 보여주는 차트입니다.
+                            </div>
+
+                            <PieChart2 data={ageGenderData.result} total={total} colors={colors} />
+                        </div>
                 }
             </div>
 
             <div className={styles.analysisZone}>
-                <div className={styles.chartZoneRight}>
-                    <div className={styles.chartZoneHeader}>
+                <div className={styles.analysisZoneLeft}>
+                    <div className={styles.analysisZoneHeader}>
                         총 소비 금액
                     </div>
 
-                    <div className={styles.chartZoneValue} style={{ color: "rgb(0, 200, 200)" }}>
+                    <div className={styles.analysisZoneValue} style={{ color: "rgb(0, 200, 200)" }}>
                         {total}
 
                         <span className={styles.won}>
@@ -143,21 +191,21 @@ function Service2Analysis() {
                     </div>
                 </div>
 
-                <div className={styles.chartZoneLeft}>
-                    <div className={styles.chartZoneHeader}>
+                <div className={styles.analysisZoneRight}>
+                    <div className={styles.analysisZoneHeader}>
                         가장 많이 소비한 카테고리
                     </div>
 
-                    <div className={styles.chartZoneIconBackground} style={{ backgroundColor: colors[maxIndex] }}>
+                    <div className={styles.analysisZoneIconBackground} style={{ backgroundColor: colors[maxIndex] }}>
                         <img
-                            alt={categoriesKor[maxIndex]} className={styles.chartZoneIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + categoriesEng[maxIndex] + ".png"} />
+                            alt={categoriesKor[maxIndex]} className={styles.analysisZoneIcon} src={process.env.PUBLIC_URL + "/images/icons/category_" + categoriesEng[maxIndex] + ".png"} />
                     </div>
 
-                    <div className={styles.chartZoneCategory} style={{ color: colors[maxIndex] }}>
+                    <div className={styles.analysisZoneCategory} style={{ color: colors[maxIndex] }}>
                         {categoriesKor[maxIndex]}
                     </div>
 
-                    <div className={styles.chartZoneValue} style={{ color: colors[maxIndex] }}>
+                    <div className={styles.analysisZoneValue} style={{ color: colors[maxIndex] }}>
                         {maxValue}
 
                         <span className={styles.won}>
@@ -189,8 +237,6 @@ function Service2Analysis() {
             <div>
                 <button className={styles.sendButton} onClick={() => {
                     const getResults = async () => {
-                        // console.log(jsonArr);
-
                         const parsedUrlEncodedData = JSON.stringify(jsonArr);
 
                         try {

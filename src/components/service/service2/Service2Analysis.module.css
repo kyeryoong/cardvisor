@@ -12,93 +12,10 @@
     margin-bottom: 20px;
 }
 
-.chartContainer {
-    width: 40vw;
-    height: 500px;
-    margin: 0px auto;
-}
-
-.analysisZone {
-    width: 60vw;
-    height: fit-content;
-    margin: 0px auto;
-    padding: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(230, 230, 230);
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
-    margin-bottom: 20px;
+.chartButtonZone {
+    height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.chartZoneRight {
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    padding-left: 20px;
-    text-align: center;
-}
-
-.chartZoneLeft {
-    text-align: center;
-    border-left: 1px solid rgb(200, 200, 200);
-}
-
-.chartZoneRightTop {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.chartZoneRightBottom {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    border-top: 1px solid rgb(200, 200, 200);
-}
-
-.chartZoneHeader {
-    font-size: 1.2rem;
-    padding-top: 10px;
-}
-
-.chartZoneIconBackground {
-    height: 100px;
-    width: 100px;
-    margin: 0px auto;
-    margin-top: 20px;
-    border-radius: 50px;
-}
-
-.chartZoneIcon {
-    height: 100px;
-    padding: 20px;
-    filter: invert();
-}
-
-.chartZoneCategory {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    margin-bottom: -10px;
-}
-
-.chartZoneValue {
-    font-size: 3rem;
-    margin-top: 10px;
-}
-
-.won {
-    font-size: 1.5rem;
-    color: rgb(150, 150, 150);
-    margin-left: 5px;
-}
-
-.chartButtonZone {
-    display: grid;
-    grid-template-columns: 50% 50%;
 }
 
 .chartButtonLeftOn {
@@ -131,6 +48,98 @@
     background-color: rgb(200, 200, 200);
 }
 
+.chartContainer {
+    width: calc(60vw - 40px);
+    height: 500px;
+    margin: 0px auto;
+}
+
+.chartDescribtion {
+    color: rgb(0, 200, 200);
+    margin-top: 20px;
+}
+
+.chartDescribtionBold {
+    font-size: 2rem;
+}
+
+.analysisZone {
+    width: 60vw;
+    height: fit-content;
+    margin: 0px auto;
+    padding: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 10px 0px rgba(150, 150, 150, 0.3);
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.analysisZoneLeft {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.analysisZoneRight {
+    text-align: center;
+    border-left: 1px solid rgb(200, 200, 200);
+}
+
+.analysisZoneRightTop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.analysisZoneRightBottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.analysisZoneHeader {
+    font-size: 1.2rem;
+    padding-top: 10px;
+}
+
+.analysisZoneIconBackground {
+    height: 100px;
+    width: 100px;
+    margin: 0px auto;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+.analysisZoneIcon {
+    height: 100px;
+    padding: 20px;
+    filter: invert();
+}
+
+.analysisZoneCategory {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.analysisZoneValue {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.won {
+    font-size: 1.5rem;
+    color: rgb(150, 150, 150);
+    margin-left: 5px;
+}
+
 .sendButton {
     width: 100vw;
     height: 80px;
@@ -148,16 +157,42 @@
 
 @media screen and (max-width: 1600px) {
     .chartZone {
-        height: 1000px;
-        display: grid;
-        grid-template-columns: none;
-        grid-template-rows: 2fr 1fr;
+        height: fit-content;
     }
 
     .chartContainer {
         width: calc(60vw - 40px);
+        height: 200px;
         border-right: none;
         border-bottom: 1px solid rgb(200, 200, 200);
+    }
+
+    .chartButtonLeftOn {
+        font-size: 0.8rem;
+    }
+    
+    .chartButtonLeftOff {
+        font-size: 0.8rem;
+    }
+    
+    .chartButtonRightOn {
+        font-size: 0.8rem;
+    }
+    
+    .chartButtonRightOff {
+        font-size: 0.8rem;
+    }
+
+    .analysisZone {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 150px 1fr;
+    }
+
+    .analysisZoneRight {
+        border-left: none;
+        border-top: 1px solid rgb(200, 200, 200);
+        padding-top: 20px;
     }
 }
 
@@ -166,11 +201,14 @@
 @media screen and (max-width: 1200px) {
     .chartZone {
         width: 90vw;
-        height: 800px;
+        height: fit-content;
     }
 
     .chartContainer {
         width: calc(90vw - 40px);
-        height: 300px;
+    }
+
+    .analysisZone {
+        width: 90vw;
     }
 }
