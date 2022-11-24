@@ -246,6 +246,12 @@
 
 
 @media screen and (max-width: 900px) {
+    .bestCardContainer {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
     .backgroundZone {
         height: 310px;
         transition: 0.5s;
@@ -291,15 +297,7 @@
         transition: 0.5s;
     }
 
-    .mainText1 {
-        width: 90vw;
-    }
-
-    .mainText2 {
-        width: 90vw;
-    }
-
-    .mainText3 {
+    .mainText {
         width: 90vw;
     }
 
