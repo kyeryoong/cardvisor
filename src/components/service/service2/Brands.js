@@ -5,9 +5,9 @@ import SelectedBrands from './SelectedBrands';
 
 
 
-function Brands({ brandNameKor, brandNameEng, i, j, selArray, setSelArray }) {
-    const [cost, setCost] = useState("");
-
+function Brands({ brandNameKor, brandNameEng, i, j }) {
+    const [cost, setCost] = useState(0);
+    
 
 
     return (
@@ -25,33 +25,36 @@ function Brands({ brandNameKor, brandNameEng, i, j, selArray, setSelArray }) {
                     onChange={event => {
                         setCost(event.target.value);
                         SelectedBrands[i][j] = Number(event.target.value);
-                        // setSelArray({...selArray, [i] : Number(event.target.value)});
                     }} />
 
                 <div className={styles.zone23}>
                     <button className={styles.costButton} onClick={(event) => {
                         setCost((current) => Number(current) + 10000);
                         SelectedBrands[i][j] = SelectedBrands[i][j] + 10000;
-                        //setSelArray({...selArray, [i] : selArray[i] + 10000});
-                    }}>1만원</button>
+                    }}>
+                        1만원
+                    </button>
 
                     <button className={styles.costButton} onClick={(event) => {
                         setCost((current) => Number(current) + 20000);
                         SelectedBrands[i][j] = SelectedBrands[i][j] + 20000;
-                        //setSelArray({...selArray, [i] : selArray[i] + 20000});
-                    }}>2만원</button>
+                    }}>
+                        2만원
+                    </button>
 
                     <button className={styles.costButton} onClick={(event) => {
                         setCost((current) => Number(current) + 50000);
                         SelectedBrands[i][j] = SelectedBrands[i][j] + 50000;
-                        //setSelArray({...selArray, [i] : selArray[i] + 50000});
-                    }}>5만원</button>
+                    }}>
+                        5만원
+                    </button>
 
                     <button className={styles.resetButton} onClick={(event) => {
                         setCost(0);
                         SelectedBrands[i][j] = 0;
-                        //setSelArray({...selArray, [i] : 0});
-                    }}>×</button>
+                    }}>
+                        ×
+                    </button>
                 </div>
             </div>
         </div>

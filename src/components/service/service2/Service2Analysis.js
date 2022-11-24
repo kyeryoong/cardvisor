@@ -20,7 +20,7 @@ function Service2Analysis() {
     const location = useLocation();
     const axiosPrivate = useAxiosPrivate();
 
-    localStorage.clear();
+    
 
     const categoriesKor = [
         "교통", "통신", "마트", "편의점", "영화",
@@ -118,7 +118,6 @@ function Service2Analysis() {
     const [toggle, setToggle] = useState(true);
 
 
-
     const ageArray = ["one", "two", "three", "four", "five", "six"];
     const ageText = ["10", "20", "30", "40", "50", "60"]
 
@@ -130,7 +129,36 @@ function Service2Analysis() {
         }
     }
 
+    var comparison = new Array(15).fill(0);
+    var comparsionSum = 0;
+    var comparisonMax = 0;
+    var comparisonByMaxValue = new Array(15).fill(0);
 
+    for (var i = 0; i < 14; i++) {
+        if (sumByCategories[i] > 0) {
+            comparsionSum = comparsionSum + ageGenderData.result[i];
+        }
+    }
+
+    for (i = 0; i < 14; i++) {
+        if (sumByCategories[i] > 0) {
+            comparison[i] = ageGenderData.result[i] / comparsionSum;
+        }
+    }
+
+    for (i = 0; i < 14; i++) {
+        if (comparison[i] > comparisonMax) {
+            comparisonMax = comparison[i];
+        }
+    }
+
+    for (i = 0; i < 14; i++) {
+        comparisonByMaxValue[i] = comparison[i] / comparisonMax;
+    }
+
+
+
+    
 
     return (
         <div>
@@ -215,21 +243,21 @@ function Service2Analysis() {
                 </div>
             </div>
 
-            <ChartElements color={colors[0]} elementKor={categoriesKor[0]} elementEng={categoriesEng[0]} value={sumByCategories[0]} ratioByCategories={ratioByCategories[0]} ratioByMaxValue={ratioByMaxValue[0]} num1={0.12} num2={68950} />
-            <ChartElements color={colors[1]} elementKor={categoriesKor[1]} elementEng={categoriesEng[1]} value={sumByCategories[1]} ratioByCategories={ratioByCategories[1]} ratioByMaxValue={ratioByMaxValue[1]} num1={0.09} num2={57910} />
-            <ChartElements color={colors[2]} elementKor={categoriesKor[2]} elementEng={categoriesEng[2]} value={sumByCategories[2]} ratioByCategories={ratioByCategories[2]} ratioByMaxValue={ratioByMaxValue[2]} num1={0.0} num2={0.0} />
-            <ChartElements color={colors[3]} elementKor={categoriesKor[3]} elementEng={categoriesEng[3]} value={sumByCategories[3]} ratioByCategories={ratioByCategories[3]} ratioByMaxValue={ratioByMaxValue[3]} num1={0.07} num2={38500} />
-            <ChartElements color={colors[4]} elementKor={categoriesKor[4]} elementEng={categoriesEng[4]} value={sumByCategories[4]} ratioByCategories={ratioByCategories[4]} ratioByMaxValue={ratioByMaxValue[4]} num1={0.0} num2={0.0} />
-            <ChartElements color={colors[5]} elementKor={categoriesKor[5]} elementEng={categoriesEng[5]} value={sumByCategories[5]} ratioByCategories={ratioByCategories[5]} ratioByMaxValue={ratioByMaxValue[5]} num1={0.0} num2={0.0} />
-            <ChartElements color={colors[6]} elementKor={categoriesKor[6]} elementEng={categoriesEng[6]} value={sumByCategories[6]} ratioByCategories={ratioByCategories[6]} ratioByMaxValue={ratioByMaxValue[6]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[7]} elementKor={categoriesKor[7]} elementEng={categoriesEng[7]} value={sumByCategories[7]} ratioByCategories={ratioByCategories[7]} ratioByMaxValue={ratioByMaxValue[7]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[8]} elementKor={categoriesKor[8]} elementEng={categoriesEng[8]} value={sumByCategories[8]} ratioByCategories={ratioByCategories[8]} ratioByMaxValue={ratioByMaxValue[8]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[9]} elementKor={categoriesKor[9]} elementEng={categoriesEng[9]} value={sumByCategories[9]} ratioByCategories={ratioByCategories[9]} ratioByMaxValue={ratioByMaxValue[9]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[10]} elementKor={categoriesKor[10]} elementEng={categoriesEng[10]} value={sumByCategories[10]} ratioByCategories={ratioByCategories[10]} ratioByMaxValue={ratioByMaxValue[10]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[11]} elementKor={categoriesKor[11]} elementEng={categoriesEng[11]} value={sumByCategories[11]} ratioByCategories={ratioByCategories[11]} ratioByMaxValue={ratioByMaxValue[11]} num1={198200} num2={0.0} />
-            <ChartElements color={colors[12]} elementKor={categoriesKor[12]} elementEng={categoriesEng[12]} value={sumByCategories[12]} ratioByCategories={ratioByCategories[12]} ratioByMaxValue={ratioByMaxValue[12]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[13]} elementKor={categoriesKor[13]} elementEng={categoriesEng[13]} value={sumByCategories[13]} ratioByCategories={ratioByCategories[13]} ratioByMaxValue={ratioByMaxValue[13]} num1={0.1} num2={0.0} />
-            <ChartElements color={colors[14]} elementKor={categoriesKor[14]} elementEng={categoriesEng[14]} value={sumByCategories[14]} ratioByCategories={ratioByCategories[14]} ratioByMaxValue={ratioByMaxValue[14]} num1={69280} num2={0.0} />
+            <ChartElements color={colors[0]} elementKor={categoriesKor[0]} elementEng={categoriesEng[0]} value={sumByCategories[0]} ratioByCategories={ratioByCategories[0]} ratioByMaxValue={ratioByMaxValue[0]} comparison={comparison[0]} comparisonByMaxValue={comparisonByMaxValue[0]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[1]} elementKor={categoriesKor[1]} elementEng={categoriesEng[1]} value={sumByCategories[1]} ratioByCategories={ratioByCategories[1]} ratioByMaxValue={ratioByMaxValue[1]} comparison={comparison[1]} comparisonByMaxValue={comparisonByMaxValue[1]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[2]} elementKor={categoriesKor[2]} elementEng={categoriesEng[2]} value={sumByCategories[2]} ratioByCategories={ratioByCategories[2]} ratioByMaxValue={ratioByMaxValue[2]} comparison={comparison[2]} comparisonByMaxValue={comparisonByMaxValue[2]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[3]} elementKor={categoriesKor[3]} elementEng={categoriesEng[3]} value={sumByCategories[3]} ratioByCategories={ratioByCategories[3]} ratioByMaxValue={ratioByMaxValue[3]} comparison={comparison[3]} comparisonByMaxValue={comparisonByMaxValue[3]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[4]} elementKor={categoriesKor[4]} elementEng={categoriesEng[4]} value={sumByCategories[4]} ratioByCategories={ratioByCategories[4]} ratioByMaxValue={ratioByMaxValue[4]} comparison={comparison[4]} comparisonByMaxValue={comparisonByMaxValue[4]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[5]} elementKor={categoriesKor[5]} elementEng={categoriesEng[5]} value={sumByCategories[5]} ratioByCategories={ratioByCategories[5]} ratioByMaxValue={ratioByMaxValue[5]} comparison={comparison[5]} comparisonByMaxValue={comparisonByMaxValue[5]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[6]} elementKor={categoriesKor[6]} elementEng={categoriesEng[6]} value={sumByCategories[6]} ratioByCategories={ratioByCategories[6]} ratioByMaxValue={ratioByMaxValue[6]} comparison={comparison[6]} comparisonByMaxValue={comparisonByMaxValue[6]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[7]} elementKor={categoriesKor[7]} elementEng={categoriesEng[7]} value={sumByCategories[7]} ratioByCategories={ratioByCategories[7]} ratioByMaxValue={ratioByMaxValue[7]} comparison={comparison[7]} comparisonByMaxValue={comparisonByMaxValue[7]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[8]} elementKor={categoriesKor[8]} elementEng={categoriesEng[8]} value={sumByCategories[8]} ratioByCategories={ratioByCategories[8]} ratioByMaxValue={ratioByMaxValue[8]} comparison={comparison[8]} comparisonByMaxValue={comparisonByMaxValue[8]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[9]} elementKor={categoriesKor[9]} elementEng={categoriesEng[9]} value={sumByCategories[9]} ratioByCategories={ratioByCategories[9]} ratioByMaxValue={ratioByMaxValue[9]} comparison={comparison[9]} comparisonByMaxValue={comparisonByMaxValue[9]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[10]} elementKor={categoriesKor[10]} elementEng={categoriesEng[10]} value={sumByCategories[10]} ratioByCategories={ratioByCategories[10]} ratioByMaxValue={ratioByMaxValue[10]} comparison={comparison[10]} comparisonByMaxValue={comparisonByMaxValue[10]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[11]} elementKor={categoriesKor[11]} elementEng={categoriesEng[11]} value={sumByCategories[11]} ratioByCategories={ratioByCategories[11]} ratioByMaxValue={ratioByMaxValue[11]} comparison={comparison[11]} comparisonByMaxValue={comparisonByMaxValue[11]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[12]} elementKor={categoriesKor[12]} elementEng={categoriesEng[12]} value={sumByCategories[12]} ratioByCategories={ratioByCategories[12]} ratioByMaxValue={ratioByMaxValue[12]} comparison={comparison[12]} comparisonByMaxValue={comparisonByMaxValue[12]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[13]} elementKor={categoriesKor[13]} elementEng={categoriesEng[13]} value={sumByCategories[13]} ratioByCategories={ratioByCategories[13]} ratioByMaxValue={ratioByMaxValue[13]} comparison={comparison[13]} comparisonByMaxValue={comparisonByMaxValue[13]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
+            <ChartElements color={colors[14]} elementKor={categoriesKor[14]} elementEng={categoriesEng[14]} value={sumByCategories[14]} ratioByCategories={ratioByCategories[14]} ratioByMaxValue={ratioByMaxValue[14]} comparison={comparison[14]} comparisonByMaxValue={comparisonByMaxValue[14]} age={ageParser(info.age)} gender={info.gender === "male" ? "남성" : "여성"} />
             <br /><br /><br /><br /><br /><br />
 
 
@@ -255,6 +283,9 @@ function Service2Analysis() {
                         }
                     }
                     getResults();
+
+                    localStorage.setItem('sumByCategories', JSON.stringify(sumByCategories))
+
                     navigate('/loading', { state: { from: location }, replace: true });
                 }}>
                     카드 추천 받기

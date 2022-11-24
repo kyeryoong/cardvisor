@@ -1,6 +1,6 @@
 import styles from './ChartElements.module.css';
 
-function ChartElements({ color, elementKor, elementEng, value, ratioByCategories, ratioByMaxValue, num1, num2 }) {
+function ChartElements({ color, elementKor, elementEng, value, ratioByCategories, comparison, age, gender }) {
     return (
         value !== 0
 
@@ -18,18 +18,34 @@ function ChartElements({ color, elementKor, elementEng, value, ratioByCategories
             </div>
 
             <div className={styles.elementsContainer2}>
-                <div className={styles.elementValue} style={{ color: color }}>
-                    {value}원
+                <div className={styles.elementsContainer21}>
+                    <div className={styles.elementValue1} style={{ color: color }}>
+                        {value}원
+                    </div>
+
+
+                    <div className={styles.elementBar1} style={{
+                        backgroundColor: color,
+                        width: "calc(100px + " + (String(ratioByCategories * 20)) + "vw)"
+                    }}>
+                        {(ratioByCategories * 100).toFixed(1)} %
+                    </div>
                 </div>
 
+                <div className={styles.elementsContainer22}>
+                    <div className={styles.elementValue2} style={{ color: color }}>
+                        {age}대 {gender} 평균
+                    </div>
 
-                <div className={styles.elementBar} style={{
-                    backgroundColor: color,
-                    width: "calc(100px + " + (String(ratioByMaxValue * 20)) + "vw)"
-                }}>
-                    {(ratioByCategories * 100).toFixed(1)} %
+                    <div className={styles.elementBar2} style={{
+                        backgroundColor: color,
+                        width: "calc(100px + " + (String(comparison * 20)) + "vw)"
+                    }}>
+                        {(comparison * 100).toFixed(1)} %
+                    </div>
                 </div>
             </div>
+
         </div >
     )
 }

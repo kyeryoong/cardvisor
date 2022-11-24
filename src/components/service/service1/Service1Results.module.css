@@ -49,6 +49,7 @@
     border-radius: 10px;
     margin-left: 20vw;
     margin-right: 20vw;
+    margin-bottom: 50px;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -187,7 +188,7 @@
     border-radius: 10px;
     margin-left: 20vw;
     margin-right: 20vw;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     padding: 20px;
 }
 
@@ -203,8 +204,7 @@
 }
 
 .moreCardsElements:hover {
-    background-color: rgb(0, 200, 200);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 200, 200);
 }
 
 .moreCardsImage {
@@ -215,6 +215,10 @@
     text-align: center;
     border-radius: 6px;
     box-shadow: 0px 2px 3px rgb(100, 100, 100);
+}
+
+.moreCardsImage:hover {
+    height: 120px;
 }
 
 .moreCardsCompanyImage {
@@ -271,6 +275,7 @@
         grid-template-columns: none;
         grid-template-rows: 1fr 2fr;
         gap: 50px;
+        margin-bottom: 30px;
     }
 
     .selectedContainerLeft {

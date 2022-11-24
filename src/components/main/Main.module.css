@@ -221,6 +221,10 @@
     cursor: pointer;
 }
 
+.recentCardImage:hover {
+    width: 180px;
+}
+
 .recentCardElements:hover > .recentCardName {
     color: rgb(0, 200, 200);
 }
@@ -232,6 +236,8 @@
     margin: 0px auto;
     transform: rotate(-90deg);
 }
+
+
 
 .recentCardBlank {
     width: 150px;

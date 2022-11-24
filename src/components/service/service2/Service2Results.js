@@ -16,10 +16,31 @@ function Service2Results() {
         return parsedItem || {};
     });
 
+    const sumByCategories = JSON.parse(localStorage.getItem("sumByCategories"));
+    
+    const selectedBrands = [];
 
+    const categoriesEng = [
+        "transportation", "communication", "mart", "convstore", "movies",
+        "entertainment", "deptstore", "onlineshopping", "easypay", "cafebakery",
+        "beauty", "dining", "books", "themepark", "fuel"
+    ]
+
+    for (var i = 0; i < 14; i++) {
+        if (sumByCategories[i] > 0) {
+            selectedBrands.push(categoriesEng[i]);
+        }
+    }
+
+   
 
     function BenefitElements(props) {
-        return (
+        return (            
+            selectedBrands.includes(result.bestCardBenefits[props.order].categoryName)
+
+            &&
+
+
             <div className={styles.benefitElementsContainer}>
                 <img
                     className={styles.benefitLogo}
@@ -116,7 +137,7 @@ function Service2Results() {
 
 
                     <div className={styles.subText}>
-                        카드 전체 혜택
+                        맞춤 혜택
                     </div>
 
                     {result.bestCardBenefits.map((current, index) => (

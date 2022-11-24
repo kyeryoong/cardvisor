@@ -1,6 +1,6 @@
 .elementsContainer {
     width: 60vw;
-    height: 100px;
+    height: fit-content;
     margin: 0px auto;
     margin-top: 10px;
     padding: 30px;
@@ -16,7 +16,12 @@
     grid-template-columns: 40px 1fr;
 }
 
-.elementsContainer2 {
+.elementsContainer21 {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.elementsContainer22 {
     display: grid;
     grid-template-columns: 120px 1fr;
 }
@@ -41,23 +46,41 @@
     margin-left: 10px;
 }
 
-.elementValue {
+.elementValue1 {
     font-size: 1.5rem;
     height: 40px;
     line-height: 40px;
     text-align: right;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.elementBar {
-    font-size: 1rem;
+.elementValue2 {
+    font-size: 0.8rem;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.elementBar1 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.elementBar2 {
+    font-size: 0.8rem;
     font-weight: 100;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     height: 20px;
     line-height: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     padding-left: 10px;
 }
 
@@ -65,9 +88,8 @@
 
 @media screen and (max-width: 1600px) {
     .elementsContainer {
-        height: 140px;
         grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 40px 1fr;
     }
 
     .elementValue {

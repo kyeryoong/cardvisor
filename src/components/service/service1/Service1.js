@@ -35,7 +35,7 @@ function Service1() {
         }
     }
 
-    console.log(selNumber)
+
 
     function SelectedZone() {
         return (

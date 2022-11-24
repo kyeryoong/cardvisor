@@ -1,4 +1,4 @@
-var SelectedBrands = new Array(10);
+var SelectedBrands = new Array(14);
 
 SelectedBrands[0] = new Array(6).fill(0);
 SelectedBrands[1] = new Array(12).fill(0);

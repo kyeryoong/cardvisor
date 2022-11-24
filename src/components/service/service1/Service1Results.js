@@ -50,10 +50,16 @@ function Service1Results() {
         });
     });
 
-    console.log(result)
+
 
     function BenefitElements(props) {
         return (
+
+            selectedBrands.includes(cardsBrands[props.order])
+
+            &&
+
+
             <div className={styles.benefitElementsContainer}>
                 <img
                     className={styles.benefitLogo}
@@ -82,6 +88,8 @@ function Service1Results() {
             </div>
         );
     }
+
+
 
 
 
@@ -177,7 +185,7 @@ function Service1Results() {
 
                             <div className={styles.selectedContainerLeftBottom}>
                                 <div className={styles.selectedContainerLeftType}>
-                                    선택한 모든 혜택
+                                    내가 선택한 혜택
                                 </div>
 
                                 <div className={styles.selectedContainerLeftValue}>
@@ -237,13 +245,8 @@ function Service1Results() {
 
 
 
-                    <div className={styles.subText}>
-                        카드 전체 혜택
-                    </div>
-
                     {
                         result.bestCardBenefits.map((current, index) => (
-                            
                             <BenefitElements order={index} />
                         ))
                     }
@@ -268,6 +271,8 @@ function Service1Results() {
                             더 많은 카드 보기
                         </button>
                     </div>
+
+
 
                     <button className={styles.goToCardInfoButton} onClick={() => {
                         navigate("/cardinfo/" + result.topTenCards[0].id)
