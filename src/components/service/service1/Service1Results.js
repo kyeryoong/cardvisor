@@ -50,7 +50,7 @@ function Service1Results() {
         });
     });
 
-
+    console.log(result)
 
     function BenefitElements(props) {
         return (
@@ -241,9 +241,12 @@ function Service1Results() {
                         카드 전체 혜택
                     </div>
 
-                    {result.bestCardBenefits.map((current, index) => (
-                        <BenefitElements order={index} />
-                    ))}
+                    {
+                        result.bestCardBenefits.map((current, index) => (
+                            
+                            <BenefitElements order={index} />
+                        ))
+                    }
 
 
 

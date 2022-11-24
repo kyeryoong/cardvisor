@@ -35,7 +35,7 @@ function Service1() {
         }
     }
 
-
+    console.log(selNumber)
 
     function SelectedZone() {
         return (
@@ -436,9 +436,13 @@ function Service1() {
                 </details>
                 <br /><br /><br />
 
-                <button className={SelectedBrands.length ? styles.sendButtonEnable : styles.sendButtonDisable} onClick={() => {
+                <button className={SelectedBrands.length >= 5 ? styles.sendButtonEnable : styles.sendButtonDisable} onClick={() => {
                     if (SelectedBrands.length === 0) {
                         alert("혜택을 선택해주세요");
+                    }
+                    
+                    else if (SelectedBrands.length < 5) {
+                        alert("혜택을 5개 이상 선택해주세요.");
                     }
 
                     else {
