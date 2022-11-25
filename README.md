@@ -295,3 +295,6 @@
 ### Ver. 1.4.22 (2022/11/21)
 - Some minor changes in designs.
 - filtering function(with keywords) was additionally implemented.
+
+### Ver. 1.4.23 (2022/11/24)
+- Chart designs were modified in Service2Analysis page.
