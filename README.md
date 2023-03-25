@@ -4,8 +4,8 @@
 
 # Deployment in Progress!
 
-### Visit our website to check this project!
-### [cardvisor.ga](http://cardvisor.ga)
+### Visit our videos to check this project!
+### [전시회 영상](https://www.youtube.com/watch?v=P6AUg1OHlSs)
 <br><br><br>
 
 
