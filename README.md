@@ -4,11 +4,11 @@
 
 # Deployment in Progress!
 
-### Visit our videos to check this project!
-### [전시회 영상](https://www.youtube.com/watch?v=P6AUg1OHlSs)
+#### Visit our videos to check this project!
+### [전시회 유튜브 영상](https://www.youtube.com/watch?v=P6AUg1OHlSs)
+#### For Backend visit the link below!
+### [Backend GitHub Page](https://github.com/min-0404/Graduation_Project)
 <br><br><br>
-
-
 
 # About Me
 
