@@ -12,7 +12,6 @@ const useRefreshToken = () => {
 
         const signOut = async () => {
             await logout();
-            // setIsLoggedIn(false);
             navigate('/login');
         }
 
