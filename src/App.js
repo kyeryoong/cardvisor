@@ -27,8 +27,8 @@ import PersistLogin from "./components/PersistLogin";
 import Loading from "./components/Loading";
 
 const ROLES = {
-    'User' : 'ROLE_USER',
-    'Admin' : 'ROLE_ADMIN'
+    'User': 'ROLE_USER',
+    'Admin': 'ROLE_ADMIN'
 }
 
 
@@ -40,7 +40,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route path="/" element={<Home />} />
-                    <Route path="login" element={<Login  />} />
+                    <Route path="login" element={<Login />} />
                     <Route path="register" element={<Register />} />
                     <Route path="unauthorized" element={<NotFound />} />
 
