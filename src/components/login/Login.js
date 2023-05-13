@@ -14,24 +14,13 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/main";
 
     const userRef = useRef();
-    // const errRef = useRef();
 
     const [user, setUser] = useState("");
     const [pwd, setPwd] = useState("");
-    // const [errMsg, setErrMsg]  = useState("");
 
     useEffect(() => {
         userRef.current.focus();
     }, []);
-
-    // useEffect(() => {
-    //     setErrMsg("");
-    // }, [user, pwd]);
-
-    const [info, setInfo] = useState({
-        username: "",
-        password: "",
-    });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,14 +39,14 @@ const Login = () => {
                     withCredentials: true
                 }
             );
-            // console.log(response?.data);
+
             const accessToken = response?.data?.access_token;
             const roles = response?.data?.roles;
             setAuth({ user, pwd, roles, accessToken });
+
             setUser("");
             setPwd("");
             navigate(from, { replace: true });
-            // navigate('/main');
         } catch (err) {
             if (!err?.response) {
                 alert("서버 응답 오류");
@@ -70,7 +59,7 @@ const Login = () => {
             else {
                 alert("로그인 실패");
             }
-            // errRef.current.focus();
+
         }
     };
 
@@ -144,18 +133,6 @@ const Login = () => {
                             회원가입 하기
                         </span>
                     </div>
-
-                    {/* <div className={styles.findPasswordZone}>
-                        비밀번호를 잊으셨나요? &nbsp;&nbsp;&nbsp;
-                        <span
-                            className={styles.findPasswordButton}
-                            onClick={() => {
-                                alert("준비중");
-                            }}
-                        >
-                            비밀번호 찾기
-                        </span>
-                    </div> */}
                 </div>
             </div>
         </div>

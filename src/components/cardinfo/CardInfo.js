@@ -27,24 +27,6 @@ function CardInfo() {
     });
 
     useEffect(() => {
-        // const getCardInfo = async () => {
-        //     // const accessToken = localStorage.getItem("accessToken");
-        //     const option = {
-        //         method: "GET",
-        //         url: "http://localhost:8080/card/" + card_code,
-        //         headers: {
-        //             Authorization: `Bearer ${auth.accessToken}`,
-        //         },
-        //     };
-        //
-        //     axios(option).then(({ data }) => {
-        //         setTimeout(() => {
-        //             setCardInfo(data);
-        //             setLoading(false);
-        //         }, 500);
-        //     });
-        // };
-
         const getCardInfo = async () => {
             try {
                 const response = await axiosPrivate.get('/card/' + card_code.toString(), {
@@ -59,8 +41,6 @@ function CardInfo() {
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
-
-        // getCardList();
 
         getCardInfo();
     }, []);

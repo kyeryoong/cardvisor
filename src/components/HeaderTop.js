@@ -22,7 +22,7 @@ function HeaderTop() {
         auth?.accessToken ? setIsLoggedIn(true) : setIsLoggedIn(false);
     }, [auth])
 
-
+    console.log(auth)
 
     return (
         <div>
