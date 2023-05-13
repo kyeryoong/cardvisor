@@ -4,17 +4,21 @@ import './index.css';
 import App from './App';
 import { AuthProvider } from "./components/context/AuthProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <React.StrictMode>
-        <BrowserRouter>
+    <BrowserRouter>
+        <Provider store={store}>
             <AuthProvider>
                 <Routes>
                     <Route path='/*' element={<App />} />
                 </Routes>
             </AuthProvider>
-        </BrowserRouter>
+        </Provider>
+    </BrowserRouter>
     // </React.StrictMode>
 );
