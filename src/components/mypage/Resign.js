@@ -3,11 +3,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
-import useAuth from "../hooks/useAuth";
 
 import HeaderBottom from '../HeaderBottom';
 
 import styles from "./Resign.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setAuth2 } from "../../store/authSlice";
 
 
 
@@ -15,7 +16,9 @@ function Resign() {
     const navigate = useNavigate();
     const axiosPrivate = useAxiosPrivate();
     const location = useLocation();
-    const { setAuth } = useAuth();
+
+    let auth2Data = useSelector((state) => state.auth2Data);
+    let dispatch = useDispatch();
 
     const [pwd, setPwd] = useState('');
 
@@ -77,7 +80,8 @@ function Resign() {
                             });
 
                             alert("회원 탈퇴가 완료되었습니다.");
-                            setAuth({});
+                            // setAuth({});
+                            dispatch(setAuth2({}));
                         } catch (err) {
                             console.error(err);
                             alert("현재 비밀번호가 올바르지 않습니다.");

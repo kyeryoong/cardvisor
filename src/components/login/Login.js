@@ -1,13 +1,13 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
 import axios from "../api/axios";
 import styles from "./Login.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setAuth2 } from "../../store/authSlice";
 
 const LOGIN_URL = "/auth/signin";
 
 const Login = () => {
-    const { setAuth } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -17,6 +17,10 @@ const Login = () => {
 
     const [user, setUser] = useState("");
     const [pwd, setPwd] = useState("");
+
+    let auth2Data = useSelector((state) => state.auth2Data);
+    let dispatch = useDispatch();
+
 
     useEffect(() => {
         userRef.current.focus();
@@ -42,7 +46,8 @@ const Login = () => {
 
             const accessToken = response?.data?.access_token;
             const roles = response?.data?.roles;
-            setAuth({ user, pwd, roles, accessToken });
+            // setAuth({ user, pwd, roles, accessToken });
+            dispatch(setAuth2({ user, pwd, roles, accessToken }))
 
             setUser("");
             setPwd("");

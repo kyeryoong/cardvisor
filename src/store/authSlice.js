@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 let auth2Data = createSlice({
     name: "auth2",
-    initialState: 0,
+    initialState: {},
     reducers: {
         setAuth2(state, action) {
-            return state + action.payload
+            return action.payload
         }
     }
 })

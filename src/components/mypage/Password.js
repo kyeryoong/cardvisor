@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useRef } from "react";
 
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
-import useAuth from "../hooks/useAuth";
 
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeaderBottom from '../HeaderBottom';
 
 import styles from "./Password.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setAuth2 } from "../../store/authSlice";
 
 
 
@@ -22,10 +23,12 @@ const PWD_REGEX = /^(?=.*[A-z])(?=.*[0-9])(?=.*[!@#$%^&*~]).{8,24}$/;
 
 
 function Password() {
+    let auth2Data = useSelector((state) => state.auth2Data);
+    let dispatch = useDispatch();
+
     const navigate = useNavigate();
     const axiosPrivate = useAxiosPrivate();
     const location = useLocation();
-    const { setAuth } = useAuth();
 
     const [currentPwd, setCurrentPwd] = useState('');
 
@@ -84,7 +87,8 @@ function Password() {
                             });
 
                             alert("비밀번호 변경이 완료되었습니다.");
-                            setAuth({});
+                            dispatch(setAuth2({}));
+                            // setAuth({});
                         } catch (err) {
                             console.error(err);
                             alert("현재 비밀번호가 올바르지 않습니다.");

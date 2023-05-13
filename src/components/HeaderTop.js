@@ -1,40 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from "./hooks/useAuth";
 import { useNavigate } from 'react-router';
 import styles from './HeaderTop.module.css';
 import useLogout from "./hooks/useLogout";
-import { useSelector, useDispatch } from 'react-redux';
-import { setAuth2 } from "../store/authSlice";
+import { useSelector } from 'react-redux';
 
 
 
 function HeaderTop() {
     const navigate = useNavigate();
-    const { auth } = useAuth();
     const logout = useLogout();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const signOut = async () => {
         await logout();
         navigate('/login');
     }
 
-    useEffect(() => {
-        auth?.accessToken ? setIsLoggedIn(true) : setIsLoggedIn(false);
-    }, [auth])
-
     let auth2Data = useSelector((state) => state.auth2Data);
-    let dispatch = useDispatch();
-    console.log(auth2Data);
 
     return (
         <div className={styles.header}>
-            <button onClick={() => dispatch(setAuth2(5))}>
-                test
-            </button>
-
             {
-                isLoggedIn
+                auth2Data?.accessToken
+
                     ?
 
                     <img alt="home" className={styles.titleLogo} src={process.env.PUBLIC_URL + "/images/cardvisor_logo/cardvisor_header.png"} onClick={() => {
@@ -49,7 +36,7 @@ function HeaderTop() {
             }
 
             {
-                isLoggedIn
+                auth2Data?.accessToken
 
                 &&
 
@@ -61,7 +48,7 @@ function HeaderTop() {
             }
 
             {
-                isLoggedIn
+                auth2Data?.accessToken
 
                 &&
 
@@ -73,7 +60,7 @@ function HeaderTop() {
             }
 
             {
-                !isLoggedIn
+                !auth2Data?.accessToken
 
                 &&
 
@@ -82,7 +69,7 @@ function HeaderTop() {
             }
 
             {
-                !isLoggedIn
+                !auth2Data?.accessToken
 
                 &&
 

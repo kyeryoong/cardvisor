@@ -1,11 +1,14 @@
 import axios from "../api/axios";
-import useAuth from "./useAuth";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setAuth2 } from "../../store/authSlice";
 
 const useLogout = () => {
-    const { setAuth } = useAuth();
+    let auth2Data = useSelector((state) => state.auth2Data);
+    let dispatch = useDispatch();
 
     const logout = async () => {
-        setAuth({});
+        dispatch(setAuth2({}));
         
         try {
             const response = await axios('/auth/signout', {

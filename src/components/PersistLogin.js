@@ -1,13 +1,16 @@
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import useRefreshToken from "./hooks/useRefreshToken";
-import useAuth from "./hooks/useAuth";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setAuth2 } from "../store/authSlice";
 
 const PersistLogin = () => {
     const [isLoading, setIsLoading] = useState(true);
     const refresh = useRefreshToken();
-    const { auth } = useAuth();
 
+    let auth2Data = useSelector((state) => state.auth2Data);
+    let dispatch = useDispatch();
 
     useEffect(() => {
         const verifyRefreshToken = async () => {
@@ -20,7 +23,7 @@ const PersistLogin = () => {
             }
         }
 
-        !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false);
+        !auth2Data?.accessToken ? verifyRefreshToken() : setIsLoading(false);
 
     }, [])
 
