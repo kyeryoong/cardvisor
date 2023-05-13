@@ -3,13 +3,13 @@ import useLogout from "./useLogout";
 import { useNavigate } from "react-router";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setAuth2 } from "../../store/authSlice";
+import { setAuth } from "../../store/authSlice";
 
 const useRefreshToken = () => {
     const logout = useLogout();
     const navigate = useNavigate();
 
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     const refresh = async () => {
@@ -24,7 +24,7 @@ const useRefreshToken = () => {
                 withCredentials: true
             });
 
-            dispatch(setAuth2(prev => {
+            dispatch(setAuth(prev => {
                 return {
                     ...prev,
                     roles: response.data.roles,

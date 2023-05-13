@@ -3,14 +3,14 @@ import { useEffect } from "react";
 import useRefreshToken from "./useRefreshToken";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setAuth2 } from "../../store/authSlice";
+import { setAuth } from "../../store/authSlice";
 
 
 const useAxiosPrivate = () => {
     const refresh = useRefreshToken();
 
 
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const useAxiosPrivate = () => {
         const requestIntercept = axiosPrivate.interceptors.request.use(
             config => {
                 if (!config.headers['Authorization']) {
-                    config.headers['Authorization'] = `Bearer ${auth2Data?.accessToken}`;
+                    config.headers['Authorization'] = `Bearer ${auth?.accessToken}`;
                 }
                 return config;
             }, (error) => Promise.reject(error)
@@ -45,7 +45,7 @@ const useAxiosPrivate = () => {
             axiosPrivate.interceptors.request.eject(requestIntercept);
             axiosPrivate.interceptors.response.eject(responseIntercept);
         }
-    }, [auth2Data, refresh])
+    }, [auth, refresh])
 
     return axiosPrivate;
 };

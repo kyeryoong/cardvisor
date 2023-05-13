@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "../api/axios";
 import styles from "./Login.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { setAuth2 } from "../../store/authSlice";
+import { setAuth } from "../../store/authSlice";
 
 const LOGIN_URL = "/auth/signin";
 
@@ -18,7 +18,7 @@ const Login = () => {
     const [user, setUser] = useState("");
     const [pwd, setPwd] = useState("");
 
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
 
@@ -46,8 +46,7 @@ const Login = () => {
 
             const accessToken = response?.data?.access_token;
             const roles = response?.data?.roles;
-            // setAuth({ user, pwd, roles, accessToken });
-            dispatch(setAuth2({ user, pwd, roles, accessToken }))
+            dispatch(setAuth({ user, pwd, roles, accessToken }))
 
             setUser("");
             setPwd("");

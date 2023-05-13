@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 import useRefreshToken from "./hooks/useRefreshToken";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setAuth2 } from "../store/authSlice";
+import { setAuth } from "../store/authSlice";
 
 const PersistLogin = () => {
     const [isLoading, setIsLoading] = useState(true);
     const refresh = useRefreshToken();
 
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const PersistLogin = () => {
             }
         }
 
-        !auth2Data?.accessToken ? verifyRefreshToken() : setIsLoading(false);
+        !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false);
 
     }, [])
 

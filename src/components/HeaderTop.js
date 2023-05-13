@@ -15,12 +15,12 @@ function HeaderTop() {
         navigate('/login');
     }
 
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
 
     return (
         <div className={styles.header}>
             {
-                auth2Data?.accessToken
+                auth?.accessToken
 
                     ?
 
@@ -36,7 +36,7 @@ function HeaderTop() {
             }
 
             {
-                auth2Data?.accessToken
+                auth?.accessToken
 
                 &&
 
@@ -48,7 +48,7 @@ function HeaderTop() {
             }
 
             {
-                auth2Data?.accessToken
+                auth?.accessToken
 
                 &&
 
@@ -60,7 +60,7 @@ function HeaderTop() {
             }
 
             {
-                !auth2Data?.accessToken
+                !auth?.accessToken
 
                 &&
 
@@ -69,7 +69,7 @@ function HeaderTop() {
             }
 
             {
-                !auth2Data?.accessToken
+                !auth?.accessToken
 
                 &&
 

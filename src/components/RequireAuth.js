@@ -1,18 +1,18 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { setAuth2 } from "../store/authSlice";
+import { setAuth } from "../store/authSlice";
 
 const RequireAuth = ({ allowedRoles }) => {
     const location = useLocation();
 
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     return (
-        auth2Data?.roles?.find(role => allowedRoles?.includes(role))
+        auth?.roles?.find(role => allowedRoles?.includes(role))
             ? <Outlet />
-            : auth2Data?.user
+            : auth?.user
                 ? <Navigate to="/unauthorized" state{...{ from: location }} replace />
                 : <Navigate to="/login" state{...{ from: location }} replace />
     );

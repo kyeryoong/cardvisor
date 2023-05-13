@@ -13,7 +13,7 @@ import HeaderBottom from '../HeaderBottom';
 
 import styles from "./Password.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { setAuth2 } from "../../store/authSlice";
+import { setAuth } from "../../store/authSlice";
 
 
 
@@ -23,7 +23,7 @@ const PWD_REGEX = /^(?=.*[A-z])(?=.*[0-9])(?=.*[!@#$%^&*~]).{8,24}$/;
 
 
 function Password() {
-    let auth2Data = useSelector((state) => state.auth2Data);
+    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     const navigate = useNavigate();
@@ -87,8 +87,7 @@ function Password() {
                             });
 
                             alert("비밀번호 변경이 완료되었습니다.");
-                            dispatch(setAuth2({}));
-                            // setAuth({});
+                            dispatch(setAuth({}));
                         } catch (err) {
                             console.error(err);
                             alert("현재 비밀번호가 올바르지 않습니다.");
