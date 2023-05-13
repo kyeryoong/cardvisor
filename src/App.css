@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-    font-family: "-apple-system", "Noto Sans KR" sans-serif;
+    font-family: "-apple-system", "Pretendard";
     font-weight: 600;
 
     padding: 0;
