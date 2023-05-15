@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosInstance from "../hooks/useAxiosInstance";
+import useAxiosObject from "../hooks/useAxiosObject";
 
 import HeaderBottom from '../HeaderBottom';
 
@@ -14,7 +14,7 @@ import { setAuth } from "../../store/authSlice";
 
 function Resign() {
     const navigate = useNavigate();
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
     const location = useLocation();
 
     let dispatch = useDispatch();
@@ -28,7 +28,7 @@ function Resign() {
     useEffect(() => {
         async function getUsername() {
             try {
-                const response = await axiosInstance.get('/member/username', {});
+                const response = await axiosObject.get('/member/username', {});
                 setUsername(response.data);
             } 
             
@@ -71,7 +71,7 @@ function Resign() {
 
                     const resign = async () => {
                         try {
-                            const response = await axiosInstance({
+                            const response = await axiosObject({
                                 method: "POST",
                                 url: "/auth/resign",
                                 data: {

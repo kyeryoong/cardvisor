@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosInstance from "../hooks/useAxiosInstance";
+import useAxiosObject from "../hooks/useAxiosObject";
 
 import HeaderBottom from '../HeaderBottom';
 
@@ -12,7 +12,7 @@ import styles from "./GenderAge.module.css";
 
 function GenderAge() {
     const navigate = useNavigate();
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
     const location = useLocation();
 
     const [info, setInfo] = useState({
@@ -36,7 +36,7 @@ function GenderAge() {
     useEffect(() => {
         const getMyInfo = async () => {
             try {
-                const response = await axiosInstance.get('/member/showMyInfo', {});
+                const response = await axiosObject.get('/member/showMyInfo', {});
 
                 setTimeout(() => {
                     setInfo(response.data);
@@ -59,7 +59,7 @@ function GenderAge() {
     useEffect(() => {
         const getUsername = async () => {
             try {
-                const response = await axiosInstance.get('/member/username', {});
+                const response = await axiosObject.get('/member/username', {});
                 setUsername(response.data);
             }
 
@@ -109,7 +109,7 @@ function GenderAge() {
                         }
 
                         try {
-                            const response = await axiosInstance({
+                            const response = await axiosObject({
                                 method: "POST",
                                 url: "/member/myInfo",
                                 data: {

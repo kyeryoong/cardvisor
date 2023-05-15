@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosInstance from "../../hooks/useAxiosInstance";
+import useAxiosObject from "../../hooks/useAxiosObject";
 
 import SelectedBrands from './SelectedBrands';
 import HeaderBottom from '../../HeaderBottom';
@@ -18,7 +18,7 @@ import styles from './Service2Analysis.module.css';
 function Service2Analysis() {
     const navigate = useNavigate();
     const location = useLocation();
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
 
 
 
@@ -48,7 +48,7 @@ function Service2Analysis() {
     useEffect(() => {
         async function getMyInfo() {
             try {
-                const response = await axiosInstance.get('/member/showMyInfo', {});
+                const response = await axiosObject.get('/member/showMyInfo', {});
 
                 setTimeout(() => {
                     setInfo(response.data);
@@ -103,7 +103,7 @@ function Service2Analysis() {
     useEffect(() => {
         async function getDonuts() {
             try {
-                const response = await axiosInstance.get('/benefit/donuts', {});
+                const response = await axiosObject.get('/benefit/donuts', {});
 
                 setTimeout(() => {
                     setAgeGenderData(response.data);
@@ -272,7 +272,7 @@ function Service2Analysis() {
                         const parsedUrlEncodedData = JSON.stringify(jsonArr);
 
                         try {
-                            const response = await axiosInstance({
+                            const response = await axiosObject({
                                 method: "POST",
                                 url: "/benefit/recommendTwo",
                                 data: parsedUrlEncodedData,
@@ -289,7 +289,7 @@ function Service2Analysis() {
                             navigate('/login', { state: { from: location }, replace: true });
                         }
                     }
-                    
+
                     getResults();
 
                     localStorage.setItem('sumByCategories', JSON.stringify(sumByCategories))

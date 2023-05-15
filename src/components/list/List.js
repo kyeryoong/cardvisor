@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosInstance from "../hooks/useAxiosInstance";
+import useAxiosObject from "../hooks/useAxiosObject";
 
 import HeaderBottom from '../HeaderBottom';
 import ListElement from "./ListElement";
@@ -20,12 +20,12 @@ function List() {
     const [cards, setCards] = useState({
         cardAll: [{}]
     });
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
 
     useEffect(() => {
         async function getCardList() {
             try {
-                const response = await axiosInstance.get('/card/cards', {});
+                const response = await axiosObject.get('/card/cards', {});
 
                 setTimeout(() => {
                     setCards(response.data);

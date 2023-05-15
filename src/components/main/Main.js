@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
-import useAxiosInstance from "../hooks/useAxiosInstance";
+import useAxiosObject from "../hooks/useAxiosObject";
 import Carousel from "react-material-ui-carousel";
 
 import styles from "./Main.module.css";
@@ -105,7 +105,7 @@ function Main() {
 
     const [width, setWidth] = useState(window.innerWidth);
 
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
     const [cards, setCards] = useState({
         MyCards: [{}],
     });
@@ -122,7 +122,7 @@ function Main() {
     useEffect(() => {
         async function getCardList() {
             try {
-                const response = await axiosInstance.get("main/myCards", {});
+                const response = await axiosObject.get("main/myCards", {});
 
                 setTimeout(() => {
                     setCards(response.data);

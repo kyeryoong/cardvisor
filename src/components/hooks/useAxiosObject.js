@@ -1,17 +1,17 @@
-import axiosInstance from "../api/axios";
+import axiosObject from "../api/axios";
 import { useEffect } from "react";
 import useRefreshToken from "./useRefreshToken";
 
 import { useSelector } from "react-redux";
 
 
-const useAxiosInstance = () => {
+function useAxiosObject() {
     const refresh = useRefreshToken();
 
     let auth = useSelector((state) => state.auth);
 
     useEffect(() => {
-        const requestIntercept = axiosInstance.interceptors.request.use(
+        const requestInterceptor = axiosObject.interceptors.request.use(
             function (config) {
                 if (!config.headers['Authorization']) {
                     config.headers['Authorization'] = `Bearer ${auth?.accessToken}`;
@@ -25,7 +25,7 @@ const useAxiosInstance = () => {
             }
         );
 
-        const responseIntercept = axiosInstance.interceptors.response.use(
+        const responseInterceptor = axiosObject.interceptors.response.use(
             function (response) {
                 return response
             },
@@ -37,7 +37,7 @@ const useAxiosInstance = () => {
                     prevRequest.sent = true;
                     const newAccessToken = await refresh();
                     prevRequest.headers['Authorization'] = `Bearer ${newAccessToken}`;
-                    return axiosInstance(prevRequest);
+                    return axiosObject(prevRequest);
                 }
 
                 else if (error?.code === "ERR_CANCELED") {
@@ -49,12 +49,12 @@ const useAxiosInstance = () => {
         );
 
         return () => {
-            axiosInstance.interceptors.request.eject(requestIntercept);
-            axiosInstance.interceptors.response.eject(responseIntercept);
+            axiosObject.interceptors.request.eject(requestInterceptor);
+            axiosObject.interceptors.response.eject(responseInterceptor);
         }
     }, [auth, refresh])
 
-    return axiosInstance;
+    return axiosObject;
 };
 
-export default useAxiosInstance;
+export default useAxiosObject;

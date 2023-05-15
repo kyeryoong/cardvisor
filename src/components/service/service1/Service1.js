@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router";
 
-import useAxiosInstance from "../../hooks/useAxiosInstance";
+import useAxiosObject from "../../hooks/useAxiosObject";
 
 import Brands from './Brands';
 import Categories from '../Categories';
@@ -18,7 +18,7 @@ function Service1() {
     const navigate = useNavigate();
 
     const location = useLocation();
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
     let jsonArr = [];
 
     localStorage.clear();
@@ -449,7 +449,7 @@ function Service1() {
                             const parsedUrlEncodedData = JSON.stringify(jsonArr);
 
                             try {
-                                const response = await axiosInstance({
+                                const response = await axiosObject({
                                     method: "POST",
                                     url: "/benefit/select",
                                     data: parsedUrlEncodedData,

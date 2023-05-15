@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosInstance from "../hooks/useAxiosInstance";
+import useAxiosObject from "../hooks/useAxiosObject";
 
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -26,7 +26,7 @@ function Password() {
     let dispatch = useDispatch();
 
     const navigate = useNavigate();
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
     const location = useLocation();
 
     const [currentPwd, setCurrentPwd] = useState('');
@@ -50,7 +50,7 @@ function Password() {
     useEffect(() => {
         async function getUsername() {
             try {
-                const response = await axiosInstance.get('/member/username', {});
+                const response = await axiosObject.get('/member/username', {});
                 setUsername(response.data);
             }
 
@@ -76,7 +76,7 @@ function Password() {
 
                     async function changePW() {
                         try {
-                            const response = await axiosInstance({
+                            const response = await axiosObject({
                                 method: "POST",
                                 url: "/auth/changePW",
                                 data: {

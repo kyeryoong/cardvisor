@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
-import useAxiosInstance from "../hooks/useAxiosInstance";
+import useAxiosObject from "../hooks/useAxiosObject";
 
 import HeaderBottom from '../HeaderBottom';
 
@@ -12,14 +12,14 @@ import styles from "./MyPage.module.css";
 function MyPage() {
     const navigate = useNavigate();
     const location = useLocation();
-    const axiosInstance = useAxiosInstance();
+    const axiosObject = useAxiosObject();
 
     const [username, setUsername] = useState("");
 
     useEffect(() => {
         async function getUsername() {
             try {
-                const response = await axiosInstance.get('/member/username', {});
+                const response = await axiosObject.get('/member/username', {});
                 setUsername(response.data);
 
             } 
