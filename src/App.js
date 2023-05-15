@@ -21,7 +21,6 @@ import GenderAge from './components/mypage/GenderAge';
 import Resign from './components/mypage/Resign';
 import CardInfo from './components/cardinfo/CardInfo';
 import NotFound from './components/notfound/NotFound';
-import RequireAuth from "./components/RequireAuth";
 import PersistLogin from "./components/PersistLogin";
 import Loading from "./components/Loading";
 
@@ -43,7 +42,6 @@ function App() {
                 <Route path="unauthorized" element={<NotFound />} />
 
                 <Route element={<PersistLogin />}>
-                    {/* <Route element={<RequireAuth allowedRoles={[ROLES.User, ROLES.Admin]} />}> */}
                         <Route path="main" element={<Main />} />
                         <Route path="service1" element={<Service1 />} />
                         <Route path="service1/results" element={<Service1Results />} />
@@ -58,7 +56,6 @@ function App() {
                         <Route path="mypage/genderage" element={<GenderAge />} />
                         <Route path="mypage/resign" element={<Resign />} />
                         <Route path="loading" element={<Loading message="데이터 분석중" />} />
-                    {/* </Route> */}
                 </Route>
 
                 <Route path="*" element={<NotFound />} />
