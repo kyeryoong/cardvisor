@@ -1,7 +1,9 @@
 import axios from "axios";
 const BASE_URL = "http://localhost:8080";
 
-const axiosPrivate = axios.create({
+
+// axios 인스턴스 생성
+const axiosInstance = axios.create({
     baseURL: BASE_URL,
     headers: {
         'CONTENT-Type': 'application/json'
@@ -9,4 +11,4 @@ const axiosPrivate = axios.create({
     withCredentials: true
 });
 
-export default axiosPrivate;
+export default axiosInstance;

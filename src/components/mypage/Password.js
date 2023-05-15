@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosInstance from "../hooks/useAxiosInstance";
 
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -26,7 +26,7 @@ function Password() {
     let dispatch = useDispatch();
 
     const navigate = useNavigate();
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
     const location = useLocation();
 
     const [currentPwd, setCurrentPwd] = useState('');
@@ -48,17 +48,17 @@ function Password() {
     const [username, setUsername] = useState("");
 
     useEffect(() => {
-        const getUsername = async () => {
+        async function getUsername() {
             try {
-                const response = await axiosPrivate.get('/member/username', {});
+                const response = await axiosInstance.get('/member/username', {});
                 setUsername(response.data);
+            }
 
-            } catch (err) {
-                console.error(err);
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
-
 
         getUsername();
     }, []);
@@ -74,9 +74,9 @@ function Password() {
                 onSubmit={(event) => {
                     event.preventDefault();
 
-                    const changePW = async () => {
+                    async function changePW() {
                         try {
-                            const response = await axiosPrivate({
+                            const response = await axiosInstance({
                                 method: "POST",
                                 url: "/auth/changePW",
                                 data: {
@@ -87,8 +87,10 @@ function Password() {
 
                             alert("비밀번호 변경이 완료되었습니다.");
                             dispatch(setAuth({}));
-                        } catch (err) {
-                            console.error(err);
+                        }
+
+                        catch (error) {
+                            console.error(error);
                             alert("현재 비밀번호가 올바르지 않습니다.");
                         }
                     }

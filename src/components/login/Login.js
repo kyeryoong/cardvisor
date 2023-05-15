@@ -25,8 +25,9 @@ const Login = () => {
         userRef.current.focus();
     }, []);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+
+    async function handleSubmit(event) {
+        event.preventDefault();
 
         try {
             const response = await axios.post(
@@ -45,17 +46,20 @@ const Login = () => {
 
             const accessToken = response?.data?.access_token;
             const roles = response?.data?.roles;
+
             dispatch(setAuth({ user, pwd, roles, accessToken }))
 
             setUser("");
             setPwd("");
+
             navigate(from, { replace: true });
-        } catch (err) {
-            if (!err?.response) {
+        }
+        catch (error) {
+            if (!error?.response) {
                 alert("서버 응답 오류");
             }
 
-            else if (err.response?.status === 401) {
+            else if (error.response?.status === 401) {
                 alert("아이디 또는 비밀번호를 확인해주세요.");
             }
 

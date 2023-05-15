@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosInstance from "../hooks/useAxiosInstance";
 
 import HeaderBottom from '../HeaderBottom';
 import ListElement from "./ListElement";
@@ -20,25 +20,26 @@ function List() {
     const [cards, setCards] = useState({
         cardAll: [{}]
     });
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
 
     useEffect(() => {
-        const getCardList = async () => {
+        async function getCardList() {
             try {
-                const response = await axiosPrivate.get('/card/cards', {
-                });
+                const response = await axiosInstance.get('/card/cards', {});
+
                 setTimeout(() => {
                     setCards(response.data);
                     setLoading(false);
                 }, 500)
-            } catch (err) {
-                console.error(err);
+            } 
+
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
 
         getCardList();
-
     }, []);
 
 

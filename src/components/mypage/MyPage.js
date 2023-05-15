@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosInstance from "../hooks/useAxiosInstance";
 
 import HeaderBottom from '../HeaderBottom';
 
@@ -12,22 +12,23 @@ import styles from "./MyPage.module.css";
 function MyPage() {
     const navigate = useNavigate();
     const location = useLocation();
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
 
     const [username, setUsername] = useState("");
 
     useEffect(() => {
-        const getUsername = async () => {
+        async function getUsername() {
             try {
-                const response = await axiosPrivate.get('/member/username', {});
+                const response = await axiosInstance.get('/member/username', {});
                 setUsername(response.data);
 
-            } catch (err) {
-                console.error(err);
+            } 
+            
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
-
 
         getUsername();
     }, []);

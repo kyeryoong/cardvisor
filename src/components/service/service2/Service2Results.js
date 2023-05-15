@@ -17,7 +17,7 @@ function Service2Results() {
     });
 
     const sumByCategories = JSON.parse(localStorage.getItem("sumByCategories"));
-    
+
     const selectedBrands = [];
 
     const categoriesEng = [
@@ -32,10 +32,10 @@ function Service2Results() {
         }
     }
 
-   
+
 
     function BenefitElements(props) {
-        return (            
+        return (
             selectedBrands.includes(result.bestCardBenefits[props.order].categoryName)
 
             &&
@@ -113,65 +113,61 @@ function Service2Results() {
 
     return (
         <div>
-            {
-                <div>
-                    <div className={styles.bestCardContainer}>
-                        <img className={styles.bestCardImage} alt="cards" src={process.env.PUBLIC_URL + "/images/card_images/" + result.topTenCards[0].id + ".png"} />
+            <div className={styles.bestCardContainer}>
+                <img className={styles.bestCardImage} alt="cards" src={process.env.PUBLIC_URL + "/images/card_images/" + result.topTenCards[0].id + ".png"} />
 
-                        <div className={styles.bestCardBottom}>
-                            <div className={styles.bestCardName}>
-                                {result.topTenCards[0].name}
-                            </div>
-
-
-                            <div className={styles.bestCardInfo}>
-                                <div className={styles.bestCardType}>
-                                    {typeParser(result.topTenCards[0].type)}
-                                </div>
-
-                                <img className={styles.bestCardCompanyLogo} alt="cards" src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + result.topTenCards[0].company_eng + ".png"} />
-                            </div>
-                        </div>
+                <div className={styles.bestCardBottom}>
+                    <div className={styles.bestCardName}>
+                        {result.topTenCards[0].name}
                     </div>
 
 
-
-                    <div className={styles.subText}>
-                        맞춤 혜택
-                    </div>
-
-                    {result.bestCardBenefits.map((current, index) => (
-                        <BenefitElements order={index} />
-                    ))}
-
-                    
-
-                    <div className={styles.subText}>
-                        이 카드는 어때요?
-                    </div>
-
-                    <div className={styles.moreCardsContainer}>
-                        <div className={styles.moreCardsRows}>
-                            <CardElements order={1} />
-                            <CardElements order={2} />
-                            <CardElements order={3} />
-                            <CardElements order={4} />
+                    <div className={styles.bestCardInfo}>
+                        <div className={styles.bestCardType}>
+                            {typeParser(result.topTenCards[0].type)}
                         </div>
 
-                        <button className={styles.moreCardsButton} onClick={() => {
-                            navigate("/service2/results/more");
-                        }}>
-                            더 많은 카드 보기
-                        </button>
+                        <img className={styles.bestCardCompanyLogo} alt="cards" src={process.env.PUBLIC_URL + "/images/card_logo/left_aligned/" + result.topTenCards[0].company_eng + ".png"} />
                     </div>
-
-                    <button className={styles.goToCardInfoButton} onClick={() => {
-                        navigate("/cardinfo/" + result.topTenCards[0].id)
-                    }}>
-                        카드 상세 정보 보기
-                    </button>
                 </div>
-            }
+            </div>
+
+
+
+            <div className={styles.subText}>
+                맞춤 혜택
+            </div>
+
+            {result.bestCardBenefits.map((current, index) => (
+                <BenefitElements order={index} />
+            ))}
+
+
+
+            <div className={styles.subText}>
+                이 카드는 어때요?
+            </div>
+
+            <div className={styles.moreCardsContainer}>
+                <div className={styles.moreCardsRows}>
+                    <CardElements order={1} />
+                    <CardElements order={2} />
+                    <CardElements order={3} />
+                    <CardElements order={4} />
+                </div>
+
+                <button className={styles.moreCardsButton} onClick={() => {
+                    navigate("/service2/results/more");
+                }}>
+                    더 많은 카드 보기
+                </button>
+            </div>
+
+            <button className={styles.goToCardInfoButton} onClick={() => {
+                navigate("/cardinfo/" + result.topTenCards[0].id)
+            }}>
+                카드 상세 정보 보기
+            </button>
         </div>
     );
 };

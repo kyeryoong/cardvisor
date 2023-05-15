@@ -11,17 +11,14 @@ const useRefreshToken = () => {
 
     let dispatch = useDispatch();
 
-    const refresh = async () => {
-
-        const signOut = async () => {
+    async function refresh() {
+        async function signOut() {
             await logout();
             navigate('/login');
         }
 
-        try{
-            const response = await axios.get('/auth/refreshToken', {
-                withCredentials: true
-            });
+        try {
+            const response = await axios.get('/auth/refreshToken', { withCredentials: true });
 
             dispatch(setAuth(prev => {
                 return {
@@ -32,12 +29,13 @@ const useRefreshToken = () => {
             }))
 
             return response.data.access_token;
-        } catch (err) {
-            console.error(err);
+        }
+        catch (error) {
+            console.error(error);
             signOut();
         }
-
     }
+
     return refresh;
 };
 

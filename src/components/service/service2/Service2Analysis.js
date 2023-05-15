@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import useAxiosInstance from "../../hooks/useAxiosInstance";
 
 import SelectedBrands from './SelectedBrands';
 import HeaderBottom from '../../HeaderBottom';
@@ -18,9 +18,9 @@ import styles from './Service2Analysis.module.css';
 function Service2Analysis() {
     const navigate = useNavigate();
     const location = useLocation();
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
 
-    
+
 
     const categoriesKor = [
         "교통", "통신", "마트", "편의점", "영화",
@@ -46,15 +46,17 @@ function Service2Analysis() {
     });
 
     useEffect(() => {
-        const getMyInfo = async () => {
+        async function getMyInfo() {
             try {
-                const response = await axiosPrivate.get('/member/showMyInfo', {
-                });
+                const response = await axiosInstance.get('/member/showMyInfo', {});
+
                 setTimeout(() => {
                     setInfo(response.data);
                 }, 0)
-            } catch (err) {
-                console.error(err);
+            }
+
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
@@ -99,15 +101,17 @@ function Service2Analysis() {
     })
 
     useEffect(() => {
-        const getDonuts = async () => {
+        async function getDonuts() {
             try {
-                const response = await axiosPrivate.get('/benefit/donuts', {
-                });
+                const response = await axiosInstance.get('/benefit/donuts', {});
+
                 setTimeout(() => {
                     setAgeGenderData(response.data);
                 }, 500)
-            } catch (err) {
-                console.error(err);
+            }
+
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
@@ -158,7 +162,7 @@ function Service2Analysis() {
 
 
 
-    
+
 
     return (
         <div>
@@ -170,7 +174,7 @@ function Service2Analysis() {
                         나의 소비 차트
                     </button>
 
-                    <button  className={!toggle ? styles.chartButtonRightOn : styles.chartButtonRightOff} onClick={() => { setToggle(false) }}>
+                    <button className={!toggle ? styles.chartButtonRightOn : styles.chartButtonRightOff} onClick={() => { setToggle(false) }}>
                         평균 연령별/성별 소비 차트
                     </button>
                 </div>
@@ -195,7 +199,7 @@ function Service2Analysis() {
                                 해당 차트는 사용자의 연령대와 성별대인
                                 <br />
                                 <span className={styles.chartDescribtionBold}>
-                                {ageParser(info.age)}대 {info.gender === "male" ? "남성" : "여성"}
+                                    {ageParser(info.age)}대 {info.gender === "male" ? "남성" : "여성"}
                                 </span>의 평균적인 소비 내역을 보여주는 차트입니다.
                             </div>
 
@@ -264,24 +268,28 @@ function Service2Analysis() {
 
             <div>
                 <button className={styles.sendButton} onClick={() => {
-                    const getResults = async () => {
+                    async function getResults() {
                         const parsedUrlEncodedData = JSON.stringify(jsonArr);
 
                         try {
-                            const response = await axiosPrivate({
+                            const response = await axiosInstance({
                                 method: "POST",
                                 url: "/benefit/recommendTwo",
                                 data: parsedUrlEncodedData,
                             });
+
                             setTimeout(() => {
                                 localStorage.setItem('servicetwo', JSON.stringify(response.data));
                                 navigate("/service2/results");
                             }, 100)
-                        } catch (err) {
-                            console.error(err);
+                        }
+
+                        catch (error) {
+                            console.error(error);
                             navigate('/login', { state: { from: location }, replace: true });
                         }
                     }
+                    
                     getResults();
 
                     localStorage.setItem('sumByCategories', JSON.stringify(sumByCategories))

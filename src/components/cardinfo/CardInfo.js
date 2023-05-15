@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router";
 
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosInstance from "../hooks/useAxiosInstance";
 
 import Loading from "../Loading";
 
@@ -17,7 +17,7 @@ function CardInfo() {
     let { card_code } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
     const [loading, setLoading] = useState(true);
     const [cardInfo, setCardInfo] = useState({
         benefits: [{}],
@@ -27,17 +27,18 @@ function CardInfo() {
     });
 
     useEffect(() => {
-        const getCardInfo = async () => {
+        async function getCardInfo() {
             try {
-                const response = await axiosPrivate.get('/card/' + card_code.toString(), {
-                });
+                const response = await axiosInstance.get('/card/' + card_code.toString(), {});
+
                 setTimeout(() => {
                     setCardInfo(response.data);
                     setLoading(false);
                 }, 500)
-                // console.log(response.data);
-            } catch (err) {
-                console.error(err);
+            }
+
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }

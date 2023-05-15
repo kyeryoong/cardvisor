@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router";
 
-import useAxiosPrivate from "../../hooks/useAxiosPrivate";
+import useAxiosInstance from "../../hooks/useAxiosInstance";
 
 import Brands from './Brands';
 import Categories from '../Categories';
@@ -18,7 +18,7 @@ function Service1() {
     const navigate = useNavigate();
 
     const location = useLocation();
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
     let jsonArr = [];
 
     localStorage.clear();
@@ -445,11 +445,11 @@ function Service1() {
 
                         dispatch(setSelectedBrands([]));
 
-                        const getResults = async () => {
+                        async function getResults() {
                             const parsedUrlEncodedData = JSON.stringify(jsonArr);
 
                             try {
-                                const response = await axiosPrivate({
+                                const response = await axiosInstance({
                                     method: "POST",
                                     url: "/benefit/select",
                                     data: parsedUrlEncodedData,
@@ -459,11 +459,14 @@ function Service1() {
 
                                     navigate("/service1/results");
                                 }, 100)
-                            } catch (err) {
-                                console.error(err);
+                            } 
+                            
+                            catch (error) {
+                                console.error(error);
                                 navigate('/login', { state: { from: location }, replace: true });
                             }
                         }
+
                         getResults();
                         navigate('/loading', { state: { from: location }, replace: true });
                     }

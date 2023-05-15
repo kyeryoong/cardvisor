@@ -8,13 +8,13 @@ const useLogout = () => {
 
     const logout = async () => {
         dispatch(setAuth({}));
-        
+
         try {
-            const response = await axios('/auth/signout', {
-                withCredentials: true
-            });
-        } catch (err) {
-            console.error(err);
+            await axios('/auth/signout', { withCredentials: true });
+        }
+
+        catch (error) {
+            console.error(error);
         }
     }
 

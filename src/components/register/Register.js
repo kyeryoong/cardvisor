@@ -57,27 +57,22 @@ function Register() {
 
 
 
-    const handleDuplicate = async (e) => {
-        e.preventDefault();
+    async function handleDuplicate(event) {
+        event.preventDefault();
 
         try {
-            const response = await axios.get(
-                "/auth/duplicate",
-                {
-                    headers: { "nickname": user }
-                }
-            )
+            const response = await axios.get("/auth/duplicate", { headers: { "nickname": user } });
 
             alert("사용 가능한 아이디입니다.");
             setNotDuplicate(true);
         }
-
-        catch (err) {
-            if (!err?.response) {
+        
+        catch (error) {
+            if (!error?.response) {
                 alert("No Server Response");
             }
 
-            else if (err.response?.status === 400) {
+            else if (error.response?.status === 400) {
                 alert("이미 사용중인 아이디입니다.");
             }
 
@@ -91,13 +86,12 @@ function Register() {
 
 
 
-    const handleClick = async (event) => {
+    async function handleClick(event) {
         event.preventDefault();
 
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
         if (!v1 || !v2) {
-            // setErrMsg("Invalid Entry");
             return;
         }
 

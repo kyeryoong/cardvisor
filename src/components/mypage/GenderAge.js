@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosInstance from "../hooks/useAxiosInstance";
 
 import HeaderBottom from '../HeaderBottom';
 
@@ -12,7 +12,7 @@ import styles from "./GenderAge.module.css";
 
 function GenderAge() {
     const navigate = useNavigate();
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
     const location = useLocation();
 
     const [info, setInfo] = useState({
@@ -36,13 +36,15 @@ function GenderAge() {
     useEffect(() => {
         const getMyInfo = async () => {
             try {
-                const response = await axiosPrivate.get('/member/showMyInfo', {
-                });
+                const response = await axiosInstance.get('/member/showMyInfo', {});
+
                 setTimeout(() => {
                     setInfo(response.data);
                 }, 0)
-            } catch (err) {
-                console.error(err);
+            }
+
+            catch (error) {
+                console.error(error);
                 navigate('/login', { state: { from: location }, replace: true });
             }
         }
@@ -57,12 +59,13 @@ function GenderAge() {
     useEffect(() => {
         const getUsername = async () => {
             try {
-                const response = await axiosPrivate.get('/member/username', {});
+                const response = await axiosInstance.get('/member/username', {});
                 setUsername(response.data);
+            }
 
-            } catch (err) {
-                console.error(err);
-                navigate('/login', {state: {from: location}, replace: true});
+            catch (error) {
+                console.error(error);
+                navigate('/login', { state: { from: location }, replace: true });
             }
         }
 
@@ -96,7 +99,7 @@ function GenderAge() {
                 onSubmit={(event) => {
                     event.preventDefault();
 
-                    const getResults = async () => {
+                    async function getResults() {
                         function ageTranslator(age) {
                             for (var i = 0; i < 6; i++) {
                                 if (age === i) {
@@ -106,7 +109,7 @@ function GenderAge() {
                         }
 
                         try {
-                            const response = await axiosPrivate({
+                            const response = await axiosInstance({
                                 method: "POST",
                                 url: "/member/myInfo",
                                 data: {
@@ -117,12 +120,15 @@ function GenderAge() {
 
                             alert("변경이 완료되었습니다.");
                             navigate("/mypage");
-                        } catch (err) {
-                            console.error(err);
+                        }
+
+                        catch (error) {
+                            console.error(error);
                             alert("오류가 발생했습니다.");
                             navigate('/login', { state: { from: location }, replace: true });
                         }
                     }
+
                     getResults();
                 }}>
 

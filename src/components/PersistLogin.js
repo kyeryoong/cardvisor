@@ -12,12 +12,16 @@ const PersistLogin = () => {
 
 
     useEffect(() => {
-        const verifyRefreshToken = async () => {
+        async function verifyRefreshToken() {
             try {
                 await refresh();
-            } catch (err) {
-                console.error(err);
-            } finally {
+            }
+
+            catch (error) {
+                console.error(error);
+            }
+
+            finally {
                 setIsLoading(false);
             }
         }
@@ -29,13 +33,15 @@ const PersistLogin = () => {
 
 
     return (
-        <>
-            {
-                isLoading
-                    ? <p>Loading ...</p>
-                    : <Outlet />
-            }
-        </>
+        isLoading
+
+            ?
+
+            <p>Loading ...</p>
+
+            :
+
+            <Outlet />
     )
 }
 

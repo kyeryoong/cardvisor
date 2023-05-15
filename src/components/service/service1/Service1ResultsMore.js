@@ -150,7 +150,6 @@ const Service1ResultsMore = () => {
             >
                 돌아가기
             </button>
-
         </div>
     );
 };

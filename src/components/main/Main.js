@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
+import useAxiosInstance from "../hooks/useAxiosInstance";
 import Carousel from "react-material-ui-carousel";
 
 import styles from "./Main.module.css";
@@ -105,7 +105,7 @@ function Main() {
 
     const [width, setWidth] = useState(window.innerWidth);
 
-    const axiosPrivate = useAxiosPrivate();
+    const axiosInstance = useAxiosInstance();
     const [cards, setCards] = useState({
         MyCards: [{}],
     });
@@ -120,14 +120,17 @@ function Main() {
     var recentCardsId = [];
 
     useEffect(() => {
-        const getCardList = async () => {
+        async function getCardList() {
             try {
-                const response = await axiosPrivate.get("main/myCards", {});
+                const response = await axiosInstance.get("main/myCards", {});
+
                 setTimeout(() => {
                     setCards(response.data);
                 }, 500);
-            } catch (err) {
-                console.error(err);
+            }
+
+            catch (error) {
+                console.error(error);
             }
         };
 
