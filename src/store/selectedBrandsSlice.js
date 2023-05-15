@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 let selectedBrands = createSlice({
-    name: "selectedBrandsSlice",
+    name: "selectedBrands",
     initialState: [],
     reducers: {
-        setSelectedBrands(state) {
-            return [0]
+        setSelectedBrands(state, action) {
+            state.push(0);
         }
     }
 })

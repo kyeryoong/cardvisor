@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "../api/axios";
 import styles from "./Login.module.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAuth } from "../../store/authSlice";
 
 const LOGIN_URL = "/auth/signin";
@@ -18,7 +18,6 @@ const Login = () => {
     const [user, setUser] = useState("");
     const [pwd, setPwd] = useState("");
 
-    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
 

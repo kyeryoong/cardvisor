@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './HeaderTop.module.css';
 import useLogout from "./hooks/useLogout";

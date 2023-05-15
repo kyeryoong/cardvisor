@@ -1,5 +1,5 @@
 import styles from './List.module.css';
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 
 
 function ListElement({ id, cardName, companyNameKor, companyNameEng }) {

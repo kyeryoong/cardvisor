@@ -1,11 +1,10 @@
-import * as React from 'react';
 import { ResponsivePie } from '@nivo/pie';
 
 import styles from './Service2Analysis.module.css';
 
 
 
-function PieChart2({ data, colors, total }) {
+function PieChart2({ data, colors }) {
     return (
         <div className={styles.chartContainer}>
             <ResponsivePie

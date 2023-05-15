@@ -2,14 +2,13 @@ import axios from "../api/axios";
 import useLogout from "./useLogout";
 import { useNavigate } from "react-router";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAuth } from "../../store/authSlice";
 
 const useRefreshToken = () => {
     const logout = useLogout();
     const navigate = useNavigate();
 
-    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     const refresh = async () => {

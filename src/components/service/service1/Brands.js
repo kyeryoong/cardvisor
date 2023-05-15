@@ -1,26 +1,31 @@
 import styles from './Brands.module.css';
 
-import SelectedBrands from './SelectedBrands';
+import { useSelector, useDispatch } from "react-redux";
+import { setSelectedBrands } from '../../../store/selectedBrandsSlice';
 
 
 
-function Brands({ brandNameKor, brandNameEng, setSelNumber, setSelArray }) {
+function Brands({ brandNameKor, brandNameEng }) {
+    let selectedBrands = useSelector((state) => state.selectedBrands);
+    let dispatch = useDispatch();
+
     return (
-        <div className={SelectedBrands.includes(brandNameEng) ? styles.iconboxChecked : styles.iconboxNotChecked} onClick={() => {
-            if (!SelectedBrands.includes(brandNameEng)) {
-                SelectedBrands.push(brandNameEng);
+        <div className={selectedBrands.includes(brandNameEng) ? styles.iconboxChecked : styles.iconboxNotChecked} onClick={() => {
+            if (!selectedBrands.includes(brandNameEng)) {
+                let temp = selectedBrands;
+                temp.push(brandNameEng);
+                dispatch(setSelectedBrands(temp));
             }
 
             else {
-                var index = SelectedBrands.indexOf(brandNameEng);
+                var index = selectedBrands.indexOf(brandNameEng);
 
                 if (index > -1) {
-                    SelectedBrands.splice(index, 1);
+                    let temp = selectedBrands;
+                    temp.splice(index, 1);
+                    dispatch(setSelectedBrands(temp));
                 }
             }
-
-            setSelNumber(SelectedBrands.length);
-            setSelArray(SelectedBrands);
         }}>
 
             <div className={styles.brandLogo}>

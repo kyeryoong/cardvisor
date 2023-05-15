@@ -7,7 +7,7 @@ import useAxiosPrivate from "../hooks/useAxiosPrivate";
 
 import Loading from "../Loading";
 
-import { benefitParser, brandParser, typeParser, feeNameParser, feeLinkParser, cardLinkParser, cardPhoneNumberParser } from '../Parser';
+import { benefitParser, typeParser, feeNameParser, feeLinkParser, cardLinkParser, cardPhoneNumberParser } from '../Parser';
 
 import styles from './CardInfo.module.css';
 

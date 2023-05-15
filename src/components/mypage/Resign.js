@@ -7,7 +7,7 @@ import useAxiosPrivate from "../hooks/useAxiosPrivate";
 import HeaderBottom from '../HeaderBottom';
 
 import styles from "./Resign.module.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAuth } from "../../store/authSlice";
 
 
@@ -17,7 +17,6 @@ function Resign() {
     const axiosPrivate = useAxiosPrivate();
     const location = useLocation();
 
-    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     const [pwd, setPwd] = useState('');

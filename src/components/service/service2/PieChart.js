@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ResponsivePie } from '@nivo/pie';
 
 import styles from './Service2Analysis.module.css';

@@ -1,10 +1,9 @@
 import axios from "../api/axios";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAuth } from "../../store/authSlice";
 
 const useLogout = () => {
-    let auth = useSelector((state) => state.auth);
     let dispatch = useDispatch();
 
     const logout = async () => {

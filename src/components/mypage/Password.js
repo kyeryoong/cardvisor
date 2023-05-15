@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from "react-router";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useRef } from "react";
 
 import useAxiosPrivate from "../hooks/useAxiosPrivate";
 

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
-import { benefitParser, brandParser, typeParser } from '../../Parser';
+import { benefitParser, typeParser } from '../../Parser';
 
 import styles from "./Service2Results.module.css";
 
